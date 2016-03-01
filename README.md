@@ -12,7 +12,7 @@ This app will help people start out or supplement their existing meditation prac
 - User will be able to have silence with audio reminders at time intervals so they can keep track of time
 - User will be able to chant and have the illusion of being surrounded by others chanting
 - User will be able to discover new meditations
-
+- User will be able to screencast w/ airplay
 - User will be able to rate meditations
 - User will be able to record meditations
 - User will be able to do live guided meditation
