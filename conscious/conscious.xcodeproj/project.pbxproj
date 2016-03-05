@@ -17,6 +17,8 @@
 		DA3501B71C881140006A41A5 /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3501B61C881140006A41A5 /* CategoryTableViewCell.swift */; };
 		DA3501B91C88115B006A41A5 /* MediaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3501B81C88115B006A41A5 /* MediaTableViewCell.swift */; };
 		DA3501BC1C881F07006A41A5 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3501BB1C881F07006A41A5 /* TimerViewController.swift */; };
+		DA3501C01C8A749E006A41A5 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3501BF1C8A749E006A41A5 /* CategoryViewController.swift */; };
+		DA3501C21C8A7E9A006A41A5 /* MediaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3501C11C8A7E9A006A41A5 /* MediaViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		DA3501B61C881140006A41A5 /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
 		DA3501B81C88115B006A41A5 /* MediaTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaTableViewCell.swift; sourceTree = "<group>"; };
 		DA3501BB1C881F07006A41A5 /* TimerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
+		DA3501BF1C8A749E006A41A5 /* CategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
+		DA3501C11C8A7E9A006A41A5 /* MediaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,8 @@
 			children = (
 				DA3501A01C880A27006A41A5 /* HomeTableViewController.swift */,
 				DA3501BB1C881F07006A41A5 /* TimerViewController.swift */,
+				DA3501BF1C8A749E006A41A5 /* CategoryViewController.swift */,
+				DA3501C11C8A7E9A006A41A5 /* MediaViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -178,8 +184,10 @@
 				DA3501B31C88111A006A41A5 /* HistoryTableViewCell.swift in Sources */,
 				DA3501A11C880A27006A41A5 /* HomeTableViewController.swift in Sources */,
 				DA3501BC1C881F07006A41A5 /* TimerViewController.swift in Sources */,
+				DA3501C01C8A749E006A41A5 /* CategoryViewController.swift in Sources */,
 				DA3501B51C88112D006A41A5 /* CallToActionTableViewCell.swift in Sources */,
 				DA3501B91C88115B006A41A5 /* MediaTableViewCell.swift in Sources */,
+				DA3501C21C8A7E9A006A41A5 /* MediaViewController.swift in Sources */,
 				DA35019F1C880A27006A41A5 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -330,6 +338,7 @@
 				DA3501AF1C880A27006A41A5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

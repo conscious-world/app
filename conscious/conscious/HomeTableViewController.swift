@@ -51,13 +51,20 @@ class HomeTableViewController: UIViewController, UITableViewDataSource, UITableV
         case 0:
             return tableView.dequeueReusableCellWithIdentifier("HistoryTableViewCell", forIndexPath: indexPath)      as! HistoryTableViewCell
         case 1:
-            var cell =  tableView.dequeueReusableCellWithIdentifier("CallToActionTableViewCell", forIndexPath: indexPath) as! CallToActionTableViewCell
+            let  cell =  tableView.dequeueReusableCellWithIdentifier("CallToActionTableViewCell", forIndexPath: indexPath) as! CallToActionTableViewCell
             cell.navigationController = self.navigationController
             return cell
+            
         case 2:
-            return tableView.dequeueReusableCellWithIdentifier("CategoryTableViewCell", forIndexPath: indexPath)     as! CategoryTableViewCell
+            let cell = tableView.dequeueReusableCellWithIdentifier("CategoryTableViewCell", forIndexPath: indexPath)     as! CategoryTableViewCell
+            cell.navigationController = self.navigationController
+            return cell
+            
         case 3:
-            return tableView.dequeueReusableCellWithIdentifier("MediaTableViewCell", forIndexPath: indexPath)        as! MediaTableViewCell
+            let cell = tableView.dequeueReusableCellWithIdentifier("MediaTableViewCell", forIndexPath: indexPath)        as! MediaTableViewCell
+            cell.navigationController = self.navigationController
+            return cell
+            
         default:
             return tableView.dequeueReusableCellWithIdentifier("CallToActionTableViewCell", forIndexPath: indexPath) as! CallToActionTableViewCell
         }
