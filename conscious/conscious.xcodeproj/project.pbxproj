@@ -19,11 +19,11 @@
 		DA3501BC1C881F07006A41A5 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3501BB1C881F07006A41A5 /* TimerViewController.swift */; };
 		DA3501C01C8A749E006A41A5 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3501BF1C8A749E006A41A5 /* CategoryViewController.swift */; };
 		DA3501C21C8A7E9A006A41A5 /* MediaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3501C11C8A7E9A006A41A5 /* MediaViewController.swift */; };
-		DA3501C61C8CCD6D006A41A5 /* TimerSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3501C51C8CCD6D006A41A5 /* TimerSettingsViewController.swift */; };
 		DA3501C91C8CCDF5006A41A5 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3501C81C8CCDF5006A41A5 /* Category.swift */; };
 		DA3501CB1C8CCE00006A41A5 /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3501CA1C8CCE00006A41A5 /* History.swift */; };
 		DA3501CD1C8CCE23006A41A5 /* Media.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3501CC1C8CCE23006A41A5 /* Media.swift */; };
 		DA3501CF1C8CCE3D006A41A5 /* TimerSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3501CE1C8CCE3D006A41A5 /* TimerSettings.swift */; };
+		DA3501D11C8CD27B006A41A5 /* TimerSettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3501D01C8CD27B006A41A5 /* TimerSettingsTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,11 +41,11 @@
 		DA3501BB1C881F07006A41A5 /* TimerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
 		DA3501BF1C8A749E006A41A5 /* CategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		DA3501C11C8A7E9A006A41A5 /* MediaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaViewController.swift; sourceTree = "<group>"; };
-		DA3501C51C8CCD6D006A41A5 /* TimerSettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerSettingsViewController.swift; sourceTree = "<group>"; };
 		DA3501C81C8CCDF5006A41A5 /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		DA3501CA1C8CCE00006A41A5 /* History.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
 		DA3501CC1C8CCE23006A41A5 /* Media.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Media.swift; sourceTree = "<group>"; };
 		DA3501CE1C8CCE3D006A41A5 /* TimerSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerSettings.swift; sourceTree = "<group>"; };
+		DA3501D01C8CD27B006A41A5 /* TimerSettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerSettingsTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,7 +116,7 @@
 				DA3501BB1C881F07006A41A5 /* TimerViewController.swift */,
 				DA3501BF1C8A749E006A41A5 /* CategoryViewController.swift */,
 				DA3501C11C8A7E9A006A41A5 /* MediaViewController.swift */,
-				DA3501C51C8CCD6D006A41A5 /* TimerSettingsViewController.swift */,
+				DA3501D01C8CD27B006A41A5 /* TimerSettingsTableViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -209,9 +209,9 @@
 				DA3501BC1C881F07006A41A5 /* TimerViewController.swift in Sources */,
 				DA3501C01C8A749E006A41A5 /* CategoryViewController.swift in Sources */,
 				DA3501B51C88112D006A41A5 /* CallToActionTableViewCell.swift in Sources */,
+				DA3501D11C8CD27B006A41A5 /* TimerSettingsTableViewController.swift in Sources */,
 				DA3501CB1C8CCE00006A41A5 /* History.swift in Sources */,
 				DA3501B91C88115B006A41A5 /* MediaTableViewCell.swift in Sources */,
-				DA3501C61C8CCD6D006A41A5 /* TimerSettingsViewController.swift in Sources */,
 				DA3501C21C8A7E9A006A41A5 /* MediaViewController.swift in Sources */,
 				DA3501CD1C8CCE23006A41A5 /* Media.swift in Sources */,
 				DA35019F1C880A27006A41A5 /* AppDelegate.swift in Sources */,

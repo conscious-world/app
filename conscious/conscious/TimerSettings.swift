@@ -8,6 +8,25 @@
 
 import Foundation
 
+
+enum AudioFeebackEffects {
+    case Reverb
+    case Delay
+}
+
 class TimerSettings{
+    
+    var intervalSeconds: Int = 300
+    var reminderTone: String = "bell1"
+    var backgroundSoundFile: String = ""
+    var AudioFeedback: AudioFeebackEffects? = nil
+    
+    init(){
+    
+    }
+    
+    func save(){
+    
+    }
 
 }
