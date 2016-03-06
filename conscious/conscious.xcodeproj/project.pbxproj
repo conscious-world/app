@@ -24,6 +24,7 @@
 		DA3501CD1C8CCE23006A41A5 /* Media.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3501CC1C8CCE23006A41A5 /* Media.swift */; };
 		DA3501CF1C8CCE3D006A41A5 /* TimerSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3501CE1C8CCE3D006A41A5 /* TimerSettings.swift */; };
 		DA3501D11C8CD27B006A41A5 /* TimerSettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3501D01C8CD27B006A41A5 /* TimerSettingsTableViewController.swift */; };
+		DA3501D61C8CE4FC006A41A5 /* MARC5MinuteBreathing.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DA3501D51C8CE4FC006A41A5 /* MARC5MinuteBreathing.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		DA3501CC1C8CCE23006A41A5 /* Media.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Media.swift; sourceTree = "<group>"; };
 		DA3501CE1C8CCE3D006A41A5 /* TimerSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerSettings.swift; sourceTree = "<group>"; };
 		DA3501D01C8CD27B006A41A5 /* TimerSettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerSettingsTableViewController.swift; sourceTree = "<group>"; };
+		DA3501D51C8CE4FC006A41A5 /* MARC5MinuteBreathing.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = MARC5MinuteBreathing.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 		DA35019D1C880A27006A41A5 /* conscious */ = {
 			isa = PBXGroup;
 			children = (
+				DA3501D21C8CE4D0006A41A5 /* Audio */,
 				DA3501C71C8CCDD3006A41A5 /* Models */,
 				DA3501BA1C881ED3006A41A5 /* ViewControllers */,
 				DA3501B01C8810DC006A41A5 /* views */,
@@ -130,6 +133,30 @@
 				DA3501CE1C8CCE3D006A41A5 /* TimerSettings.swift */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		DA3501D21C8CE4D0006A41A5 /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				DA3501D41C8CE4EC006A41A5 /* Sounds */,
+				DA3501D31C8CE4E1006A41A5 /* Media */,
+			);
+			name = Audio;
+			sourceTree = "<group>";
+		};
+		DA3501D31C8CE4E1006A41A5 /* Media */ = {
+			isa = PBXGroup;
+			children = (
+				DA3501D51C8CE4FC006A41A5 /* MARC5MinuteBreathing.mp3 */,
+			);
+			name = Media;
+			sourceTree = "<group>";
+		};
+		DA3501D41C8CE4EC006A41A5 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Sounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -190,6 +217,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA3501D61C8CE4FC006A41A5 /* MARC5MinuteBreathing.mp3 in Resources */,
 				DA3501A91C880A27006A41A5 /* LaunchScreen.storyboard in Resources */,
 				DA3501A61C880A27006A41A5 /* Assets.xcassets in Resources */,
 				DA3501A41C880A27006A41A5 /* Main.storyboard in Resources */,

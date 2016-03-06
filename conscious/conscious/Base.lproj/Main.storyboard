@@ -375,13 +375,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="speaker-7" translatesAutoresizingMaskIntoConstraints="NO" id="R9D-5t-3eC">
-                                <rect key="frame" x="285" y="285" width="30" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="WrM-Pc-c8z"/>
-                                    <constraint firstAttribute="width" constant="30" id="kxn-gS-FY7"/>
-                                </constraints>
-                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CTH-nj-IhO">
+                                <rect key="frame" x="278" y="285" width="44" height="30"/>
+                                <state key="normal" title="Play▶︎">
+                                    <color key="titleColor" red="0.16569926340976027" green="0.17961675289449719" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="playSound:" destination="IHv-Ek-HpY" eventType="touchUpInside" id="LBt-jh-rlm"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.52635605378362915" green="1" blue="0.57897882809018797" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" red="0.69009782016649046" green="1" blue="0.54698733191160198" alpha="1" colorSpace="calibratedRGB"/>
@@ -389,8 +391,8 @@
                             <accessibilityTraits key="traits" playsSound="YES"/>
                         </accessibility>
                         <constraints>
-                            <constraint firstItem="R9D-5t-3eC" firstAttribute="centerX" secondItem="Yd6-Ah-pq4" secondAttribute="centerX" id="9bz-jW-76t"/>
-                            <constraint firstItem="R9D-5t-3eC" firstAttribute="centerY" secondItem="Yd6-Ah-pq4" secondAttribute="centerY" id="ONN-P8-Wfm"/>
+                            <constraint firstItem="CTH-nj-IhO" firstAttribute="centerX" secondItem="Yd6-Ah-pq4" secondAttribute="centerX" id="JDW-Tx-DbS"/>
+                            <constraint firstItem="CTH-nj-IhO" firstAttribute="centerY" secondItem="Yd6-Ah-pq4" secondAttribute="centerY" id="bKG-4o-apY"/>
                         </constraints>
                     </view>
                 </viewController>

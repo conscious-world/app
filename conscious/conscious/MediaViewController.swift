@@ -7,18 +7,43 @@
 //
 
 import UIKit
+import AVFoundation
 
 class MediaViewController: UIViewController {
+    
+    var audioPlayer:AVAudioPlayer!
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    @IBAction func playSound(sender: UIButton) {
+        
+        let audioFilePath = NSBundle.mainBundle().pathForResource("MARC5MinuteBreathing", ofType: "mp3")
+        
+        if audioFilePath != nil {
+            
+            let audioFileUrl = NSURL.fileURLWithPath(audioFilePath!)
+            
+
+            do {
+                audioPlayer = try AVAudioPlayer(contentsOfURL: audioFileUrl, fileTypeHint: nil)
+                audioPlayer.play()
+            }
+            catch {
+                fatalError ("Error loading \(audioFileUrl): \(error)")
+            }
+            
+        } else {
+            print("audio file is not found")
+        }
     }
     
 
