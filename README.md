@@ -16,5 +16,5 @@ This app will help people start out or supplement their existing meditation prac
 - User will be able to rate meditations
 - User will be able to record meditations
 - User will be able to do live guided meditation
-<img src='conciousflow.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='conscious1.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
