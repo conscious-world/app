@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		912C76A9713F2DCF4F3A5C84 /* libPods-conscious.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AF2A56554296CAD3E80F515 /* libPods-conscious.a */; };
 		DA35019F1C880A27006A41A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA35019E1C880A27006A41A5 /* AppDelegate.swift */; };
 		DA3501A11C880A27006A41A5 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3501A01C880A27006A41A5 /* HomeTableViewController.swift */; };
 		DA3501A41C880A27006A41A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA3501A21C880A27006A41A5 /* Main.storyboard */; };
@@ -25,9 +26,13 @@
 		DA3501CF1C8CCE3D006A41A5 /* TimerSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3501CE1C8CCE3D006A41A5 /* TimerSettings.swift */; };
 		DA3501D11C8CD27B006A41A5 /* TimerSettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3501D01C8CD27B006A41A5 /* TimerSettingsTableViewController.swift */; };
 		DA3501D61C8CE4FC006A41A5 /* MARC5MinuteBreathing.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DA3501D51C8CE4FC006A41A5 /* MARC5MinuteBreathing.mp3 */; };
+		DA3501DA1C8CEDDB006A41A5 /* ReverbOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3501D91C8CEDDB006A41A5 /* ReverbOutput.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3AF2A56554296CAD3E80F515 /* libPods-conscious.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-conscious.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F0A3CA90B5EAA920D64E307 /* Pods-conscious.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-conscious.debug.xcconfig"; path = "Pods/Target Support Files/Pods-conscious/Pods-conscious.debug.xcconfig"; sourceTree = "<group>"; };
+		B24AE942D5D41CCB7D7F2C51 /* Pods-conscious.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-conscious.release.xcconfig"; path = "Pods/Target Support Files/Pods-conscious/Pods-conscious.release.xcconfig"; sourceTree = "<group>"; };
 		DA35019B1C880A27006A41A5 /* conscious.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = conscious.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA35019E1C880A27006A41A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DA3501A01C880A27006A41A5 /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
@@ -48,6 +53,8 @@
 		DA3501CE1C8CCE3D006A41A5 /* TimerSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerSettings.swift; sourceTree = "<group>"; };
 		DA3501D01C8CD27B006A41A5 /* TimerSettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerSettingsTableViewController.swift; sourceTree = "<group>"; };
 		DA3501D51C8CE4FC006A41A5 /* MARC5MinuteBreathing.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = MARC5MinuteBreathing.mp3; sourceTree = "<group>"; };
+		DA3501D71C8CE9EA006A41A5 /* conscios-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "conscios-Bridging-Header.h"; sourceTree = "<group>"; };
+		DA3501D91C8CEDDB006A41A5 /* ReverbOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReverbOutput.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,17 +62,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				912C76A9713F2DCF4F3A5C84 /* libPods-conscious.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		08411C9DA7095F834BE95345 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8F0A3CA90B5EAA920D64E307 /* Pods-conscious.debug.xcconfig */,
+				B24AE942D5D41CCB7D7F2C51 /* Pods-conscious.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D9D6E06B6FE8CF0D49E40748 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3AF2A56554296CAD3E80F515 /* libPods-conscious.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		DA3501921C880A27006A41A5 = {
 			isa = PBXGroup;
 			children = (
 				DA35019D1C880A27006A41A5 /* conscious */,
 				DA35019C1C880A27006A41A5 /* Products */,
+				08411C9DA7095F834BE95345 /* Pods */,
+				D9D6E06B6FE8CF0D49E40748 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -89,6 +116,7 @@
 				DA3501A51C880A27006A41A5 /* Assets.xcassets */,
 				DA3501A71C880A27006A41A5 /* LaunchScreen.storyboard */,
 				DA3501AA1C880A27006A41A5 /* Info.plist */,
+				DA3501D71C8CE9EA006A41A5 /* conscios-Bridging-Header.h */,
 			);
 			path = conscious;
 			sourceTree = "<group>";
@@ -127,6 +155,7 @@
 		DA3501C71C8CCDD3006A41A5 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				DA3501D81C8CEDB5006A41A5 /* AudioEffects */,
 				DA3501C81C8CCDF5006A41A5 /* Category.swift */,
 				DA3501CA1C8CCE00006A41A5 /* History.swift */,
 				DA3501CC1C8CCE23006A41A5 /* Media.swift */,
@@ -159,6 +188,14 @@
 			name = Sounds;
 			sourceTree = "<group>";
 		};
+		DA3501D81C8CEDB5006A41A5 /* AudioEffects */ = {
+			isa = PBXGroup;
+			children = (
+				DA3501D91C8CEDDB006A41A5 /* ReverbOutput.swift */,
+			);
+			name = AudioEffects;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -166,9 +203,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DA3501AD1C880A27006A41A5 /* Build configuration list for PBXNativeTarget "conscious" */;
 			buildPhases = (
+				CC8AFFFBA89E4666D98415D0 /* Check Pods Manifest.lock */,
 				DA3501971C880A27006A41A5 /* Sources */,
 				DA3501981C880A27006A41A5 /* Frameworks */,
 				DA3501991C880A27006A41A5 /* Resources */,
+				9652F8D4E83DDAFBBCE97463 /* Embed Pods Frameworks */,
+				2ED8234092F947F4A180874B /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -226,6 +266,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2ED8234092F947F4A180874B /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-conscious/Pods-conscious-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9652F8D4E83DDAFBBCE97463 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-conscious/Pods-conscious-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CC8AFFFBA89E4666D98415D0 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		DA3501971C880A27006A41A5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -234,6 +322,7 @@
 				DA3501B71C881140006A41A5 /* CategoryTableViewCell.swift in Sources */,
 				DA3501B31C88111A006A41A5 /* HistoryTableViewCell.swift in Sources */,
 				DA3501A11C880A27006A41A5 /* HomeTableViewController.swift in Sources */,
+				DA3501DA1C8CEDDB006A41A5 /* ReverbOutput.swift in Sources */,
 				DA3501BC1C881F07006A41A5 /* TimerViewController.swift in Sources */,
 				DA3501C01C8A749E006A41A5 /* CategoryViewController.swift in Sources */,
 				DA3501B51C88112D006A41A5 /* CallToActionTableViewCell.swift in Sources */,
@@ -355,23 +444,27 @@
 		};
 		DA3501AE1C880A27006A41A5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8F0A3CA90B5EAA920D64E307 /* Pods-conscious.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = conscious/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = world.conscious.conscious;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "conscious/conscios-Bridging-Header.h";
 			};
 			name = Debug;
 		};
 		DA3501AF1C880A27006A41A5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B24AE942D5D41CCB7D7F2C51 /* Pods-conscious.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = conscious/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = world.conscious.conscious;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "conscious/conscios-Bridging-Header.h";
 			};
 			name = Release;
 		};

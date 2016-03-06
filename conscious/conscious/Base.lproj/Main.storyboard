@@ -199,7 +199,7 @@
                         <viewControllerLayoutGuide type="top" id="UGd-i4-V6n"/>
                         <viewControllerLayoutGuide type="bottom" id="Miq-2g-tPr"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="7Yp-YZ-dmq">
+                    <view key="view" contentMode="scaleToFill" id="7Yp-YZ-dmq" customClass="EZAudioPlotGL">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -210,13 +210,40 @@
                                     <constraint firstAttribute="height" constant="30" id="eQ9-Y4-gbm"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QOs-e9-7hG">
+                                <rect key="frame" x="274" y="323" width="53" height="30"/>
+                                <state key="normal" title="Start ▶︎">
+                                    <color key="titleColor" red="0.0" green="0.085529393242230078" blue="0.7158958333333334" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="onStartButtonPressed:" destination="4fH-2B-HlF" eventType="touchUpInside" id="nte-6E-vey"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HgA-qZ-fIo">
+                                <rect key="frame" x="275.5" y="323" width="49" height="30"/>
+                                <state key="normal" title="Stop ◼︎">
+                                    <color key="titleColor" red="0.0" green="0.085529393240000001" blue="0.71589583329999995" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="onStopButtonPressed:" destination="4fH-2B-HlF" eventType="touchUpInside" id="iJ3-kY-Ha9"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.45104509922632685" green="0.70853810761007696" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="42w-4e-U6u" firstAttribute="centerX" secondItem="7Yp-YZ-dmq" secondAttribute="centerX" id="Oj6-uy-Job"/>
+                            <constraint firstItem="HgA-qZ-fIo" firstAttribute="top" secondItem="42w-4e-U6u" secondAttribute="bottom" constant="8" id="Sgb-ji-N9Y"/>
                             <constraint firstItem="42w-4e-U6u" firstAttribute="centerY" secondItem="7Yp-YZ-dmq" secondAttribute="centerY" id="e9I-04-t7g"/>
+                            <constraint firstItem="QOs-e9-7hG" firstAttribute="top" secondItem="42w-4e-U6u" secondAttribute="bottom" constant="8" id="fds-CU-EQO"/>
+                            <constraint firstItem="HgA-qZ-fIo" firstAttribute="centerX" secondItem="7Yp-YZ-dmq" secondAttribute="centerX" id="ieT-Ey-6lf"/>
+                            <constraint firstItem="QOs-e9-7hG" firstAttribute="centerX" secondItem="7Yp-YZ-dmq" secondAttribute="centerX" id="vUB-0g-9sQ"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="plot" destination="7Yp-YZ-dmq" id="17S-Ub-d1N"/>
+                        <outlet property="startButton" destination="QOs-e9-7hG" id="BWv-kX-S1e"/>
+                        <outlet property="stopButton" destination="HgA-qZ-fIo" id="x64-N5-S15"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GX9-ht-wHM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
