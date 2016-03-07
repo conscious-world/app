@@ -22,3 +22,4 @@ This app will help people start out or supplement their existing meditation prac
 
 ### Data Schema
 <img src='dataSchema.png' title='Data Schema' width='' alt='Data Schema' />
+To update, copy the dataSchema.xml file and load it [at this url](http://ondras.zarovi.cz/sql/demo/)
