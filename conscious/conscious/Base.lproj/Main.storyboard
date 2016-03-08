@@ -228,11 +228,19 @@
                                     <action selector="onStopButtonPressed:" destination="4fH-2B-HlF" eventType="touchUpInside" id="iJ3-kY-Ha9"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Max Freq" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3AE-sS-QWu">
+                                <rect key="frame" x="265" y="370" width="71" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.45104509922632685" green="0.70853810761007696" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="3AE-sS-QWu" firstAttribute="centerX" secondItem="7Yp-YZ-dmq" secondAttribute="centerX" id="CFH-PQ-oXi"/>
                             <constraint firstItem="42w-4e-U6u" firstAttribute="centerX" secondItem="7Yp-YZ-dmq" secondAttribute="centerX" id="Oj6-uy-Job"/>
                             <constraint firstItem="HgA-qZ-fIo" firstAttribute="top" secondItem="42w-4e-U6u" secondAttribute="bottom" constant="8" id="Sgb-ji-N9Y"/>
+                            <constraint firstItem="3AE-sS-QWu" firstAttribute="top" secondItem="HgA-qZ-fIo" secondAttribute="bottom" constant="17" id="cpL-QZ-tzK"/>
                             <constraint firstItem="42w-4e-U6u" firstAttribute="centerY" secondItem="7Yp-YZ-dmq" secondAttribute="centerY" id="e9I-04-t7g"/>
                             <constraint firstItem="QOs-e9-7hG" firstAttribute="top" secondItem="42w-4e-U6u" secondAttribute="bottom" constant="8" id="fds-CU-EQO"/>
                             <constraint firstItem="HgA-qZ-fIo" firstAttribute="centerX" secondItem="7Yp-YZ-dmq" secondAttribute="centerX" id="ieT-Ey-6lf"/>
@@ -240,6 +248,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="maxFrequencyLabel" destination="3AE-sS-QWu" id="MWA-kU-wQJ"/>
                         <outlet property="plot" destination="7Yp-YZ-dmq" id="17S-Ub-d1N"/>
                         <outlet property="startButton" destination="QOs-e9-7hG" id="BWv-kX-S1e"/>
                         <outlet property="stopButton" destination="HgA-qZ-fIo" id="x64-N5-S15"/>

@@ -18,7 +18,7 @@ The following **optional** features are implemented:
 - [] User will be able to record their state of mind before and after each session
 - [] User will be able to see a visualization of their practice/progress
 - [] User will be able to screencast w/ airplay
-- [] User will be able to rate meditations
+- [] User will be able to favorie meditations/media
 
 The following **bonus** features are implemented:
 - [] Apple TV Guided Mediation browse and listen

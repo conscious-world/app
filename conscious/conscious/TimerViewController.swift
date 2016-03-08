@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TimerViewController: UIViewController, EZMicrophoneDelegate {
+class TimerViewController: UIViewController, EZMicrophoneDelegate, EZAudioFFTDelegate {
     
     var settingButton : UIBarButtonItem?
     
@@ -16,6 +16,11 @@ class TimerViewController: UIViewController, EZMicrophoneDelegate {
     @IBOutlet weak var plot: EZAudioPlotGL?
     @IBOutlet weak var stopButton: UIButton!
     @IBOutlet weak var startButton: UIButton!
+    @IBOutlet weak var maxFrequencyLabel: UILabel!
+    let FFTViewControllerFFTWindowSize:vDSP_Length = 4096;
+    var fft: EZAudioFFTRolling!
+
+    
     var microphone: EZMicrophone!
     var session: AVAudioSession?
     var backgroundTaskId: UIBackgroundTaskIdentifier?
@@ -29,6 +34,7 @@ class TimerViewController: UIViewController, EZMicrophoneDelegate {
         super.viewDidLoad()
         styleButtons()
         session = AVAudioSession.sharedInstance()
+        self.maxFrequencyLabel.numberOfLines = 0;
         startAudio()
     }
     
@@ -81,11 +87,12 @@ class TimerViewController: UIViewController, EZMicrophoneDelegate {
         }
         
         
-        
-        EZMicrophone.sharedMicrophone().delegate = self
+        self.microphone = EZMicrophone.sharedMicrophone()
+        self.microphone.delegate = self
         //EZMicrophone.sharedMicrophone().startFetchingAudio()
-        EZMicrophone.sharedMicrophone().output = ReverbOutput.sharedOutput()
+        self.microphone.output = ReverbOutput.sharedOutput()
         //EZMicrophone.sharedMicrophone().output = DelayedOutput.sharedOutput()
+         self.fft = EZAudioFFTRolling.fftWithWindowSize(FFTViewControllerFFTWindowSize, sampleRate: Float(self.microphone.audioStreamBasicDescription().mSampleRate), delegate: self)
         
         do{
             try session!.overrideOutputAudioPort(AVAudioSessionPortOverride.Speaker)
@@ -99,6 +106,9 @@ class TimerViewController: UIViewController, EZMicrophoneDelegate {
     
     //EZMicrophoneDelegate
     func microphone(microphone: EZMicrophone!, hasAudioReceived buffer: UnsafeMutablePointer<UnsafeMutablePointer<Float>>, withBufferSize bufferSize: UInt32, withNumberOfChannels numberOfChannels: UInt32) {
+        
+        self.fft.computeFFTWithBuffer(buffer[0], withBufferSize: bufferSize)
+
         dispatch_async(dispatch_get_main_queue(), { () -> Void in
             self.plot?.updateBuffer(buffer[0], withBufferSize: bufferSize);
         });
@@ -127,6 +137,17 @@ class TimerViewController: UIViewController, EZMicrophoneDelegate {
             print("No vc found")
         }
     }
+    
+    func fft(fft: EZAudioFFT!, updatedWithFFTData fftData: UnsafeMutablePointer<Float>, bufferSize: vDSP_Length) {
+        let maxFrequency: Float = fft.maxFrequency
+        let noteName: String = EZAudioUtilities.noteNameStringForFrequency(maxFrequency, includeOctave: true)
+        //weak var weakSelf = self
+        dispatch_async(dispatch_get_main_queue(), {() -> Void in
+            self.maxFrequencyLabel.text = "Highest Note: \(noteName),\nFrequency: \(maxFrequency)"
+            //weakSelf.audioPlotFreq.updateBuffer(fftData, withBufferSize: UInt32(bufferSize))
+        })
+    }
+
     
 
     /*
