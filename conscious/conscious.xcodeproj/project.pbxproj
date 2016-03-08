@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		912C76A9713F2DCF4F3A5C84 /* libPods-conscious.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AF2A56554296CAD3E80F515 /* libPods-conscious.a */; };
+		5CBE7A7E1C8E53A900232BFA /* Particles.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5CBE7A7D1C8E53A900232BFA /* Particles.metal */; };
+		5CBE7A801C8E53C600232BFA /* ParticleLab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBE7A7F1C8E53C600232BFA /* ParticleLab.swift */; };
+		A5821C31E973E0AA765EDE67 /* Pods_conscious.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B02A2064DB3422AEFF960630 /* Pods_conscious.framework */; };
 		DA35019F1C880A27006A41A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA35019E1C880A27006A41A5 /* AppDelegate.swift */; };
 		DA3501A11C880A27006A41A5 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3501A01C880A27006A41A5 /* HomeTableViewController.swift */; };
 		DA3501A41C880A27006A41A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA3501A21C880A27006A41A5 /* Main.storyboard */; };
@@ -30,8 +32,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3AF2A56554296CAD3E80F515 /* libPods-conscious.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-conscious.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5CBE7A7D1C8E53A900232BFA /* Particles.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = Particles.metal; sourceTree = "<group>"; };
+		5CBE7A7F1C8E53C600232BFA /* ParticleLab.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParticleLab.swift; sourceTree = "<group>"; };
 		8F0A3CA90B5EAA920D64E307 /* Pods-conscious.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-conscious.debug.xcconfig"; path = "Pods/Target Support Files/Pods-conscious/Pods-conscious.debug.xcconfig"; sourceTree = "<group>"; };
+		B02A2064DB3422AEFF960630 /* Pods_conscious.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_conscious.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B24AE942D5D41CCB7D7F2C51 /* Pods-conscious.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-conscious.release.xcconfig"; path = "Pods/Target Support Files/Pods-conscious/Pods-conscious.release.xcconfig"; sourceTree = "<group>"; };
 		DA35019B1C880A27006A41A5 /* conscious.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = conscious.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA35019E1C880A27006A41A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -62,7 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				912C76A9713F2DCF4F3A5C84 /* libPods-conscious.a in Frameworks */,
+				A5821C31E973E0AA765EDE67 /* Pods_conscious.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,10 +82,19 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		5CBE7A7C1C8E539C00232BFA /* ParticleLab */ = {
+			isa = PBXGroup;
+			children = (
+				5CBE7A7D1C8E53A900232BFA /* Particles.metal */,
+				5CBE7A7F1C8E53C600232BFA /* ParticleLab.swift */,
+			);
+			name = ParticleLab;
+			sourceTree = "<group>";
+		};
 		D9D6E06B6FE8CF0D49E40748 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				3AF2A56554296CAD3E80F515 /* libPods-conscious.a */,
+				B02A2064DB3422AEFF960630 /* Pods_conscious.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -107,6 +120,7 @@
 		DA35019D1C880A27006A41A5 /* conscious */ = {
 			isa = PBXGroup;
 			children = (
+				5CBE7A7C1C8E539C00232BFA /* ParticleLab */,
 				DA3501D21C8CE4D0006A41A5 /* Audio */,
 				DA3501C71C8CCDD3006A41A5 /* Models */,
 				DA3501BA1C881ED3006A41A5 /* ViewControllers */,
@@ -323,9 +337,11 @@
 				DA3501B31C88111A006A41A5 /* HistoryTableViewCell.swift in Sources */,
 				DA3501A11C880A27006A41A5 /* HomeTableViewController.swift in Sources */,
 				DA3501DA1C8CEDDB006A41A5 /* ReverbOutput.swift in Sources */,
+				5CBE7A801C8E53C600232BFA /* ParticleLab.swift in Sources */,
 				DA3501BC1C881F07006A41A5 /* TimerViewController.swift in Sources */,
 				DA3501C01C8A749E006A41A5 /* CategoryViewController.swift in Sources */,
 				DA3501B51C88112D006A41A5 /* CallToActionTableViewCell.swift in Sources */,
+				5CBE7A7E1C8E53A900232BFA /* Particles.metal in Sources */,
 				DA3501D11C8CD27B006A41A5 /* TimerSettingsTableViewController.swift in Sources */,
 				DA3501CB1C8CCE00006A41A5 /* History.swift in Sources */,
 				DA3501B91C88115B006A41A5 /* MediaTableViewCell.swift in Sources */,
@@ -451,7 +467,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = world.conscious.conscious;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "conscious/conscios-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 			};
 			name = Debug;
 		};
@@ -464,7 +480,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = world.conscious.conscious;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "conscious/conscios-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 			};
 			name = Release;
 		};

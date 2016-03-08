@@ -9,6 +9,7 @@
 #ifndef conscios_Bridging_Header_h
 #define conscios_Bridging_Header_h
 
-#import <EZAudio.h>
+//
+//#import <EZAudio.h>
 
 #endif /* conscios_Bridging_Header_h */
