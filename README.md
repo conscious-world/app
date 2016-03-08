@@ -12,6 +12,7 @@ The following **required** functionality is completed:
 [] User will be able to have silence with audio reminders at time intervals so they can keep track of time
 [] User will be able to chant and have the illusion of being surrounded by others chanting
 [] User will be able to discover new meditations
+[] User will be prompted to take an action upon launch the app based on it either being the first lauch or what they did last time
 
 The following **optional** features are implemented:
 [] User will be able to record their state of mind before and after each session
@@ -20,10 +21,12 @@ The following **optional** features are implemented:
 [] User will be able to rate meditations
 
 The following **bonus** features are implemented:
+[] Apple TV Guided Mediation browse and listen
 [] User will be able to record meditations
 [] User will be able to do live guided meditation
 [] User can share mediation with others
 [] User can follow other users
+[] Apple watch 
 [] User can comment on other meditations
 [] User can like other mediations
 
