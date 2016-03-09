@@ -19,6 +19,7 @@ class TimerSettings{
     var intervalSeconds: Int = 300
     var reminderTone: String = "bell1"
     var backgroundSoundFile: String = ""
+    var backgroundGif: String = "cloudssf"
     var AudioFeedback: AudioFeebackEffects? = nil
     
     init(){

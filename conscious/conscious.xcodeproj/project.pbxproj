@@ -27,6 +27,12 @@
 		DA3501D11C8CD27B006A41A5 /* TimerSettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3501D01C8CD27B006A41A5 /* TimerSettingsTableViewController.swift */; };
 		DA3501D61C8CE4FC006A41A5 /* MARC5MinuteBreathing.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DA3501D51C8CE4FC006A41A5 /* MARC5MinuteBreathing.mp3 */; };
 		DA3501DA1C8CEDDB006A41A5 /* ReverbOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3501D91C8CEDDB006A41A5 /* ReverbOutput.swift */; };
+		DA3501E21C8FDECA006A41A5 /* beach1.gif in Resources */ = {isa = PBXBuildFile; fileRef = DA3501DC1C8FDECA006A41A5 /* beach1.gif */; };
+		DA3501E31C8FDECA006A41A5 /* cloudssf.gif in Resources */ = {isa = PBXBuildFile; fileRef = DA3501DD1C8FDECA006A41A5 /* cloudssf.gif */; };
+		DA3501E41C8FDECA006A41A5 /* river1.gif in Resources */ = {isa = PBXBuildFile; fileRef = DA3501DE1C8FDECA006A41A5 /* river1.gif */; };
+		DA3501E51C8FDECA006A41A5 /* sunset1.gif in Resources */ = {isa = PBXBuildFile; fileRef = DA3501DF1C8FDECA006A41A5 /* sunset1.gif */; };
+		DA3501E61C8FDECA006A41A5 /* waterfall1.gif in Resources */ = {isa = PBXBuildFile; fileRef = DA3501E01C8FDECA006A41A5 /* waterfall1.gif */; };
+		DA3501E71C8FDECA006A41A5 /* waterfall2.gif in Resources */ = {isa = PBXBuildFile; fileRef = DA3501E11C8FDECA006A41A5 /* waterfall2.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +61,12 @@
 		DA3501D51C8CE4FC006A41A5 /* MARC5MinuteBreathing.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = MARC5MinuteBreathing.mp3; sourceTree = "<group>"; };
 		DA3501D71C8CE9EA006A41A5 /* conscios-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "conscios-Bridging-Header.h"; sourceTree = "<group>"; };
 		DA3501D91C8CEDDB006A41A5 /* ReverbOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReverbOutput.swift; sourceTree = "<group>"; };
+		DA3501DC1C8FDECA006A41A5 /* beach1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = beach1.gif; sourceTree = "<group>"; };
+		DA3501DD1C8FDECA006A41A5 /* cloudssf.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = cloudssf.gif; sourceTree = "<group>"; };
+		DA3501DE1C8FDECA006A41A5 /* river1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = river1.gif; sourceTree = "<group>"; };
+		DA3501DF1C8FDECA006A41A5 /* sunset1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = sunset1.gif; sourceTree = "<group>"; };
+		DA3501E01C8FDECA006A41A5 /* waterfall1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = waterfall1.gif; sourceTree = "<group>"; };
+		DA3501E11C8FDECA006A41A5 /* waterfall2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = waterfall2.gif; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +119,7 @@
 		DA35019D1C880A27006A41A5 /* conscious */ = {
 			isa = PBXGroup;
 			children = (
+				DA3501DB1C8FDDA6006A41A5 /* backgroundImages */,
 				DA3501D21C8CE4D0006A41A5 /* Audio */,
 				DA3501C71C8CCDD3006A41A5 /* Models */,
 				DA3501BA1C881ED3006A41A5 /* ViewControllers */,
@@ -196,6 +209,19 @@
 			name = AudioEffects;
 			sourceTree = "<group>";
 		};
+		DA3501DB1C8FDDA6006A41A5 /* backgroundImages */ = {
+			isa = PBXGroup;
+			children = (
+				DA3501DC1C8FDECA006A41A5 /* beach1.gif */,
+				DA3501DD1C8FDECA006A41A5 /* cloudssf.gif */,
+				DA3501DE1C8FDECA006A41A5 /* river1.gif */,
+				DA3501DF1C8FDECA006A41A5 /* sunset1.gif */,
+				DA3501E01C8FDECA006A41A5 /* waterfall1.gif */,
+				DA3501E11C8FDECA006A41A5 /* waterfall2.gif */,
+			);
+			name = backgroundImages;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -259,8 +285,14 @@
 			files = (
 				DA3501D61C8CE4FC006A41A5 /* MARC5MinuteBreathing.mp3 in Resources */,
 				DA3501A91C880A27006A41A5 /* LaunchScreen.storyboard in Resources */,
+				DA3501E51C8FDECA006A41A5 /* sunset1.gif in Resources */,
+				DA3501E61C8FDECA006A41A5 /* waterfall1.gif in Resources */,
 				DA3501A61C880A27006A41A5 /* Assets.xcassets in Resources */,
+				DA3501E31C8FDECA006A41A5 /* cloudssf.gif in Resources */,
+				DA3501E71C8FDECA006A41A5 /* waterfall2.gif in Resources */,
+				DA3501E41C8FDECA006A41A5 /* river1.gif in Resources */,
 				DA3501A41C880A27006A41A5 /* Main.storyboard in Resources */,
+				DA3501E21C8FDECA006A41A5 /* beach1.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -199,10 +199,14 @@
                         <viewControllerLayoutGuide type="top" id="UGd-i4-V6n"/>
                         <viewControllerLayoutGuide type="bottom" id="Miq-2g-tPr"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="7Yp-YZ-dmq" customClass="EZAudioPlotGL">
+                    <view key="view" contentMode="scaleToFill" id="7Yp-YZ-dmq">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NY3-Ye-lCY" customClass="EZAudioPlotGL">
+                                <rect key="frame" x="11" y="0.0" width="569" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clock-7" translatesAutoresizingMaskIntoConstraints="NO" id="42w-4e-U6u">
                                 <rect key="frame" x="285" y="285" width="30" height="30"/>
                                 <constraints>
@@ -220,7 +224,8 @@
                                 </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HgA-qZ-fIo">
-                                <rect key="frame" x="275.5" y="323" width="49" height="30"/>
+                                <rect key="frame" x="275" y="323" width="49" height="30"/>
+                                <accessibility key="accessibilityConfiguration" identifier="Play"/>
                                 <state key="normal" title="Stop ◼︎">
                                     <color key="titleColor" red="0.0" green="0.085529393240000001" blue="0.71589583329999995" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -229,29 +234,57 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Max Freq" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3AE-sS-QWu">
-                                <rect key="frame" x="265" y="370" width="71" height="21"/>
+                                <rect key="frame" x="265" y="370" width="71" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n5k-li-mmu">
+                                <rect key="frame" x="26" y="28" width="71.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bO6-n5-pfX" customClass="UIWebView">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.45104509922632685" green="0.70853810761007696" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="3AE-sS-QWu" firstAttribute="top" secondItem="NY3-Ye-lCY" secondAttribute="bottom" id="1HG-pr-e3H"/>
+                            <constraint firstItem="bO6-n5-pfX" firstAttribute="leading" secondItem="7Yp-YZ-dmq" secondAttribute="leading" id="72g-uv-UTL"/>
                             <constraint firstItem="3AE-sS-QWu" firstAttribute="centerX" secondItem="7Yp-YZ-dmq" secondAttribute="centerX" id="CFH-PQ-oXi"/>
+                            <constraint firstAttribute="trailing" secondItem="bO6-n5-pfX" secondAttribute="trailing" id="O6C-g2-YSf"/>
                             <constraint firstItem="42w-4e-U6u" firstAttribute="centerX" secondItem="7Yp-YZ-dmq" secondAttribute="centerX" id="Oj6-uy-Job"/>
                             <constraint firstItem="HgA-qZ-fIo" firstAttribute="top" secondItem="42w-4e-U6u" secondAttribute="bottom" constant="8" id="Sgb-ji-N9Y"/>
+                            <constraint firstItem="NY3-Ye-lCY" firstAttribute="top" secondItem="7Yp-YZ-dmq" secondAttribute="topMargin" id="Vcf-U1-N33"/>
                             <constraint firstItem="3AE-sS-QWu" firstAttribute="top" secondItem="HgA-qZ-fIo" secondAttribute="bottom" constant="17" id="cpL-QZ-tzK"/>
+                            <constraint firstItem="NY3-Ye-lCY" firstAttribute="leading" secondItem="7Yp-YZ-dmq" secondAttribute="leadingMargin" id="d7z-DD-HPM"/>
                             <constraint firstItem="42w-4e-U6u" firstAttribute="centerY" secondItem="7Yp-YZ-dmq" secondAttribute="centerY" id="e9I-04-t7g"/>
                             <constraint firstItem="QOs-e9-7hG" firstAttribute="top" secondItem="42w-4e-U6u" secondAttribute="bottom" constant="8" id="fds-CU-EQO"/>
                             <constraint firstItem="HgA-qZ-fIo" firstAttribute="centerX" secondItem="7Yp-YZ-dmq" secondAttribute="centerX" id="ieT-Ey-6lf"/>
+                            <constraint firstItem="bO6-n5-pfX" firstAttribute="top" secondItem="7Yp-YZ-dmq" secondAttribute="top" id="nv3-80-HBW"/>
+                            <constraint firstItem="n5k-li-mmu" firstAttribute="top" secondItem="UGd-i4-V6n" secondAttribute="bottom" constant="8" id="oWT-q6-c2u"/>
+                            <constraint firstItem="Miq-2g-tPr" firstAttribute="top" secondItem="NY3-Ye-lCY" secondAttribute="bottom" id="qXy-G2-CfU"/>
+                            <constraint firstItem="n5k-li-mmu" firstAttribute="leading" secondItem="7Yp-YZ-dmq" secondAttribute="leading" constant="26" id="qlZ-sD-ByS"/>
+                            <constraint firstItem="NY3-Ye-lCY" firstAttribute="trailing" secondItem="7Yp-YZ-dmq" secondAttribute="trailingMargin" id="ucJ-6U-yhm"/>
                             <constraint firstItem="QOs-e9-7hG" firstAttribute="centerX" secondItem="7Yp-YZ-dmq" secondAttribute="centerX" id="vUB-0g-9sQ"/>
+                            <constraint firstItem="Miq-2g-tPr" firstAttribute="top" secondItem="bO6-n5-pfX" secondAttribute="bottom" id="x5I-rV-tDc"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="1HG-pr-e3H"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
+                        <outlet property="backgroundView" destination="bO6-n5-pfX" id="3BB-LA-CE9"/>
                         <outlet property="maxFrequencyLabel" destination="3AE-sS-QWu" id="MWA-kU-wQJ"/>
-                        <outlet property="plot" destination="7Yp-YZ-dmq" id="17S-Ub-d1N"/>
+                        <outlet property="plot" destination="NY3-Ye-lCY" id="hGv-i8-uru"/>
                         <outlet property="startButton" destination="QOs-e9-7hG" id="BWv-kX-S1e"/>
                         <outlet property="stopButton" destination="HgA-qZ-fIo" id="x64-N5-S15"/>
+                        <outlet property="timerLabel" destination="n5k-li-mmu" id="6ij-C8-Csm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GX9-ht-wHM" userLabel="First Responder" sceneMemberID="firstResponder"/>

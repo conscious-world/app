@@ -14,12 +14,17 @@ class TimerViewController: UIViewController, EZMicrophoneDelegate, EZAudioFFTDel
     
     
     @IBOutlet weak var plot: EZAudioPlotGL?
+    @IBOutlet weak var backgroundView: UIWebView!
     @IBOutlet weak var stopButton: UIButton!
     @IBOutlet weak var startButton: UIButton!
     @IBOutlet weak var maxFrequencyLabel: UILabel!
     let FFTViewControllerFFTWindowSize:vDSP_Length = 4096;
     var fft: EZAudioFFTRolling!
-
+    var timer = NSTimer()
+    var counter = 0;
+    var userSettings = TimerSettings()
+    
+    @IBOutlet weak var timerLabel: UILabel!
     
     var microphone: EZMicrophone!
     var session: AVAudioSession?
@@ -32,10 +37,15 @@ class TimerViewController: UIViewController, EZMicrophoneDelegate, EZAudioFFTDel
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.plot?.backgroundColor = UIColor.clearColor()
+        setBackground()
+        self.view.sendSubviewToBack(backgroundView)
         styleButtons()
         session = AVAudioSession.sharedInstance()
         self.maxFrequencyLabel.numberOfLines = 0;
         startAudio()
+        
+        timerLabel.hidden = true
     }
     
     func styleButtons(){
@@ -52,23 +62,53 @@ class TimerViewController: UIViewController, EZMicrophoneDelegate, EZAudioFFTDel
         EZMicrophone.sharedMicrophone().stopFetchingAudio()
         sender.hidden = true
         startButton.hidden = false
+        //timerLabel.hidden = true
+        timer.invalidate()
     }
     
     @IBAction func onStartButtonPressed(sender: UIButton) {
         //startAudio()
+        timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("updateCounter"), userInfo: nil, repeats: true)
         sender.hidden = true
         stopButton.hidden = false
+        timerLabel.hidden = false
         EZMicrophone.sharedMicrophone().startFetchingAudio()
         EZOutput.sharedOutput().startPlayback();
         backgroundTaskId = UIApplication.sharedApplication().beginBackgroundTaskWithExpirationHandler(nil)
-        
+    }
+    
+    func updateCounter(){
+        timerLabel.text = timeFormatted(counter)
+        counter = counter + 1
+    }
+    
+    func timeFormatted(totalSeconds: Int) -> String {
+        let seconds: Int = totalSeconds % 60
+        let minutes: Int = (totalSeconds / 60) % 60
+        let hours: Int = totalSeconds / 3600
+        return String(format: "%02d:%02d:%02d", hours, minutes, seconds)
+    }
+    
+    func setBackground(){
+        let path =  NSBundle.mainBundle().bundlePath
+        let baseURL = NSURL.fileURLWithPath(path)
+        let imageHTML  = "<!DOCTYPE html>" +
+            "<html lang=\"ja\"><head>" +
+            "<style type=\"text/css\">" +
+            "html{background: url('\(userSettings.backgroundGif).gif') no-repeat center center fixed;" +
+            " -webkit-background-size: cover; background-size: cover;}" +
+            "</style></head><body></body></html>"
+
+        backgroundView.loadHTMLString(imageHTML, baseURL: baseURL)
+        backgroundView.userInteractionEnabled = false;
     }
     
     
     
     func startAudio()
     {
-        self.plot?.backgroundColor = UIColor(red:11.0/255.0, green: 102.0/255.0, blue: 255.0/255.0, alpha: 1.0);
+        //self.plot?.backgroundColor = UIColor(red:11.0/255.0, green: 102.0/255.0, blue: 255.0/255.0, alpha: 1.0);
+        self.plot?.backgroundColor = UIColor.clearColor()
         self.plot?.shouldFill = true
         self.plot?.shouldMirror = true
         
@@ -86,7 +126,7 @@ class TimerViewController: UIViewController, EZMicrophoneDelegate, EZAudioFFTDel
             NSLog("Error setting up audio session active")
         }
         
-        
+        self.plot?.backgroundColor = UIColor.clearColor()
         self.microphone = EZMicrophone.sharedMicrophone()
         self.microphone.delegate = self
         //EZMicrophone.sharedMicrophone().startFetchingAudio()
