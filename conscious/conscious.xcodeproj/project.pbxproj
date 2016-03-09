@@ -33,6 +33,10 @@
 		DA3501E51C8FDECA006A41A5 /* sunset1.gif in Resources */ = {isa = PBXBuildFile; fileRef = DA3501DF1C8FDECA006A41A5 /* sunset1.gif */; };
 		DA3501E61C8FDECA006A41A5 /* waterfall1.gif in Resources */ = {isa = PBXBuildFile; fileRef = DA3501E01C8FDECA006A41A5 /* waterfall1.gif */; };
 		DA3501E71C8FDECA006A41A5 /* waterfall2.gif in Resources */ = {isa = PBXBuildFile; fileRef = DA3501E11C8FDECA006A41A5 /* waterfall2.gif */; };
+		DA3501E91C8FF1AB006A41A5 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA3501E81C8FF1AB006A41A5 /* AudioToolbox.framework */; };
+		DA3501EB1C8FF439006A41A5 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA3501EA1C8FF439006A41A5 /* AVFoundation.framework */; };
+		DA3501EF1C8FF6F9006A41A5 /* bowl1hit.wav in Resources */ = {isa = PBXBuildFile; fileRef = DA3501EE1C8FF6F9006A41A5 /* bowl1hit.wav */; };
+		DA3501F11C8FFBC0006A41A5 /* rain-06.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DA3501F01C8FFBC0006A41A5 /* rain-06.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,6 +71,10 @@
 		DA3501DF1C8FDECA006A41A5 /* sunset1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = sunset1.gif; sourceTree = "<group>"; };
 		DA3501E01C8FDECA006A41A5 /* waterfall1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = waterfall1.gif; sourceTree = "<group>"; };
 		DA3501E11C8FDECA006A41A5 /* waterfall2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = waterfall2.gif; sourceTree = "<group>"; };
+		DA3501E81C8FF1AB006A41A5 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		DA3501EA1C8FF439006A41A5 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		DA3501EE1C8FF6F9006A41A5 /* bowl1hit.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = bowl1hit.wav; sourceTree = "<group>"; };
+		DA3501F01C8FFBC0006A41A5 /* rain-06.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "rain-06.mp3"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +82,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA3501EB1C8FF439006A41A5 /* AVFoundation.framework in Frameworks */,
+				DA3501E91C8FF1AB006A41A5 /* AudioToolbox.framework in Frameworks */,
 				912C76A9713F2DCF4F3A5C84 /* libPods-conscious.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -93,6 +103,8 @@
 		D9D6E06B6FE8CF0D49E40748 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DA3501EA1C8FF439006A41A5 /* AVFoundation.framework */,
+				DA3501E81C8FF1AB006A41A5 /* AudioToolbox.framework */,
 				3AF2A56554296CAD3E80F515 /* libPods-conscious.a */,
 			);
 			name = Frameworks;
@@ -197,6 +209,8 @@
 		DA3501D41C8CE4EC006A41A5 /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				DA3501F01C8FFBC0006A41A5 /* rain-06.mp3 */,
+				DA3501EE1C8FF6F9006A41A5 /* bowl1hit.wav */,
 			);
 			name = Sounds;
 			sourceTree = "<group>";
@@ -257,6 +271,7 @@
 				TargetAttributes = {
 					DA35019A1C880A27006A41A5 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 4AS52V979F;
 					};
 				};
 			};
@@ -287,7 +302,9 @@
 				DA3501A91C880A27006A41A5 /* LaunchScreen.storyboard in Resources */,
 				DA3501E51C8FDECA006A41A5 /* sunset1.gif in Resources */,
 				DA3501E61C8FDECA006A41A5 /* waterfall1.gif in Resources */,
+				DA3501EF1C8FF6F9006A41A5 /* bowl1hit.wav in Resources */,
 				DA3501A61C880A27006A41A5 /* Assets.xcassets in Resources */,
+				DA3501F11C8FFBC0006A41A5 /* rain-06.mp3 in Resources */,
 				DA3501E31C8FDECA006A41A5 /* cloudssf.gif in Resources */,
 				DA3501E71C8FDECA006A41A5 /* waterfall2.gif in Resources */,
 				DA3501E41C8FDECA006A41A5 /* river1.gif in Resources */,
@@ -479,10 +496,13 @@
 			baseConfigurationReference = 8F0A3CA90B5EAA920D64E307 /* Pods-conscious.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = conscious/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = world.conscious.conscious;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "conscious/conscios-Bridging-Header.h";
 			};
 			name = Debug;
@@ -492,10 +512,13 @@
 			baseConfigurationReference = B24AE942D5D41CCB7D7F2C51 /* Pods-conscious.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = conscious/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = world.conscious.conscious;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "conscious/conscios-Bridging-Header.h";
 			};
 			name = Release;

@@ -10,5 +10,6 @@
 #define conscios_Bridging_Header_h
 
 #import <EZAudio.h>
+#import <AudioToolbox/AudioToolbox.h>
 
 #endif /* conscios_Bridging_Header_h */

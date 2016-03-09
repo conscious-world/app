@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AudioToolbox
 
 class TimerViewController: UIViewController, EZMicrophoneDelegate, EZAudioFFTDelegate {
     
@@ -44,7 +45,6 @@ class TimerViewController: UIViewController, EZMicrophoneDelegate, EZAudioFFTDel
         session = AVAudioSession.sharedInstance()
         self.maxFrequencyLabel.numberOfLines = 0;
         startAudio()
-        
         timerLabel.hidden = true
     }
     
@@ -60,6 +60,7 @@ class TimerViewController: UIViewController, EZMicrophoneDelegate, EZAudioFFTDel
     @IBAction func onStopButtonPressed(sender: UIButton) {
         EZOutput.sharedOutput().stopPlayback()
         EZMicrophone.sharedMicrophone().stopFetchingAudio()
+        userSettings.stopBackgroundSound()
         sender.hidden = true
         startButton.hidden = false
         //timerLabel.hidden = true
@@ -68,6 +69,7 @@ class TimerViewController: UIViewController, EZMicrophoneDelegate, EZAudioFFTDel
     
     @IBAction func onStartButtonPressed(sender: UIButton) {
         //startAudio()
+        userSettings.playBackgroundSound()
         timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("updateCounter"), userInfo: nil, repeats: true)
         sender.hidden = true
         stopButton.hidden = false
@@ -78,6 +80,11 @@ class TimerViewController: UIViewController, EZMicrophoneDelegate, EZAudioFFTDel
     }
     
     func updateCounter(){
+        print(counter % userSettings.intervalSeconds)
+        if(counter % userSettings.intervalSeconds == 0){
+            userSettings.playReminderTone()
+        }
+        
         timerLabel.text = timeFormatted(counter)
         counter = counter + 1
     }
@@ -107,8 +114,8 @@ class TimerViewController: UIViewController, EZMicrophoneDelegate, EZAudioFFTDel
     
     func startAudio()
     {
-        //self.plot?.backgroundColor = UIColor(red:11.0/255.0, green: 102.0/255.0, blue: 255.0/255.0, alpha: 1.0);
         self.plot?.backgroundColor = UIColor.clearColor()
+        self.plot?.plotType = EZPlotType.Rolling
         self.plot?.shouldFill = true
         self.plot?.shouldMirror = true
         
@@ -155,7 +162,6 @@ class TimerViewController: UIViewController, EZMicrophoneDelegate, EZAudioFFTDel
     }
     
     override func viewWillAppear(animated: Bool) {
-        
         self.title = "Timed Mediation"
         settingButton = UIBarButtonItem(title: "⚙", style: UIBarButtonItemStyle.Plain, target: self, action: "onSettingsBarBtnTap")
         self.navigationItem.rightBarButtonItem = settingButton

@@ -203,8 +203,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NY3-Ye-lCY" customClass="EZAudioPlotGL">
-                                <rect key="frame" x="11" y="0.0" width="569" height="600"/>
+                            <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NY3-Ye-lCY" customClass="EZAudioPlotGL">
+                                <rect key="frame" x="0.0" y="300" width="600" height="300"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clock-7" translatesAutoresizingMaskIntoConstraints="NO" id="42w-4e-U6u">
@@ -255,18 +255,20 @@
                             <constraint firstItem="3AE-sS-QWu" firstAttribute="top" secondItem="NY3-Ye-lCY" secondAttribute="bottom" id="1HG-pr-e3H"/>
                             <constraint firstItem="bO6-n5-pfX" firstAttribute="leading" secondItem="7Yp-YZ-dmq" secondAttribute="leading" id="72g-uv-UTL"/>
                             <constraint firstItem="3AE-sS-QWu" firstAttribute="centerX" secondItem="7Yp-YZ-dmq" secondAttribute="centerX" id="CFH-PQ-oXi"/>
+                            <constraint firstAttribute="trailing" secondItem="NY3-Ye-lCY" secondAttribute="trailing" id="JqI-1E-Qj9"/>
+                            <constraint firstItem="NY3-Ye-lCY" firstAttribute="leading" secondItem="7Yp-YZ-dmq" secondAttribute="leading" id="N5A-c4-2us"/>
                             <constraint firstAttribute="trailing" secondItem="bO6-n5-pfX" secondAttribute="trailing" id="O6C-g2-YSf"/>
                             <constraint firstItem="42w-4e-U6u" firstAttribute="centerX" secondItem="7Yp-YZ-dmq" secondAttribute="centerX" id="Oj6-uy-Job"/>
                             <constraint firstItem="HgA-qZ-fIo" firstAttribute="top" secondItem="42w-4e-U6u" secondAttribute="bottom" constant="8" id="Sgb-ji-N9Y"/>
-                            <constraint firstItem="NY3-Ye-lCY" firstAttribute="top" secondItem="7Yp-YZ-dmq" secondAttribute="topMargin" id="Vcf-U1-N33"/>
                             <constraint firstItem="3AE-sS-QWu" firstAttribute="top" secondItem="HgA-qZ-fIo" secondAttribute="bottom" constant="17" id="cpL-QZ-tzK"/>
                             <constraint firstItem="NY3-Ye-lCY" firstAttribute="leading" secondItem="7Yp-YZ-dmq" secondAttribute="leadingMargin" id="d7z-DD-HPM"/>
                             <constraint firstItem="42w-4e-U6u" firstAttribute="centerY" secondItem="7Yp-YZ-dmq" secondAttribute="centerY" id="e9I-04-t7g"/>
                             <constraint firstItem="QOs-e9-7hG" firstAttribute="top" secondItem="42w-4e-U6u" secondAttribute="bottom" constant="8" id="fds-CU-EQO"/>
                             <constraint firstItem="HgA-qZ-fIo" firstAttribute="centerX" secondItem="7Yp-YZ-dmq" secondAttribute="centerX" id="ieT-Ey-6lf"/>
+                            <constraint firstItem="NY3-Ye-lCY" firstAttribute="top" secondItem="7Yp-YZ-dmq" secondAttribute="top" constant="300" id="l96-FQ-32A"/>
+                            <constraint firstItem="Miq-2g-tPr" firstAttribute="top" secondItem="NY3-Ye-lCY" secondAttribute="bottom" id="m1U-Ff-GI2"/>
                             <constraint firstItem="bO6-n5-pfX" firstAttribute="top" secondItem="7Yp-YZ-dmq" secondAttribute="top" id="nv3-80-HBW"/>
                             <constraint firstItem="n5k-li-mmu" firstAttribute="top" secondItem="UGd-i4-V6n" secondAttribute="bottom" constant="8" id="oWT-q6-c2u"/>
-                            <constraint firstItem="Miq-2g-tPr" firstAttribute="top" secondItem="NY3-Ye-lCY" secondAttribute="bottom" id="qXy-G2-CfU"/>
                             <constraint firstItem="n5k-li-mmu" firstAttribute="leading" secondItem="7Yp-YZ-dmq" secondAttribute="leading" constant="26" id="qlZ-sD-ByS"/>
                             <constraint firstItem="NY3-Ye-lCY" firstAttribute="trailing" secondItem="7Yp-YZ-dmq" secondAttribute="trailingMargin" id="ucJ-6U-yhm"/>
                             <constraint firstItem="QOs-e9-7hG" firstAttribute="centerX" secondItem="7Yp-YZ-dmq" secondAttribute="centerX" id="vUB-0g-9sQ"/>
@@ -274,6 +276,8 @@
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="d7z-DD-HPM"/>
+                                <exclude reference="ucJ-6U-yhm"/>
                                 <exclude reference="1HG-pr-e3H"/>
                             </mask>
                         </variation>
@@ -567,7 +571,8 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="q8l-g0-1zT" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Zrr-EI-UbB">
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <navigationBar key="navigationBar" alpha="0.65000000000000002" contentMode="scaleToFill" id="Zrr-EI-UbB">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
