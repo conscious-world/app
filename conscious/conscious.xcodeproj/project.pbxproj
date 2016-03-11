@@ -37,6 +37,7 @@
 		DA3501EB1C8FF439006A41A5 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA3501EA1C8FF439006A41A5 /* AVFoundation.framework */; };
 		DA3501EF1C8FF6F9006A41A5 /* bowl1hit.wav in Resources */ = {isa = PBXBuildFile; fileRef = DA3501EE1C8FF6F9006A41A5 /* bowl1hit.wav */; };
 		DA3501F11C8FFBC0006A41A5 /* rain-06.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DA3501F01C8FFBC0006A41A5 /* rain-06.mp3 */; };
+		DA3501F61C926A34006A41A5 /* timed_meditation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA3501F51C926A34006A41A5 /* timed_meditation.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -75,6 +76,7 @@
 		DA3501EA1C8FF439006A41A5 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		DA3501EE1C8FF6F9006A41A5 /* bowl1hit.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = bowl1hit.wav; sourceTree = "<group>"; };
 		DA3501F01C8FFBC0006A41A5 /* rain-06.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "rain-06.mp3"; sourceTree = "<group>"; };
+		DA3501F51C926A34006A41A5 /* timed_meditation.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = timed_meditation.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +133,7 @@
 		DA35019D1C880A27006A41A5 /* conscious */ = {
 			isa = PBXGroup;
 			children = (
+				DA3501F41C926A11006A41A5 /* timed_mediation */,
 				DA3501DB1C8FDDA6006A41A5 /* backgroundImages */,
 				DA3501D21C8CE4D0006A41A5 /* Audio */,
 				DA3501C71C8CCDD3006A41A5 /* Models */,
@@ -169,10 +172,8 @@
 			isa = PBXGroup;
 			children = (
 				DA3501A01C880A27006A41A5 /* HomeTableViewController.swift */,
-				DA3501BB1C881F07006A41A5 /* TimerViewController.swift */,
 				DA3501BF1C8A749E006A41A5 /* CategoryViewController.swift */,
 				DA3501C11C8A7E9A006A41A5 /* MediaViewController.swift */,
-				DA3501D01C8CD27B006A41A5 /* TimerSettingsTableViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -184,7 +185,6 @@
 				DA3501C81C8CCDF5006A41A5 /* Category.swift */,
 				DA3501CA1C8CCE00006A41A5 /* History.swift */,
 				DA3501CC1C8CCE23006A41A5 /* Media.swift */,
-				DA3501CE1C8CCE3D006A41A5 /* TimerSettings.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -234,6 +234,33 @@
 				DA3501E11C8FDECA006A41A5 /* waterfall2.gif */,
 			);
 			name = backgroundImages;
+			sourceTree = "<group>";
+		};
+		DA3501F41C926A11006A41A5 /* timed_mediation */ = {
+			isa = PBXGroup;
+			children = (
+				DA3501F81C926A7B006A41A5 /* Controllers */,
+				DA3501F71C926A6B006A41A5 /* Models */,
+				DA3501F51C926A34006A41A5 /* timed_meditation.storyboard */,
+			);
+			name = timed_mediation;
+			sourceTree = "<group>";
+		};
+		DA3501F71C926A6B006A41A5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DA3501CE1C8CCE3D006A41A5 /* TimerSettings.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		DA3501F81C926A7B006A41A5 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DA3501BB1C881F07006A41A5 /* TimerViewController.swift */,
+				DA3501D01C8CD27B006A41A5 /* TimerSettingsTableViewController.swift */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -307,6 +334,7 @@
 				DA3501F11C8FFBC0006A41A5 /* rain-06.mp3 in Resources */,
 				DA3501E31C8FDECA006A41A5 /* cloudssf.gif in Resources */,
 				DA3501E71C8FDECA006A41A5 /* waterfall2.gif in Resources */,
+				DA3501F61C926A34006A41A5 /* timed_meditation.storyboard in Resources */,
 				DA3501E41C8FDECA006A41A5 /* river1.gif in Resources */,
 				DA3501A41C880A27006A41A5 /* Main.storyboard in Resources */,
 				DA3501E21C8FDECA006A41A5 /* beach1.gif in Resources */,

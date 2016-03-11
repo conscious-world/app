@@ -28,7 +28,7 @@ class CallToActionTableViewCell: UITableViewCell {
     }
     
     func openActivity(){
-        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        let storyBoard = UIStoryboard(name: "timed_meditation", bundle: nil)
         if let timerViewController  = storyBoard.instantiateViewControllerWithIdentifier("TimerViewController") as? TimerViewController{
             
             self.navigationController?.pushViewController(timerViewController, animated: true)
