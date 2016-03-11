@@ -38,6 +38,7 @@
 		DA3501EF1C8FF6F9006A41A5 /* bowl1hit.wav in Resources */ = {isa = PBXBuildFile; fileRef = DA3501EE1C8FF6F9006A41A5 /* bowl1hit.wav */; };
 		DA3501F11C8FFBC0006A41A5 /* rain-06.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DA3501F01C8FFBC0006A41A5 /* rain-06.mp3 */; };
 		DA3501F61C926A34006A41A5 /* timed_meditation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA3501F51C926A34006A41A5 /* timed_meditation.storyboard */; };
+		DA3501FA1C927046006A41A5 /* TimePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3501F91C927046006A41A5 /* TimePickerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -77,6 +78,7 @@
 		DA3501EE1C8FF6F9006A41A5 /* bowl1hit.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = bowl1hit.wav; sourceTree = "<group>"; };
 		DA3501F01C8FFBC0006A41A5 /* rain-06.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "rain-06.mp3"; sourceTree = "<group>"; };
 		DA3501F51C926A34006A41A5 /* timed_meditation.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = timed_meditation.storyboard; sourceTree = "<group>"; };
+		DA3501F91C927046006A41A5 /* TimePickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimePickerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -239,6 +241,7 @@
 		DA3501F41C926A11006A41A5 /* timed_mediation */ = {
 			isa = PBXGroup;
 			children = (
+				DA3501FB1C9277E0006A41A5 /* Views */,
 				DA3501F81C926A7B006A41A5 /* Controllers */,
 				DA3501F71C926A6B006A41A5 /* Models */,
 				DA3501F51C926A34006A41A5 /* timed_meditation.storyboard */,
@@ -261,6 +264,14 @@
 				DA3501D01C8CD27B006A41A5 /* TimerSettingsTableViewController.swift */,
 			);
 			name = Controllers;
+			sourceTree = "<group>";
+		};
+		DA3501FB1C9277E0006A41A5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DA3501F91C927046006A41A5 /* TimePickerView.swift */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -403,6 +414,7 @@
 				DA3501BC1C881F07006A41A5 /* TimerViewController.swift in Sources */,
 				DA3501C01C8A749E006A41A5 /* CategoryViewController.swift in Sources */,
 				DA3501B51C88112D006A41A5 /* CallToActionTableViewCell.swift in Sources */,
+				DA3501FA1C927046006A41A5 /* TimePickerView.swift in Sources */,
 				DA3501D11C8CD27B006A41A5 /* TimerSettingsTableViewController.swift in Sources */,
 				DA3501CB1C8CCE00006A41A5 /* History.swift in Sources */,
 				DA3501B91C88115B006A41A5 /* MediaTableViewCell.swift in Sources */,

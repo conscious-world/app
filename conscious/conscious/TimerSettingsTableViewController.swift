@@ -10,4 +10,12 @@ import UIKit
 
 class TimerSettingsTableViewController: UITableViewController {
 
+    @IBOutlet weak var timePicker: TimePickerView!
+    let settings = TimerSettings.getCurrentSettings()
+    
+    override func viewDidLoad() {
+        timePicker.settings = settings
+        timePicker.countDownDuration = settings.intervalSeconds
+    }
+   
 }
