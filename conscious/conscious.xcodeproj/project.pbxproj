@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5CB0BA151C9291C20045901F /* media_meditation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CB0BA141C9291C20045901F /* media_meditation.storyboard */; };
 		912C76A9713F2DCF4F3A5C84 /* libPods-conscious.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AF2A56554296CAD3E80F515 /* libPods-conscious.a */; };
 		DA35019F1C880A27006A41A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA35019E1C880A27006A41A5 /* AppDelegate.swift */; };
 		DA3501A11C880A27006A41A5 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3501A01C880A27006A41A5 /* HomeTableViewController.swift */; };
@@ -42,6 +43,7 @@
 
 /* Begin PBXFileReference section */
 		3AF2A56554296CAD3E80F515 /* libPods-conscious.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-conscious.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5CB0BA141C9291C20045901F /* media_meditation.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = media_meditation.storyboard; sourceTree = "<group>"; };
 		8F0A3CA90B5EAA920D64E307 /* Pods-conscious.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-conscious.debug.xcconfig"; path = "Pods/Target Support Files/Pods-conscious/Pods-conscious.debug.xcconfig"; sourceTree = "<group>"; };
 		B24AE942D5D41CCB7D7F2C51 /* Pods-conscious.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-conscious.release.xcconfig"; path = "Pods/Target Support Files/Pods-conscious/Pods-conscious.release.xcconfig"; sourceTree = "<group>"; };
 		DA35019B1C880A27006A41A5 /* conscious.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = conscious.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -102,6 +104,32 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		5CB0BA111C92916B0045901F /* media_meditation */ = {
+			isa = PBXGroup;
+			children = (
+				5CB0BA131C92917F0045901F /* Models */,
+				5CB0BA121C9291740045901F /* Controllers */,
+				5CB0BA141C9291C20045901F /* media_meditation.storyboard */,
+			);
+			name = media_meditation;
+			sourceTree = "<group>";
+		};
+		5CB0BA121C9291740045901F /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DA3501C11C8A7E9A006A41A5 /* MediaViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		5CB0BA131C92917F0045901F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DA3501CC1C8CCE23006A41A5 /* Media.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		D9D6E06B6FE8CF0D49E40748 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -133,6 +161,7 @@
 		DA35019D1C880A27006A41A5 /* conscious */ = {
 			isa = PBXGroup;
 			children = (
+				5CB0BA111C92916B0045901F /* media_meditation */,
 				DA3501F41C926A11006A41A5 /* timed_mediation */,
 				DA3501DB1C8FDDA6006A41A5 /* backgroundImages */,
 				DA3501D21C8CE4D0006A41A5 /* Audio */,
@@ -173,7 +202,6 @@
 			children = (
 				DA3501A01C880A27006A41A5 /* HomeTableViewController.swift */,
 				DA3501BF1C8A749E006A41A5 /* CategoryViewController.swift */,
-				DA3501C11C8A7E9A006A41A5 /* MediaViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -184,7 +212,6 @@
 				DA3501D81C8CEDB5006A41A5 /* AudioEffects */,
 				DA3501C81C8CCDF5006A41A5 /* Category.swift */,
 				DA3501CA1C8CCE00006A41A5 /* History.swift */,
-				DA3501CC1C8CCE23006A41A5 /* Media.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -326,6 +353,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA3501D61C8CE4FC006A41A5 /* MARC5MinuteBreathing.mp3 in Resources */,
+				5CB0BA151C9291C20045901F /* media_meditation.storyboard in Resources */,
 				DA3501A91C880A27006A41A5 /* LaunchScreen.storyboard in Resources */,
 				DA3501E51C8FDECA006A41A5 /* sunset1.gif in Resources */,
 				DA3501E61C8FDECA006A41A5 /* waterfall1.gif in Resources */,
