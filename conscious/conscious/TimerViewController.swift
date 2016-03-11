@@ -175,7 +175,7 @@ class TimerViewController: UIViewController, EZMicrophoneDelegate, EZAudioFFTDel
     func onSettingsBarBtnTap(){
         print("click");
         
-        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        let storyBoard = UIStoryboard(name: "timed_meditation", bundle: nil)
         if let settingsViewController  = storyBoard.instantiateViewControllerWithIdentifier("TimerSettingsTableViewController") as? TimerSettingsTableViewController{
             
             self.navigationController?.pushViewController(settingsViewController, animated: true)
