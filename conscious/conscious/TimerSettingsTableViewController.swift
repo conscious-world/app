@@ -15,7 +15,9 @@ class TimerSettingsTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         timePicker.settings = settings
-        timePicker.countDownDuration = settings.intervalSeconds
+        dispatch_async(dispatch_get_main_queue(),{
+            self.timePicker.countDownDuration = self.settings.intervalSeconds
+        })
     }
    
 }
