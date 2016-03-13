@@ -16,12 +16,14 @@ protocol TimerSettingsTableViewControllerDelegate : class {
 class TimerSettingsTableViewController: UITableViewController, SelectableSettingViewControllerDelegate {
 
     @IBOutlet weak var timePicker: TimePickerView!
+
     var settings = TimerSettings.getCurrentSettings()
     var settingToUpdate: TimerSettings.SettingType?
     var delegate: TimerSettingsTableViewControllerDelegate?
     
     @IBOutlet weak var selectedNotificationSoundLabel: UILabel!
     @IBOutlet weak var selectedBackgroundSoundLabel: UILabel!
+    @IBOutlet weak var audioFeedbackSwitch: UISwitch!
     override func viewDidLoad() {
         timePicker.settings = settings
         updateSelectedSettings()
@@ -32,8 +34,10 @@ class TimerSettingsTableViewController: UITableViewController, SelectableSetting
     }
     
     func updateSelectedSettings(){
+        
         selectedNotificationSoundLabel.text = settings.reminderTone
         selectedBackgroundSoundLabel.text = settings.backgroundSoundFile
+        audioFeedbackSwitch.on = settings.useAudioReverb()
     }
     
     override func willMoveToParentViewController(parent: UIViewController?) {
@@ -45,6 +49,16 @@ class TimerSettingsTableViewController: UITableViewController, SelectableSetting
     }
     
 
+    @IBAction func audioEffectSwitchChanged(sender: UISwitch) {
+        //audioFeedbackSwitch.on = sender.on
+        if(sender.on){
+            //use the default value
+            settings.audioEffect = TimerSettings().audioEffect
+        }else{
+            settings.audioEffect = "none"
+        }
+
+    }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
@@ -89,7 +103,6 @@ class TimerSettingsTableViewController: UITableViewController, SelectableSetting
         var soundSettings = [SimpleSelectableSetting]()
         for option in options{
             let simpleSetting = SimpleSelectableSetting(value: option, label: option, selected: (option == settings.reminderTone), type: TimerSettings.SettingType.ReminderTone, onSelect: { (newValue) -> () in
-                print(self.settings.reminderTone)
                 self.settings.reminderTone = newValue as! String
                 self.settings.playReminderTone()
             })
@@ -103,7 +116,6 @@ class TimerSettingsTableViewController: UITableViewController, SelectableSetting
         var soundSettings = [SimpleSelectableSetting]()
         for option in options{
             let simpleSetting = SimpleSelectableSetting(value: option, label: option, selected: (option == settings.backgroundSoundFile), type: TimerSettings.SettingType.BackgroundSoundFile, onSelect: { (newValue) -> () in
-                print(self.settings.reminderTone)
                 self.settings.backgroundSoundFile = newValue as! String
                 self.settings.playBackgroundSound()
             })

@@ -45,10 +45,14 @@ class TimerSettings{
         }
     }
 
-    var audioEffect: String? = "reverb"{
+    var audioEffect: String = "reverb"{
         didSet {
             self.save()
         }
+    }
+    
+    func useAudioReverb() -> Bool{
+        return audioEffect == "reverb"
     }
 
     var reminderAudioPlayer:AVAudioPlayer!
@@ -109,20 +113,20 @@ class TimerSettings{
         }
         
         get{
+            var effect: String?
             return
             [
                 "intervalSeconds":     String(intervalSeconds),
                 "reminderTone":        reminderTone,
                 "backgroundSoundFile": backgroundSoundFile,
                 "backgroundGif":       backgroundGif,
-                "audioEffect":         String(audioEffect),
+                "audioEffect":         audioEffect,
             ]
         }
         
     }
     
     func playReminderTone(){
-        print("playReminderTone: \(self.reminderTone)")
         let audioFilePath = NSBundle.mainBundle().pathForResource(self.reminderTone, ofType: "mp3")
         if audioFilePath != nil {
             let audioFileUrl = NSURL.fileURLWithPath(audioFilePath!)

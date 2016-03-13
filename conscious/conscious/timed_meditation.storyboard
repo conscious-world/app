@@ -91,8 +91,8 @@
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="9qG-ZT-YLO"/>
                                 <exclude reference="4KP-BU-rJ6"/>
+                                <exclude reference="9qG-ZT-YLO"/>
                                 <exclude reference="vpd-EL-udH"/>
                             </mask>
                         </variation>
@@ -214,6 +214,9 @@
                                                 </label>
                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yj7-L0-CWe">
                                                     <rect key="frame" x="538" y="6" width="51" height="31"/>
+                                                    <connections>
+                                                        <action selector="audioEffectSwitchChanged:" destination="s2e-Si-pdV" eventType="valueChanged" id="xte-6U-IHH"/>
+                                                    </connections>
                                                 </switch>
                                             </subviews>
                                             <constraints>
@@ -223,6 +226,9 @@
                                                 <constraint firstItem="hOm-F9-GjG" firstAttribute="leading" secondItem="lK2-tv-gD0" secondAttribute="leading" constant="14" id="zAo-2u-X77"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <accessibility key="accessibilityConfiguration">
+                                            <accessibilityTraits key="traits" notEnabled="YES"/>
+                                        </accessibility>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -233,6 +239,7 @@
                         </connections>
                     </tableView>
                     <connections>
+                        <outlet property="audioFeedbackSwitch" destination="yj7-L0-CWe" id="dsx-7v-4nH"/>
                         <outlet property="selectedBackgroundSoundLabel" destination="ayi-Op-5gw" id="fbK-01-Y8v"/>
                         <outlet property="selectedNotificationSoundLabel" destination="vJw-vv-ygF" id="xU4-w1-8Cl"/>
                         <outlet property="timePicker" destination="z1X-mx-taO" id="uAf-qW-eFd"/>
