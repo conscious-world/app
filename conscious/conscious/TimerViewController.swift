@@ -9,7 +9,7 @@
 import UIKit
 import AudioToolbox
 
-class TimerViewController: UIViewController, EZMicrophoneDelegate, EZAudioFFTDelegate {
+class TimerViewController: UIViewController, EZMicrophoneDelegate, EZAudioFFTDelegate, TimerSettingsTableViewControllerDelegate {
     
     var settingButton : UIBarButtonItem?
     
@@ -173,11 +173,10 @@ class TimerViewController: UIViewController, EZMicrophoneDelegate, EZAudioFFTDel
     }
     
     func onSettingsBarBtnTap(){
-        print("click");
         
         let storyBoard = UIStoryboard(name: "timed_meditation", bundle: nil)
         if let settingsViewController  = storyBoard.instantiateViewControllerWithIdentifier("TimerSettingsTableViewController") as? TimerSettingsTableViewController{
-            
+            settingsViewController.delegate = self
             self.navigationController?.pushViewController(settingsViewController, animated: true)
         }else{
             print("No vc found")
@@ -192,6 +191,12 @@ class TimerViewController: UIViewController, EZMicrophoneDelegate, EZAudioFFTDel
             self.maxFrequencyLabel.text = "Highest Note: \(noteName),\nFrequency: \(maxFrequency)"
             //weakSelf.audioPlotFreq.updateBuffer(fftData, withBufferSize: UInt32(bufferSize))
         })
+    }
+    
+    
+    func settingsUpdated(controller: TimerSettingsTableViewController, settings: TimerSettings){
+        print("Update settings from settings controller")
+        self.userSettings = settings
     }
 
     

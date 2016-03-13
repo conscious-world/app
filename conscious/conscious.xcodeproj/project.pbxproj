@@ -36,10 +36,14 @@
 		DA3501E71C8FDECA006A41A5 /* waterfall2.gif in Resources */ = {isa = PBXBuildFile; fileRef = DA3501E11C8FDECA006A41A5 /* waterfall2.gif */; };
 		DA3501E91C8FF1AB006A41A5 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA3501E81C8FF1AB006A41A5 /* AudioToolbox.framework */; };
 		DA3501EB1C8FF439006A41A5 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA3501EA1C8FF439006A41A5 /* AVFoundation.framework */; };
-		DA3501EF1C8FF6F9006A41A5 /* bowl1hit.wav in Resources */ = {isa = PBXBuildFile; fileRef = DA3501EE1C8FF6F9006A41A5 /* bowl1hit.wav */; };
-		DA3501F11C8FFBC0006A41A5 /* rain-06.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DA3501F01C8FFBC0006A41A5 /* rain-06.mp3 */; };
+		DA3501EF1C8FF6F9006A41A5 /* bowl.wav in Resources */ = {isa = PBXBuildFile; fileRef = DA3501EE1C8FF6F9006A41A5 /* bowl.wav */; };
+		DA3501F11C8FFBC0006A41A5 /* rain.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DA3501F01C8FFBC0006A41A5 /* rain.mp3 */; };
 		DA3501F61C926A34006A41A5 /* timed_meditation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA3501F51C926A34006A41A5 /* timed_meditation.storyboard */; };
 		DA3501FA1C927046006A41A5 /* TimePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3501F91C927046006A41A5 /* TimePickerView.swift */; };
+		DA3501FD1C94D184006A41A5 /* SettingCheckboxTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3501FC1C94D184006A41A5 /* SettingCheckboxTableViewCell.swift */; };
+		DA3501FF1C94D32D006A41A5 /* SelectableSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3501FE1C94D32D006A41A5 /* SelectableSettingViewController.swift */; };
+		DA3502031C94E63C006A41A5 /* SimpleSelectableSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3502021C94E63C006A41A5 /* SimpleSelectableSetting.swift */; };
+		DA3502051C94ED90006A41A5 /* bells.wav in Resources */ = {isa = PBXBuildFile; fileRef = DA3502041C94ED90006A41A5 /* bells.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -77,10 +81,14 @@
 		DA3501E11C8FDECA006A41A5 /* waterfall2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = waterfall2.gif; sourceTree = "<group>"; };
 		DA3501E81C8FF1AB006A41A5 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		DA3501EA1C8FF439006A41A5 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		DA3501EE1C8FF6F9006A41A5 /* bowl1hit.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = bowl1hit.wav; sourceTree = "<group>"; };
-		DA3501F01C8FFBC0006A41A5 /* rain-06.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "rain-06.mp3"; sourceTree = "<group>"; };
+		DA3501EE1C8FF6F9006A41A5 /* bowl.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = bowl.wav; sourceTree = "<group>"; };
+		DA3501F01C8FFBC0006A41A5 /* rain.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = rain.mp3; sourceTree = "<group>"; };
 		DA3501F51C926A34006A41A5 /* timed_meditation.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = timed_meditation.storyboard; sourceTree = "<group>"; };
 		DA3501F91C927046006A41A5 /* TimePickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimePickerView.swift; sourceTree = "<group>"; };
+		DA3501FC1C94D184006A41A5 /* SettingCheckboxTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingCheckboxTableViewCell.swift; sourceTree = "<group>"; };
+		DA3501FE1C94D32D006A41A5 /* SelectableSettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectableSettingViewController.swift; sourceTree = "<group>"; };
+		DA3502021C94E63C006A41A5 /* SimpleSelectableSetting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleSelectableSetting.swift; sourceTree = "<group>"; };
+		DA3502041C94ED90006A41A5 /* bells.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = bells.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -238,8 +246,9 @@
 		DA3501D41C8CE4EC006A41A5 /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
-				DA3501F01C8FFBC0006A41A5 /* rain-06.mp3 */,
-				DA3501EE1C8FF6F9006A41A5 /* bowl1hit.wav */,
+				DA3502041C94ED90006A41A5 /* bells.wav */,
+				DA3501F01C8FFBC0006A41A5 /* rain.mp3 */,
+				DA3501EE1C8FF6F9006A41A5 /* bowl.wav */,
 			);
 			name = Sounds;
 			sourceTree = "<group>";
@@ -280,6 +289,7 @@
 			isa = PBXGroup;
 			children = (
 				DA3501CE1C8CCE3D006A41A5 /* TimerSettings.swift */,
+				DA3502021C94E63C006A41A5 /* SimpleSelectableSetting.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -289,6 +299,7 @@
 			children = (
 				DA3501BB1C881F07006A41A5 /* TimerViewController.swift */,
 				DA3501D01C8CD27B006A41A5 /* TimerSettingsTableViewController.swift */,
+				DA3501FE1C94D32D006A41A5 /* SelectableSettingViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -297,6 +308,7 @@
 			isa = PBXGroup;
 			children = (
 				DA3501F91C927046006A41A5 /* TimePickerView.swift */,
+				DA3501FC1C94D184006A41A5 /* SettingCheckboxTableViewCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -364,13 +376,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA3501D61C8CE4FC006A41A5 /* MARC5MinuteBreathing.mp3 in Resources */,
+				DA3502051C94ED90006A41A5 /* bells.wav in Resources */,
 				5CB0BA151C9291C20045901F /* media_meditation.storyboard in Resources */,
 				DA3501A91C880A27006A41A5 /* LaunchScreen.storyboard in Resources */,
 				DA3501E51C8FDECA006A41A5 /* sunset1.gif in Resources */,
 				DA3501E61C8FDECA006A41A5 /* waterfall1.gif in Resources */,
-				DA3501EF1C8FF6F9006A41A5 /* bowl1hit.wav in Resources */,
+				DA3501EF1C8FF6F9006A41A5 /* bowl.wav in Resources */,
 				DA3501A61C880A27006A41A5 /* Assets.xcassets in Resources */,
-				DA3501F11C8FFBC0006A41A5 /* rain-06.mp3 in Resources */,
+				DA3501F11C8FFBC0006A41A5 /* rain.mp3 in Resources */,
 				DA3501E31C8FDECA006A41A5 /* cloudssf.gif in Resources */,
 				DA3501E71C8FDECA006A41A5 /* waterfall2.gif in Resources */,
 				DA3501F61C926A34006A41A5 /* timed_meditation.storyboard in Resources */,
@@ -435,6 +448,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA3501FD1C94D184006A41A5 /* SettingCheckboxTableViewCell.swift in Sources */,
 				DA3501B71C881140006A41A5 /* CategoryTableViewCell.swift in Sources */,
 				DA3501B31C88111A006A41A5 /* HistoryTableViewCell.swift in Sources */,
 				DA3501A11C880A27006A41A5 /* HomeTableViewController.swift in Sources */,
@@ -448,9 +462,11 @@
 				DA3501B91C88115B006A41A5 /* MediaTableViewCell.swift in Sources */,
 				DA3501C21C8A7E9A006A41A5 /* MediaViewController.swift in Sources */,
 				DA3501CD1C8CCE23006A41A5 /* Media.swift in Sources */,
+				DA3502031C94E63C006A41A5 /* SimpleSelectableSetting.swift in Sources */,
 				DA35019F1C880A27006A41A5 /* AppDelegate.swift in Sources */,
 				DA3501CF1C8CCE3D006A41A5 /* TimerSettings.swift in Sources */,
 				DA3501C91C8CCDF5006A41A5 /* Category.swift in Sources */,
+				DA3501FF1C94D32D006A41A5 /* SelectableSettingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

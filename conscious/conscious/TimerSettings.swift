@@ -12,6 +12,11 @@ import AVFoundation
 
 class TimerSettings{
     
+    enum SettingType{
+        case ReminderTone
+        case BackgroundSoundFile
+    }
+    
     var blockSave = false
     
     var intervalSeconds: Double = 600.0{
@@ -20,13 +25,14 @@ class TimerSettings{
         }
     }
     
-    var reminderTone: String = "bowl1hit"{
+    var reminderTones = ["bowl", "bells"]
+    var reminderTone: String = "bowl"{
         didSet {
             self.save()
         }
     }
 
-    var backgroundSoundFile: String = "rain-06"{
+    var backgroundSoundFile: String = "rain"{
         didSet {
             self.save()
         }
@@ -115,6 +121,7 @@ class TimerSettings{
     }
     
     func playReminderTone(){
+        print("playReminderTone: \(self.reminderTone)")
         let audioFilePath = NSBundle.mainBundle().pathForResource(self.reminderTone, ofType: "wav")
         if audioFilePath != nil {
             let audioFileUrl = NSURL.fileURLWithPath(audioFilePath!)
