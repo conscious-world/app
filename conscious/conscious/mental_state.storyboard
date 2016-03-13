@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--MentalStateViewController-->
+        <scene sceneID="dhF-cF-dad">
+            <objects>
+                <viewController storyboardIdentifier="MentalStateViewController" title="MentalStateViewController" id="AV3-jS-Dr8" customClass="MentalStateViewController" customModule="conscious" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="KLy-Yd-YvM"/>
+                        <viewControllerLayoutGuide type="bottom" id="jCC-Mr-kV6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="C4M-WR-OvB" userLabel="contentView">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vaQ-PZ-DFV">
+                                <rect key="frame" x="9" y="134" width="585" height="413"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="31a-F1-F9p">
+                                        <rect key="frame" x="263" y="179" width="56" height="56"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="56" id="d3g-Gg-XaE"/>
+                                            <constraint firstAttribute="height" constant="56" id="ilU-cG-h16"/>
+                                        </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="8yP-gp-fgL" appends="YES" id="gnd-PW-Nmd"/>
+                                        </connections>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="0.51694362279999995" green="1" blue="0.83927488459999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="31a-F1-F9p" firstAttribute="top" secondItem="vaQ-PZ-DFV" secondAttribute="top" constant="179" id="0AK-dM-tAy"/>
+                                    <constraint firstAttribute="bottom" secondItem="31a-F1-F9p" secondAttribute="bottom" constant="178" id="2w8-Oa-gMa"/>
+                                    <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="31a-F1-F9p" secondAttribute="trailing" constant="266" id="OPn-X1-Zas"/>
+                                    <constraint firstItem="31a-F1-F9p" firstAttribute="leading" relation="lessThanOrEqual" secondItem="vaQ-PZ-DFV" secondAttribute="leading" constant="263" id="qxq-b6-FFS"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stressed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tmk-ef-CGH">
+                                <rect key="frame" x="266" y="74" width="68" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How are you doing today?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S6w-6K-5oc">
+                                <rect key="frame" x="201" y="28" width="198" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="S6w-6K-5oc" firstAttribute="top" secondItem="KLy-Yd-YvM" secondAttribute="bottom" constant="8" id="Chc-xe-75f"/>
+                            <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="S6w-6K-5oc" secondAttribute="trailing" constant="201" id="GAG-sj-ZOW"/>
+                            <constraint firstItem="S6w-6K-5oc" firstAttribute="leading" relation="lessThanOrEqual" secondItem="C4M-WR-OvB" secondAttribute="leading" constant="201" id="IRf-S1-PrO"/>
+                            <constraint firstItem="Tmk-ef-CGH" firstAttribute="top" secondItem="S6w-6K-5oc" secondAttribute="bottom" constant="26" id="PQX-eK-JaX"/>
+                            <constraint firstItem="vaQ-PZ-DFV" firstAttribute="leading" secondItem="C4M-WR-OvB" secondAttribute="leading" constant="9" id="U3W-QE-wIO"/>
+                            <constraint firstAttribute="trailingMargin" relation="lessThanOrEqual" secondItem="Tmk-ef-CGH" secondAttribute="trailing" constant="246" id="gGB-7c-zLv"/>
+                            <constraint firstAttribute="trailing" secondItem="vaQ-PZ-DFV" secondAttribute="trailing" constant="6" id="hva-gt-rgv"/>
+                            <constraint firstItem="Tmk-ef-CGH" firstAttribute="leading" relation="lessThanOrEqual" secondItem="C4M-WR-OvB" secondAttribute="leadingMargin" constant="246" id="qid-3s-Is0"/>
+                            <constraint firstItem="S6w-6K-5oc" firstAttribute="centerX" secondItem="C4M-WR-OvB" secondAttribute="centerX" id="tMj-mS-e6H"/>
+                            <constraint firstItem="jCC-Mr-kV6" firstAttribute="top" secondItem="vaQ-PZ-DFV" secondAttribute="bottom" constant="53" id="vCj-cT-p3o"/>
+                            <constraint firstItem="vaQ-PZ-DFV" firstAttribute="top" secondItem="Tmk-ef-CGH" secondAttribute="bottom" constant="39" id="wGc-Hn-CQp"/>
+                            <constraint firstItem="Tmk-ef-CGH" firstAttribute="centerX" secondItem="S6w-6K-5oc" secondAttribute="centerX" id="y9l-nd-Mu7"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="contentView" destination="C4M-WR-OvB" id="saf-pM-kMh"/>
+                        <outlet property="mentalStateCursorView" destination="31a-F1-F9p" id="kWp-4h-qQa"/>
+                        <outlet property="mentalStateGridView" destination="vaQ-PZ-DFV" id="uwz-QR-yKm"/>
+                        <outlet property="mentalStateLabel" destination="Tmk-ef-CGH" id="dAn-dh-mQn"/>
+                        <outlet property="questionLabel" destination="S6w-6K-5oc" id="Osu-Xf-rHB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3EM-4P-Agt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="8yP-gp-fgL">
+                    <connections>
+                        <action selector="mentalStateCursorPanned:" destination="AV3-jS-Dr8" id="QTU-jB-mFZ"/>
+                    </connections>
+                </panGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="276" y="388"/>
+        </scene>
+    </scenes>
+</document>

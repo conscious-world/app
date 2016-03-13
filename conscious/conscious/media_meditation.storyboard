@@ -82,6 +82,7 @@
                     </view>
                     <connections>
                         <outlet property="currentTimeLabel" destination="ijJ-In-Xx5" id="pPB-AQ-n44"/>
+                        <outlet property="mediaView" destination="2f2-ut-DKj" id="Xet-f3-UCM"/>
                         <outlet property="playPauseButton" destination="8bW-r9-8lr" id="5kg-L5-JBd"/>
                         <outlet property="timeLeftLabel" destination="7eF-Ie-fJl" id="BWn-kK-D9m"/>
                         <outlet property="timeSlider" destination="0At-Zh-jTa" id="V02-YD-nUg"/>

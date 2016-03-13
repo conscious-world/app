@@ -9,14 +9,16 @@
 import UIKit
 import AVFoundation
 
-class MediaViewController: UIViewController, AVAudioPlayerDelegate {
+class MediaViewController: UIViewController, AVAudioPlayerDelegate, UIViewControllerTransitioningDelegate {
 
     @IBOutlet weak var playPauseButton: UIButton!
     @IBOutlet weak var currentTimeLabel: UILabel!
     @IBOutlet weak var timeLeftLabel: UILabel!
     @IBOutlet weak var timeSlider: UISlider!
+    @IBOutlet var mediaView: UIView!
     
-    var audioPlayer:AVAudioPlayer!
+    var animator: MyAnimator = MyAnimator()
+    var audioPlayer: AVAudioPlayer!
     var minValue: NSTimeInterval!
     var maxValue: NSDate?
     var timer = NSTimer()
@@ -29,7 +31,24 @@ class MediaViewController: UIViewController, AVAudioPlayerDelegate {
         loadAudio()
         playPauseButton.setImage(UIImage(named: "video-player-7"), forState: UIControlState.Normal)
         playPauseButton.backgroundColor = UIColor.blueColor()
-
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+    }
+    
+    
+    func presentation() {
+        let storyBoard = UIStoryboard(name: "mental_state", bundle: nil)
+        let next = storyBoard.instantiateViewControllerWithIdentifier("MentalStateViewController") as! MentalStateViewController
+        next.animator = animator
+        next.modalPresentationStyle = .Custom
+        next.transitioningDelegate = self
+        self.presentViewController(next, animated: true, completion: nil)
+    }
+    
+    func presentationControllerForPresentedViewController(presented: UIViewController, presentingViewController presenting: UIViewController, sourceViewController source: UIViewController) -> UIPresentationController? {
+        return MyPresentation(presentedViewController: presented, presentingViewController: presenting)
     }
 
     override func didReceiveMemoryWarning() {
@@ -104,6 +123,7 @@ class MediaViewController: UIViewController, AVAudioPlayerDelegate {
     func audioPlayerDidFinishPlaying(player: AVAudioPlayer, successfully flag: Bool) {
         playPauseButton.setImage(UIImage(named: "video-player-7"), forState: UIControlState.Normal)
         // segue to post-meditation screen
+        presentation()
     }
 
     /*
@@ -116,6 +136,45 @@ class MediaViewController: UIViewController, AVAudioPlayerDelegate {
     }
     */
 
+}
+
+private let DURATION:NSTimeInterval = 0.35
+class MyAnimator: UIPercentDrivenInteractiveTransition, UIViewControllerAnimatedTransitioning {
+    var isUsingGesture: Bool = false
+    func transitionDuration(transitionContext: UIViewControllerContextTransitioning?) -> NSTimeInterval {
+        return DURATION
+    }
+    
+    func animateTransition(transitionContext: UIViewControllerContextTransitioning) {
+        let container = transitionContext.containerView()
+        let fromView = transitionContext.viewForKey(UITransitionContextFromViewKey)!
+        let toView = transitionContext.viewForKey(UITransitionContextToViewKey)!
+        toView.frame = container!.bounds
+        toView.alpha = 0.0
+        container?.addSubview(toView)
+        UIView.animateWithDuration(DURATION, animations: { () -> Void in
+            toView.alpha = 1.0
+        }) { (finished) -> Void in
+            fromView.removeFromSuperview()
+            transitionContext.completeTransition(!transitionContext.transitionWasCancelled())
+        }
+        
+    }
+}
+
+class MyPresentation: UIPresentationController {
+    var dimView: UIView!
+    override func presentationTransitionWillBegin() {
+        dimView = UIView(frame: CGRectZero)
+        dimView.backgroundColor = UIColor.blackColor()
+        dimView.alpha = 0.0
+        dimView.frame = (self.containerView?.bounds)!
+        self.containerView?.addSubview(dimView)
+        self.presentingViewController.transitionCoordinator()?.animateAlongsideTransition({ (context) -> Void in
+            self.dimView.alpha = 0.3
+            }, completion: { (finished) -> Void in
+        })
+    }
 }
 
 extension NSTimeInterval {
