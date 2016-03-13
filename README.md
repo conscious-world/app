@@ -5,8 +5,8 @@ This app will help people start out or supplement their existing meditation prac
 ## User Stories
 
 The following **required** functionality is completed:
-- [] User will be able to choose the type of meditation
-- [] User will be able to choose the length of meditation
+- [x] User will be able to choose the type of meditation
+- [x] User will be able to choose the length of meditation
 - [] User will be able to listen to guided meditations
 - [] User will be able to listen to ambient sounds
 - [x] User will be able to have silence with audio reminders at time intervals so they can keep track of time
