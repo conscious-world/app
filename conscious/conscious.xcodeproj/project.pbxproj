@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		5CB0BA151C9291C20045901F /* media_meditation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CB0BA141C9291C20045901F /* media_meditation.storyboard */; };
+		5CCB321D1C93FEDA00EB656E /* MentalStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCB321C1C93FEDA00EB656E /* MentalStateView.swift */; };
+		5CCB32231C95044A00EB656E /* MentalStateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCB32221C95044A00EB656E /* MentalStateViewController.swift */; };
+		5CCB32261C9508D500EB656E /* mental_state.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CCB32251C9508D500EB656E /* mental_state.storyboard */; };
 		912C76A9713F2DCF4F3A5C84 /* libPods-conscious.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AF2A56554296CAD3E80F515 /* libPods-conscious.a */; };
 		DA35019F1C880A27006A41A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA35019E1C880A27006A41A5 /* AppDelegate.swift */; };
 		DA3501A11C880A27006A41A5 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3501A01C880A27006A41A5 /* HomeTableViewController.swift */; };
@@ -44,6 +47,9 @@
 /* Begin PBXFileReference section */
 		3AF2A56554296CAD3E80F515 /* libPods-conscious.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-conscious.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CB0BA141C9291C20045901F /* media_meditation.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = media_meditation.storyboard; sourceTree = "<group>"; };
+		5CCB321C1C93FEDA00EB656E /* MentalStateView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MentalStateView.swift; sourceTree = "<group>"; };
+		5CCB32221C95044A00EB656E /* MentalStateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MentalStateViewController.swift; sourceTree = "<group>"; };
+		5CCB32251C9508D500EB656E /* mental_state.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = mental_state.storyboard; sourceTree = "<group>"; };
 		8F0A3CA90B5EAA920D64E307 /* Pods-conscious.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-conscious.debug.xcconfig"; path = "Pods/Target Support Files/Pods-conscious/Pods-conscious.debug.xcconfig"; sourceTree = "<group>"; };
 		B24AE942D5D41CCB7D7F2C51 /* Pods-conscious.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-conscious.release.xcconfig"; path = "Pods/Target Support Files/Pods-conscious/Pods-conscious.release.xcconfig"; sourceTree = "<group>"; };
 		DA35019B1C880A27006A41A5 /* conscious.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = conscious.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -130,6 +136,16 @@
 			name = Models;
 			sourceTree = "<group>";
 		};
+		5CCB32241C9508A100EB656E /* mental_state */ = {
+			isa = PBXGroup;
+			children = (
+				5CCB321C1C93FEDA00EB656E /* MentalStateView.swift */,
+				5CCB32221C95044A00EB656E /* MentalStateViewController.swift */,
+				5CCB32251C9508D500EB656E /* mental_state.storyboard */,
+			);
+			name = mental_state;
+			sourceTree = "<group>";
+		};
 		D9D6E06B6FE8CF0D49E40748 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -161,6 +177,7 @@
 		DA35019D1C880A27006A41A5 /* conscious */ = {
 			isa = PBXGroup;
 			children = (
+				5CCB32241C9508A100EB656E /* mental_state */,
 				5CB0BA111C92916B0045901F /* media_meditation */,
 				DA3501F41C926A11006A41A5 /* timed_mediation */,
 				DA3501DB1C8FDDA6006A41A5 /* backgroundImages */,
@@ -366,6 +383,7 @@
 				DA3501E41C8FDECA006A41A5 /* river1.gif in Resources */,
 				DA3501A41C880A27006A41A5 /* Main.storyboard in Resources */,
 				DA3501E21C8FDECA006A41A5 /* beach1.gif in Resources */,
+				5CCB32261C9508D500EB656E /* mental_state.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,6 +455,8 @@
 				DA3501C21C8A7E9A006A41A5 /* MediaViewController.swift in Sources */,
 				DA3501CD1C8CCE23006A41A5 /* Media.swift in Sources */,
 				DA35019F1C880A27006A41A5 /* AppDelegate.swift in Sources */,
+				5CCB321D1C93FEDA00EB656E /* MentalStateView.swift in Sources */,
+				5CCB32231C95044A00EB656E /* MentalStateViewController.swift in Sources */,
 				DA3501CF1C8CCE3D006A41A5 /* TimerSettings.swift in Sources */,
 				DA3501C91C8CCDF5006A41A5 /* Category.swift in Sources */,
 			);
