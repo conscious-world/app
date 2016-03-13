@@ -27,9 +27,9 @@ class MediaTableViewCell: UITableViewCell {
     }
     
     func onTap(){
-        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-        if let timerViewController  = storyBoard.instantiateViewControllerWithIdentifier("MediaViewController") as? MediaViewController{
-            self.navigationController?.pushViewController(timerViewController, animated: true)
+        let storyBoard = UIStoryboard(name: "media_meditation", bundle: nil)
+        if let mediaViewController  = storyBoard.instantiateViewControllerWithIdentifier("MediaViewController") as? MediaViewController{
+            self.navigationController?.pushViewController(mediaViewController, animated: true)
         }
     }
 

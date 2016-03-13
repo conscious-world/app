@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="q8l-g0-1zT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="q8l-g0-1zT">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -52,7 +52,7 @@
                                                     <rect key="frame" x="180" y="18" width="240" height="60"/>
                                                     <subviews>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lk9-f1-q8H">
-                                                            <rect key="frame" x="3" y="13.5" width="234" height="33"/>
+                                                            <rect key="frame" x="3" y="14" width="234" height="33"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="33" id="28h-AQ-DWZ"/>
                                                                 <constraint firstAttribute="width" constant="234" id="dZv-zs-Mwc"/>
@@ -97,9 +97,9 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S9L-Oa-cBf">
-                                                    <rect key="frame" x="61" y="22.5" width="120" height="20.5"/>
+                                                    <rect key="frame" x="61" y="23" width="120" height="20"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -121,7 +121,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="exampleMeditionCover" translatesAutoresizingMaskIntoConstraints="NO" id="zII-Ka-fQ3">
-                                                    <rect key="frame" x="0.0" y="0.0" width="600" height="616.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="600" height="617"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="200" id="cVh-MW-d6e"/>
                                                     </constraints>
@@ -141,9 +141,9 @@
                                                                 </constraints>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Mediation Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GDk-PI-Etw">
-                                                                <rect key="frame" x="53" y="24" width="125" height="20.5"/>
+                                                                <rect key="frame" x="53" y="24" width="125" height="21"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                         </subviews>
@@ -191,43 +191,6 @@
             </objects>
             <point key="canvasLocation" x="1090" y="339"/>
         </scene>
-        <!--Media View Controller-->
-        <scene sceneID="pwg-5K-kq1">
-            <objects>
-                <viewController storyboardIdentifier="MediaViewController" id="IHv-Ek-HpY" customClass="MediaViewController" customModule="conscious" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="1MJ-4Q-Xu9"/>
-                        <viewControllerLayoutGuide type="bottom" id="r5e-2z-ql0"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Yd6-Ah-pq4">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CTH-nj-IhO">
-                                <rect key="frame" x="278" y="285" width="44" height="30"/>
-                                <state key="normal" title="Play▶︎">
-                                    <color key="titleColor" red="0.16569926340976027" green="0.17961675289449719" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="playSound:" destination="IHv-Ek-HpY" eventType="touchUpInside" id="LBt-jh-rlm"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" red="0.52635605378362915" green="1" blue="0.57897882809018797" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="tintColor" red="0.69009782016649046" green="1" blue="0.54698733191160198" alpha="1" colorSpace="calibratedRGB"/>
-                        <accessibility key="accessibilityConfiguration">
-                            <accessibilityTraits key="traits" playsSound="YES"/>
-                        </accessibility>
-                        <constraints>
-                            <constraint firstItem="CTH-nj-IhO" firstAttribute="centerX" secondItem="Yd6-Ah-pq4" secondAttribute="centerX" id="JDW-Tx-DbS"/>
-                            <constraint firstItem="CTH-nj-IhO" firstAttribute="centerY" secondItem="Yd6-Ah-pq4" secondAttribute="centerY" id="bKG-4o-apY"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Faw-vX-U1C" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="654" y="1736"/>
-        </scene>
         <!--Category View Controller-->
         <scene sceneID="uru-ZU-OT3">
             <objects>
@@ -252,7 +215,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="exampleMeditionCover" translatesAutoresizingMaskIntoConstraints="NO" id="wkT-Gg-670">
-                                                    <rect key="frame" x="0.0" y="0.0" width="600" height="616.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="600" height="617"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="200" id="RTF-35-FAR"/>
                                                     </constraints>
@@ -272,9 +235,9 @@
                                                                 </constraints>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Mediation Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bof-Px-M83">
-                                                                <rect key="frame" x="53" y="24" width="125" height="20.5"/>
+                                                                <rect key="frame" x="53" y="24" width="125" height="21"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                         </subviews>
