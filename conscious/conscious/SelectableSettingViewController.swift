@@ -48,13 +48,9 @@ class SelectableSettingViewController: UIViewController, UITableViewDataSource, 
         
         if (setting.selected)
         {
-            print("Select this!")
-            self.delegate?.settingSelected(self, setting: setting.value!, type: setting.type)
-
-            UITableViewCellAccessoryType.Checkmark
             cell.accessoryType = UITableViewCellAccessoryType.Checkmark
+            self.delegate?.settingSelected(self, setting: setting.value!, type: setting.type)
         } else {
-            print("DONT SELECT this!")
             cell.accessoryType = UITableViewCellAccessoryType.None
         }
         

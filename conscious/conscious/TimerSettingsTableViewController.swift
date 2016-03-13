@@ -33,13 +33,13 @@ class TimerSettingsTableViewController: UITableViewController, SelectableSetting
     
     func updateSelectedSettings(){
         selectedNotificationSoundLabel.text = settings.reminderTone
-        print("YOYOY settings.backgroundSoundFile = \(settings.backgroundSoundFile)")
         selectedBackgroundSoundLabel.text = settings.backgroundSoundFile
     }
     
     override func willMoveToParentViewController(parent: UIViewController?) {
         if parent == nil {
-            print("now call notify the mediation delegate that the settings have changed")
+            self.settings.stopBackgroundSound()
+            self.settings.stopReminderTone()
             self.delegate?.settingsUpdated(self, settings: self.settings)
         }
     }
@@ -49,19 +49,22 @@ class TimerSettingsTableViewController: UITableViewController, SelectableSetting
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
         if(indexPath.row == 1){
-            print("showChangeSettingScreen")
             settingToUpdate = TimerSettings.SettingType.ReminderTone
             self.performSegueWithIdentifier("changeSound", sender: self)
-        }else{
+        }else if(indexPath.row == 2){
+            settingToUpdate = TimerSettings.SettingType.BackgroundSoundFile
+            self.performSegueWithIdentifier("changeSound", sender: self)
+        }
+        else{
             self.tableView.cellForRowAtIndexPath(indexPath)?.selected = false
         }
-        print("Selected row \(indexPath.row)")
     }
     
     func settingSelected(controller: SelectableSettingViewController, setting: AnyObject, type: TimerSettings.SettingType){
-        print("delegate settingSelected called")
         if(type == TimerSettings.SettingType.ReminderTone){
             self.settings.reminderTone = setting as! String
+        }else if(type == TimerSettings.SettingType.BackgroundSoundFile){
+            self.settings.backgroundSoundFile = setting as! String
         }
         updateSelectedSettings()
     }
@@ -73,6 +76,8 @@ class TimerSettingsTableViewController: UITableViewController, SelectableSetting
             rootViewController.delegate = self
             if(settingToUpdate == TimerSettings.SettingType.ReminderTone){
                 rootViewController.settings = reminderToneSettings()
+            }else if settingToUpdate == TimerSettings.SettingType.BackgroundSoundFile{
+                rootViewController.settings = backgroundSounndSettings()
             }
             
         }
@@ -87,6 +92,20 @@ class TimerSettingsTableViewController: UITableViewController, SelectableSetting
                 print(self.settings.reminderTone)
                 self.settings.reminderTone = newValue as! String
                 self.settings.playReminderTone()
+            })
+            soundSettings.append(simpleSetting)
+        }
+        return soundSettings
+    }
+    
+    func backgroundSounndSettings() -> [SimpleSelectableSetting]{
+        let options = settings.backgroundSoundFiles
+        var soundSettings = [SimpleSelectableSetting]()
+        for option in options{
+            let simpleSetting = SimpleSelectableSetting(value: option, label: option, selected: (option == settings.backgroundSoundFile), type: TimerSettings.SettingType.BackgroundSoundFile, onSelect: { (newValue) -> () in
+                print(self.settings.reminderTone)
+                self.settings.backgroundSoundFile = newValue as! String
+                self.settings.playBackgroundSound()
             })
             soundSettings.append(simpleSetting)
         }
