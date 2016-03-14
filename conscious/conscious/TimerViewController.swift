@@ -22,7 +22,8 @@ class TimerViewController: UIViewController, EZMicrophoneDelegate, EZAudioFFTDel
     let FFTViewControllerFFTWindowSize:vDSP_Length = 4096;
     var fft: EZAudioFFTRolling!
     var timer = NSTimer()
-    var counter = 0;
+    var counter = 0
+    var meditation: Meditation?
     var userSettings = TimerSettings.getCurrentSettings()
     
     @IBOutlet weak var timerLabel: UILabel!
@@ -58,6 +59,9 @@ class TimerViewController: UIViewController, EZMicrophoneDelegate, EZAudioFFTDel
     
     
     @IBAction func onStopButtonPressed(sender: UIButton) {
+        meditation!.end()
+        //TODO there should be a better end, like taking a survey
+        History.append(meditation!)
         EZOutput.sharedOutput().stopPlayback()
         EZMicrophone.sharedMicrophone().stopFetchingAudio()
         userSettings.stopBackgroundSound()
@@ -68,6 +72,8 @@ class TimerViewController: UIViewController, EZMicrophoneDelegate, EZAudioFFTDel
     }
     
     @IBAction func onStartButtonPressed(sender: UIButton) {
+        self.meditation = Meditation.newTimedMeditation()
+        meditation!.start()
         startAudio()
         userSettings.playBackgroundSound()
         timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("updateCounter"), userInfo: nil, repeats: true)

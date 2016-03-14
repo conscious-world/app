@@ -12,18 +12,51 @@ import Foundation
 let HISTORY_KEY = "conscious.mediation.history"
 class History: NSObject, NSCoding{
     
-    var mediations: [String: Meditation]
+    private var meditations: [Meditation]?
     
-    init(mediationHistory: [String: Meditation]){
-        self.mediations = mediationHistory
+    init(mediationHistory: [Meditation]?){
+        if(mediationHistory != nil){
+            self.meditations = mediationHistory
+        }else{
+            self.meditations = []
+        }
     }
 
     required init?(coder aDecoder: NSCoder){
-        self.mediations = aDecoder.decodeObjectForKey(HISTORY_KEY) as! [String: Meditation]
+        self.meditations = aDecoder.decodeObjectForKey(HISTORY_KEY) as? [Meditation]
         super.init()
     }
     
     func encodeWithCoder(aCoder: NSCoder) {
-        aCoder.encodeObject(self.mediations, forKey: HISTORY_KEY)
+        aCoder.encodeObject(self.meditations, forKey: HISTORY_KEY)
+    }
+    
+    static func append(mediation:Meditation){
+        sharedInstance()?.append(mediation)
+    }
+    
+    static func sharedInstance() -> History?{
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        return appDelegate.history
+    }
+    
+    func append(mediation: Meditation){
+        meditations!.append(mediation)
+    }
+    
+    static func count() -> Int{
+        return sharedInstance()?.count() ?? 0
+    }
+    
+    func count() -> Int{
+        return meditations?.count ?? 0
+    }
+    
+    var first: Meditation?{
+        return meditations?.first
+    }
+    
+    var last: Meditation?{
+        return meditations?.last
     }
 }

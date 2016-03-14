@@ -29,17 +29,29 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="97"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="exapleHistory" translatesAutoresizingMaskIntoConstraints="NO" id="S1T-r9-idz">
-                                                    <rect key="frame" x="39" y="0.0" width="522" height="93"/>
-                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of mediations:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EDT-1t-VG7">
+                                                    <rect key="frame" x="8" y="38" width="175" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YfC-XD-xj9">
+                                                    <rect key="frame" x="191" y="39" width="10" height="20"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="S1T-r9-idz" firstAttribute="top" secondItem="UXg-dM-dpf" secondAttribute="top" id="2BL-5e-gmu"/>
-                                                <constraint firstAttribute="bottom" secondItem="S1T-r9-idz" secondAttribute="bottom" id="bH8-OR-m0Z"/>
-                                                <constraint firstItem="S1T-r9-idz" firstAttribute="centerY" secondItem="UXg-dM-dpf" secondAttribute="centerY" id="qIy-OJ-2aK"/>
-                                                <constraint firstItem="S1T-r9-idz" firstAttribute="centerX" secondItem="UXg-dM-dpf" secondAttribute="centerX" id="yT0-8e-5Pm"/>
+                                                <constraint firstItem="YfC-XD-xj9" firstAttribute="leading" secondItem="EDT-1t-VG7" secondAttribute="trailing" constant="8" id="0Xd-5d-t5u"/>
+                                                <constraint firstItem="EDT-1t-VG7" firstAttribute="leading" secondItem="UXg-dM-dpf" secondAttribute="leading" constant="8" id="XRU-Dv-anW"/>
+                                                <constraint firstItem="EDT-1t-VG7" firstAttribute="centerY" secondItem="UXg-dM-dpf" secondAttribute="centerY" id="ZGI-CZ-pLA"/>
+                                                <constraint firstItem="YfC-XD-xj9" firstAttribute="centerY" secondItem="UXg-dM-dpf" secondAttribute="centerY" id="gLY-L4-s7S"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="meditationCountLabel" destination="YfC-XD-xj9" id="Rc8-27-OIY"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CallToActionTableViewCell" id="dLd-rv-m6f" customClass="CallToActionTableViewCell" customModule="conscious" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="189" width="600" height="94"/>
@@ -308,7 +320,6 @@
         <image name="clock-7" width="30" height="30"/>
         <image name="clock-timer-7" width="29" height="30"/>
         <image name="exampleMeditionCover" width="1188" height="616"/>
-        <image name="exapleHistory" width="522" height="282"/>
         <image name="speaker-7" width="30" height="30"/>
     </resources>
 </document>

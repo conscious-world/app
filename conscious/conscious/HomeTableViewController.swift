@@ -17,8 +17,7 @@ class HomeTableViewController: UIViewController, UITableViewDataSource, UITableV
     var ctas = ["intro"]
     var recomededMediations = ["Loving Kindness", "Healing", "PM Relaxations"]
     var tableSectionsData:[[String]] = []
-    
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         tableSectionsData = [histories, ctas, categories, recomededMediations]
@@ -49,7 +48,9 @@ class HomeTableViewController: UIViewController, UITableViewDataSource, UITableV
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         switch indexPath.section {
         case 0:
-            return tableView.dequeueReusableCellWithIdentifier("HistoryTableViewCell", forIndexPath: indexPath)      as! HistoryTableViewCell
+            let cell = tableView.dequeueReusableCellWithIdentifier("HistoryTableViewCell", forIndexPath: indexPath)      as! HistoryTableViewCell
+            cell.meditationCountLabel.text = "\(History.count())"
+            return cell
         case 1:
             let  cell =  tableView.dequeueReusableCellWithIdentifier("CallToActionTableViewCell", forIndexPath: indexPath) as! CallToActionTableViewCell
             cell.navigationController = self.navigationController

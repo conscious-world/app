@@ -18,6 +18,8 @@ class Meditation: NSObject, NSCoding{
     static let TIME_START_KEY = "conscious.mediation.time_start"
     static let TIME_END_KEY = "conscious.mediation.time_end"
     static let OPTIONS_KEY = "conscious.mediation.options"
+    
+    static let timed_mediation_type = "conscious.mediation.timed_type"
 
     var meditation_type: String
     var media_id: String?
@@ -66,6 +68,18 @@ class Meditation: NSObject, NSCoding{
         coder.encodeObject(self.time_start, forKey: Meditation.TIME_START_KEY)
         coder.encodeObject(self.time_end, forKey: Meditation.TIME_END_KEY)
         coder.encodeObject(self.options, forKey: Meditation.OPTIONS_KEY)
+    }
+    
+    static func newTimedMeditation() -> Meditation{
+        return Meditation(meditation_type: Meditation.timed_mediation_type, media_id: nil, mentality_before: nil, mentality_after: nil, durration: nil, time_start: nil, time_end: nil, options: nil)
+    }
+    
+    func start(){
+        self.time_start = NSDate()
+    }
+    
+    func end(){
+        self.time_end = NSDate()
     }
 
 }
