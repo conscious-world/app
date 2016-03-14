@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--MentalStateViewController-->
@@ -19,10 +18,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vaQ-PZ-DFV">
-                                <rect key="frame" x="9" y="134" width="585" height="413"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="31a-F1-F9p">
-                                        <rect key="frame" x="263" y="179" width="56" height="56"/>
+                                        <rect key="frame" x="272" y="272" width="56" height="56"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <gestureRecognizers/>
                                         <constraints>
@@ -33,50 +32,45 @@
                                             <outletCollection property="gestureRecognizers" destination="8yP-gp-fgL" appends="YES" id="gnd-PW-Nmd"/>
                                         </connections>
                                     </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How are you doing today?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S6w-6K-5oc">
+                                        <rect key="frame" x="127" y="162" width="346" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.51694362279999995" green="1" blue="0.83927488459999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstItem="31a-F1-F9p" firstAttribute="top" secondItem="vaQ-PZ-DFV" secondAttribute="top" constant="179" id="0AK-dM-tAy"/>
-                                    <constraint firstAttribute="bottom" secondItem="31a-F1-F9p" secondAttribute="bottom" constant="178" id="2w8-Oa-gMa"/>
-                                    <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="31a-F1-F9p" secondAttribute="trailing" constant="266" id="OPn-X1-Zas"/>
-                                    <constraint firstItem="31a-F1-F9p" firstAttribute="leading" relation="lessThanOrEqual" secondItem="vaQ-PZ-DFV" secondAttribute="leading" constant="263" id="qxq-b6-FFS"/>
+                                    <constraint firstItem="31a-F1-F9p" firstAttribute="centerY" secondItem="vaQ-PZ-DFV" secondAttribute="centerY" id="6bJ-UN-an9"/>
+                                    <constraint firstItem="S6w-6K-5oc" firstAttribute="centerX" secondItem="vaQ-PZ-DFV" secondAttribute="centerX" id="BeQ-Qh-Rms"/>
+                                    <constraint firstAttribute="trailing" secondItem="S6w-6K-5oc" secondAttribute="trailing" constant="127" id="fvx-S7-KFB"/>
+                                    <constraint firstItem="S6w-6K-5oc" firstAttribute="top" secondItem="vaQ-PZ-DFV" secondAttribute="top" constant="162" id="jJM-YN-wc5"/>
+                                    <constraint firstItem="31a-F1-F9p" firstAttribute="centerX" secondItem="vaQ-PZ-DFV" secondAttribute="centerX" id="jre-TC-WOZ"/>
+                                    <constraint firstAttribute="width" constant="400" id="mtv-e2-xvW"/>
+                                    <constraint firstAttribute="height" constant="400" id="vb9-V6-eG2"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="mtv-e2-xvW"/>
+                                        <exclude reference="vb9-V6-eG2"/>
+                                        <exclude reference="fvx-S7-KFB"/>
+                                    </mask>
+                                </variation>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stressed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tmk-ef-CGH">
-                                <rect key="frame" x="266" y="74" width="68" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How are you doing today?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S6w-6K-5oc">
-                                <rect key="frame" x="201" y="28" width="198" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="S6w-6K-5oc" firstAttribute="top" secondItem="KLy-Yd-YvM" secondAttribute="bottom" constant="8" id="Chc-xe-75f"/>
-                            <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="S6w-6K-5oc" secondAttribute="trailing" constant="201" id="GAG-sj-ZOW"/>
-                            <constraint firstItem="S6w-6K-5oc" firstAttribute="leading" relation="lessThanOrEqual" secondItem="C4M-WR-OvB" secondAttribute="leading" constant="201" id="IRf-S1-PrO"/>
-                            <constraint firstItem="Tmk-ef-CGH" firstAttribute="top" secondItem="S6w-6K-5oc" secondAttribute="bottom" constant="26" id="PQX-eK-JaX"/>
-                            <constraint firstItem="vaQ-PZ-DFV" firstAttribute="leading" secondItem="C4M-WR-OvB" secondAttribute="leading" constant="9" id="U3W-QE-wIO"/>
-                            <constraint firstAttribute="trailingMargin" relation="lessThanOrEqual" secondItem="Tmk-ef-CGH" secondAttribute="trailing" constant="246" id="gGB-7c-zLv"/>
-                            <constraint firstAttribute="trailing" secondItem="vaQ-PZ-DFV" secondAttribute="trailing" constant="6" id="hva-gt-rgv"/>
-                            <constraint firstItem="Tmk-ef-CGH" firstAttribute="leading" relation="lessThanOrEqual" secondItem="C4M-WR-OvB" secondAttribute="leadingMargin" constant="246" id="qid-3s-Is0"/>
-                            <constraint firstItem="S6w-6K-5oc" firstAttribute="centerX" secondItem="C4M-WR-OvB" secondAttribute="centerX" id="tMj-mS-e6H"/>
-                            <constraint firstItem="jCC-Mr-kV6" firstAttribute="top" secondItem="vaQ-PZ-DFV" secondAttribute="bottom" constant="53" id="vCj-cT-p3o"/>
-                            <constraint firstItem="vaQ-PZ-DFV" firstAttribute="top" secondItem="Tmk-ef-CGH" secondAttribute="bottom" constant="39" id="wGc-Hn-CQp"/>
-                            <constraint firstItem="Tmk-ef-CGH" firstAttribute="centerX" secondItem="S6w-6K-5oc" secondAttribute="centerX" id="y9l-nd-Mu7"/>
+                            <constraint firstItem="vaQ-PZ-DFV" firstAttribute="leading" secondItem="C4M-WR-OvB" secondAttribute="leading" id="5mr-AZ-1Ww"/>
+                            <constraint firstItem="jCC-Mr-kV6" firstAttribute="top" secondItem="vaQ-PZ-DFV" secondAttribute="bottom" id="Kp5-8x-R9a"/>
+                            <constraint firstItem="vaQ-PZ-DFV" firstAttribute="top" secondItem="C4M-WR-OvB" secondAttribute="top" id="VXn-8y-SzZ"/>
+                            <constraint firstAttribute="trailing" secondItem="vaQ-PZ-DFV" secondAttribute="trailing" id="dd9-B0-1Pm"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="contentView" destination="C4M-WR-OvB" id="saf-pM-kMh"/>
                         <outlet property="mentalStateCursorView" destination="31a-F1-F9p" id="kWp-4h-qQa"/>
                         <outlet property="mentalStateGridView" destination="vaQ-PZ-DFV" id="uwz-QR-yKm"/>
-                        <outlet property="mentalStateLabel" destination="Tmk-ef-CGH" id="dAn-dh-mQn"/>
-                        <outlet property="questionLabel" destination="S6w-6K-5oc" id="Osu-Xf-rHB"/>
+                        <outlet property="questionLabel" destination="S6w-6K-5oc" id="ROl-6T-AHb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3EM-4P-Agt" userLabel="First Responder" sceneMemberID="firstResponder"/>
