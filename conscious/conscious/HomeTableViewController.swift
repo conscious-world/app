@@ -12,10 +12,10 @@ class HomeTableViewController: UIViewController, UITableViewDataSource, UITableV
 
     @IBOutlet weak var tableView: UITableView!
     
-    var categories = ["Timed Meditation", "Guided Meditations", "Ambient Sounds", "Chants", "Binaural Beats"]
+    var categories = ["Guided Meditations"]
     var histories = ["basics"]
     var ctas = ["intro"]
-    var recomededMediations = ["Loving Kindness", "Healing", "PM Relaxations"]
+    var recomededMediations = ["PM Relaxations"]
     var tableSectionsData:[[String]] = []
         
     override func viewDidLoad() {

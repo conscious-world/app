@@ -7,12 +7,12 @@ This app will help people start out or supplement their existing meditation prac
 The following **required** functionality is completed:
 - [x] User will be able to choose the type of meditation
 - [x] User will be able to choose the length of meditation
-- [] User will be able to listen to guided meditations
-- [] User will be able to listen to ambient sounds
+- [x] User will be able to listen to guided meditations
+- [x] User will be able to listen to ambient sounds
 - [x] User will be able to have silence with audio reminders at time intervals so they can keep track of time
 - [x] User will be able to chant and have the illusion of being surrounded by others chanting
-- [] User will be able to discover new meditations
-- [] User will be prompted to take an action upon launch the app based on it either being the first lauch or what they did last time
+- [x] User will be able to discover new meditations
+- [x] User will be prompted to take an action upon launch the app based on it either being the first lauch or what they did last time
 
 The following **optional** features are implemented:
 - [] User will be able to record their state of mind before and after each session

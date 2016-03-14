@@ -12,7 +12,7 @@ class CategoryViewController: UIViewController, UITableViewDelegate, UITableView
 
     @IBOutlet weak var tableView: UITableView!
     
-    var categoryMedia = ["Loving Kindness", "Healing", "PM Relaxations"]
+    var categoryMedia = ["Relaxations"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
