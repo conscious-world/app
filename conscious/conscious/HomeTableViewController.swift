@@ -12,13 +12,12 @@ class HomeTableViewController: UIViewController, UITableViewDataSource, UITableV
 
     @IBOutlet weak var tableView: UITableView!
     
-    var categories = ["Timed Meditation", "Guided Meditations", "Ambient Sounds", "Chants", "Binaural Beats"]
+    var categories = ["Guided Meditations"]
     var histories = ["basics"]
     var ctas = ["intro"]
-    var recomededMediations = ["Loving Kindness", "Healing", "PM Relaxations"]
+    var recomededMediations = ["PM Relaxations"]
     var tableSectionsData:[[String]] = []
-    
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         tableSectionsData = [histories, ctas, categories, recomededMediations]
@@ -27,6 +26,13 @@ class HomeTableViewController: UIViewController, UITableViewDataSource, UITableV
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 180
         // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        let lastMeditaion = History.sharedInstance()?.last
+        print("you have \(History.count()) medations and your last mediation was of type \(lastMeditaion?.meditation_type)" )
+        tableView.reloadData()
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -49,7 +55,9 @@ class HomeTableViewController: UIViewController, UITableViewDataSource, UITableV
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         switch indexPath.section {
         case 0:
-            return tableView.dequeueReusableCellWithIdentifier("HistoryTableViewCell", forIndexPath: indexPath)      as! HistoryTableViewCell
+            let cell = tableView.dequeueReusableCellWithIdentifier("HistoryTableViewCell", forIndexPath: indexPath)      as! HistoryTableViewCell
+            cell.meditationCountLabel.text = "\(History.count())"
+            return cell
         case 1:
             let  cell =  tableView.dequeueReusableCellWithIdentifier("CallToActionTableViewCell", forIndexPath: indexPath) as! CallToActionTableViewCell
             cell.navigationController = self.navigationController

@@ -13,8 +13,12 @@ class HistoryTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        meditationCountLabel.text = "\(History.count)"
+
     }
 
+    @IBOutlet weak var meditationCountLabel: UILabel!
+    
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
