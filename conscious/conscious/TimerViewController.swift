@@ -23,7 +23,7 @@ class TimerViewController: UIViewController, EZMicrophoneDelegate, EZAudioFFTDel
     var fft: EZAudioFFTRolling!
     var timer = NSTimer()
     var counter = 0;
-    var userSettings = TimerSettings()
+    var userSettings = TimerSettings.getCurrentSettings()
     
     @IBOutlet weak var timerLabel: UILabel!
     
@@ -80,8 +80,8 @@ class TimerViewController: UIViewController, EZMicrophoneDelegate, EZAudioFFTDel
     }
     
     func updateCounter(){
-        print(counter % userSettings.intervalSeconds)
-        if(counter % userSettings.intervalSeconds == 0){
+        print(counter % Int(userSettings.intervalSeconds))
+        if(counter % Int(userSettings.intervalSeconds) == 0){
             userSettings.playReminderTone()
         }
         
