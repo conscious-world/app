@@ -24,15 +24,12 @@ class MediaViewController: UIViewController, AVAudioPlayerDelegate, UIViewContro
     var timer = NSTimer()
     var duration: Double?
     var playing: Bool = false
-<<<<<<< 482a7ad209bdd247d2b21de8d5d432dd74a9f389
     var mediation: Meditation?
-=======
     var myPresentation: MyPresentation!
     var isPresenting: Bool = false
     var next = MentalStateViewController!()
     var finished: Bool = false
     var first: Bool = true
->>>>>>> mentalState working
 
     override func viewDidLoad() {
         super.viewDidLoad()
