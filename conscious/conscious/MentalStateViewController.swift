@@ -24,23 +24,20 @@ class MentalStateViewController: UIViewController, UIViewControllerTransitioning
     var animator: MyAnimator?
     var newPos: CGPoint?
     var startPos: CGPoint?
-    var numberOfSections: Int = 4
-    var im: UILabel!
-    var originalColor: UIColor = UIColor(hexString: "#FAC54B")
-    var xScale: Float?
-    var yScale: Float?
     var newX: CGFloat?
     var newY: CGFloat?
-    var deltaAngle: Float?
+    var dx: Float!
+    var dy: Float!
     var gridCenter: CGPoint?
     var sectors: [Sector]? = []
+    var numberOfSections: Int!
+    var deltaAngle: Float?
+    var originalColor: UIColor = UIColor(hexString: "#FAC54B")
     let joyColor: UIColor = UIColor.yellowColor()
     let fearColor: UIColor = UIColor.greenColor()
     let sadnessColor: UIColor = UIColor.blueColor()
     let rageColor: UIColor = UIColor.redColor()
     var color: UIColor?
-    var dx: Float!
-    var dy: Float!
     var second: Bool?
     var state: String!
     
@@ -48,21 +45,39 @@ class MentalStateViewController: UIViewController, UIViewControllerTransitioning
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let v = UIView(frame: CGRectMake(0, 0, 400, 400))
-        v.backgroundColor = UIColor.clearColor()
+        // setup Grid
+        setupGrid()
+        createSectors(4)
+        if (second != nil)  {
+            questionLabel.text = "How do you feel now?"
+        }
+    }
+    
+    func setupGrid(){
         mentalStateGridView.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
         mentalStateGridView.layer.position = CGPointMake(contentView.bounds.size.width / 2.0, contentView.bounds.size.height / 2.0)
         startPos = mentalStateGridView.center
         gridCenter = startPos
         mentalStateCursorView.center = startPos!
         mentalStateGridView.backgroundColor = originalColor.tintColor(amount: 0.8)
-        
-        self.view = contentView
         view.addSubview(mentalStateGridView)
+        
+        // set up cursorView
+        let backgroundImage = UIImageView(frame: mentalStateCursorView.bounds)
+        backgroundImage.image = UIImage(named: "buddha")
+        self.mentalStateCursorView.insertSubview(backgroundImage, atIndex: 0)
+        mentalStateCursorView.layer.borderWidth = 1.0
+        mentalStateCursorView.layer.masksToBounds = false
+        mentalStateCursorView.backgroundColor = UIColor.clearColor()
+        mentalStateCursorView.layer.borderColor = UIColor.grayColor().CGColor
+        mentalStateCursorView.layer.cornerRadius = mentalStateCursorView.frame.size.width/2
+        mentalStateCursorView.clipsToBounds = true
+    }
+    
+    func createSectors(numberOfSections: Int){
         let angleSize: CGFloat = CGFloat(2 * M_PI / Double(numberOfSections))
         var mid: CGFloat = 0
         for var i = 0; i < numberOfSections; i++ {
-            
             let sector: Sector = Sector()
             sector.midValue = mid
             sector.minValue = mid - (angleSize/2)
@@ -75,21 +90,6 @@ class MentalStateViewController: UIViewController, UIViewControllerTransitioning
             }
             mid -= angleSize
             sectors!.append(sector)
-        }
-        
-        let backgroundImage = UIImageView(frame: mentalStateCursorView.bounds)
-        backgroundImage.image = UIImage(named: "buddha")
-        self.mentalStateCursorView.insertSubview(backgroundImage, atIndex: 0)
-        
-        mentalStateCursorView.layer.borderWidth = 1.0
-        mentalStateCursorView.layer.masksToBounds = false
-        mentalStateCursorView.backgroundColor = UIColor.clearColor()
-        mentalStateCursorView.layer.borderColor = UIColor.grayColor().CGColor
-        mentalStateCursorView.layer.cornerRadius = mentalStateCursorView.frame.size.width/2
-        mentalStateCursorView.clipsToBounds = true
-        
-        if (second != nil)  {
-            questionLabel.text = "How do you feel now?"
         }
     }
 
@@ -228,7 +228,7 @@ class MentalStateViewController: UIViewController, UIViewControllerTransitioning
         return MyPresentation(presentedViewController: presented, presentingViewController: presenting)
     }
     
-
+    /*
 
     // MARK: - Navigation
 
@@ -239,8 +239,7 @@ class MentalStateViewController: UIViewController, UIViewControllerTransitioning
         let destinationVC:MediaViewController = segue.destinationViewController as! MediaViewController
         
         //set properties on the destination view controller
-        destinationVC.meditation!.mentality_before = "sog"
     }
-
+    */
 }
 
