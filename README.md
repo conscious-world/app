@@ -31,7 +31,7 @@ The following **bonus** features are implemented:
 - [] User can like other mediations
 
 ### Video Walkthrough
-<img src='conscious1.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='conscious2.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 ### Data Schema
 <img src='dataSchema.png' title='Data Schema' width='' alt='Data Schema' />
