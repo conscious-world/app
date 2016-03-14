@@ -34,6 +34,8 @@ class SelectableSettingViewController: UIViewController, UITableViewDataSource, 
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        self.view.backgroundColor = UIColor.clearColor()
+        tableView.backgroundColor = UIColor.clearColor()
     }
 
     override func didReceiveMemoryWarning() {
@@ -57,6 +59,16 @@ class SelectableSettingViewController: UIViewController, UITableViewDataSource, 
         return cell
 
     }
+    
+    
+    
+    func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+        cell.clipsToBounds = false
+        cell.backgroundColor = UIColor.clearColor()
+        cell.contentView.backgroundColor = UIColor.clearColor()
+        cell.backgroundView?.backgroundColor = UIColor.clearColor()
+    }
+
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return settings != nil ? settings!.count : 0

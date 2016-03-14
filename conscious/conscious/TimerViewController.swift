@@ -175,7 +175,10 @@ class TimerViewController: UIViewController, EZMicrophoneDelegate, EZAudioFFTDel
         let storyBoard = UIStoryboard(name: "timed_meditation", bundle: nil)
         if let settingsViewController  = storyBoard.instantiateViewControllerWithIdentifier("TimerSettingsTableViewController") as? TimerSettingsTableViewController{
             settingsViewController.delegate = self
-            self.navigationController?.pushViewController(settingsViewController, animated: true)
+            settingsViewController.modalPresentationStyle = .OverFullScreen
+            settingsViewController.view.backgroundColor = UIColor.clearColor()
+            self.presentViewController(settingsViewController, animated: true, completion: nil)
+           // self.navigationController?.pushViewController(settingsViewController, animated: true)
         }
     }
     
