@@ -44,7 +44,7 @@ class TimerViewController: UIViewController, EZMicrophoneDelegate, EZAudioFFTDel
         styleButtons()
         session = AVAudioSession.sharedInstance()
         self.maxFrequencyLabel.numberOfLines = 0;
-        startAudio()
+        //startAudio()
         timerLabel.hidden = true
     }
     
@@ -68,19 +68,20 @@ class TimerViewController: UIViewController, EZMicrophoneDelegate, EZAudioFFTDel
     }
     
     @IBAction func onStartButtonPressed(sender: UIButton) {
-        //startAudio()
+        startAudio()
         userSettings.playBackgroundSound()
         timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("updateCounter"), userInfo: nil, repeats: true)
         sender.hidden = true
         stopButton.hidden = false
         timerLabel.hidden = false
-        EZMicrophone.sharedMicrophone().startFetchingAudio()
-        EZOutput.sharedOutput().startPlayback();
-        backgroundTaskId = UIApplication.sharedApplication().beginBackgroundTaskWithExpirationHandler(nil)
+        if(userSettings.useAudioReverb()){
+            EZMicrophone.sharedMicrophone().startFetchingAudio()
+            EZOutput.sharedOutput().startPlayback();
+            backgroundTaskId = UIApplication.sharedApplication().beginBackgroundTaskWithExpirationHandler(nil)
+        }
     }
     
     func updateCounter(){
-        print(counter % Int(userSettings.intervalSeconds))
         if(counter % Int(userSettings.intervalSeconds) == 0){
             userSettings.playReminderTone()
         }
@@ -109,8 +110,6 @@ class TimerViewController: UIViewController, EZMicrophoneDelegate, EZAudioFFTDel
         backgroundView.loadHTMLString(imageHTML, baseURL: baseURL)
         backgroundView.userInteractionEnabled = false;
     }
-    
-    
     
     func startAudio()
     {
@@ -148,7 +147,6 @@ class TimerViewController: UIViewController, EZMicrophoneDelegate, EZAudioFFTDel
             NSLog("Error setting up audio session active");
             
         }
-        
     }
     
     //EZMicrophoneDelegate
@@ -177,9 +175,10 @@ class TimerViewController: UIViewController, EZMicrophoneDelegate, EZAudioFFTDel
         let storyBoard = UIStoryboard(name: "timed_meditation", bundle: nil)
         if let settingsViewController  = storyBoard.instantiateViewControllerWithIdentifier("TimerSettingsTableViewController") as? TimerSettingsTableViewController{
             settingsViewController.delegate = self
-            self.navigationController?.pushViewController(settingsViewController, animated: true)
-        }else{
-            print("No vc found")
+            settingsViewController.modalPresentationStyle = .OverFullScreen
+            settingsViewController.view.backgroundColor = UIColor.clearColor()
+            self.presentViewController(settingsViewController, animated: true, completion: nil)
+           // self.navigationController?.pushViewController(settingsViewController, animated: true)
         }
     }
     
@@ -193,13 +192,9 @@ class TimerViewController: UIViewController, EZMicrophoneDelegate, EZAudioFFTDel
         })
     }
     
-    
     func settingsUpdated(controller: TimerSettingsTableViewController, settings: TimerSettings){
-        print("Update settings from settings controller")
         self.userSettings = settings
     }
-
-    
 
     /*
     // MARK: - Navigation

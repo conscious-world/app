@@ -36,14 +36,17 @@
 		DA3501E71C8FDECA006A41A5 /* waterfall2.gif in Resources */ = {isa = PBXBuildFile; fileRef = DA3501E11C8FDECA006A41A5 /* waterfall2.gif */; };
 		DA3501E91C8FF1AB006A41A5 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA3501E81C8FF1AB006A41A5 /* AudioToolbox.framework */; };
 		DA3501EB1C8FF439006A41A5 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA3501EA1C8FF439006A41A5 /* AVFoundation.framework */; };
-		DA3501EF1C8FF6F9006A41A5 /* bowl.wav in Resources */ = {isa = PBXBuildFile; fileRef = DA3501EE1C8FF6F9006A41A5 /* bowl.wav */; };
 		DA3501F11C8FFBC0006A41A5 /* rain.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DA3501F01C8FFBC0006A41A5 /* rain.mp3 */; };
 		DA3501F61C926A34006A41A5 /* timed_meditation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA3501F51C926A34006A41A5 /* timed_meditation.storyboard */; };
 		DA3501FA1C927046006A41A5 /* TimePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3501F91C927046006A41A5 /* TimePickerView.swift */; };
 		DA3501FD1C94D184006A41A5 /* SettingCheckboxTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3501FC1C94D184006A41A5 /* SettingCheckboxTableViewCell.swift */; };
 		DA3501FF1C94D32D006A41A5 /* SelectableSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3501FE1C94D32D006A41A5 /* SelectableSettingViewController.swift */; };
 		DA3502031C94E63C006A41A5 /* SimpleSelectableSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3502021C94E63C006A41A5 /* SimpleSelectableSetting.swift */; };
-		DA3502051C94ED90006A41A5 /* bells.wav in Resources */ = {isa = PBXBuildFile; fileRef = DA3502041C94ED90006A41A5 /* bells.wav */; };
+		DA3502071C951731006A41A5 /* waves.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DA3502061C951731006A41A5 /* waves.mp3 */; };
+		DA3502091C951803006A41A5 /* bells.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DA3502081C951803006A41A5 /* bells.mp3 */; };
+		DA35020B1C951869006A41A5 /* bowl.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DA35020A1C951869006A41A5 /* bowl.mp3 */; };
+		DA35020F1C951CE2006A41A5 /* crickets.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DA35020E1C951CE2006A41A5 /* crickets.mp3 */; };
+		DA3502111C9641F1006A41A5 /* Mediation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3502101C9641F1006A41A5 /* Mediation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -81,14 +84,17 @@
 		DA3501E11C8FDECA006A41A5 /* waterfall2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = waterfall2.gif; sourceTree = "<group>"; };
 		DA3501E81C8FF1AB006A41A5 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		DA3501EA1C8FF439006A41A5 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		DA3501EE1C8FF6F9006A41A5 /* bowl.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = bowl.wav; sourceTree = "<group>"; };
 		DA3501F01C8FFBC0006A41A5 /* rain.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = rain.mp3; sourceTree = "<group>"; };
 		DA3501F51C926A34006A41A5 /* timed_meditation.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = timed_meditation.storyboard; sourceTree = "<group>"; };
 		DA3501F91C927046006A41A5 /* TimePickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimePickerView.swift; sourceTree = "<group>"; };
 		DA3501FC1C94D184006A41A5 /* SettingCheckboxTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingCheckboxTableViewCell.swift; sourceTree = "<group>"; };
 		DA3501FE1C94D32D006A41A5 /* SelectableSettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectableSettingViewController.swift; sourceTree = "<group>"; };
 		DA3502021C94E63C006A41A5 /* SimpleSelectableSetting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleSelectableSetting.swift; sourceTree = "<group>"; };
-		DA3502041C94ED90006A41A5 /* bells.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = bells.wav; sourceTree = "<group>"; };
+		DA3502061C951731006A41A5 /* waves.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = waves.mp3; sourceTree = "<group>"; };
+		DA3502081C951803006A41A5 /* bells.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bells.mp3; sourceTree = "<group>"; };
+		DA35020A1C951869006A41A5 /* bowl.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bowl.mp3; sourceTree = "<group>"; };
+		DA35020E1C951CE2006A41A5 /* crickets.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = crickets.mp3; sourceTree = "<group>"; };
+		DA3502101C9641F1006A41A5 /* Mediation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mediation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -222,6 +228,7 @@
 				DA3501D81C8CEDB5006A41A5 /* AudioEffects */,
 				DA3501C81C8CCDF5006A41A5 /* Category.swift */,
 				DA3501CA1C8CCE00006A41A5 /* History.swift */,
+				DA3502101C9641F1006A41A5 /* Mediation.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -246,9 +253,11 @@
 		DA3501D41C8CE4EC006A41A5 /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
-				DA3502041C94ED90006A41A5 /* bells.wav */,
+				DA3502061C951731006A41A5 /* waves.mp3 */,
+				DA3502081C951803006A41A5 /* bells.mp3 */,
+				DA35020E1C951CE2006A41A5 /* crickets.mp3 */,
+				DA35020A1C951869006A41A5 /* bowl.mp3 */,
 				DA3501F01C8FFBC0006A41A5 /* rain.mp3 */,
-				DA3501EE1C8FF6F9006A41A5 /* bowl.wav */,
 			);
 			name = Sounds;
 			sourceTree = "<group>";
@@ -376,20 +385,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA3501D61C8CE4FC006A41A5 /* MARC5MinuteBreathing.mp3 in Resources */,
-				DA3502051C94ED90006A41A5 /* bells.wav in Resources */,
 				5CB0BA151C9291C20045901F /* media_meditation.storyboard in Resources */,
 				DA3501A91C880A27006A41A5 /* LaunchScreen.storyboard in Resources */,
 				DA3501E51C8FDECA006A41A5 /* sunset1.gif in Resources */,
 				DA3501E61C8FDECA006A41A5 /* waterfall1.gif in Resources */,
-				DA3501EF1C8FF6F9006A41A5 /* bowl.wav in Resources */,
 				DA3501A61C880A27006A41A5 /* Assets.xcassets in Resources */,
 				DA3501F11C8FFBC0006A41A5 /* rain.mp3 in Resources */,
+				DA35020F1C951CE2006A41A5 /* crickets.mp3 in Resources */,
 				DA3501E31C8FDECA006A41A5 /* cloudssf.gif in Resources */,
 				DA3501E71C8FDECA006A41A5 /* waterfall2.gif in Resources */,
 				DA3501F61C926A34006A41A5 /* timed_meditation.storyboard in Resources */,
 				DA3501E41C8FDECA006A41A5 /* river1.gif in Resources */,
+				DA35020B1C951869006A41A5 /* bowl.mp3 in Resources */,
+				DA3502071C951731006A41A5 /* waves.mp3 in Resources */,
 				DA3501A41C880A27006A41A5 /* Main.storyboard in Resources */,
 				DA3501E21C8FDECA006A41A5 /* beach1.gif in Resources */,
+				DA3502091C951803006A41A5 /* bells.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -456,6 +467,7 @@
 				DA3501BC1C881F07006A41A5 /* TimerViewController.swift in Sources */,
 				DA3501C01C8A749E006A41A5 /* CategoryViewController.swift in Sources */,
 				DA3501B51C88112D006A41A5 /* CallToActionTableViewCell.swift in Sources */,
+				DA3502111C9641F1006A41A5 /* Mediation.swift in Sources */,
 				DA3501FA1C927046006A41A5 /* TimePickerView.swift in Sources */,
 				DA3501D11C8CD27B006A41A5 /* TimerSettingsTableViewController.swift in Sources */,
 				DA3501CB1C8CCE00006A41A5 /* History.swift in Sources */,
