@@ -46,6 +46,7 @@
 		DA3502091C951803006A41A5 /* bells.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DA3502081C951803006A41A5 /* bells.mp3 */; };
 		DA35020B1C951869006A41A5 /* bowl.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DA35020A1C951869006A41A5 /* bowl.mp3 */; };
 		DA35020F1C951CE2006A41A5 /* crickets.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DA35020E1C951CE2006A41A5 /* crickets.mp3 */; };
+		DA3502111C9641F1006A41A5 /* Mediation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3502101C9641F1006A41A5 /* Mediation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -93,6 +94,7 @@
 		DA3502081C951803006A41A5 /* bells.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bells.mp3; sourceTree = "<group>"; };
 		DA35020A1C951869006A41A5 /* bowl.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bowl.mp3; sourceTree = "<group>"; };
 		DA35020E1C951CE2006A41A5 /* crickets.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = crickets.mp3; sourceTree = "<group>"; };
+		DA3502101C9641F1006A41A5 /* Mediation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mediation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -226,6 +228,7 @@
 				DA3501D81C8CEDB5006A41A5 /* AudioEffects */,
 				DA3501C81C8CCDF5006A41A5 /* Category.swift */,
 				DA3501CA1C8CCE00006A41A5 /* History.swift */,
+				DA3502101C9641F1006A41A5 /* Mediation.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -464,6 +467,7 @@
 				DA3501BC1C881F07006A41A5 /* TimerViewController.swift in Sources */,
 				DA3501C01C8A749E006A41A5 /* CategoryViewController.swift in Sources */,
 				DA3501B51C88112D006A41A5 /* CallToActionTableViewCell.swift in Sources */,
+				DA3502111C9641F1006A41A5 /* Mediation.swift in Sources */,
 				DA3501FA1C927046006A41A5 /* TimePickerView.swift in Sources */,
 				DA3501D11C8CD27B006A41A5 /* TimerSettingsTableViewController.swift in Sources */,
 				DA3501CB1C8CCE00006A41A5 /* History.swift in Sources */,

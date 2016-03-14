@@ -24,13 +24,22 @@ class TimerSettingsTableViewController: UITableViewController, SelectableSetting
     @IBOutlet weak var selectedNotificationSoundLabel: UILabel!
     @IBOutlet weak var selectedBackgroundSoundLabel: UILabel!
     @IBOutlet weak var audioFeedbackSwitch: UISwitch!
+    
     override func viewDidLoad() {
+        print("viewDidLoad")
         timePicker.settings = settings
         updateSelectedSettings()
-        
+        self.tableView.backgroundColor = UIColor.redColor()
         dispatch_async(dispatch_get_main_queue(),{
             self.timePicker.countDownDuration = self.settings.intervalSeconds
         })
+    }
+    
+    @IBAction func onCloseButtonTouched(sender: UIButton) {
+        self.settings.stopBackgroundSound()
+        self.settings.stopReminderTone()
+        self.delegate?.settingsUpdated(self, settings: self.settings)
+        self.dismissViewControllerAnimated(true, completion: nil)
     }
     
     func updateSelectedSettings(){
@@ -61,17 +70,27 @@ class TimerSettingsTableViewController: UITableViewController, SelectableSetting
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        
-        if(indexPath.row == 1){
+        print("didselectrowatindexpath")
+        self.tableView.cellForRowAtIndexPath(indexPath)?.selected = false
+        if(indexPath.row == 3){
+            print("changeSound ReminderTone")
             settingToUpdate = TimerSettings.SettingType.ReminderTone
             self.performSegueWithIdentifier("changeSound", sender: self)
-        }else if(indexPath.row == 2){
+        }else if(indexPath.row == 4){
+            print("changeSound BackgroundSoundFile")
             settingToUpdate = TimerSettings.SettingType.BackgroundSoundFile
             self.performSegueWithIdentifier("changeSound", sender: self)
         }
         else{
             self.tableView.cellForRowAtIndexPath(indexPath)?.selected = false
         }
+    }
+    
+    override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+        cell.clipsToBounds = false
+        cell.backgroundColor = UIColor.clearColor()
+        cell.contentView.backgroundColor = UIColor.clearColor()
+        cell.backgroundView?.backgroundColor = UIColor.clearColor()
     }
     
     func settingSelected(controller: SelectableSettingViewController, setting: AnyObject, type: TimerSettings.SettingType){
