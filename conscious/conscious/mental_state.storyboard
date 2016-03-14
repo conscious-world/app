@@ -32,19 +32,28 @@
                                             <outletCollection property="gestureRecognizers" destination="8yP-gp-fgL" appends="YES" id="gnd-PW-Nmd"/>
                                         </connections>
                                     </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How are you doing today?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S6w-6K-5oc">
-                                        <rect key="frame" x="127" y="162" width="346" height="36"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dXs-8X-R0e">
+                                        <rect key="frame" x="117" y="64" width="367" height="128"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="How are you doing today?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S6w-6K-5oc">
+                                                <rect key="frame" x="10" y="46" width="346" height="36"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="367" id="H1P-UP-AN2"/>
+                                            <constraint firstAttribute="height" constant="128" id="ymo-g6-qgs"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" red="0.51694362279999995" green="1" blue="0.83927488459999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="31a-F1-F9p" firstAttribute="centerY" secondItem="vaQ-PZ-DFV" secondAttribute="centerY" id="6bJ-UN-an9"/>
-                                    <constraint firstItem="S6w-6K-5oc" firstAttribute="centerX" secondItem="vaQ-PZ-DFV" secondAttribute="centerX" id="BeQ-Qh-Rms"/>
-                                    <constraint firstAttribute="trailing" secondItem="S6w-6K-5oc" secondAttribute="trailing" constant="127" id="fvx-S7-KFB"/>
-                                    <constraint firstItem="S6w-6K-5oc" firstAttribute="top" secondItem="vaQ-PZ-DFV" secondAttribute="top" constant="162" id="jJM-YN-wc5"/>
+                                    <constraint firstItem="dXs-8X-R0e" firstAttribute="centerX" secondItem="vaQ-PZ-DFV" secondAttribute="centerX" id="U6x-rB-8AS"/>
+                                    <constraint firstItem="dXs-8X-R0e" firstAttribute="top" secondItem="vaQ-PZ-DFV" secondAttribute="top" constant="64" id="Wfa-7L-PjJ"/>
                                     <constraint firstItem="31a-F1-F9p" firstAttribute="centerX" secondItem="vaQ-PZ-DFV" secondAttribute="centerX" id="jre-TC-WOZ"/>
                                     <constraint firstAttribute="width" constant="400" id="mtv-e2-xvW"/>
                                     <constraint firstAttribute="height" constant="400" id="vb9-V6-eG2"/>
@@ -53,7 +62,6 @@
                                     <mask key="constraints">
                                         <exclude reference="mtv-e2-xvW"/>
                                         <exclude reference="vb9-V6-eG2"/>
-                                        <exclude reference="fvx-S7-KFB"/>
                                     </mask>
                                 </variation>
                             </view>

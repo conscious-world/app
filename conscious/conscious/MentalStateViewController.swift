@@ -8,14 +8,14 @@
 
 import UIKit
 
-let Pi = CGFloat(M_PI)
-let DegreesToRadians = Pi / 180
-let RadiansToDegrees = 180 / Pi
+@objc protocol MentalStateDelegate {
+    func mentalStateSelected(picker: MentalStateViewController, didPickState state: String?)
+}
 
-class MentalStateViewController: UIViewController, UIViewControllerTransitioningDelegate {
+class MentalStateViewController: UIViewController, UIViewControllerTransitioningDelegate{
 
+    weak var delegate: MentalStateDelegate?
     @IBOutlet var contentView: UIView!
-
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var mentalStateGridView: UIView!
     @IBOutlet weak var mentalStateCursorView: UIView!
@@ -42,6 +42,7 @@ class MentalStateViewController: UIViewController, UIViewControllerTransitioning
     var dx: Float!
     var dy: Float!
     var second: Bool?
+    var state: String!
     
     
     
@@ -82,6 +83,7 @@ class MentalStateViewController: UIViewController, UIViewControllerTransitioning
         
         mentalStateCursorView.layer.borderWidth = 1.0
         mentalStateCursorView.layer.masksToBounds = false
+        mentalStateCursorView.backgroundColor = UIColor.clearColor()
         mentalStateCursorView.layer.borderColor = UIColor.grayColor().CGColor
         mentalStateCursorView.layer.cornerRadius = mentalStateCursorView.frame.size.width/2
         mentalStateCursorView.clipsToBounds = true
@@ -142,16 +144,37 @@ class MentalStateViewController: UIViewController, UIViewControllerTransitioning
                     default:
                         // TODO:: Setup color mixing
                         if dx != 0 || dy != 0 {
-                            color = color!.mixWithColor(UIColor.blueColor())
+                            //This will be reached if the cursor is on a radian
                         }
                 }
 
             }
-            mentalStateCursorView.center = CGPoint(x: newX!, y: newY!)
             changeColor(distFromCenter, color: color!)
             setText(distFromCenter, sector: sector)
+            newX = (startPos!.x + translation.x)
+            newY = (startPos!.y + translation.y)
+            mentalStateCursorView.center = CGPoint(x: newX!, y: newY!)
+            
         } else if gesture.state == UIGestureRecognizerState.Ended {
-            NSTimer.scheduledTimerWithTimeInterval(0.2, target: self, selector: "dismissView", userInfo:nil ,repeats: false)
+            makeRipple()
+            delegate?.mentalStateSelected(self, didPickState: self.state)
+            
+            NSTimer.scheduledTimerWithTimeInterval(0.5, target: self, selector: "dismissView", userInfo:nil ,repeats: false)
+        }
+    }
+    
+    func makeRipple() {
+        var option = Ripple.option()
+        //configure
+        option.borderWidth = CGFloat(2.0)
+        option.radius = CGFloat(20.0)
+        option.duration = CFTimeInterval(1.0)
+        option.borderColor = UIColor.whiteColor().tintColor(amount: 0.7)
+//        option.fillColor = UIColor.whiteColor().tintColor(amount: 0.9)
+        option.scale = CGFloat(10)
+        
+        Ripple.run(mentalStateCursorView, locationInView: CGPoint(x: 25,y: 20), option: option){
+            print("animation completed")
         }
     }
     
@@ -160,14 +183,14 @@ class MentalStateViewController: UIViewController, UIViewControllerTransitioning
     }
     
     func changeColor(tint: Float, color: UIColor) {
-        UIView.animateWithDuration(0.3) { () -> Void in
+        UIView.animateWithDuration(1.0) { () -> Void in
             self.mentalStateGridView.backgroundColor = color.tintColor(amount: CGFloat(tint))
         }
     }
     
     func setText(tint: Float, sector: Int){
         var text: String = questionLabel.text!
-        let joy = ["serentiy", "joy", "ecstasy"]
+        let joy = ["serenity", "joy", "ecstasy"]
         let fear = ["apprehension", "fear", "terror"]
         let sadness = ["pensiveness", "sadness", "grief"]
         let anger = ["annoyance", "anger", "rage"]
@@ -198,6 +221,7 @@ class MentalStateViewController: UIViewController, UIViewControllerTransitioning
             self.questionLabel.text = text
             self.questionLabel!.alpha = 1.0
         }
+        state = text
     }
     
     func presentationControllerForPresentedViewController(presented: UIViewController, presentingViewController presenting: UIViewController, sourceViewController source: UIViewController) -> UIPresentationController? {
@@ -205,15 +229,18 @@ class MentalStateViewController: UIViewController, UIViewControllerTransitioning
     }
     
 
-    /*
+
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        let destinationVC:MediaViewController = segue.destinationViewController as! MediaViewController
+        
+        //set properties on the destination view controller
+        destinationVC.meditation!.mentality_before = "sog"
     }
-    */
 
 }
 

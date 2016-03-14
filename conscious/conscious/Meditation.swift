@@ -31,6 +31,7 @@ class Meditation: NSObject, NSCoding{
     var time_end: NSDate?
     var options: [[String:String]]?
     
+    
     init(meditation_type: String, media_id: String?, mentality_before: String?, mentality_after: String?, durration: NSTimeInterval?, time_start: NSDate?, time_end: NSDate?, options: [[String:String]]?){
         self.meditation_type    = meditation_type
         self.media_id           = media_id

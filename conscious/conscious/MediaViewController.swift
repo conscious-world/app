@@ -9,7 +9,7 @@
 import UIKit
 import AVFoundation
 
-class MediaViewController: UIViewController, AVAudioPlayerDelegate, UIViewControllerTransitioningDelegate {
+class MediaViewController: UIViewController, AVAudioPlayerDelegate, UIViewControllerTransitioningDelegate, MentalStateDelegate {
 
     @IBOutlet weak var playPauseButton: UIButton!
     @IBOutlet weak var currentTimeLabel: UILabel!
@@ -17,6 +17,7 @@ class MediaViewController: UIViewController, AVAudioPlayerDelegate, UIViewContro
     @IBOutlet weak var timeSlider: UISlider!
     @IBOutlet var mediaView: UIView!
     
+    var mentalStateDelegate: MentalStateDelegate!
     var animator: MyAnimator = MyAnimator()
     var audioPlayer: AVAudioPlayer!
     var minValue: NSTimeInterval!
@@ -24,9 +25,8 @@ class MediaViewController: UIViewController, AVAudioPlayerDelegate, UIViewContro
     var timer = NSTimer()
     var duration: Double?
     var playing: Bool = false
-    var mediation: Meditation?
+    var meditation: Meditation?
     var myPresentation: MyPresentation!
-    var isPresenting: Bool = false
     var next = MentalStateViewController!()
     var finished: Bool = false
     var first: Bool = true
@@ -35,8 +35,20 @@ class MediaViewController: UIViewController, AVAudioPlayerDelegate, UIViewContro
         super.viewDidLoad()
         loadAudio()
         if first {
+            meditation = Meditation.newGuidedMeditation()
             presentation()
             first = false
+        } else {
+        }
+    }
+    
+    func mentalStateSelected(picker: MentalStateViewController, didPickState state: String?) {
+        if let mentalState = state {
+            if finished == false {
+                meditation?.mentality_before = mentalState
+            } else {
+                meditation?.mentality_after = mentalState
+            }
         }
     }
     
@@ -45,6 +57,7 @@ class MediaViewController: UIViewController, AVAudioPlayerDelegate, UIViewContro
         next = storyBoard.instantiateViewControllerWithIdentifier("MentalStateViewController") as! MentalStateViewController
         next.animator = animator
         next.modalPresentationStyle = .Custom
+        next.delegate = self
         next.transitioningDelegate = self
         if first == false {
             next.second = true
@@ -105,21 +118,25 @@ class MediaViewController: UIViewController, AVAudioPlayerDelegate, UIViewContro
     
     @IBAction func togglePlayingSound(sender: AnyObject) {
         if playing {
-            print("fake end of mediation")
-            mediation?.end()
-            History.append(mediation!)
+            print("togglePlayingSound: fake end of mediation")
+            endMeditation()
             playPauseButton.setImage(UIImage(named: "video-player-7"), forState: UIControlState.Normal)
             audioPlayer.pause()
             timer.invalidate()
             playing = false
         } else {
-            mediation = Meditation.newGuidedMeditation()
-            mediation!.start()
+            meditation!.start()
             audioPlayer.play()
             playPauseButton.setImage(UIImage(named: "pushpin-7"), forState: UIControlState.Normal)
             timer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: Selector("updateTimeSlider"), userInfo: nil, repeats: true)
             playing = true
         }
+    }
+    
+    func endMeditation() {
+        //meditation?.duration = meditation?.time_start - meditation?.time_end
+        meditation?.end()
+        History.append(meditation!)
     }
     
     func updateTimeSlider () {
@@ -139,6 +156,7 @@ class MediaViewController: UIViewController, AVAudioPlayerDelegate, UIViewContro
     
     func audioPlayerDidFinishPlaying(player: AVAudioPlayer, successfully flag: Bool) {
         playPauseButton.setImage(UIImage(named: "video-player-7"), forState: UIControlState.Normal)
+        endMeditation()
         // segue to post-meditation screen
         presentation()
     }

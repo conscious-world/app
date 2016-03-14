@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C290EF81C97790E000FF2D9 /* PIRipple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C290EF71C97790E000FF2D9 /* PIRipple.swift */; };
 		5C3E9EB71C959ECC00936753 /* DynamicColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C3E9EB51C959ECC00936753 /* DynamicColor.swift */; };
 		5C3E9EB81C959ECC00936753 /* HSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C3E9EB61C959ECC00936753 /* HSL.swift */; };
 		5C822B461C96786C00D085B1 /* Sector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C822B451C96786C00D085B1 /* Sector.swift */; };
@@ -57,6 +58,7 @@
 
 /* Begin PBXFileReference section */
 		40F07EF925CB2A44E1843088 /* libPods-conscious.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-conscious.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C290EF71C97790E000FF2D9 /* PIRipple.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PIRipple.swift; sourceTree = "<group>"; };
 		5C3E9EB51C959ECC00936753 /* DynamicColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DynamicColor.swift; path = "../../../../../../../../Downloads/DynamicColor-master/Sources/DynamicColor.swift"; sourceTree = "<group>"; };
 		5C3E9EB61C959ECC00936753 /* HSL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HSL.swift; path = "../../../../../../../../Downloads/DynamicColor-master/Sources/HSL.swift"; sourceTree = "<group>"; };
 		5C822B451C96786C00D085B1 /* Sector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sector.swift; sourceTree = "<group>"; };
@@ -181,6 +183,7 @@
 				5C822B431C96782300D085B1 /* Models */,
 				5CCB321C1C93FEDA00EB656E /* MentalStateView.swift */,
 				5CCB32251C9508D500EB656E /* mental_state.storyboard */,
+				5C290EF71C97790E000FF2D9 /* PIRipple.swift */,
 			);
 			name = mental_state;
 			sourceTree = "<group>";
@@ -399,7 +402,7 @@
 				TargetAttributes = {
 					DA35019A1C880A27006A41A5 = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = 4AS52V979F;
+						DevelopmentTeam = H27A3U4FRN;
 					};
 				};
 			};
@@ -504,6 +507,7 @@
 			files = (
 				DA3501FD1C94D184006A41A5 /* SettingCheckboxTableViewCell.swift in Sources */,
 				DA3501B71C881140006A41A5 /* CategoryTableViewCell.swift in Sources */,
+				5C290EF81C97790E000FF2D9 /* PIRipple.swift in Sources */,
 				DA3501B31C88111A006A41A5 /* HistoryTableViewCell.swift in Sources */,
 				DA3501A11C880A27006A41A5 /* HomeTableViewController.swift in Sources */,
 				5C3E9EB81C959ECC00936753 /* HSL.swift in Sources */,
