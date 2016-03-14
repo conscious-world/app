@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		5C3E9EB71C959ECC00936753 /* DynamicColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C3E9EB51C959ECC00936753 /* DynamicColor.swift */; };
 		5C3E9EB81C959ECC00936753 /* HSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C3E9EB61C959ECC00936753 /* HSL.swift */; };
+		5C822B461C96786C00D085B1 /* Sector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C822B451C96786C00D085B1 /* Sector.swift */; };
 		5CB0BA151C9291C20045901F /* media_meditation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CB0BA141C9291C20045901F /* media_meditation.storyboard */; };
 		5CCB321D1C93FEDA00EB656E /* MentalStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCB321C1C93FEDA00EB656E /* MentalStateView.swift */; };
 		5CCB32231C95044A00EB656E /* MentalStateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCB32221C95044A00EB656E /* MentalStateViewController.swift */; };
@@ -58,6 +59,7 @@
 		40F07EF925CB2A44E1843088 /* libPods-conscious.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-conscious.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C3E9EB51C959ECC00936753 /* DynamicColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DynamicColor.swift; path = "../../../../../../../../Downloads/DynamicColor-master/Sources/DynamicColor.swift"; sourceTree = "<group>"; };
 		5C3E9EB61C959ECC00936753 /* HSL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HSL.swift; path = "../../../../../../../../Downloads/DynamicColor-master/Sources/HSL.swift"; sourceTree = "<group>"; };
+		5C822B451C96786C00D085B1 /* Sector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sector.swift; sourceTree = "<group>"; };
 		5CB0BA141C9291C20045901F /* media_meditation.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = media_meditation.storyboard; sourceTree = "<group>"; };
 		5CCB321C1C93FEDA00EB656E /* MentalStateView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MentalStateView.swift; sourceTree = "<group>"; };
 		5CCB32221C95044A00EB656E /* MentalStateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MentalStateViewController.swift; sourceTree = "<group>"; };
@@ -130,6 +132,22 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		5C822B431C96782300D085B1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5C822B451C96786C00D085B1 /* Sector.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		5C822B441C96782B00D085B1 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5CCB32221C95044A00EB656E /* MentalStateViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
 		5CB0BA111C92916B0045901F /* media_meditation */ = {
 			isa = PBXGroup;
 			children = (
@@ -159,8 +177,9 @@
 		5CCB32241C9508A100EB656E /* mental_state */ = {
 			isa = PBXGroup;
 			children = (
+				5C822B441C96782B00D085B1 /* Controllers */,
+				5C822B431C96782300D085B1 /* Models */,
 				5CCB321C1C93FEDA00EB656E /* MentalStateView.swift */,
-				5CCB32221C95044A00EB656E /* MentalStateViewController.swift */,
 				5CCB32251C9508D500EB656E /* mental_state.storyboard */,
 			);
 			name = mental_state;
@@ -497,6 +516,7 @@
 				5C3E9EB71C959ECC00936753 /* DynamicColor.swift in Sources */,
 				DA3501D11C8CD27B006A41A5 /* TimerSettingsTableViewController.swift in Sources */,
 				DA3501CB1C8CCE00006A41A5 /* History.swift in Sources */,
+				5C822B461C96786C00D085B1 /* Sector.swift in Sources */,
 				DA3501B91C88115B006A41A5 /* MediaTableViewCell.swift in Sources */,
 				DA3501C21C8A7E9A006A41A5 /* MediaViewController.swift in Sources */,
 				DA3501CD1C8CCE23006A41A5 /* Media.swift in Sources */,

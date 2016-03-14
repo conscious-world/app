@@ -149,13 +149,14 @@ class MentalStateViewController: UIViewController, UIViewControllerTransitioning
             }
             mentalStateCursorView.center = CGPoint(x: newX!, y: newY!)
             changeColor(distFromCenter, color: color!)
-//            setText(distFromCenter, sector: sector)
+            setText(distFromCenter, sector: sector)
         } else if gesture.state == UIGestureRecognizerState.Ended {
-            self.dismissViewControllerAnimated(true, completion: { () -> Void in
-            })
-            mentalStateCursorView.center = startPos!
-            mentalStateGridView.backgroundColor = originalColor.tintColor(amount: 0.8)
+            NSTimer.scheduledTimerWithTimeInterval(0.2, target: self, selector: "dismissView", userInfo:nil ,repeats: false)
         }
+    }
+    
+    func dismissView() {
+        self.dismissViewControllerAnimated(true, completion: nil)
     }
     
     func changeColor(tint: Float, color: UIColor) {
@@ -214,12 +215,5 @@ class MentalStateViewController: UIViewController, UIViewControllerTransitioning
     }
     */
 
-}
-
-class Sector: NSObject {
-    var minValue: CGFloat?
-    var maxValue: CGFloat?
-    var midValue: CGFloat?
-    var sector: Int?
 }
 
