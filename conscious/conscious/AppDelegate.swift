@@ -20,6 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         let s = pathForKeyArchive
         NSLog("String: \(s)")
+        print("didFinishLaunchingWithOptions")
         self.history = self.historyFromDisk()
         return true
     }
@@ -30,6 +31,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationDidEnterBackground(application: UIApplication) {
+        print("applicationDidEnterBackground")
         self.saveToDisk()
         // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
         // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
@@ -40,13 +42,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     private func historyFromDisk() -> History?{
-        let history = NSKeyedUnarchiver.unarchiveObjectWithFile(pathForKeyArchive) as? History
-        return history ?? History(mediationHistory: nil)
+        print("historyFromDisk")
+        if let history = NSKeyedUnarchiver.unarchiveObjectWithFile(pathForKeyArchive) as? History{
+            print("got history from disk")
+            return history
+        }
+        print("no history from disk so just returnting a new history object")
+
+        return History(mediationHistory: nil)
     }
     
     private func saveToDisk(){
+        print("saveToDisk")
         if let historyToSave = self.history{
-            NSKeyedArchiver.archiveRootObject(historyToSave, toFile: pathForKeyArchive)
+            print("we have history so archiveRootObject to \(pathForKeyArchive)")
+            let result = NSKeyedArchiver.archiveRootObject(historyToSave, toFile: pathForKeyArchive)
+            print("NSKeyedArchiver.archiveRootObject\(historyToSave) returned \(result)")
         }
     }
     
@@ -55,10 +66,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationDidBecomeActive(application: UIApplication) {
+        let s = pathForKeyArchive
+        NSLog("String: \(s)")
+        print("applicationDidBecomeActive")
+        self.history = self.historyFromDisk()
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
     }
 
     func applicationWillTerminate(application: UIApplication) {
+        self.saveToDisk()
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 

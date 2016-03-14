@@ -22,6 +22,7 @@ class MediaViewController: UIViewController, AVAudioPlayerDelegate {
     var timer = NSTimer()
     var duration: Double?
     var playing: Bool = false
+    var mediation: Meditation?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -66,11 +67,16 @@ class MediaViewController: UIViewController, AVAudioPlayerDelegate {
     
     @IBAction func togglePlayingSound(sender: AnyObject) {
         if playing {
+            print("fake end of mediation")
+            mediation?.end()
+            History.append(mediation!)
             playPauseButton.setImage(UIImage(named: "video-player-7"), forState: UIControlState.Normal)
             audioPlayer.pause()
             timer.invalidate()
             playing = false
         } else {
+            mediation = Meditation.newGuidedMeditation()
+            mediation!.start()
             audioPlayer.play()
             playPauseButton.setImage(UIImage(named: "pushpin-7"), forState: UIControlState.Normal)
             timer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: Selector("updateTimeSlider"), userInfo: nil, repeats: true)

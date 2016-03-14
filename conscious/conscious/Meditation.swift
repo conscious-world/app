@@ -20,6 +20,8 @@ class Meditation: NSObject, NSCoding{
     static let OPTIONS_KEY = "conscious.mediation.options"
     
     static let timed_mediation_type = "conscious.mediation.timed_type"
+    static let guided_mediation_type = "conscious.mediation.guided_mediation_type"
+    
 
     var meditation_type: String
     var media_id: String?
@@ -72,6 +74,10 @@ class Meditation: NSObject, NSCoding{
     
     static func newTimedMeditation() -> Meditation{
         return Meditation(meditation_type: Meditation.timed_mediation_type, media_id: nil, mentality_before: nil, mentality_after: nil, durration: nil, time_start: nil, time_end: nil, options: nil)
+    }
+    
+    static func newGuidedMeditation() -> Meditation{
+        return Meditation(meditation_type: Meditation.guided_mediation_type, media_id: nil, mentality_before: nil, mentality_after: nil, durration: nil, time_start: nil, time_end: nil, options: nil)
     }
     
     func start(){

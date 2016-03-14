@@ -27,6 +27,13 @@ class HomeTableViewController: UIViewController, UITableViewDataSource, UITableV
         tableView.estimatedRowHeight = 180
         // Do any additional setup after loading the view, typically from a nib.
     }
+    
+    override func viewWillAppear(animated: Bool) {
+        let lastMeditaion = History.sharedInstance()?.last
+        print("you have \(History.count()) medations and your last mediation was of type \(lastMeditaion?.meditation_type)" )
+        tableView.reloadData()
+        
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

@@ -23,11 +23,13 @@ class History: NSObject, NSCoding{
     }
 
     required init?(coder aDecoder: NSCoder){
+        print("decode meditations")
         self.meditations = aDecoder.decodeObjectForKey(HISTORY_KEY) as? [Meditation]
         super.init()
     }
     
     func encodeWithCoder(aCoder: NSCoder) {
+        print("encode History.meditations")
         aCoder.encodeObject(self.meditations, forKey: HISTORY_KEY)
     }
     
