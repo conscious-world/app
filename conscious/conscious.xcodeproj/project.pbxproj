@@ -7,11 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C3E9EB71C959ECC00936753 /* DynamicColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C3E9EB51C959ECC00936753 /* DynamicColor.swift */; };
+		5C3E9EB81C959ECC00936753 /* HSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C3E9EB61C959ECC00936753 /* HSL.swift */; };
 		5CB0BA151C9291C20045901F /* media_meditation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CB0BA141C9291C20045901F /* media_meditation.storyboard */; };
 		5CCB321D1C93FEDA00EB656E /* MentalStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCB321C1C93FEDA00EB656E /* MentalStateView.swift */; };
 		5CCB32231C95044A00EB656E /* MentalStateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCB32221C95044A00EB656E /* MentalStateViewController.swift */; };
 		5CCB32261C9508D500EB656E /* mental_state.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CCB32251C9508D500EB656E /* mental_state.storyboard */; };
-		912C76A9713F2DCF4F3A5C84 /* libPods-conscious.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AF2A56554296CAD3E80F515 /* libPods-conscious.a */; };
+		D923E6254EE0B63CF62F6076 /* libPods-conscious.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 40F07EF925CB2A44E1843088 /* libPods-conscious.a */; };
 		DA35019F1C880A27006A41A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA35019E1C880A27006A41A5 /* AppDelegate.swift */; };
 		DA3501A11C880A27006A41A5 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3501A01C880A27006A41A5 /* HomeTableViewController.swift */; };
 		DA3501A41C880A27006A41A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA3501A21C880A27006A41A5 /* Main.storyboard */; };
@@ -53,7 +55,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3AF2A56554296CAD3E80F515 /* libPods-conscious.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-conscious.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		40F07EF925CB2A44E1843088 /* libPods-conscious.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-conscious.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C3E9EB51C959ECC00936753 /* DynamicColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DynamicColor.swift; path = "../../../../../../../../Downloads/DynamicColor-master/Sources/DynamicColor.swift"; sourceTree = "<group>"; };
+		5C3E9EB61C959ECC00936753 /* HSL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HSL.swift; path = "../../../../../../../../Downloads/DynamicColor-master/Sources/HSL.swift"; sourceTree = "<group>"; };
 		5CB0BA141C9291C20045901F /* media_meditation.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = media_meditation.storyboard; sourceTree = "<group>"; };
 		5CCB321C1C93FEDA00EB656E /* MentalStateView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MentalStateView.swift; sourceTree = "<group>"; };
 		5CCB32221C95044A00EB656E /* MentalStateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MentalStateViewController.swift; sourceTree = "<group>"; };
@@ -110,7 +114,7 @@
 			files = (
 				DA3501EB1C8FF439006A41A5 /* AVFoundation.framework in Frameworks */,
 				DA3501E91C8FF1AB006A41A5 /* AudioToolbox.framework in Frameworks */,
-				912C76A9713F2DCF4F3A5C84 /* libPods-conscious.a in Frameworks */,
+				D923E6254EE0B63CF62F6076 /* libPods-conscious.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -167,7 +171,7 @@
 			children = (
 				DA3501EA1C8FF439006A41A5 /* AVFoundation.framework */,
 				DA3501E81C8FF1AB006A41A5 /* AudioToolbox.framework */,
-				3AF2A56554296CAD3E80F515 /* libPods-conscious.a */,
+				40F07EF925CB2A44E1843088 /* libPods-conscious.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -202,6 +206,8 @@
 				DA3501BA1C881ED3006A41A5 /* ViewControllers */,
 				DA3501B01C8810DC006A41A5 /* views */,
 				DA35019E1C880A27006A41A5 /* AppDelegate.swift */,
+				5C3E9EB51C959ECC00936753 /* DynamicColor.swift */,
+				5C3E9EB61C959ECC00936753 /* HSL.swift */,
 				DA3501A21C880A27006A41A5 /* Main.storyboard */,
 				DA3501A51C880A27006A41A5 /* Assets.xcassets */,
 				DA3501A71C880A27006A41A5 /* LaunchScreen.storyboard */,
@@ -481,12 +487,14 @@
 				DA3501B71C881140006A41A5 /* CategoryTableViewCell.swift in Sources */,
 				DA3501B31C88111A006A41A5 /* HistoryTableViewCell.swift in Sources */,
 				DA3501A11C880A27006A41A5 /* HomeTableViewController.swift in Sources */,
+				5C3E9EB81C959ECC00936753 /* HSL.swift in Sources */,
 				DA3501DA1C8CEDDB006A41A5 /* ReverbOutput.swift in Sources */,
 				DA3501BC1C881F07006A41A5 /* TimerViewController.swift in Sources */,
 				DA3501C01C8A749E006A41A5 /* CategoryViewController.swift in Sources */,
 				DA3501B51C88112D006A41A5 /* CallToActionTableViewCell.swift in Sources */,
 				DA3502111C9641F1006A41A5 /* Meditation.swift in Sources */,
 				DA3501FA1C927046006A41A5 /* TimePickerView.swift in Sources */,
+				5C3E9EB71C959ECC00936753 /* DynamicColor.swift in Sources */,
 				DA3501D11C8CD27B006A41A5 /* TimerSettingsTableViewController.swift in Sources */,
 				DA3501CB1C8CCE00006A41A5 /* History.swift in Sources */,
 				DA3501B91C88115B006A41A5 /* MediaTableViewCell.swift in Sources */,

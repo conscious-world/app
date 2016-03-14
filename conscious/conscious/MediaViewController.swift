@@ -24,31 +24,54 @@ class MediaViewController: UIViewController, AVAudioPlayerDelegate, UIViewContro
     var timer = NSTimer()
     var duration: Double?
     var playing: Bool = false
+<<<<<<< 482a7ad209bdd247d2b21de8d5d432dd74a9f389
     var mediation: Meditation?
+=======
+    var myPresentation: MyPresentation!
+    var isPresenting: Bool = false
+    var next = MentalStateViewController!()
+    var finished: Bool = false
+    var first: Bool = true
+>>>>>>> mentalState working
 
     override func viewDidLoad() {
         super.viewDidLoad()
         loadAudio()
-        playPauseButton.setImage(UIImage(named: "video-player-7"), forState: UIControlState.Normal)
-        playPauseButton.backgroundColor = UIColor.blueColor()
+        if first {
+            presentation()
+            first = false
+        }
     }
-    
-    override func viewDidAppear(animated: Bool) {
-        super.viewDidAppear(animated)
-    }
-    
     
     func presentation() {
         let storyBoard = UIStoryboard(name: "mental_state", bundle: nil)
-        let next = storyBoard.instantiateViewControllerWithIdentifier("MentalStateViewController") as! MentalStateViewController
+        next = storyBoard.instantiateViewControllerWithIdentifier("MentalStateViewController") as! MentalStateViewController
         next.animator = animator
         next.modalPresentationStyle = .Custom
         next.transitioningDelegate = self
+        if first == false {
+            next.second = true
+        }
         self.presentViewController(next, animated: true, completion: nil)
+        myPresentation = MyPresentation(presentedViewController: next, presentingViewController: self)
     }
     
     func presentationControllerForPresentedViewController(presented: UIViewController, presentingViewController presenting: UIViewController, sourceViewController source: UIViewController) -> UIPresentationController? {
-        return MyPresentation(presentedViewController: presented, presentingViewController: presenting)
+        if first {
+            next.animator!.presenting = true
+            return myPresentation
+        } else {
+            return nil
+        }
+    }
+    
+    func animationControllerForDismissedController(dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        if finished {
+             self.navigationController?.popViewControllerAnimated(true)
+        } else {
+            finished = true
+        }
+        return nil
     }
 
     override func didReceiveMemoryWarning() {
@@ -58,12 +81,12 @@ class MediaViewController: UIViewController, AVAudioPlayerDelegate, UIViewContro
     
     func loadAudio() {
         let audioFilePath = NSBundle.mainBundle().pathForResource("MARC5MinuteBreathing", ofType: "mp3")
+        playPauseButton.setImage(UIImage(named: "video-player-7"), forState: UIControlState.Normal)
+        playPauseButton.backgroundColor = UIColor.blueColor()
         minValue = 0
         
         if audioFilePath != nil {
-            
             let audioFileUrl = NSURL.fileURLWithPath(audioFilePath!)
-            
             
             do {
                 audioPlayer = try AVAudioPlayer(contentsOfURL: audioFileUrl, fileTypeHint: nil)
@@ -78,7 +101,6 @@ class MediaViewController: UIViewController, AVAudioPlayerDelegate, UIViewContro
             catch {
                 fatalError ("Error loading \(audioFileUrl): \(error)")
             }
-            
         } else {
             print("audio file is not found")
         }
@@ -106,10 +128,8 @@ class MediaViewController: UIViewController, AVAudioPlayerDelegate, UIViewContro
     func updateTimeSlider () {
         timeSlider.value = Float(audioPlayer.currentTime)
         currentTimeLabel.text = audioPlayer.currentTime.mmss
-        // this resets regardless of scrub
         let diff = Float(duration!) - timeSlider.value
         timeLeftLabel.text  = NSTimeInterval(diff).mmss
-        
     }
     
     @IBAction func scrubTimeSlider(sender: AnyObject) {
@@ -140,7 +160,7 @@ class MediaViewController: UIViewController, AVAudioPlayerDelegate, UIViewContro
 
 private let DURATION:NSTimeInterval = 0.35
 class MyAnimator: UIPercentDrivenInteractiveTransition, UIViewControllerAnimatedTransitioning {
-    var isUsingGesture: Bool = false
+    var presenting: Bool = false
     func transitionDuration(transitionContext: UIViewControllerContextTransitioning?) -> NSTimeInterval {
         return DURATION
     }
@@ -150,15 +170,23 @@ class MyAnimator: UIPercentDrivenInteractiveTransition, UIViewControllerAnimated
         let fromView = transitionContext.viewForKey(UITransitionContextFromViewKey)!
         let toView = transitionContext.viewForKey(UITransitionContextToViewKey)!
         toView.frame = container!.bounds
-        toView.alpha = 0.0
-        container?.addSubview(toView)
-        UIView.animateWithDuration(DURATION, animations: { () -> Void in
-            toView.alpha = 1.0
-        }) { (finished) -> Void in
-            fromView.removeFromSuperview()
-            transitionContext.completeTransition(!transitionContext.transitionWasCancelled())
-        }
         
+        if presenting {
+            toView.alpha = 0.0
+            container?.addSubview(toView)
+            UIView.animateWithDuration(DURATION, animations: { () -> Void in
+                toView.alpha = 1.0
+                }) { (finished) -> Void in
+                    transitionContext.completeTransition(!transitionContext.transitionWasCancelled())
+            }
+
+        } else {
+            UIView.animateWithDuration(0.4, animations: { () -> Void in
+                }) { (finished: Bool) -> Void in
+                    transitionContext.completeTransition(true)
+                    fromView.removeFromSuperview()
+            }
+        }
     }
 }
 
@@ -168,12 +196,14 @@ class MyPresentation: UIPresentationController {
         dimView = UIView(frame: CGRectZero)
         dimView.backgroundColor = UIColor.blackColor()
         dimView.alpha = 0.0
+        dimView.frame = CGRectMake(0, 0, 400, 400)
         dimView.frame = (self.containerView?.bounds)!
         self.containerView?.addSubview(dimView)
         self.presentingViewController.transitionCoordinator()?.animateAlongsideTransition({ (context) -> Void in
             self.dimView.alpha = 0.3
             }, completion: { (finished) -> Void in
         })
+        
     }
 }
 
