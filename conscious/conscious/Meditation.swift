@@ -19,9 +19,8 @@ class Meditation: NSObject, NSCoding{
     static let TIME_END_KEY = "conscious.mediation.time_end"
     static let OPTIONS_KEY = "conscious.mediation.options"
     
-    static let timed_mediation_type = "conscious.mediation.timed_type"
-    static let guided_mediation_type = "conscious.mediation.guided_mediation_type"
-    
+    static let timed_mediation_type = "timed_meditation"
+    static let guided_mediation_type = "guided_meditation"
 
     var meditation_type: String
     var media_id: String?
