@@ -43,9 +43,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     private func historyFromDisk() -> History?{
         print("historyFromDisk")
-        if let history = NSKeyedUnarchiver.unarchiveObjectWithFile(pathForKeyArchive) as? History{
+        if let meditations = NSKeyedUnarchiver.unarchiveObjectWithFile(pathForKeyArchive) as? [Meditation]{
+            
             print("got history from disk")
-            return history
+            return History(mediationHistory: meditations)
         }
         print("no history from disk so just returnting a new history object")
 
@@ -55,14 +56,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     private func saveToDisk(){
         print("saveToDisk")
         if let historyToSave = self.history{
-            print("we have history so archiveRootObject to \(pathForKeyArchive)")
-            let result = NSKeyedArchiver.archiveRootObject(historyToSave, toFile: pathForKeyArchive)
-            print("NSKeyedArchiver.archiveRootObject\(historyToSave) returned \(result)")
+            print("we have history")
+            if let medations = historyToSave.meditations{
+                print("we have mediations so archiveRootObject \(medations) to \(pathForKeyArchive)")
+                let result = NSKeyedArchiver.archiveRootObject(medations, toFile: pathForKeyArchive)
+                print("NSKeyedArchiver.archiveRootObject\(medations) returned \(result)")
+            }
+            
         }
     }
     
     private var pathForKeyArchive:String{
-        return (NSSearchPathForDirectoriesInDomains(.DocumentationDirectory, .UserDomainMask, true).first! as NSString).stringByAppendingPathComponent("history.bin")
+        return (NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true).first! as NSString).stringByAppendingPathComponent("history.bin")
     }
 
     func applicationDidBecomeActive(application: UIApplication) {

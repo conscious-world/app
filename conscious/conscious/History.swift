@@ -12,7 +12,7 @@ import Foundation
 let HISTORY_KEY = "conscious.mediation.history"
 class History: NSObject, NSCoding{
     
-    private var meditations: [Meditation]?
+    var meditations: [Meditation]?
     
     init(mediationHistory: [Meditation]?){
         if(mediationHistory != nil){
