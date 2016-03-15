@@ -30,7 +30,7 @@ class MentalStateViewController: UIViewController, UIViewControllerTransitioning
     var dy: Float!
     var gridCenter: CGPoint?
     var sectors: [Sector]? = []
-    var numberOfSections: Int!
+    var numberOfSections: Int = 4
     var deltaAngle: Float?
     var originalColor: UIColor = UIColor(hexString: "#FAC54B")
     let joyColor: UIColor = UIColor.yellowColor()
@@ -47,7 +47,7 @@ class MentalStateViewController: UIViewController, UIViewControllerTransitioning
         super.viewDidLoad()
         // setup Grid
         setupGrid()
-        createSectors(4)
+        createSectors()
         if (second != nil)  {
             questionLabel.text = "How do you feel now?"
         }
@@ -74,7 +74,7 @@ class MentalStateViewController: UIViewController, UIViewControllerTransitioning
         mentalStateCursorView.clipsToBounds = true
     }
     
-    func createSectors(numberOfSections: Int){
+    func createSectors(){
         let angleSize: CGFloat = CGFloat(2 * M_PI / Double(numberOfSections))
         var mid: CGFloat = 0
         for var i = 0; i < numberOfSections; i++ {
