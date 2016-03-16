@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <scenes>
+        <!--MentalStateViewController-->
+        <scene sceneID="dhF-cF-dad">
+            <objects>
+                <viewController storyboardIdentifier="MentalStateViewController" title="MentalStateViewController" id="AV3-jS-Dr8" customClass="MentalStateViewController" customModule="conscious" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="KLy-Yd-YvM"/>
+                        <viewControllerLayoutGuide type="bottom" id="jCC-Mr-kV6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="C4M-WR-OvB" userLabel="contentView">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vaQ-PZ-DFV">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="31a-F1-F9p">
+                                        <rect key="frame" x="272" y="272" width="56" height="56"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="56" id="d3g-Gg-XaE"/>
+                                            <constraint firstAttribute="height" constant="56" id="ilU-cG-h16"/>
+                                        </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="8yP-gp-fgL" appends="YES" id="gnd-PW-Nmd"/>
+                                        </connections>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dXs-8X-R0e">
+                                        <rect key="frame" x="117" y="64" width="367" height="128"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="How are you doing today?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S6w-6K-5oc">
+                                                <rect key="frame" x="10" y="46" width="346" height="36"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="367" id="H1P-UP-AN2"/>
+                                            <constraint firstAttribute="height" constant="128" id="ymo-g6-qgs"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="0.51694362279999995" green="1" blue="0.83927488459999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="31a-F1-F9p" firstAttribute="centerY" secondItem="vaQ-PZ-DFV" secondAttribute="centerY" id="6bJ-UN-an9"/>
+                                    <constraint firstItem="dXs-8X-R0e" firstAttribute="centerX" secondItem="vaQ-PZ-DFV" secondAttribute="centerX" id="U6x-rB-8AS"/>
+                                    <constraint firstItem="dXs-8X-R0e" firstAttribute="top" secondItem="vaQ-PZ-DFV" secondAttribute="top" constant="64" id="Wfa-7L-PjJ"/>
+                                    <constraint firstItem="31a-F1-F9p" firstAttribute="centerX" secondItem="vaQ-PZ-DFV" secondAttribute="centerX" id="jre-TC-WOZ"/>
+                                    <constraint firstAttribute="width" constant="400" id="mtv-e2-xvW"/>
+                                    <constraint firstAttribute="height" constant="400" id="vb9-V6-eG2"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="mtv-e2-xvW"/>
+                                        <exclude reference="vb9-V6-eG2"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="vaQ-PZ-DFV" firstAttribute="leading" secondItem="C4M-WR-OvB" secondAttribute="leading" id="5mr-AZ-1Ww"/>
+                            <constraint firstItem="jCC-Mr-kV6" firstAttribute="top" secondItem="vaQ-PZ-DFV" secondAttribute="bottom" id="Kp5-8x-R9a"/>
+                            <constraint firstItem="vaQ-PZ-DFV" firstAttribute="top" secondItem="C4M-WR-OvB" secondAttribute="top" id="VXn-8y-SzZ"/>
+                            <constraint firstAttribute="trailing" secondItem="vaQ-PZ-DFV" secondAttribute="trailing" id="dd9-B0-1Pm"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="contentView" destination="C4M-WR-OvB" id="saf-pM-kMh"/>
+                        <outlet property="mentalStateCursorView" destination="31a-F1-F9p" id="kWp-4h-qQa"/>
+                        <outlet property="mentalStateGridView" destination="vaQ-PZ-DFV" id="uwz-QR-yKm"/>
+                        <outlet property="questionLabel" destination="S6w-6K-5oc" id="ROl-6T-AHb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3EM-4P-Agt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="8yP-gp-fgL">
+                    <connections>
+                        <action selector="mentalStateCursorPanned:" destination="AV3-jS-Dr8" id="QTU-jB-mFZ"/>
+                    </connections>
+                </panGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="276" y="388"/>
+        </scene>
+    </scenes>
+</document>

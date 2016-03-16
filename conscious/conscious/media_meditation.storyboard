@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <scenes>
         <!--Media Meditation-->
@@ -82,6 +82,7 @@
                     </view>
                     <connections>
                         <outlet property="currentTimeLabel" destination="ijJ-In-Xx5" id="pPB-AQ-n44"/>
+                        <outlet property="mediaView" destination="2f2-ut-DKj" id="Xet-f3-UCM"/>
                         <outlet property="playPauseButton" destination="8bW-r9-8lr" id="5kg-L5-JBd"/>
                         <outlet property="timeLeftLabel" destination="7eF-Ie-fJl" id="BWn-kK-D9m"/>
                         <outlet property="timeSlider" destination="0At-Zh-jTa" id="V02-YD-nUg"/>
