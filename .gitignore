@@ -5,6 +5,7 @@
 ## Build generated
 build/
 DerivedData/
+conscious/Pods/
 
 ## Various settings
 *.pbxuser

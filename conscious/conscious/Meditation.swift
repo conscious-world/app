@@ -23,6 +23,10 @@ class Meditation: NSObject, NSCoding{
     static let guided_mediation_type = "guided_meditation"
 
     var meditation_type: String
+    var meditation_title: String?
+    var meditation_description: String?
+    var coverImageUrl: String?
+    var iconName: String?
     var media_id: String?
     var mentality_before: String?
     var mentality_after: String?
@@ -30,6 +34,15 @@ class Meditation: NSObject, NSCoding{
     var time_start: NSDate?
     var time_end: NSDate?
     var options: [[String:String]]?
+    var coverImage: UIImage?{
+        get{
+            guard let imageName = self.coverImageUrl
+                else{
+                    return nil
+            }
+            return UIImage(named: imageName)
+        }
+    }
     
     
     init(meditation_type: String, media_id: String?, mentality_before: String?, mentality_after: String?, durration: NSTimeInterval?, time_start: NSDate?, time_end: NSDate?, options: [[String:String]]?){
@@ -87,5 +100,31 @@ class Meditation: NSObject, NSCoding{
     func end(){
         self.time_end = NSDate()
     }
-
+    
+    static func getAllPossible() -> [Meditation]{
+        return [TimedMeditation.build(), FiveMintueBreathingMeditation.build()]
+    }
+    
+    class TimedMeditation: Meditation{
+        static func build() -> Meditation{
+            let meditation = Meditation.newTimedMeditation()
+            meditation.coverImageUrl = "indoorMeditator"
+            meditation.iconName = "clock-7"
+            meditation.meditation_title = "Start a new timed meditation"
+            meditation.meditation_description = "Set a timer, selection optional scene, background sound, reminder tone and audio chant reverb"
+            return meditation
+        }
+    }
+    
+    class FiveMintueBreathingMeditation: Meditation{
+        static func build() -> Meditation{
+            let meditation = Meditation.newGuidedMeditation()
+            meditation.coverImageUrl = "guidedBeachMeditation"
+            meditation.iconName = "circle-user-7"
+            meditation.meditation_title = "Five Minute breathing excersise"
+            meditation.meditation_description = "Five minutes is all it takes to reset your day with this simple breathing exercise"
+            return meditation
+        }
+    }
 }
+

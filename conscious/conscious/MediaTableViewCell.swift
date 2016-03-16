@@ -13,12 +13,31 @@ class MediaTableViewCell: UITableViewCell {
     weak var navigationController: UINavigationController!
     var tapGestureRecognizer: UITapGestureRecognizer?
     
-
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var coverImage: UIImageView!
+    @IBOutlet weak var iconContainerView: UIView!
+    @IBOutlet weak var iconImageView: UIImageView!
+    
+    var meditation: Meditation?{
+        didSet{
+            if let newMeditation = meditation{
+                self.titleLabel.text = newMeditation.meditation_title
+                self.descriptionLabel.text = newMeditation.meditation_description
+                self.coverImage.image = newMeditation.coverImage
+                self.iconImageView.image = UIImage(named: newMeditation.iconName!)
+                self.iconImageView.tintColor = UIColor.whiteColor()
+            }
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         tapGestureRecognizer = UITapGestureRecognizer(target: self, action: "onTap")
         self.userInteractionEnabled = true
         self.addGestureRecognizer(tapGestureRecognizer!)
+        self.iconContainerView.layer.cornerRadius = 24
+        self.iconContainerView.clipsToBounds = true
     }
 
     override func setSelected(selected: Bool, animated: Bool) {
@@ -28,9 +47,21 @@ class MediaTableViewCell: UITableViewCell {
     }
     
     func onTap(){
-        let storyBoard = UIStoryboard(name: "media_meditation", bundle: nil)
-        if let mediaViewController  = storyBoard.instantiateViewControllerWithIdentifier("MediaViewController") as? MediaViewController{
-            self.navigationController?.pushViewController(mediaViewController, animated: true)
+        if let meditation = self.meditation{
+            if meditation.meditation_type == Meditation.guided_mediation_type{
+                let storyBoard = UIStoryboard(name: "media_meditation", bundle: nil)
+                if let mediaViewController  = storyBoard.instantiateViewControllerWithIdentifier("MediaViewController") as? MediaViewController{
+                    self.navigationController?.pushViewController(mediaViewController, animated: true)
+                    return
+                }
+                
+            }
+        }
+        //else lets start a timed meditaion
+        let storyBoard = UIStoryboard(name: "timed_meditation", bundle: nil)
+        if let timerViewController  = storyBoard.instantiateViewControllerWithIdentifier("TimerViewController") as? TimerViewController{
+            
+            self.navigationController?.pushViewController(timerViewController, animated: true)
         }
     }
 
