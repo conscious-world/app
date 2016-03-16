@@ -86,7 +86,9 @@ class Meditation: NSObject, NSCoding{
     }
     
     static func newTimedMeditation() -> Meditation{
-        return Meditation(meditation_type: Meditation.timed_mediation_type, media_id: nil, mentality_before: nil, mentality_after: nil, durration: nil, time_start: nil, time_end: nil, options: nil)
+        let meditation = Meditation(meditation_type: Meditation.timed_mediation_type, media_id: nil, mentality_before: nil, mentality_after: nil, durration: nil, time_start: nil, time_end: nil, options: nil)
+        meditation.meditation_title = "Timed medation"
+        return meditation
     }
     
     static func newGuidedMeditation() -> Meditation{
