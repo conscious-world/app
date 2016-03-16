@@ -27,6 +27,8 @@ class TimerViewController: UIViewController, EZMicrophoneDelegate, EZAudioFFTDel
     @IBOutlet weak var stopButton: UIButton!
     @IBOutlet weak var startButton: UIButton!
     @IBOutlet weak var maxFrequencyLabel: UILabel!
+    @IBOutlet weak var meditationDescriptionLabel: UILabel!
+    
     let FFTViewControllerFFTWindowSize:vDSP_Length = 4096;
     var fft: EZAudioFFTRolling!
     var timer = NSTimer()
@@ -58,8 +60,16 @@ class TimerViewController: UIViewController, EZMicrophoneDelegate, EZAudioFFTDel
         if first {
             meditation = Meditation.newTimedMeditation()
             presentation()
+            self.meditationDescriptionLabel?.text = meditation?.meditation_title
             first = false
         } else {
+        }
+    }
+    
+    override func willMoveToParentViewController(parent: UIViewController?) {
+        if parent == nil {
+            // Back btn Event handler
+            presentation()
         }
     }
     
@@ -74,7 +84,6 @@ class TimerViewController: UIViewController, EZMicrophoneDelegate, EZAudioFFTDel
     
     @IBAction func onStopButtonPressed(sender: UIButton) {
         meditation!.end()
-        presentation()
         //TODO there should be a better end, like taking a survey
         History.append(meditation!)
         EZOutput.sharedOutput().stopPlayback()
