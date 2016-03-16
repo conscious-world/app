@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C04E3071C98F0FA003558CF /* mentalStatePresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C04E3061C98F0FA003558CF /* mentalStatePresentation.swift */; };
+		5C04E30A1C98F2A1003558CF /* presentationAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C04E3091C98F2A1003558CF /* presentationAnimation.swift */; };
 		5C290EF81C97790E000FF2D9 /* PIRipple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C290EF71C97790E000FF2D9 /* PIRipple.swift */; };
 		5C822B461C96786C00D085B1 /* Sector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C822B451C96786C00D085B1 /* Sector.swift */; };
 		5CB0BA151C9291C20045901F /* media_meditation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CB0BA141C9291C20045901F /* media_meditation.storyboard */; };
@@ -58,6 +60,8 @@
 
 /* Begin PBXFileReference section */
 		40F07EF925CB2A44E1843088 /* libPods-conscious.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-conscious.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C04E3061C98F0FA003558CF /* mentalStatePresentation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mentalStatePresentation.swift; sourceTree = "<group>"; };
+		5C04E3091C98F2A1003558CF /* presentationAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = presentationAnimation.swift; sourceTree = "<group>"; };
 		5C290EF71C97790E000FF2D9 /* PIRipple.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PIRipple.swift; sourceTree = "<group>"; };
 		5C822B451C96786C00D085B1 /* Sector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sector.swift; sourceTree = "<group>"; };
 		5CB0BA141C9291C20045901F /* media_meditation.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = media_meditation.storyboard; sourceTree = "<group>"; };
@@ -132,6 +136,14 @@
 				B24AE942D5D41CCB7D7F2C51 /* Pods-conscious.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		5C04E3081C98F26A003558CF /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				5C04E3091C98F2A1003558CF /* presentationAnimation.swift */,
+			);
+			name = Animations;
 			sourceTree = "<group>";
 		};
 		5C822B431C96782300D085B1 /* Models */ = {
@@ -219,6 +231,7 @@
 		DA35019D1C880A27006A41A5 /* conscious */ = {
 			isa = PBXGroup;
 			children = (
+				5C04E3081C98F26A003558CF /* Animations */,
 				5CCB32241C9508A100EB656E /* mental_state */,
 				5CB0BA111C92916B0045901F /* media_meditation */,
 				DA3501F41C926A11006A41A5 /* timed_mediation */,
@@ -243,6 +256,7 @@
 			isa = PBXGroup;
 			children = (
 				DA3501B11C8810E6006A41A5 /* cells */,
+				5C04E3061C98F0FA003558CF /* mentalStatePresentation.swift */,
 			);
 			name = views;
 			sourceTree = "<group>";
@@ -529,7 +543,9 @@
 				5CCB321D1C93FEDA00EB656E /* MentalStateView.swift in Sources */,
 				5CCB32231C95044A00EB656E /* MentalStateViewController.swift in Sources */,
 				DA3501CF1C8CCE3D006A41A5 /* TimerSettings.swift in Sources */,
+				5C04E3071C98F0FA003558CF /* mentalStatePresentation.swift in Sources */,
 				DA3501C91C8CCDF5006A41A5 /* Category.swift in Sources */,
+				5C04E30A1C98F2A1003558CF /* presentationAnimation.swift in Sources */,
 				DA3501FF1C94D32D006A41A5 /* SelectableSettingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

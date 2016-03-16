@@ -21,7 +21,7 @@ class MentalStateViewController: UIViewController, UIViewControllerTransitioning
     @IBOutlet weak var mentalStateCursorView: UIView!
     
     var mentalStateView: MentalStateView?
-    var animator: MyAnimator?
+    var animator: PresentationAnimator?
     var newPos: CGPoint?
     var startPos: CGPoint?
     var newX: CGFloat?
@@ -225,7 +225,7 @@ class MentalStateViewController: UIViewController, UIViewControllerTransitioning
     }
     
     func presentationControllerForPresentedViewController(presented: UIViewController, presentingViewController presenting: UIViewController, sourceViewController source: UIViewController) -> UIPresentationController? {
-        return MyPresentation(presentedViewController: presented, presentingViewController: presenting)
+        return MentalStatePresentation(presentedViewController: presented, presentingViewController: presenting)
     }
     
     /*
