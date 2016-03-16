@@ -22,6 +22,8 @@ class CallToActionTableViewCell: UITableViewCell {
         if let last_medaition = History.sharedInstance()?.last{
             let mediationName = last_medaition.meditation_type.stringByReplacingOccurrencesOfString("_", withString: " ")
             self.ctaButton.setTitle("Start \(mediationName)", forState: UIControlState.Normal)
+            self.ctaButton.layer.cornerRadius = 5
+            self.ctaButton.clipsToBounds = true
         }
     }
 

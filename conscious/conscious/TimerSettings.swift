@@ -39,7 +39,7 @@ class TimerSettings{
         }
     }
 
-    var backgroundGif: String = "cloudssf"{
+    var backgroundGif: String = "beach1"{
         didSet {
             self.save()
         }

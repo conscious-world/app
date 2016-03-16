@@ -17,14 +17,15 @@ class HomeTableViewController: UIViewController, UITableViewDataSource, UITableV
     var ctas = ["intro"]
     var recomededMediations = ["PM Relaxations"]
     var tableSectionsData:[[String]] = []
+    var meditations: [Meditation] = Meditation.getAllPossible()
         
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableSectionsData = [histories, ctas, categories, recomededMediations]
+        tableSectionsData = [ctas,recomededMediations]
         tableView.dataSource = self
         tableView.delegate = self
         tableView.rowHeight = UITableViewAutomaticDimension
-        tableView.estimatedRowHeight = 180
+        tableView.estimatedRowHeight = 250
         // Do any additional setup after loading the view, typically from a nib.
     }
     
@@ -41,7 +42,11 @@ class HomeTableViewController: UIViewController, UITableViewDataSource, UITableV
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return tableSectionsData[section].count
+        if(section == 0){
+            return 1
+        }
+  
+        return meditations.count
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
@@ -54,27 +59,28 @@ class HomeTableViewController: UIViewController, UITableViewDataSource, UITableV
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         switch indexPath.section {
+//        case 0:
+//            let cell = tableView.dequeueReusableCellWithIdentifier("HistoryTableViewCell", forIndexPath: indexPath)      as! HistoryTableViewCell
+//            cell.meditationCountLabel.text = "\(History.count())"
+//            return cell
         case 0:
-            let cell = tableView.dequeueReusableCellWithIdentifier("HistoryTableViewCell", forIndexPath: indexPath)      as! HistoryTableViewCell
-            cell.meditationCountLabel.text = "\(History.count())"
-            return cell
-        case 1:
             let  cell =  tableView.dequeueReusableCellWithIdentifier("CallToActionTableViewCell", forIndexPath: indexPath) as! CallToActionTableViewCell
             cell.navigationController = self.navigationController
             return cell
             
-        case 2:
-            let cell = tableView.dequeueReusableCellWithIdentifier("CategoryTableViewCell", forIndexPath: indexPath)     as! CategoryTableViewCell
-            cell.navigationController = self.navigationController
-            return cell
-            
-        case 3:
+//        case 1:
+//            let cell = tableView.dequeueReusableCellWithIdentifier("CategoryTableViewCell", forIndexPath: indexPath)     as! CategoryTableViewCell
+//            cell.navigationController = self.navigationController
+//            return cell
+//            
+        case 1:
             let cell = tableView.dequeueReusableCellWithIdentifier("MediaTableViewCell", forIndexPath: indexPath)        as! MediaTableViewCell
+            cell.meditation = meditations[indexPath.row]
             cell.navigationController = self.navigationController
             return cell
             
         default:
-            return tableView.dequeueReusableCellWithIdentifier("CallToActionTableViewCell", forIndexPath: indexPath) as! CallToActionTableViewCell
+            return tableView.dequeueReusableCellWithIdentifier("MediaTableViewCell", forIndexPath: indexPath) as! MediaTableViewCell
         }
         
     }
