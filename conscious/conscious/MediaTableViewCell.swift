@@ -12,6 +12,7 @@ class MediaTableViewCell: UITableViewCell {
     
     weak var navigationController: UINavigationController!
     var tapGestureRecognizer: UITapGestureRecognizer?
+    
 
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -16,9 +16,10 @@ class MediaViewController: UIViewController, AVAudioPlayerDelegate, UIViewContro
     @IBOutlet weak var timeLeftLabel: UILabel!
     @IBOutlet weak var timeSlider: UISlider!
     @IBOutlet var mediaView: UIView!
+    @IBOutlet weak var volumeSlider: UISlider!
     
     var mentalStateDelegate: MentalStateDelegate!
-    var animator: MyAnimator = MyAnimator()
+    var animator: PresentationAnimator = PresentationAnimator()
     var audioPlayer: AVAudioPlayer!
     var minValue: NSTimeInterval!
     var maxValue: NSDate?
@@ -26,11 +27,11 @@ class MediaViewController: UIViewController, AVAudioPlayerDelegate, UIViewContro
     var duration: Double?
     var playing: Bool = false
     var meditation: Meditation?
-    var myPresentation: MyPresentation!
+    var mentalStatePresentation: MentalStatePresentation!
     var next = MentalStateViewController!()
     var finished: Bool = false
     var first: Bool = true
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         loadAudio()
@@ -63,13 +64,13 @@ class MediaViewController: UIViewController, AVAudioPlayerDelegate, UIViewContro
             next.second = true
         }
         self.presentViewController(next, animated: true, completion: nil)
-        myPresentation = MyPresentation(presentedViewController: next, presentingViewController: self)
+        mentalStatePresentation = MentalStatePresentation(presentedViewController: next, presentingViewController: self)
     }
     
     func presentationControllerForPresentedViewController(presented: UIViewController, presentingViewController presenting: UIViewController, sourceViewController source: UIViewController) -> UIPresentationController? {
         if first {
             next.animator!.presenting = true
-            return myPresentation
+            return mentalStatePresentation
         } else {
             return nil
         }
@@ -154,6 +155,12 @@ class MediaViewController: UIViewController, AVAudioPlayerDelegate, UIViewContro
         timeLeftLabel.text = NSTimeInterval(diff).mmss
     }
     
+    @IBAction func updateVolumeSlider(sender: AnyObject) {
+        if (audioPlayer != nil) {
+            audioPlayer.volume = Float(volumeSlider.value)
+        }
+    }
+    
     func audioPlayerDidFinishPlaying(player: AVAudioPlayer, successfully flag: Bool) {
         playPauseButton.setImage(UIImage(named: "video-player-7"), forState: UIControlState.Normal)
         endMeditation()
@@ -173,54 +180,6 @@ class MediaViewController: UIViewController, AVAudioPlayerDelegate, UIViewContro
 
 }
 
-private let DURATION:NSTimeInterval = 0.35
-class MyAnimator: UIPercentDrivenInteractiveTransition, UIViewControllerAnimatedTransitioning {
-    var presenting: Bool = false
-    func transitionDuration(transitionContext: UIViewControllerContextTransitioning?) -> NSTimeInterval {
-        return DURATION
-    }
-    
-    func animateTransition(transitionContext: UIViewControllerContextTransitioning) {
-        let container = transitionContext.containerView()
-        let fromView = transitionContext.viewForKey(UITransitionContextFromViewKey)!
-        let toView = transitionContext.viewForKey(UITransitionContextToViewKey)!
-        toView.frame = container!.bounds
-        
-        if presenting {
-            toView.alpha = 0.0
-            container?.addSubview(toView)
-            UIView.animateWithDuration(DURATION, animations: { () -> Void in
-                toView.alpha = 1.0
-                }) { (finished) -> Void in
-                    transitionContext.completeTransition(!transitionContext.transitionWasCancelled())
-            }
-
-        } else {
-            UIView.animateWithDuration(0.4, animations: { () -> Void in
-                }) { (finished: Bool) -> Void in
-                    transitionContext.completeTransition(true)
-                    fromView.removeFromSuperview()
-            }
-        }
-    }
-}
-
-class MyPresentation: UIPresentationController {
-    var dimView: UIView!
-    override func presentationTransitionWillBegin() {
-        dimView = UIView(frame: CGRectZero)
-        dimView.backgroundColor = UIColor.blackColor()
-        dimView.alpha = 0.0
-        dimView.frame = CGRectMake(0, 0, 400, 400)
-        dimView.frame = (self.containerView?.bounds)!
-        self.containerView?.addSubview(dimView)
-        self.presentingViewController.transitionCoordinator()?.animateAlongsideTransition({ (context) -> Void in
-            self.dimView.alpha = 0.3
-            }, completion: { (finished) -> Void in
-        })
-        
-    }
-}
 
 extension NSTimeInterval {
     var mmss: String {
