@@ -9,9 +9,17 @@
 import UIKit
 import AudioToolbox
 
-class TimerViewController: UIViewController, EZMicrophoneDelegate, EZAudioFFTDelegate, TimerSettingsTableViewControllerDelegate {
+class TimerViewController: UIViewController, EZMicrophoneDelegate, EZAudioFFTDelegate, TimerSettingsTableViewControllerDelegate, UIViewControllerTransitioningDelegate, MentalStateDelegate {
     
     var settingButton : UIBarButtonItem?
+    
+    // set up mentalState
+    var mentalStateDelegate: MentalStateDelegate!
+    var animator: PresentationAnimator = PresentationAnimator()
+    var mentalStatePresentation: MentalStatePresentation!
+    var next = MentalStateViewController!()
+    var finished: Bool = false
+    var first: Bool = true
     
     
     @IBOutlet weak var plot: EZAudioPlotGL?
@@ -47,6 +55,12 @@ class TimerViewController: UIViewController, EZMicrophoneDelegate, EZAudioFFTDel
         self.maxFrequencyLabel.numberOfLines = 0;
         //startAudio()
         timerLabel.hidden = true
+        if first {
+            meditation = Meditation.newTimedMeditation()
+            presentation()
+            first = false
+        } else {
+        }
     }
     
     func styleButtons(){
@@ -60,6 +74,7 @@ class TimerViewController: UIViewController, EZMicrophoneDelegate, EZAudioFFTDel
     
     @IBAction func onStopButtonPressed(sender: UIButton) {
         meditation!.end()
+        presentation()
         //TODO there should be a better end, like taking a survey
         History.append(meditation!)
         EZOutput.sharedOutput().stopPlayback()
@@ -72,7 +87,6 @@ class TimerViewController: UIViewController, EZMicrophoneDelegate, EZAudioFFTDel
     }
     
     @IBAction func onStartButtonPressed(sender: UIButton) {
-        self.meditation = Meditation.newTimedMeditation()
         meditation!.start()
         startAudio()
         userSettings.playBackgroundSound()
@@ -200,6 +214,48 @@ class TimerViewController: UIViewController, EZMicrophoneDelegate, EZAudioFFTDel
     
     func settingsUpdated(controller: TimerSettingsTableViewController, settings: TimerSettings){
         self.userSettings = settings
+    }
+    
+    func mentalStateSelected(picker: MentalStateViewController, didPickState state: String?) {
+        if let mentalState = state {
+            if finished == false {
+                meditation?.mentality_before = mentalState
+            } else {
+                meditation?.mentality_after = mentalState
+            }
+        }
+    }
+    
+    func presentation() {
+        let storyBoard = UIStoryboard(name: "mental_state", bundle: nil)
+        next = storyBoard.instantiateViewControllerWithIdentifier("MentalStateViewController") as! MentalStateViewController
+        next.animator = animator
+        next.modalPresentationStyle = .Custom
+        next.delegate = self
+        next.transitioningDelegate = self
+        if first == false {
+            next.second = true
+        }
+        self.presentViewController(next, animated: true, completion: nil)
+        mentalStatePresentation = MentalStatePresentation(presentedViewController: next, presentingViewController: self)
+    }
+    
+    func presentationControllerForPresentedViewController(presented: UIViewController, presentingViewController presenting: UIViewController, sourceViewController source: UIViewController) -> UIPresentationController? {
+        if first {
+            next.animator!.presenting = true
+            return mentalStatePresentation
+        } else {
+            return nil
+        }
+    }
+    
+    func animationControllerForDismissedController(dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        if finished {
+            self.navigationController?.popViewControllerAnimated(true)
+        } else {
+            finished = true
+        }
+        return nil
     }
 
     /*
