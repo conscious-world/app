@@ -21,6 +21,7 @@ class TimerViewController: UIViewController, EZMicrophoneDelegate, EZAudioFFTDel
     var finished: Bool = false
     var first: Bool = true
     
+    @IBOutlet weak var controlContainerView: UIView!
     
     @IBOutlet weak var plot: EZAudioPlotGL?
     @IBOutlet weak var backgroundView: UIWebView!
@@ -37,6 +38,7 @@ class TimerViewController: UIViewController, EZMicrophoneDelegate, EZAudioFFTDel
     var userSettings = TimerSettings.getCurrentSettings()
     
     @IBOutlet weak var timerLabel: UILabel!
+    @IBOutlet weak var timeLeftLabel: UILabel!
     
     var microphone: EZMicrophone!
     var session: AVAudioSession?
@@ -53,10 +55,12 @@ class TimerViewController: UIViewController, EZMicrophoneDelegate, EZAudioFFTDel
         setBackground()
         self.view.sendSubviewToBack(backgroundView)
         styleButtons()
+        controlContainerView.backgroundColor = UIColor.clearColor()
         session = AVAudioSession.sharedInstance()
         self.maxFrequencyLabel.numberOfLines = 0;
         //startAudio()
         timerLabel.hidden = true
+        timeLeftLabel.hidden = true
         if first {
             meditation = Meditation.newTimedMeditation()
             presentation()
@@ -65,7 +69,33 @@ class TimerViewController: UIViewController, EZMicrophoneDelegate, EZAudioFFTDel
         } else {
         }
     }
-    
+    @IBOutlet weak var conrolContainerBottonConstraint: NSLayoutConstraint!
+    var controlHiden = false
+    @IBAction func onViewTap(sender: UITapGestureRecognizer) {
+        print("Tap")
+        UIView.animateWithDuration(0.4, animations: {
+            
+            if(self.controlHiden){
+                self.controlContainerView.alpha  = 100.0
+                self.conrolContainerBottonConstraint.constant = 0
+                self.controlHiden = false
+            }else{
+                self.controlContainerView.alpha  = 0
+                self.conrolContainerBottonConstraint.constant = -200
+                self.controlHiden = true
+            }
+            self.view.layoutIfNeeded()
+            
+            }, completion: {
+                (value: Bool) in
+                if(self.controlHiden){
+                    self.controlContainerView.alpha = 0
+                }else{
+                    self.controlContainerView.alpha = 100
+                }
+        })
+    }
+   
     override func willMoveToParentViewController(parent: UIViewController?) {
         if parent == nil {
             // Back btn Event handler
@@ -103,6 +133,7 @@ class TimerViewController: UIViewController, EZMicrophoneDelegate, EZAudioFFTDel
         sender.hidden = true
         stopButton.hidden = false
         timerLabel.hidden = false
+        timeLeftLabel.hidden = false
         if(userSettings.useAudioReverb()){
             EZMicrophone.sharedMicrophone().startFetchingAudio()
             EZOutput.sharedOutput().startPlayback();
@@ -114,16 +145,18 @@ class TimerViewController: UIViewController, EZMicrophoneDelegate, EZAudioFFTDel
         if(counter % Int(userSettings.intervalSeconds) == 0){
             userSettings.playReminderTone()
         }
-        
+        let secondsLeft = (Int(userSettings.intervalSeconds) - counter)
         timerLabel.text = timeFormatted(counter)
+        timeLeftLabel.text = timeFormatted(secondsLeft)
         counter = counter + 1
     }
     
     func timeFormatted(totalSeconds: Int) -> String {
         let seconds: Int = totalSeconds % 60
-        let minutes: Int = (totalSeconds / 60) % 60
-        let hours: Int = totalSeconds / 3600
-        return String(format: "%02d:%02d:%02d", hours, minutes, seconds)
+        let minutes: Int = (totalSeconds / 60) //% 60
+        //let hours: Int = totalSeconds / 3600
+        return String(format: "%02d:%02d", minutes, seconds)
+        //return String(format: "%02d:%02d:%02d", hours, minutes, seconds)
     }
     
     func setBackground(){
@@ -199,6 +232,10 @@ class TimerViewController: UIViewController, EZMicrophoneDelegate, EZAudioFFTDel
         // Dispose of any resources that can be recreated.
     }
     
+ 
+    @IBAction func onControlSettingsButtonTap(sender: UIButton) {
+        onSettingsBarBtnTap()
+    }
     func onSettingsBarBtnTap(){
         
         let storyBoard = UIStoryboard(name: "timed_meditation", bundle: nil)
