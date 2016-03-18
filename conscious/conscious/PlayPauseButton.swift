@@ -48,8 +48,8 @@ public class PlayPauseButton: UIButton {
         playImage = UIImage(named: "play");
         pauseImage = UIImage(named: "pause");
         
-        tintedPlay = origImage?.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
-        tintedPause = origImage?.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
+        tintedPlay = playImage?.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
+        tintedPause = pauseImage?.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
         tintedImage = origImage?.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
         
         self.backgroundColor = UIColor.clearColor()
@@ -62,10 +62,10 @@ public class PlayPauseButton: UIButton {
     public func togglePlaying(playing: Bool) {
         if playing == true {
             self.tintColor = UIColor.redColor()
-            self.setBackgroundImage(tintedPlay, forState: UIControlState.Normal)
+            self.setBackgroundImage(tintedPause, forState: UIControlState.Normal)
         } else {
             self.tintColor = UIColor.greenColor()
-            self.setBackgroundImage(tintedPause, forState: UIControlState.Normal)
+            self.setBackgroundImage(tintedPlay, forState: UIControlState.Normal)
         }
     }
 
