@@ -9,17 +9,19 @@
 import UIKit
 import AVFoundation
 
-class MediaViewController: UIViewController, AVAudioPlayerDelegate, UIViewControllerTransitioningDelegate, MentalStateDelegate {
+class MediaViewController: UIViewController, AVAudioPlayerDelegate, UIViewControllerTransitioningDelegate, MentalStateDelegate, UIGestureRecognizerDelegate {
 
-    @IBOutlet weak var playPauseButton: UIButton!
     @IBOutlet weak var currentTimeLabel: UILabel!
     @IBOutlet weak var timeLeftLabel: UILabel!
     @IBOutlet weak var timeSlider: UISlider!
     @IBOutlet var mediaView: UIView!
     @IBOutlet weak var volumeSlider: UISlider!
+    @IBOutlet weak var playView: UIView!
     
+    var playPauseButton: PlayPauseButton!
     var mentalStateDelegate: MentalStateDelegate!
     var animator: PresentationAnimator = PresentationAnimator()
+    var playPauseButtonView: UIView!
     var audioPlayer: AVAudioPlayer!
     var minValue: NSTimeInterval!
     var maxValue: NSDate?
@@ -34,12 +36,39 @@ class MediaViewController: UIViewController, AVAudioPlayerDelegate, UIViewContro
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        playPauseButton = PlayPauseButton(frame: playView.bounds)
+        playPauseButton.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
+        playView.addSubview(playPauseButton)
+        let tap = UITapGestureRecognizer(target: self, action: Selector("handleTap:"))
+        tap.delegate = self
+        playPauseButton.addGestureRecognizer(tap)
         loadAudio()
         if first {
             meditation = Meditation.newGuidedMeditation()
             presentation()
             first = false
         } else {
+        }
+    }
+    
+    func handleTap(sender: UITapGestureRecognizer? = nil){
+        print("hey!")
+        togglePlayingSound()
+        playPauseButton.togglePlaying(playing)
+    }
+    
+    func togglePlayingSound() {
+        if playing {
+            print("togglePlayingSound: fake end of mediation")
+            endMeditation()
+            audioPlayer.pause()
+            timer.invalidate()
+            playing = false
+        } else {
+            meditation!.start()
+            audioPlayer.play()
+            timer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: Selector("updateTimeSlider"), userInfo: nil, repeats: true)
+            playing = true
         }
     }
     
@@ -92,8 +121,8 @@ class MediaViewController: UIViewController, AVAudioPlayerDelegate, UIViewContro
     
     func loadAudio() {
         let audioFilePath = NSBundle.mainBundle().pathForResource("MARC5MinuteBreathing", ofType: "mp3")
-        playPauseButton.setImage(UIImage(named: "video-player-7"), forState: UIControlState.Normal)
-        playPauseButton.backgroundColor = UIColor.blueColor()
+//        playPauseButton.setImage(UIImage(named: "video-player-7"), forState: UIControlState.Normal)
+//        playPauseButton.backgroundColor = UIColor.blueColor()
         minValue = 0
         
         if audioFilePath != nil {
@@ -114,23 +143,6 @@ class MediaViewController: UIViewController, AVAudioPlayerDelegate, UIViewContro
             }
         } else {
             print("audio file is not found")
-        }
-    }
-    
-    @IBAction func togglePlayingSound(sender: AnyObject) {
-        if playing {
-            print("togglePlayingSound: fake end of mediation")
-            endMeditation()
-            playPauseButton.setImage(UIImage(named: "video-player-7"), forState: UIControlState.Normal)
-            audioPlayer.pause()
-            timer.invalidate()
-            playing = false
-        } else {
-            meditation!.start()
-            audioPlayer.play()
-            playPauseButton.setImage(UIImage(named: "pushpin-7"), forState: UIControlState.Normal)
-            timer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: Selector("updateTimeSlider"), userInfo: nil, repeats: true)
-            playing = true
         }
     }
     
@@ -162,7 +174,7 @@ class MediaViewController: UIViewController, AVAudioPlayerDelegate, UIViewContro
     }
     
     func audioPlayerDidFinishPlaying(player: AVAudioPlayer, successfully flag: Bool) {
-        playPauseButton.setImage(UIImage(named: "video-player-7"), forState: UIControlState.Normal)
+//        playPauseButton.setImage(UIImage(named: "video-player-7"), forState: UIControlState.Normal)
         endMeditation()
         // segue to post-meditation screen
         presentation()
