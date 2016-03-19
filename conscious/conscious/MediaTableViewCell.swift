@@ -23,10 +23,11 @@ class MediaTableViewCell: UITableViewCell {
         didSet{
             if let newMeditation = meditation{
                 self.titleLabel.text = newMeditation.meditation_title
-                self.descriptionLabel.text = newMeditation.meditation_description
+                //self.descriptionLabel.text = newMeditation.meditation_description
                 self.coverImage.image = newMeditation.coverImage
                 self.iconImageView.image = UIImage(named: newMeditation.iconName!)
-                self.iconImageView.tintColor = UIColor.whiteColor()
+                
+//                self.iconImageView.tintColor = UIColor.whiteColor()
             }
         }
     }
@@ -36,8 +37,12 @@ class MediaTableViewCell: UITableViewCell {
         tapGestureRecognizer = UITapGestureRecognizer(target: self, action: "onTap")
         self.userInteractionEnabled = true
         self.addGestureRecognizer(tapGestureRecognizer!)
-        self.iconContainerView.layer.cornerRadius = 24
-        self.iconContainerView.clipsToBounds = true
+        titleLabel.layer.shadowOpacity = 0.8
+        titleLabel.layer.shadowRadius = 6.0
+        titleLabel.layer.shadowColor = UIColor.blackColor().CGColor
+        titleLabel.layer.shadowOffset = CGSizeMake(0.0, -1.0)
+//        self.iconContainerView.layer.cornerRadius = 24
+//        self.iconContainerView.clipsToBounds = true
     }
 
     override func setSelected(selected: Bool, animated: Bool) {

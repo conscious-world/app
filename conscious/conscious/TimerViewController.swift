@@ -37,6 +37,48 @@ class TimerViewController: UIViewController, EZMicrophoneDelegate, EZAudioFFTDel
     var meditation: Meditation?
     var userSettings = TimerSettings.getCurrentSettings()
     
+    let traySmallHeight = 200
+    @IBOutlet weak var trayHeightContraint: NSLayoutConstraint!
+    
+    var trayPanGestureRecognizer:UIPanGestureRecognizer?
+    var trayStartY = CGPoint()
+    
+    @IBAction func onTrayPanGesure(sender: UIPanGestureRecognizer) {
+        
+        let translation = sender.translationInView(self.view)
+        translation.y
+        
+
+        let point = sender.locationInView(self.view)
+        
+        if sender.state == UIGestureRecognizerState.Began {
+            print("Gesture began at: \(point)")
+        } else if sender.state == UIGestureRecognizerState.Changed {
+            translation.y
+            print("translation.y \(translation.y)")
+            trayHeightContraint.constant = trayHeightContraint.constant - translation.y
+            sender.setTranslation(CGPointZero, inView: self.view)
+            print("Gesture changed at: \(point)")
+        } else if sender.state == UIGestureRecognizerState.Ended {
+            UIView.animateWithDuration(1.0, animations: {
+                
+                if(self.controlHiden){
+                   //no-op
+                }else{
+                    if(self.trayHeightContraint.constant >= 220){
+                        self.trayHeightContraint.constant =
+                            self.view.frame.height
+                        self.controlHiden = true
+                    }else{
+                         self.trayHeightContraint.constant = 200
+                    }
+                }
+                //self.view.layoutIfNeeded()
+                
+                })
+
+        }
+    }
     @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var timeLeftLabel: UILabel!
     
@@ -49,11 +91,62 @@ class TimerViewController: UIViewController, EZMicrophoneDelegate, EZAudioFFTDel
         return UIStatusBarStyle.LightContent;
     }
     
+    func getTringle(tringleView:UIView, index:Int) -> UIView{
+    
+        // Build a triangular path
+        
+        let path = UIBezierPath()
+       
+        if(index % 2 == 0){
+             path.moveToPoint(CGPoint(x: 0,y: 0))
+            path.addLineToPoint(CGPoint(x: 50,y: 75))
+            path.addLineToPoint(CGPoint(x: 100,y: 0))
+            path.addLineToPoint(CGPoint(x: 0,y: 0))
+        }else{
+            path.moveToPoint(CGPoint(x: 0,y: 75))
+            path.addLineToPoint(CGPoint(x: 50,y: 0))
+            path.addLineToPoint(CGPoint(x: 100,y: 75))
+            path.addLineToPoint(CGPoint(x: 0,y: 75))
+        }
+        
+        
+        // Create a CAShapeLayer with this triangular path
+        // Same size as the original imageView
+        let mask = CAShapeLayer()
+        
+        mask.frame = tringleView.bounds;
+        mask.path = path.CGPath;
+        
+        // Mask the imageView's layer with this shape
+        tringleView.layer.mask = mask;
+        return tringleView
+    }
+    
+    func makeTringles(){
+        for yindex in 0...8{
+            for xindex in -1...7 {
+                let x = CGFloat(xindex * 50)
+                let y = CGFloat(yindex * 75)
+                var DynamicView=UIView(frame: CGRectMake(x, y, 100, 100))
+                DynamicView.backgroundColor=UIColor.clearColor()
+                
+                let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.Light)
+                let blurEffectView = UIVisualEffectView(effect: blurEffect)
+                blurEffectView.frame = DynamicView.bounds
+                DynamicView.addSubview(blurEffectView)
+                
+                DynamicView = getTringle(DynamicView, index: (xindex + yindex))
+                self.view.addSubview(DynamicView)
+            }
+        }
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.plot?.backgroundColor = UIColor.clearColor()
-        setBackground()
-        self.view.sendSubviewToBack(backgroundView)
+        //setBackground()
+        //self.view.sendSubviewToBack(backgroundView)
         styleButtons()
         controlContainerView.backgroundColor = UIColor.clearColor()
         session = AVAudioSession.sharedInstance()
@@ -61,6 +154,12 @@ class TimerViewController: UIViewController, EZMicrophoneDelegate, EZAudioFFTDel
         //startAudio()
         timerLabel.hidden = true
         timeLeftLabel.hidden = true
+        
+        makeTringles()
+        self.view.bringSubviewToFront(controlContainerView)
+        //self.view.sendSubviewToBack(controlContainerView)
+
+        
         if first {
             meditation = Meditation.newTimedMeditation()
             presentation()
@@ -71,30 +170,6 @@ class TimerViewController: UIViewController, EZMicrophoneDelegate, EZAudioFFTDel
     }
     @IBOutlet weak var conrolContainerBottonConstraint: NSLayoutConstraint!
     var controlHiden = false
-    @IBAction func onViewTap(sender: UITapGestureRecognizer) {
-        print("Tap")
-        UIView.animateWithDuration(0.4, animations: {
-            
-            if(self.controlHiden){
-                self.controlContainerView.alpha  = 100.0
-                self.conrolContainerBottonConstraint.constant = 0
-                self.controlHiden = false
-            }else{
-                self.controlContainerView.alpha  = 0
-                self.conrolContainerBottonConstraint.constant = -200
-                self.controlHiden = true
-            }
-            self.view.layoutIfNeeded()
-            
-            }, completion: {
-                (value: Bool) in
-                if(self.controlHiden){
-                    self.controlContainerView.alpha = 0
-                }else{
-                    self.controlContainerView.alpha = 100
-                }
-        })
-    }
    
     override func willMoveToParentViewController(parent: UIViewController?) {
         if parent == nil {
@@ -176,6 +251,7 @@ class TimerViewController: UIViewController, EZMicrophoneDelegate, EZAudioFFTDel
     func startAudio()
     {
         self.plot?.backgroundColor = UIColor.clearColor()
+        self.plot?.color = UIColor.orangeColor()
         self.plot?.plotType = EZPlotType.Rolling
         self.plot?.shouldFill = true
         self.plot?.shouldMirror = true
@@ -250,11 +326,10 @@ class TimerViewController: UIViewController, EZMicrophoneDelegate, EZAudioFFTDel
     
     func fft(fft: EZAudioFFT!, updatedWithFFTData fftData: UnsafeMutablePointer<Float>, bufferSize: vDSP_Length) {
         let maxFrequency: Float = fft.maxFrequency
+        
         let noteName: String = EZAudioUtilities.noteNameStringForFrequency(maxFrequency, includeOctave: true)
-        //weak var weakSelf = self
         dispatch_async(dispatch_get_main_queue(), {() -> Void in
-            self.maxFrequencyLabel.text = "Highest Note: \(noteName),\nFrequency: \(maxFrequency)"
-            //weakSelf.audioPlotFreq.updateBuffer(fftData, withBufferSize: UInt32(bufferSize))
+            NSLog("Highest Note: \(noteName),\nFrequency: \(maxFrequency)")
         })
     }
     
@@ -273,6 +348,7 @@ class TimerViewController: UIViewController, EZMicrophoneDelegate, EZAudioFFTDel
     }
     
     func presentation() {
+        return
         let storyBoard = UIStoryboard(name: "mental_state", bundle: nil)
         next = storyBoard.instantiateViewControllerWithIdentifier("MentalStateViewController") as! MentalStateViewController
         next.animator = animator

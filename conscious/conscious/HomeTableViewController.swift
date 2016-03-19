@@ -25,7 +25,7 @@ class HomeTableViewController: UIViewController, UITableViewDataSource, UITableV
         tableView.dataSource = self
         tableView.delegate = self
         tableView.rowHeight = UITableViewAutomaticDimension
-        tableView.estimatedRowHeight = 250
+        tableView.estimatedRowHeight = 150
         // Do any additional setup after loading the view, typically from a nib.
     }
     
