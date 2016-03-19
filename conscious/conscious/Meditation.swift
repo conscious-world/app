@@ -111,7 +111,7 @@ class Meditation: NSObject, NSCoding{
         static func build() -> Meditation{
             let meditation = Meditation.newTimedMeditation()
             meditation.coverImageUrl = "indoorMeditator"
-            meditation.iconName = "clock-7"
+            meditation.iconName = "clock-stopwatch-7"
             meditation.meditation_title = "Start a new timed meditation"
             meditation.meditation_description = "Set a timer, selection optional scene, background sound, reminder tone and audio chant reverb"
             return meditation
