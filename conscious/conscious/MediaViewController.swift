@@ -48,7 +48,6 @@ class MediaViewController: UIViewController, AVAudioPlayerDelegate, UIViewContro
         } else {
         }
         UIView.animateWithDuration(1, animations: {
- 
             self.view.layoutIfNeeded()
         })
     }
@@ -100,12 +99,16 @@ class MediaViewController: UIViewController, AVAudioPlayerDelegate, UIViewContro
     
     func setupVolumeSlider() {
         volumeSlider = sliderView.volumeSlider
+        var pan = UIPanGestureRecognizer(target: self, action: "onVolumePan:")
+        volumeSlider!.userInteractionEnabled = true
+        volumeSlider!.addGestureRecognizer(pan)
     }
 
     
-    func handleVolumeScrub(sender: UIPanGestureRecognizer? = nil) {
+    func onVolumePan(sender: UIPanGestureRecognizer) {
         if (audioPlayer != nil) {
-            audioPlayer.volume = Float(volumeSlider!.value)
+            print(sender)
+//            audioPlayer.volume = Float(volumeSlider!.value)
         }
     }
     
@@ -155,9 +158,7 @@ class MediaViewController: UIViewController, AVAudioPlayerDelegate, UIViewContro
     
     func loadAudio() {
         let audioFilePath = NSBundle.mainBundle().pathForResource("MARC5MinuteBreathing", ofType: "mp3")
-//        playPauseButton.setImage(UIImage(named: "video-player-7"), forState: UIControlState.Normal)
-//        playPauseButton.backgroundColor = UIColor.blueColor()
-        minValue = 0
+         minValue = 0
         
         if audioFilePath != nil {
             let audioFileUrl = NSURL.fileURLWithPath(audioFilePath!)

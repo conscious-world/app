@@ -42,7 +42,13 @@ public class VolumeSliderView: UIView {
         sliderView.frame = bounds
         sliderView.addSubview(volumeSlider)
         addSubview(sliderView)
-
+//        var pan = UIPanGestureRecognizer(target: self, action: "onVolumePan:")
+//        volumeSlider!.userInteractionEnabled = true
+//        volumeSlider?.addGestureRecognizer(pan)
+    }
+    
+    func onVolumePan(sender: UIPanGestureRecognizer) {
+    print("hi!")
     }
     
 }
