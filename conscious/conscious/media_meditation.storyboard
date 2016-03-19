@@ -36,26 +36,11 @@
                                 <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="hbd-mx-wlg">
-                                <rect key="frame" x="70" y="525" width="460" height="31"/>
-                                <connections>
-                                    <action selector="updateVolumeSlider:" destination="xZ1-Jg-0QA" eventType="valueChanged" id="zWR-k7-CpV"/>
-                                </connections>
-                            </slider>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="speaker-7" translatesAutoresizingMaskIntoConstraints="NO" id="jOS-NK-jSE">
-                                <rect key="frame" x="531" y="531" width="18" height="18"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="18" id="LVM-Db-6Mu"/>
-                                    <constraint firstAttribute="width" constant="18" id="UBi-Xy-vbb"/>
-                                </constraints>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="speaker-7" translatesAutoresizingMaskIntoConstraints="NO" id="FXy-XI-7Ht">
-                                <rect key="frame" x="52" y="531" width="18" height="18"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="18" id="9er-qq-6Gz"/>
-                                    <constraint firstAttribute="width" constant="18" id="S10-Aj-77M"/>
-                                </constraints>
-                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ntN-9y-eUE" customClass="VolumeSliderView" customModule="conscious" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="528" width="600" height="72"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
+                            </view>
                             <view contentMode="scaleToFill" restorationIdentifier="PlayPauseButtonView" translatesAutoresizingMaskIntoConstraints="NO" id="YSA-cu-O6i">
                                 <rect key="frame" x="273" y="456" width="55" height="55"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -74,31 +59,28 @@
                         </accessibility>
                         <constraints>
                             <constraint firstItem="ijJ-In-Xx5" firstAttribute="baseline" secondItem="7eF-Ie-fJl" secondAttribute="baseline" id="0oF-pb-qJx"/>
-                            <constraint firstItem="FXy-XI-7Ht" firstAttribute="baseline" secondItem="hbd-mx-wlg" secondAttribute="baseline" constant="-6" id="A8t-Pd-32X"/>
-                            <constraint firstItem="jOS-NK-jSE" firstAttribute="baseline" secondItem="hbd-mx-wlg" secondAttribute="baseline" constant="-6" id="FRh-m7-Swq"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="jOS-NK-jSE" secondAttribute="trailing" constant="31" id="GKr-Y9-cXp"/>
-                            <constraint firstItem="iRv-xM-wNa" firstAttribute="top" secondItem="hbd-mx-wlg" secondAttribute="bottom" constant="45" id="OKu-on-6OX"/>
-                            <constraint firstItem="hbd-mx-wlg" firstAttribute="leading" secondItem="FXy-XI-7Ht" secondAttribute="trailing" constant="2" id="U50-TI-KUw"/>
+                            <constraint firstItem="ntN-9y-eUE" firstAttribute="leading" secondItem="2f2-ut-DKj" secondAttribute="leading" id="8oX-bJ-PuR"/>
+                            <constraint firstItem="ntN-9y-eUE" firstAttribute="top" secondItem="YSA-cu-O6i" secondAttribute="bottom" constant="17" id="IzR-1S-noF"/>
                             <constraint firstAttribute="trailing" secondItem="0At-Zh-jTa" secondAttribute="trailing" id="WSk-Ph-jRS"/>
+                            <constraint firstItem="iRv-xM-wNa" firstAttribute="top" secondItem="ntN-9y-eUE" secondAttribute="bottom" id="aiS-32-GWm"/>
                             <constraint firstItem="YSA-cu-O6i" firstAttribute="top" secondItem="0At-Zh-jTa" secondAttribute="bottom" constant="18" id="bHO-O5-5N1"/>
                             <constraint firstAttribute="leadingMargin" secondItem="ijJ-In-Xx5" secondAttribute="leading" id="cy0-X6-bht"/>
-                            <constraint firstItem="FXy-XI-7Ht" firstAttribute="leading" secondItem="2f2-ut-DKj" secondAttribute="leadingMargin" constant="32" id="fn3-yn-FTj"/>
                             <constraint firstItem="YSA-cu-O6i" firstAttribute="centerX" secondItem="2f2-ut-DKj" secondAttribute="centerX" id="igz-O3-3gz"/>
+                            <constraint firstItem="0At-Zh-jTa" firstAttribute="top" secondItem="hBW-h3-gPX" secondAttribute="bottom" constant="388" id="rYA-dA-hZt"/>
                             <constraint firstItem="ijJ-In-Xx5" firstAttribute="top" secondItem="0At-Zh-jTa" secondAttribute="bottom" constant="-11" id="rbZ-R7-4Vw"/>
                             <constraint firstItem="7eF-Ie-fJl" firstAttribute="top" secondItem="0At-Zh-jTa" secondAttribute="bottom" constant="-12" id="u7Q-Ff-S2D"/>
                             <constraint firstItem="0At-Zh-jTa" firstAttribute="leading" secondItem="2f2-ut-DKj" secondAttribute="leading" id="vTz-v5-4Zr"/>
                             <constraint firstAttribute="trailingMargin" secondItem="7eF-Ie-fJl" secondAttribute="trailing" id="xv8-Na-vac"/>
-                            <constraint firstItem="jOS-NK-jSE" firstAttribute="leading" secondItem="hbd-mx-wlg" secondAttribute="trailing" constant="3" id="y8H-VO-dWI"/>
-                            <constraint firstItem="hbd-mx-wlg" firstAttribute="top" secondItem="YSA-cu-O6i" secondAttribute="bottom" constant="14" id="zsg-cg-c2A"/>
+                            <constraint firstAttribute="trailing" secondItem="ntN-9y-eUE" secondAttribute="trailing" id="yBJ-u3-lXy"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="currentTimeLabel" destination="ijJ-In-Xx5" id="pPB-AQ-n44"/>
                         <outlet property="mediaView" destination="2f2-ut-DKj" id="Xet-f3-UCM"/>
                         <outlet property="playView" destination="YSA-cu-O6i" id="WSF-qG-ssL"/>
+                        <outlet property="sliderView" destination="ntN-9y-eUE" id="pQe-a5-wuH"/>
                         <outlet property="timeLeftLabel" destination="7eF-Ie-fJl" id="BWn-kK-D9m"/>
                         <outlet property="timeSlider" destination="0At-Zh-jTa" id="V02-YD-nUg"/>
-                        <outlet property="volumeSlider" destination="hbd-mx-wlg" id="wqc-2d-04Q"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YSz-91-grG" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -107,7 +89,4 @@
             <point key="canvasLocation" x="704" y="1476"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="speaker-7" width="30" height="30"/>
-    </resources>
 </document>

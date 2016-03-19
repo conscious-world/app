@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="VolumeSliderView" customModule="conscious" customModuleProvider="target">
+            <connections>
+                <outlet property="leftSoundImage" destination="adv-rq-8VB" id="tik-ae-wro"/>
+                <outlet property="rightSoundImage" destination="6LE-iT-SoK" id="W0e-57-Ki4"/>
+                <outlet property="sliderView" destination="iN0-l3-epB" id="Xu4-bN-AgL"/>
+                <outlet property="volumeSlider" destination="GG6-Dk-r9D" id="1t9-Aj-Ue4"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="601" height="48"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="speaker-7" translatesAutoresizingMaskIntoConstraints="NO" id="adv-rq-8VB">
+                    <rect key="frame" x="29" y="16" width="15" height="15"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="15" id="XNu-t9-E9q"/>
+                        <constraint firstAttribute="width" constant="15" id="iGz-HW-BR8"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="speaker-7" translatesAutoresizingMaskIntoConstraints="NO" id="6LE-iT-SoK">
+                    <rect key="frame" x="557" y="16" width="15" height="15"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="15" id="OGG-n0-s1t"/>
+                        <constraint firstAttribute="width" constant="15" id="Plh-YG-zMC"/>
+                    </constraints>
+                </imageView>
+                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="GG6-Dk-r9D">
+                    <rect key="frame" x="56" y="9" width="489" height="31"/>
+                    <gestureRecognizers/>
+                </slider>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="GG6-Dk-r9D" firstAttribute="centerY" secondItem="6LE-iT-SoK" secondAttribute="centerY" id="1cq-zp-Fms"/>
+                <constraint firstItem="6LE-iT-SoK" firstAttribute="leading" secondItem="GG6-Dk-r9D" secondAttribute="trailing" constant="14" id="5jz-PA-J31"/>
+                <constraint firstItem="GG6-Dk-r9D" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="U1z-pV-Xzf"/>
+                <constraint firstItem="GG6-Dk-r9D" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="X22-aJ-YyS"/>
+                <constraint firstItem="GG6-Dk-r9D" firstAttribute="leading" secondItem="adv-rq-8VB" secondAttribute="trailing" constant="14" id="a78-x5-V82"/>
+                <constraint firstItem="GG6-Dk-r9D" firstAttribute="centerY" secondItem="adv-rq-8VB" secondAttribute="centerY" id="c3p-qj-Xg4"/>
+                <constraint firstItem="adv-rq-8VB" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="29" id="h6u-pR-lmo"/>
+                <constraint firstAttribute="trailing" secondItem="6LE-iT-SoK" secondAttribute="trailing" constant="29" id="qxK-O0-Atu"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="213.5" y="461"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="speaker-7" width="30" height="30"/>
+    </resources>
+</document>

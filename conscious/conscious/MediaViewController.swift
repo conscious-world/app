@@ -15,10 +15,12 @@ class MediaViewController: UIViewController, AVAudioPlayerDelegate, UIViewContro
     @IBOutlet weak var timeLeftLabel: UILabel!
     @IBOutlet weak var timeSlider: UISlider!
     @IBOutlet var mediaView: UIView!
-    @IBOutlet weak var volumeSlider: UISlider!
     @IBOutlet weak var playView: UIView!
+    @IBOutlet weak var sliderView: VolumeSliderView!
     
+    var volumeSlider: UISlider?
     var playPauseButton: PlayPauseButton!
+    
     var mentalStateDelegate: MentalStateDelegate!
     var animator: PresentationAnimator = PresentationAnimator()
     var playPauseButtonView: UIView!
@@ -36,22 +38,36 @@ class MediaViewController: UIViewController, AVAudioPlayerDelegate, UIViewContro
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        playPauseButton = PlayPauseButton(frame: playView.bounds)
-        playPauseButton.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
-        playView.addSubview(playPauseButton)
-        let tap = UITapGestureRecognizer(target: self, action: Selector("handleTap:"))
-        tap.delegate = self
-        playPauseButton.addGestureRecognizer(tap)
         loadAudio()
+        setupPlayButton()
+        setupVolumeSlider()
         if first {
             meditation = Meditation.newGuidedMeditation()
             presentation()
             first = false
         } else {
         }
+        UIView.animateWithDuration(1, animations: {
+ 
+            self.view.layoutIfNeeded()
+        })
     }
     
-    func handleTap(sender: UITapGestureRecognizer? = nil){
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+    }
+    
+    func setupPlayButton() {
+        playPauseButton = PlayPauseButton(frame: playView.bounds)
+        playPauseButton.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
+        playView.addSubview(playPauseButton)
+        let tap = UITapGestureRecognizer(target: self, action: Selector("handlePlayTap:"))
+        tap.delegate = self
+        playPauseButton.addGestureRecognizer(tap)
+    }
+    
+    
+    func handlePlayTap(sender: UITapGestureRecognizer? = nil){
         print("hey!")
         togglePlayingSound()
         playPauseButton.togglePlaying(playing)
@@ -80,6 +96,24 @@ class MediaViewController: UIViewController, AVAudioPlayerDelegate, UIViewContro
                 meditation?.mentality_after = mentalState
             }
         }
+    }
+    
+    func setupVolumeSlider() {
+        volumeSlider = sliderView.volumeSlider
+    }
+
+    
+    func handleVolumeScrub(sender: UIPanGestureRecognizer? = nil) {
+        if (audioPlayer != nil) {
+            audioPlayer.volume = Float(volumeSlider!.value)
+        }
+    }
+    
+    func updateTimeSlider () {
+        timeSlider.value = Float(audioPlayer.currentTime)
+        currentTimeLabel.text = audioPlayer.currentTime.mmss
+        let diff = Float(duration!) - timeSlider.value
+        timeLeftLabel.text  = NSTimeInterval(diff).mmss
     }
     
     func presentation() {
@@ -152,25 +186,12 @@ class MediaViewController: UIViewController, AVAudioPlayerDelegate, UIViewContro
         History.append(meditation!)
     }
     
-    func updateTimeSlider () {
-        timeSlider.value = Float(audioPlayer.currentTime)
-        currentTimeLabel.text = audioPlayer.currentTime.mmss
-        let diff = Float(duration!) - timeSlider.value
-        timeLeftLabel.text  = NSTimeInterval(diff).mmss
-    }
-    
     @IBAction func scrubTimeSlider(sender: AnyObject) {
         let scrubbedValue = NSTimeInterval(timeSlider.value)
         audioPlayer.currentTime = scrubbedValue
         currentTimeLabel.text = scrubbedValue.mmss
         let diff = Float(duration!) - timeSlider.value
         timeLeftLabel.text = NSTimeInterval(diff).mmss
-    }
-    
-    @IBAction func updateVolumeSlider(sender: AnyObject) {
-        if (audioPlayer != nil) {
-            audioPlayer.volume = Float(volumeSlider.value)
-        }
     }
     
     func audioPlayerDidFinishPlaying(player: AVAudioPlayer, successfully flag: Bool) {
