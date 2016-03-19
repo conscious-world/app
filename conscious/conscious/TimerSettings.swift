@@ -39,7 +39,7 @@ class TimerSettings{
         }
     }
 
-    var backgroundGif: String = "beach1"{
+    var backgroundGif: String = "radialColors"{
         didSet {
             self.save()
         }
