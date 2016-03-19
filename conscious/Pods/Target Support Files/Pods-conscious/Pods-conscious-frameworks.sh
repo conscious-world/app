@@ -82,3 +82,14 @@ strip_invalid_archs() {
   fi
 }
 
+
+if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "Pods-conscious/EZAudio.framework"
+  install_framework "Pods-conscious/StarWars.framework"
+  install_framework "Pods-conscious/TPCircularBuffer.framework"
+fi
+if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "Pods-conscious/EZAudio.framework"
+  install_framework "Pods-conscious/StarWars.framework"
+  install_framework "Pods-conscious/TPCircularBuffer.framework"
+fi

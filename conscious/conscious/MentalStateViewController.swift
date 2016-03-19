@@ -170,7 +170,7 @@ class MentalStateViewController: UIViewController, UIViewControllerTransitioning
         option.radius = CGFloat(20.0)
         option.duration = CFTimeInterval(1.0)
         option.borderColor = UIColor.whiteColor().tintColor(amount: 0.7)
-//        option.fillColor = UIColor.whiteColor().tintColor(amount: 0.9)
+        option.fillColor = UIColor.orangeColor().tintColor(amount: 0.1)
         option.scale = CGFloat(10)
         
         Ripple.run(mentalStateCursorView, locationInView: CGPoint(x: 25,y: 20), option: option){
