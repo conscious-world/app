@@ -40,7 +40,6 @@ class MediaViewController: UIViewController, AVAudioPlayerDelegate, UIViewContro
         super.viewDidLoad()
         loadAudio()
         setupPlayButton()
-        setupVolumeSlider()
         if first {
             meditation = Meditation.newGuidedMeditation()
             presentation()
@@ -94,21 +93,6 @@ class MediaViewController: UIViewController, AVAudioPlayerDelegate, UIViewContro
             } else {
                 meditation?.mentality_after = mentalState
             }
-        }
-    }
-    
-    func setupVolumeSlider() {
-        volumeSlider = sliderView.volumeSlider
-        var pan = UIPanGestureRecognizer(target: self, action: "onVolumePan:")
-        volumeSlider!.userInteractionEnabled = true
-        volumeSlider!.addGestureRecognizer(pan)
-    }
-
-    
-    func onVolumePan(sender: UIPanGestureRecognizer) {
-        if (audioPlayer != nil) {
-            print(sender)
-//            audioPlayer.volume = Float(volumeSlider!.value)
         }
     }
     
