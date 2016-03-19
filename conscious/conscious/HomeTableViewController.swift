@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import StarWars
 
 class HomeTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
@@ -45,7 +46,6 @@ class HomeTableViewController: UIViewController, UITableViewDataSource, UITableV
         if(section == 0){
             return 1
         }
-  
         return meditations.count
     }
     
@@ -84,7 +84,20 @@ class HomeTableViewController: UIViewController, UITableViewDataSource, UITableV
         }
         
     }
+    
+    //there is no segue
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let destination = segue.destinationViewController
+        destination.transitioningDelegate = self
+    }
 
+}
 
+extension HomeTableViewController: UIViewControllerTransitioningDelegate {
+    
+    func animationControllerForDismissedController(dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return StarWarsGLAnimator()
+        
+    }
 }
 

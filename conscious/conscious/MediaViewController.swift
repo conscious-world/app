@@ -46,13 +46,18 @@ class MediaViewController: UIViewController, AVAudioPlayerDelegate, UIViewContro
             first = false
         } else {
         }
-        UIView.animateWithDuration(1, animations: {
-            self.view.layoutIfNeeded()
-        })
     }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        UIView.animateWithDuration(1) { () -> Void in
+            self.view.layoutIfNeeded()
+        }
     }
     
     func setupPlayButton() {

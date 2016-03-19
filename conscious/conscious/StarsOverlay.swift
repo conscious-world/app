@@ -37,13 +37,13 @@ class StarsOverlay: UIView {
         
         particle = CAEmitterCell()
         
-        particle.contents = UIImage(named: "lotus_1")!.CGImage
-        particle.birthRate = 10
+        particle.contents = UIImage(named: "spark")!.CGImage
+        particle.birthRate = 5
         
-        particle.lifetime = 50
+        particle.lifetime = 10
         particle.lifetimeRange = 5
         
-        particle.velocity = 20
+        particle.velocity = 12
         particle.velocityRange = 10
         
         particle.scale = 0.02

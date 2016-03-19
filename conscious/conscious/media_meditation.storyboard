@@ -14,7 +14,7 @@
                         <viewControllerLayoutGuide type="top" id="hBW-h3-gPX"/>
                         <viewControllerLayoutGuide type="bottom" id="iRv-xM-wNa"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="2f2-ut-DKj">
+                    <view key="view" contentMode="scaleToFill" id="2f2-ut-DKj" customClass="StarsOverlay" customModule="conscious" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>

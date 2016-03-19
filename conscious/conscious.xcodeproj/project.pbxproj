@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D196E2C49435BC52C402D5E /* Pods_conscious.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3302C71425482D62DEF932A4 /* Pods_conscious.framework */; };
 		5C04E3071C98F0FA003558CF /* mentalStatePresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C04E3061C98F0FA003558CF /* mentalStatePresentation.swift */; };
 		5C04E30A1C98F2A1003558CF /* presentationAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C04E3091C98F2A1003558CF /* presentationAnimation.swift */; };
 		5C290EF81C97790E000FF2D9 /* PIRipple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C290EF71C97790E000FF2D9 /* PIRipple.swift */; };
@@ -19,7 +20,6 @@
 		5CCB32261C9508D500EB656E /* mental_state.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CCB32251C9508D500EB656E /* mental_state.storyboard */; };
 		5CD6E2F81C9B9DBD00AB2770 /* PlayPauseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD6E2F71C9B9DBD00AB2770 /* PlayPauseButton.swift */; };
 		5CD6E2FE1C9BD96D00AB2770 /* VolumeSliderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CD6E2FD1C9BD96D00AB2770 /* VolumeSliderView.xib */; };
-		D923E6254EE0B63CF62F6076 /* libPods-conscious.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 40F07EF925CB2A44E1843088 /* libPods-conscious.a */; };
 		DA35019F1C880A27006A41A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA35019E1C880A27006A41A5 /* AppDelegate.swift */; };
 		DA3501A11C880A27006A41A5 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3501A01C880A27006A41A5 /* HomeTableViewController.swift */; };
 		DA3501A41C880A27006A41A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA3501A21C880A27006A41A5 /* Main.storyboard */; };
@@ -63,7 +63,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		40F07EF925CB2A44E1843088 /* libPods-conscious.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-conscious.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3302C71425482D62DEF932A4 /* Pods_conscious.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_conscious.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C04E3061C98F0FA003558CF /* mentalStatePresentation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mentalStatePresentation.swift; sourceTree = "<group>"; };
 		5C04E3091C98F2A1003558CF /* presentationAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = presentationAnimation.swift; sourceTree = "<group>"; };
 		5C290EF71C97790E000FF2D9 /* PIRipple.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PIRipple.swift; sourceTree = "<group>"; };
@@ -130,7 +130,7 @@
 			files = (
 				DA3501EB1C8FF439006A41A5 /* AVFoundation.framework in Frameworks */,
 				DA3501E91C8FF1AB006A41A5 /* AudioToolbox.framework in Frameworks */,
-				D923E6254EE0B63CF62F6076 /* libPods-conscious.a in Frameworks */,
+				1D196E2C49435BC52C402D5E /* Pods_conscious.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,6 +149,7 @@
 		5C04E3081C98F26A003558CF /* Animations */ = {
 			isa = PBXGroup;
 			children = (
+				5C49AC471C9D0947003F90F4 /* StarsOverlay.swift */,
 				5C04E3091C98F2A1003558CF /* presentationAnimation.swift */,
 			);
 			name = Animations;
@@ -160,7 +161,6 @@
 				5CD6E2F71C9B9DBD00AB2770 /* PlayPauseButton.swift */,
 				5CD6E2FD1C9BD96D00AB2770 /* VolumeSliderView.xib */,
 				5CB34B371C9BDC8F00DF50FF /* VolumeSliderView.swift */,
-				5C49AC471C9D0947003F90F4 /* StarsOverlay.swift */,
 			);
 			name = components;
 			sourceTree = "<group>";
@@ -224,7 +224,7 @@
 			children = (
 				DA3501EA1C8FF439006A41A5 /* AVFoundation.framework */,
 				DA3501E81C8FF1AB006A41A5 /* AudioToolbox.framework */,
-				40F07EF925CB2A44E1843088 /* libPods-conscious.a */,
+				3302C71425482D62DEF932A4 /* Pods_conscious.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
