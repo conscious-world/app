@@ -18,24 +18,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NXH-vg-Dek">
+                                <rect key="frame" x="0.0" y="-30" width="600" height="630"/>
+                                <color key="backgroundColor" red="1" green="0.51318947189999997" blue="0.080729444710000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Max Freq" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zft-f8-vcQ">
                                 <rect key="frame" x="0.0" y="0.0" width="71" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Iw-Xl-Jbr" customClass="EZAudioPlotGL">
-                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="400" id="wou-3h-yRA"/>
-                                </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="wou-3h-yRA"/>
-                                    </mask>
-                                </variation>
-                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8L5-Vc-Rz1" customClass="DraggableView" customModule="conscious" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="380" width="600" height="220"/>
                                 <subviews>
@@ -101,12 +93,27 @@
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" white="0.5" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Iw-Xl-Jbr" customClass="EZAudioPlotGL">
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="400" id="wou-3h-yRA"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="wou-3h-yRA"/>
+                                    </mask>
+                                </variation>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.45104509920000002" green="0.70853810760000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="2Iw-Xl-Jbr" firstAttribute="top" secondItem="JG4-UO-tLa" secondAttribute="bottom" id="7qs-O8-HDk"/>
+                            <constraint firstItem="NXH-vg-Dek" firstAttribute="top" secondItem="JG4-UO-tLa" secondAttribute="bottom" constant="-50" id="887-2x-vmi"/>
+                            <constraint firstAttribute="trailing" secondItem="NXH-vg-Dek" secondAttribute="trailing" id="CNp-uc-cxk"/>
                             <constraint firstAttribute="trailing" secondItem="8L5-Vc-Rz1" secondAttribute="trailing" id="El3-wU-NM9"/>
+                            <constraint firstItem="NXH-vg-Dek" firstAttribute="leading" secondItem="jqL-Hz-Xd9" secondAttribute="leading" id="KPA-5G-qSH"/>
                             <constraint firstAttribute="trailingMargin" secondItem="W81-5S-kye" secondAttribute="trailing" constant="20" id="OOF-OD-tWo"/>
                             <constraint firstItem="bcS-a3-Eb4" firstAttribute="top" secondItem="W81-5S-kye" secondAttribute="bottom" constant="20" id="P6r-HB-qYg"/>
                             <constraint firstItem="2Iw-Xl-Jbr" firstAttribute="leading" secondItem="jqL-Hz-Xd9" secondAttribute="leading" id="PrO-8z-cg6"/>
@@ -114,6 +121,7 @@
                             <constraint firstItem="EaT-kS-78Y" firstAttribute="leading" secondItem="jqL-Hz-Xd9" secondAttribute="leading" constant="20" id="cHM-gl-PoM"/>
                             <constraint firstItem="bcS-a3-Eb4" firstAttribute="top" secondItem="EaT-kS-78Y" secondAttribute="bottom" constant="20" id="e8C-HX-82P"/>
                             <constraint firstItem="bcS-a3-Eb4" firstAttribute="top" secondItem="2Iw-Xl-Jbr" secondAttribute="bottom" id="har-dZ-25a"/>
+                            <constraint firstItem="bcS-a3-Eb4" firstAttribute="top" secondItem="NXH-vg-Dek" secondAttribute="bottom" id="iBq-fn-dHG"/>
                             <constraint firstItem="8L5-Vc-Rz1" firstAttribute="leading" secondItem="jqL-Hz-Xd9" secondAttribute="leading" id="nSb-bz-vqL"/>
                             <constraint firstItem="bcS-a3-Eb4" firstAttribute="top" secondItem="8L5-Vc-Rz1" secondAttribute="bottom" id="smF-nl-e2T"/>
                         </constraints>
@@ -126,6 +134,7 @@
                         <outlet property="plot" destination="2Iw-Xl-Jbr" id="aix-IJ-7eV"/>
                         <outlet property="startButton" destination="LbM-aw-Tom" id="zj4-j9-fnZ"/>
                         <outlet property="stopButton" destination="uAG-Ko-9pv" id="wD0-xo-KRT"/>
+                        <outlet property="tiledBackground" destination="NXH-vg-Dek" id="Kwm-hT-btP"/>
                         <outlet property="timeLeftLabel" destination="W81-5S-kye" id="gRG-7J-rir"/>
                         <outlet property="timerLabel" destination="EaT-kS-78Y" id="DKe-oZ-poi"/>
                         <outlet property="trayHeightContraint" destination="4fB-1i-bsx" id="80V-ym-cWZ"/>

@@ -43,44 +43,10 @@ class TimerViewController: UIViewController, EZMicrophoneDelegate, EZAudioFFTDel
     var trayPanGestureRecognizer:UIPanGestureRecognizer?
     var trayStartY = CGPoint()
     
-    @IBAction func onTrayPanGesure(sender: UIPanGestureRecognizer) {
-        
-        let translation = sender.translationInView(self.view)
-        translation.y
-        
 
-        let point = sender.locationInView(self.view)
-        
-        if sender.state == UIGestureRecognizerState.Began {
-            print("Gesture began at: \(point)")
-        } else if sender.state == UIGestureRecognizerState.Changed {
-            translation.y
-            print("translation.y \(translation.y)")
-            trayHeightContraint.constant = trayHeightContraint.constant - translation.y
-            sender.setTranslation(CGPointZero, inView: self.view)
-            print("Gesture changed at: \(point)")
-        } else if sender.state == UIGestureRecognizerState.Ended {
-            UIView.animateWithDuration(1.0, animations: {
-                
-                if(self.controlHiden){
-                   //no-op
-                }else{
-                    if(self.trayHeightContraint.constant >= 220){
-                        self.trayHeightContraint.constant =
-                            self.view.frame.height
-                        self.controlHiden = true
-                    }else{
-                         self.trayHeightContraint.constant = 200
-                    }
-                }
-                //self.view.layoutIfNeeded()
-                
-                })
-
-        }
-    }
     @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var timeLeftLabel: UILabel!
+    @IBOutlet weak var tiledBackground: UIView!
     
     var microphone: EZMicrophone!
     var session: AVAudioSession?
@@ -91,56 +57,7 @@ class TimerViewController: UIViewController, EZMicrophoneDelegate, EZAudioFFTDel
         return UIStatusBarStyle.LightContent;
     }
     
-    func getTringle(tringleView:UIView, index:Int) -> UIView{
-    
-        // Build a triangular path
-        
-        let path = UIBezierPath()
-       
-        if(index % 2 == 0){
-             path.moveToPoint(CGPoint(x: 0,y: 0))
-            path.addLineToPoint(CGPoint(x: 50,y: 75))
-            path.addLineToPoint(CGPoint(x: 100,y: 0))
-            path.addLineToPoint(CGPoint(x: 0,y: 0))
-        }else{
-            path.moveToPoint(CGPoint(x: 0,y: 75))
-            path.addLineToPoint(CGPoint(x: 50,y: 0))
-            path.addLineToPoint(CGPoint(x: 100,y: 75))
-            path.addLineToPoint(CGPoint(x: 0,y: 75))
-        }
-        
-        
-        // Create a CAShapeLayer with this triangular path
-        // Same size as the original imageView
-        let mask = CAShapeLayer()
-        
-        mask.frame = tringleView.bounds;
-        mask.path = path.CGPath;
-        
-        // Mask the imageView's layer with this shape
-        tringleView.layer.mask = mask;
-        return tringleView
-    }
-    
-    func makeTringles(){
-        for yindex in 0...8{
-            for xindex in -1...7 {
-                let x = CGFloat(xindex * 50)
-                let y = CGFloat(yindex * 75)
-                var DynamicView=UIView(frame: CGRectMake(x, y, 100, 100))
-                DynamicView.backgroundColor=UIColor.clearColor()
-                
-                let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.Light)
-                let blurEffectView = UIVisualEffectView(effect: blurEffect)
-                blurEffectView.frame = DynamicView.bounds
-                DynamicView.addSubview(blurEffectView)
-                
-                DynamicView = getTringle(DynamicView, index: (xindex + yindex))
-                self.view.addSubview(DynamicView)
-            }
-        }
-        
-    }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -155,11 +72,14 @@ class TimerViewController: UIViewController, EZMicrophoneDelegate, EZAudioFFTDel
         timerLabel.hidden = true
         timeLeftLabel.hidden = true
         
-        makeTringles()
-        self.view.bringSubviewToFront(controlContainerView)
-        //self.view.sendSubviewToBack(controlContainerView)
+        //make Tringles
+        print("self.view.heigh \(self.view.frame.height)")
+        print("self.view.heigh \(self.tiledBackground.frame.height)")
 
-        
+        let tiledTriangleView =   TiledTriangleView(frame: tiledBackground.frame, tileWidth: 100, tileHeight: 75)
+        tiledBackground.addSubview(tiledTriangleView)
+        self.view.bringSubviewToFront(controlContainerView)
+
         if first {
             meditation = Meditation.newTimedMeditation()
             presentation()
