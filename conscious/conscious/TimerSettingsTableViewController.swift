@@ -28,11 +28,22 @@ class TimerSettingsTableViewController: UITableViewController, SelectableSetting
     override func viewDidLoad() {
         print("viewDidLoad")
         timePicker.settings = settings
+        timePicker.setValue(UIColor.whiteColor(), forKeyPath:"textColor")
+        
         updateSelectedSettings()
         self.tableView.backgroundColor = UIColor.redColor()
         dispatch_async(dispatch_get_main_queue(),{
             self.timePicker.countDownDuration = self.settings.intervalSeconds
         })
+        
+        //let selector = NSSelectorFromString("setHighlightsToday:")
+//        let invocation = NSInvocation(UIDatePicker.instanceMethodSignatureForSelector(selector))
+//        
+//        invocationWithMethodSignature:[UIDatePicker instanceMethodSignatureForSelector:selector]];
+//        BOOL no = NO;
+//        [invocation setSelector:selector];
+//        [invocation setArgument:&no atIndex:2];
+//        [invocation invokeWithTarget:self.datePicker];
     }
     
     @IBAction func onCloseButtonTouched(sender: UIButton) {

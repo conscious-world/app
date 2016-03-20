@@ -25,6 +25,7 @@ class CallToActionTableViewCell: UITableViewCell {
             self.ctaButton.layer.cornerRadius = 10
             self.ctaButton.clipsToBounds = true
         }
+
     }
 
     @IBOutlet weak var ctaButton: UIButton!
@@ -45,22 +46,38 @@ class CallToActionTableViewCell: UITableViewCell {
             if last_medaition.meditation_type == Meditation.guided_mediation_type{
                 let storyBoard = UIStoryboard(name: "media_meditation", bundle: nil)
                 if let mediaViewController  = storyBoard.instantiateViewControllerWithIdentifier("MediaViewController") as? MediaViewController{
-                    self.navigationController?.pushViewController(mediaViewController, animated: true)
-                    //exit now
+                    self.window!.rootViewController?.presentViewController(mediaViewController, animated: true, completion: nil)
                     return
                 }
-                
             }
         }
         //else lets start a timed meditaion
         let storyBoard = UIStoryboard(name: "timed_meditation", bundle: nil)
         if let timerViewController  = storyBoard.instantiateViewControllerWithIdentifier("TimerViewController") as? TimerViewController{
-            
+            if let vc = self.window!.rootViewController{
+                vc.performSegueWithIdentifier("toTimedMeditationSegue", sender: self)
+
+                //vc.presentViewController(timerViewController, animated: true, completion: nil)
+            }
+        }
+    }
+    
+    func openActivityInNavigationController(){
+        if let last_medaition = History.sharedInstance()?.last{
+            if last_medaition.meditation_type == Meditation.guided_mediation_type{
+                let storyBoard = UIStoryboard(name: "media_meditation", bundle: nil)
+                if let mediaViewController  = storyBoard.instantiateViewControllerWithIdentifier("MediaViewController") as? MediaViewController{
+                    self.navigationController?.pushViewController(mediaViewController, animated: true)
+                    //exit now
+                    return
+                }
+            }
+        }
+        //else lets start a timed meditaion
+        let storyBoard = UIStoryboard(name: "timed_meditation", bundle: nil)
+        if let timerViewController  = storyBoard.instantiateViewControllerWithIdentifier("TimerViewController") as? TimerViewController{
             self.navigationController?.pushViewController(timerViewController, animated: true)
         }
-        
-        
-        
     }
 
 }
