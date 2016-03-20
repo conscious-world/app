@@ -63,7 +63,7 @@ class TiledTriangleView: UIView{
                 let triangleTile = TriangleTile(width: tileWidth, height: tileHeight, xIndex: xindex, yIndex: yindex)
                 self.addSubview(triangleTile)
                 print("self.center = \(triangleTile.center)")
-                let selectionPoint = CGPoint(x: triangleTile.center.x, y: triangleTile.center.y * 0.9)
+                let selectionPoint = CGPoint(x: triangleTile.center.x * 0.9, y: triangleTile.center.y * 0.75)
                 print("backgroundImage?.getPixelColor(self.center) = \(selectionPoint)")
                 triangleTile.backgroundColor = backgroundImage?.getPixelColor(selectionPoint)
             }
@@ -90,6 +90,7 @@ class TiledTriangleView: UIView{
             super.init(frame: frame)
             
             addTriangleMask(xIndex + yIndex)
+            self.alpha = 0.8
             
         }
 
