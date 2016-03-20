@@ -14,17 +14,17 @@ class CallToActionTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        self.ctaButton.layer.cornerRadius = 10
+        self.ctaButton.clipsToBounds = true
+        if let last_medaition = History.sharedInstance()?.last{
+            let mediationName = last_medaition.meditation_type.stringByReplacingOccurrencesOfString("_", withString: " ")
+            self.ctaButton.setTitle("Start \(mediationName)", forState: UIControlState.Normal)
+        }
     }
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        if let last_medaition = History.sharedInstance()?.last{
-            let mediationName = last_medaition.meditation_type.stringByReplacingOccurrencesOfString("_", withString: " ")
-            self.ctaButton.setTitle("Start \(mediationName)", forState: UIControlState.Normal)
-            self.ctaButton.layer.cornerRadius = 10
-            self.ctaButton.clipsToBounds = true
-        }
+
 
     }
 

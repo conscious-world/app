@@ -25,8 +25,8 @@ class HomeTableViewController: UIViewController, UITableViewDataSource, UITableV
         tableSectionsData = [ctas,recomededMediations]
         tableView.dataSource = self
         tableView.delegate = self
-        tableView.rowHeight = UITableViewAutomaticDimension
-        tableView.estimatedRowHeight = 150
+        //tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 250
         // Do any additional setup after loading the view, typically from a nib.
     }
     
@@ -72,6 +72,10 @@ class HomeTableViewController: UIViewController, UITableViewDataSource, UITableV
             return tableView.dequeueReusableCellWithIdentifier("MediaTableViewCell", forIndexPath: indexPath) as! MediaTableViewCell
         }
         
+    }
+    
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 250.0
     }
     
     //there is no segue
