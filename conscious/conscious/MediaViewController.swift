@@ -14,10 +14,10 @@ class MediaViewController: UIViewController, AVAudioPlayerDelegate, UIViewContro
     @IBOutlet weak var currentTimeLabel: UILabel!
     @IBOutlet weak var timeLeftLabel: UILabel!
     @IBOutlet weak var timeSlider: UISlider!
-    @IBOutlet var mediaView: UIView!
+    @IBOutlet var mediaView: StarsOverlay!
     @IBOutlet weak var playView: UIView!
-    @IBOutlet weak var sliderView: VolumeSliderView!
     
+    var smallerView: StarsOverlay?
     var volumeSlider: UISlider?
     var playPauseButton: PlayPauseButton!
     
@@ -40,6 +40,7 @@ class MediaViewController: UIViewController, AVAudioPlayerDelegate, UIViewContro
         super.viewDidLoad()
         loadAudio()
         setupPlayButton()
+        mediaView.setEmitters(true, spin: 130.0)
         if first {
             meditation = Meditation.newGuidedMeditation()
             presentation()
@@ -78,12 +79,14 @@ class MediaViewController: UIViewController, AVAudioPlayerDelegate, UIViewContro
     
     func togglePlayingSound() {
         if playing {
+            mediaView.setEmitters(true, spin: 130.0)
             print("togglePlayingSound: fake end of mediation")
             endMeditation()
             audioPlayer.pause()
             timer.invalidate()
             playing = false
         } else {
+//            mediaView.setEmitters(false)
             meditation!.start()
             audioPlayer.play()
             timer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: Selector("updateTimeSlider"), userInfo: nil, repeats: true)
@@ -91,9 +94,11 @@ class MediaViewController: UIViewController, AVAudioPlayerDelegate, UIViewContro
         }
     }
     
-    func mentalStateSelected(picker: MentalStateViewController, didPickState state: String?) {
+    func mentalStateSelected(picker: MentalStateViewController, didPickState state: String?, color: UIColor?) {
         if let mentalState = state {
             if finished == false {
+                mediaView.changeSize(5.0)
+                mediaView.changeColor(color!)
                 meditation?.mentality_before = mentalState
             } else {
                 meditation?.mentality_after = mentalState

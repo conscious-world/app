@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -14,7 +14,7 @@
                         <viewControllerLayoutGuide type="top" id="JG4-UO-tLa"/>
                         <viewControllerLayoutGuide type="bottom" id="bcS-a3-Eb4"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="jqL-Hz-Xd9">
+                    <view key="view" contentMode="scaleToFill" id="jqL-Hz-Xd9" customClass="StarsOverlay" customModule="conscious" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -105,25 +105,25 @@
                         <color key="backgroundColor" red="0.45104509920000002" green="0.70853810760000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="2Iw-Xl-Jbr" firstAttribute="top" secondItem="JG4-UO-tLa" secondAttribute="bottom" id="7qs-O8-HDk"/>
                             <constraint firstAttribute="trailing" secondItem="8L5-Vc-Rz1" secondAttribute="trailing" id="El3-wU-NM9"/>
+                            <constraint firstItem="bcS-a3-Eb4" firstAttribute="top" secondItem="2Iw-Xl-Jbr" secondAttribute="bottom" id="Fkk-c2-TO8"/>
+                            <constraint firstItem="bcS-a3-Eb4" firstAttribute="top" secondItem="W81-5S-kye" secondAttribute="bottom" constant="20" id="Fxp-UY-PSa"/>
                             <constraint firstAttribute="trailingMargin" secondItem="W81-5S-kye" secondAttribute="trailing" constant="20" id="OOF-OD-tWo"/>
-                            <constraint firstItem="bcS-a3-Eb4" firstAttribute="top" secondItem="W81-5S-kye" secondAttribute="bottom" constant="20" id="P6r-HB-qYg"/>
                             <constraint firstItem="2Iw-Xl-Jbr" firstAttribute="leading" secondItem="jqL-Hz-Xd9" secondAttribute="leading" id="PrO-8z-cg6"/>
+                            <constraint firstItem="bcS-a3-Eb4" firstAttribute="top" secondItem="EaT-kS-78Y" secondAttribute="bottom" constant="20" id="QmQ-mQ-zbN"/>
                             <constraint firstAttribute="trailing" secondItem="2Iw-Xl-Jbr" secondAttribute="trailing" id="VHb-6e-Nx6"/>
                             <constraint firstItem="EaT-kS-78Y" firstAttribute="leading" secondItem="jqL-Hz-Xd9" secondAttribute="leading" constant="20" id="cHM-gl-PoM"/>
-                            <constraint firstItem="bcS-a3-Eb4" firstAttribute="top" secondItem="EaT-kS-78Y" secondAttribute="bottom" constant="20" id="e8C-HX-82P"/>
-                            <constraint firstItem="bcS-a3-Eb4" firstAttribute="top" secondItem="2Iw-Xl-Jbr" secondAttribute="bottom" id="har-dZ-25a"/>
                             <constraint firstItem="8L5-Vc-Rz1" firstAttribute="leading" secondItem="jqL-Hz-Xd9" secondAttribute="leading" id="nSb-bz-vqL"/>
-                            <constraint firstItem="bcS-a3-Eb4" firstAttribute="top" secondItem="8L5-Vc-Rz1" secondAttribute="bottom" id="smF-nl-e2T"/>
+                            <constraint firstItem="2Iw-Xl-Jbr" firstAttribute="top" secondItem="JG4-UO-tLa" secondAttribute="bottom" id="oJ6-wI-rb0"/>
+                            <constraint firstItem="bcS-a3-Eb4" firstAttribute="top" secondItem="8L5-Vc-Rz1" secondAttribute="bottom" id="sBu-g2-ITI"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="conrolContainerBottonConstraint" destination="smF-nl-e2T" id="rAu-LD-61o"/>
                         <outlet property="controlContainerView" destination="8L5-Vc-Rz1" id="QUh-Mm-8oL"/>
                         <outlet property="maxFrequencyLabel" destination="zft-f8-vcQ" id="Xal-hf-SW8"/>
                         <outlet property="meditationDescriptionLabel" destination="x1b-YG-00v" id="x7v-LD-iLd"/>
                         <outlet property="plot" destination="2Iw-Xl-Jbr" id="aix-IJ-7eV"/>
+                        <outlet property="starsOverlay" destination="jqL-Hz-Xd9" id="zNd-AM-5Xa"/>
                         <outlet property="startButton" destination="LbM-aw-Tom" id="zj4-j9-fnZ"/>
                         <outlet property="stopButton" destination="uAG-Ko-9pv" id="wD0-xo-KRT"/>
                         <outlet property="timeLeftLabel" destination="W81-5S-kye" id="gRG-7J-rir"/>

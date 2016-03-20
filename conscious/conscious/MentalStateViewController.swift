@@ -9,11 +9,11 @@
 import UIKit
 
 @objc protocol MentalStateDelegate {
-    func mentalStateSelected(picker: MentalStateViewController, didPickState state: String?)
+    func mentalStateSelected(picker: MentalStateViewController, didPickState state: String?, color: UIColor?)
 }
 
 class MentalStateViewController: UIViewController, UIViewControllerTransitioningDelegate{
-
+    
     weak var delegate: MentalStateDelegate?
     @IBOutlet var contentView: UIView!
     @IBOutlet weak var questionLabel: UILabel!
@@ -30,14 +30,20 @@ class MentalStateViewController: UIViewController, UIViewControllerTransitioning
     var dy: Float!
     var gridCenter: CGPoint?
     var sectors: [Sector]? = []
-    var numberOfSections: Int = 4
+    var numberOfSections: Int = 8
     var deltaAngle: Float?
     var originalColor: UIColor = UIColor(hexString: "#FAC54B")
-    let joyColor: UIColor = UIColor.yellowColor()
-    let fearColor: UIColor = UIColor.greenColor()
-    let sadnessColor: UIColor = UIColor.blueColor()
-    let rageColor: UIColor = UIColor.redColor()
+    let joyColor: UIColor = UIColor(hexString: "#a0ba11")
+    let fearColor: UIColor = UIColor(hexString: "#a3cc3f")
+    var amazementColor: UIColor = UIColor(hexString: "#62be86")
+    let sadnessColor: UIColor = UIColor(hexString: "#40bded")
+    let rageColor: UIColor = UIColor(hexString: "#dd0c81")
+    let terrorColor: UIColor = UIColor(hexString: "#a3cc3f")
+    var admirationColor: UIColor = UIColor(hexString: "#cfdd26")
+    var loathingColor: UIColor = UIColor(hexString: "#964097")
+    var vigilanceColor: UIColor = UIColor(hexString: "#f8a61e")
     var color: UIColor?
+    var nextColor: UIColor?
     var second: Bool?
     var state: String!
     
@@ -88,12 +94,41 @@ class MentalStateViewController: UIViewController, UIViewControllerTransitioning
                 sector.midValue = mid
                 sector.minValue = CGFloat((fabsf(Float(sector.maxValue!))))
             }
+            switch (sector.sector!){
+            case 0:
+                sector.type = "sadness"
+                sector.color = sadnessColor
+            case 1:
+                sector.type = "loathing"
+                sector.color = loathingColor
+            case 2:
+                sector.type = "rage"
+                sector.color = rageColor
+            case 3:
+                sector.type = "vigiliance"
+                sector.color = vigilanceColor
+            case 4:
+                sector.type = "joy"
+                sector.color = joyColor
+            case 5:
+                sector.type = "admiration"
+                sector.color = admirationColor
+            case 6:
+                sector.type = "terror"
+                sector.color = fearColor
+            case 7:
+                sector.type = "amazement"
+                sector.color = amazementColor
+            default:
+                sector.type = "undefined"
+                sector.color = originalColor
+            }
             mid -= angleSize
             sectors!.append(sector)
         }
     }
-
-
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -115,7 +150,8 @@ class MentalStateViewController: UIViewController, UIViewControllerTransitioning
             newY = (startPos!.y + translation.y)
             var distFromCenter: Float = 0
             let radians: CGFloat = CGFloat(atan2f(Float(dx), Float(dy)))
-            var sector: Int = 10
+            var sector: Int = 0
+            var weight: CGFloat = 0
             for s: Sector in sectors! {
                 if radians > CGFloat(s.minValue!) && radians < CGFloat(s.maxValue!) {
                     sector = s.sector!
@@ -124,32 +160,119 @@ class MentalStateViewController: UIViewController, UIViewControllerTransitioning
                     if s.minValue > s.maxValue && (radians > CGFloat(s.minValue!) || -radians > CGFloat(s.minValue!)) {
                         sector = numberOfSections/2
                     }
-                if dx == 0 && dy == 0 {
-                    sector = 10
+                    if dx == 0 && dy == 0 {
+                        //                    sector = 10
+                    }
                 }
+                color = sectors![sector].color
+                var triangulation = sqrt((dx*dx) + (dy*dy))
+                distFromCenter = 1 - Float(triangulation)/Float(190.0)
+                
+                if triangulation < 45 {
+                    
+                }
+                
+                if triangulation > 45 && triangulation < 90 {
+                    
+                }
+                
+                if triangulation > 90  {
+                    
                 }
                 switch (sector) {
-                    case 0:
-                        distFromCenter = 1 - dy/Float((self.mentalStateGridView.frame.height/2))
-                        color = sadnessColor
-                    case 1:
-                        distFromCenter = 1 - -dx/Float((self.mentalStateGridView.frame.width/2))
-                        color = rageColor
-                    case 2:
-                        distFromCenter = 1 - -dy/Float((self.mentalStateGridView.frame.height/2))
-                        color = joyColor
-                    case 3:
-                        distFromCenter = 1 - dx/Float((self.mentalStateGridView.frame.width/2))
-                        color = fearColor
-                    default:
-                        // TODO:: Setup color mixing
-                        if dx != 0 || dy != 0 {
-                            //This will be reached if the cursor is on a radian
-                        }
-                }
+                case 0:
+                    if radians > sectors![sector].midValue {
+                        weight = CGFloat(radians/sectors![sector].maxValue!)
+                        print(weight)
+                        nextColor = color!.mixWithColor(loathingColor, weight: weight)
+                    }
+                    if radians < sectors![sector].midValue {
+                        weight = CGFloat(radians/sectors![sector].minValue!)
+                        print(weight)
+                        nextColor = color!.mixWithColor(amazementColor, weight: weight)
+                    }
+                case 1:
+                    if radians > sectors![sector].midValue {
+                        weight = CGFloat(radians/sectors![sector].maxValue!)
+                        print(radians, sectors![sector].maxValue!, sectors![sector].minValue!, weight)
+                        nextColor = color!.mixWithColor(rageColor, weight: weight)
+                    }
+                    if radians < sectors![sector].midValue {
+                        weight = CGFloat(radians/sectors![sector].minValue!)
+                        print(radians, sectors![sector].maxValue!, sectors![sector].minValue!, weight)
+                        nextColor = color!.mixWithColor(sadnessColor, weight: weight)
+                    }
 
+                    //                    sector.color = rageColor
+//                case 3:
+//                    sector.type = "vigiliance"
+//                    sector.color = vigilanceColor
+                    //                case 4:
+                    //                    sector.type = "joy"
+                    //                    sector.color = joyColor
+                    //                case 5:
+                    //                    sector.type = "admiration"
+                    //                    sector.color = admirationColor
+                    //                case 6:
+                    //                    sector.type = "terror"
+                    //                    sector.color = fearColor
+                    //                case 7:
+                    //                    sector.type = "amazement"
+                    //                    sector.color = amazementColor
+                default:
+                    print(sector)
+                    
+                }
+                //                print(sector)
+                //                switch (sector) {
+                //                    case 0:
+                //                        distFromCenter = 1 - dy/Float((self.mentalStateGridView.frame.height/2))
+                //                        color = sadnessColor
+                //                        if radians > sectors![sector].midValue {
+                //                            weight = CGFloat(radians/sectors![sector].maxValue!)
+                ////                            print(weight, radians, sectors![sector].minValue!, sectors![sector].midValue, sectors![sector].maxValue!)
+                //                            color = sadnessColor.mixWithColor(fearColor, weight: weight)
+                //                        }
+                //                        if radians < sectors![sector].midValue {
+                //                            weight = CGFloat(radians/sectors![sector].minValue!)
+                ////                            print(weight, radians, sectors![sector].minValue!, sectors![sector].midValue, sectors![sector].maxValue!)
+                //                            color = sadnessColor.mixWithColor(rageColor, weight: weight)
+                //                        }
+                //                    case 1:
+                //                        distFromCenter = 1 - -dx/Float((self.mentalStateGridView.frame  .width/2))
+                //                        color = rageColor
+                //                        if radians < sectors![sector].midValue {
+                //                            weight = CGFloat((-1*(radians) + sectors![sector].midValue!))
+                ////                            print(sector,weight, radians, sectors![sector].minValue!, sectors![sector].midValue, sectors![sector].maxValue!)
+                //                            color = rageColor.mixWithColor(joyColor, weight: weight)
+                //                        }
+                //                        if radians > sectors![sector].midValue {
+                //                            weight = CGFloat((sectors![sector].maxValue!/radians))
+                ////                            print(sector,weight, radians, sectors![sector].minValue!, sectors![sector].midValue, sectors![sector].maxValue!)
+                //                            color = rageColor.mixWithColor(sadnessColor, weight: weight)
+                //                        }
+                //                    case 2:
+                //                        distFromCenter = 1 - -dy/Float((self.mentalStateGridView.frame.height/2))
+                //                        color = joyColor
+                //                    case 3:
+                //                        distFromCenter = 1 - dx/Float((self.mentalStateGridView.frame.width/2))
+                //                        color = fearColor
+                //                    default:
+                //                        // TODO:: Setup color mixing
+                //                        if dx != 0 || dy != 0 {
+                //                            if dx == dy {
+                //                            }
+                ////                            print(dx,dx,radians,s.minValue,s.maxValue)
+                //                            //This will be reached if the cursor is on a radian
+                //                        }
+                //                }
+                
             }
+            makeTinyRipple(color)
             changeColor(distFromCenter, color: color!)
+            if nextColor != nil {
+                self.mergeColor(nextColor, weight: Float(weight))
+            }
             setText(distFromCenter, sector: sector)
             newX = (startPos!.x + translation.x)
             newY = (startPos!.y + translation.y)
@@ -157,9 +280,24 @@ class MentalStateViewController: UIViewController, UIViewControllerTransitioning
             
         } else if gesture.state == UIGestureRecognizerState.Ended {
             makeRipple()
-            delegate?.mentalStateSelected(self, didPickState: self.state)
+            delegate?.mentalStateSelected(self, didPickState: self.state, color: color)
             
             NSTimer.scheduledTimerWithTimeInterval(0.5, target: self, selector: "dismissView", userInfo:nil ,repeats: false)
+        }
+    }
+    
+    func makeTinyRipple(color: UIColor!) {
+        var option = Ripple.option()
+    //configure
+        option.borderWidth = CGFloat(2.0)
+        option.radius = CGFloat(20.0)
+        option.duration = CFTimeInterval(1.0)
+        option.borderColor = UIColor.whiteColor().tintColor(amount: 0.7)
+        option.fillColor = color
+        option.scale = CGFloat(4)
+    
+        Ripple.run(mentalStateCursorView, locationInView: CGPoint(x: 25,y: 20),     option: option){
+        print("animation completed")
         }
     }
     
@@ -167,16 +305,17 @@ class MentalStateViewController: UIViewController, UIViewControllerTransitioning
         var option = Ripple.option()
         //configure
         option.borderWidth = CGFloat(2.0)
-        option.radius = CGFloat(20.0)
-        option.duration = CFTimeInterval(1.0)
+        option.radius = CGFloat(40.0)
+        option.duration = CFTimeInterval(1.3)
         option.borderColor = UIColor.whiteColor().tintColor(amount: 0.7)
-        option.fillColor = UIColor.orangeColor().tintColor(amount: 0.1)
-        option.scale = CGFloat(10)
+        option.fillColor = color!
+        option.scale = CGFloat(40)
         
         Ripple.run(mentalStateCursorView, locationInView: CGPoint(x: 25,y: 20), option: option){
             print("animation completed")
         }
     }
+    
     
     func dismissView() {
         self.dismissViewControllerAnimated(true, completion: nil)
@@ -185,6 +324,12 @@ class MentalStateViewController: UIViewController, UIViewControllerTransitioning
     func changeColor(tint: Float, color: UIColor) {
         UIView.animateWithDuration(1.0) { () -> Void in
             self.mentalStateGridView.backgroundColor = color.tintColor(amount: CGFloat(tint))
+        }
+    }
+    
+    func mergeColor(nextColor: UIColor?, weight: Float?) {
+        UIView.animateWithDuration(1.0) { () -> Void in
+            self.mentalStateGridView.backgroundColor = self.color?.mixWithColor(nextColor!,weight: CGFloat(weight!))
         }
     }
     
@@ -217,11 +362,13 @@ class MentalStateViewController: UIViewController, UIViewControllerTransitioning
         if sector == 3 {
             text = fear[index]
         }
-        UIView.animateWithDuration(0.35) { () -> Void in
-            self.questionLabel.text = text
-            self.questionLabel!.alpha = 1.0
+        if self.sectors![sector].type != nil {
+            UIView.animateWithDuration(0.35) { () -> Void in
+                self.questionLabel.text = self.sectors![sector].type!
+                self.questionLabel!.alpha = 1.0
+            }
         }
-        state = text
+        self.state = text
     }
     
     func presentationControllerForPresentedViewController(presented: UIViewController, presentingViewController presenting: UIViewController, sourceViewController source: UIViewController) -> UIPresentationController? {
@@ -229,16 +376,16 @@ class MentalStateViewController: UIViewController, UIViewControllerTransitioning
     }
     
     /*
-
+    
     // MARK: - Navigation
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-        let destinationVC:MediaViewController = segue.destinationViewController as! MediaViewController
-        
-        //set properties on the destination view controller
+    // Get the new view controller using segue.destinationViewController.
+    // Pass the selected object to the new view controller.
+    let destinationVC:MediaViewController = segue.destinationViewController as! MediaViewController
+    
+    //set properties on the destination view controller
     }
     */
 }

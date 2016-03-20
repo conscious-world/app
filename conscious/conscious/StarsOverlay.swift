@@ -8,6 +8,7 @@
 import UIKit
 
 class StarsOverlay: UIView {
+    var origColor: UIColor? = UIColor.whiteColor()
     
     override class func layerClass() -> AnyClass {
         return CAEmitterLayer.self
@@ -34,11 +35,14 @@ class StarsOverlay: UIView {
         emitter.emitterShape = kCAEmitterLayerCircle
         emitter.renderMode = kCAEmitterLayerOldestFirst
         emitter.preservesDepth = true
+        emitter.backgroundColor = UIColor.grayColor().CGColor
+        
         
         particle = CAEmitterCell()
         
         particle.contents = UIImage(named: "spark")!.CGImage
         particle.birthRate = 5
+        particle.name = "spark"
         
         particle.lifetime = 10
         particle.lifetimeRange = 5
@@ -46,11 +50,22 @@ class StarsOverlay: UIView {
         particle.velocity = 12
         particle.velocityRange = 10
         
-        particle.scale = 0.02
+        particle.scale = 0.42
         particle.scaleRange = 0.1
-        particle.scaleSpeed = 0.02
+        particle.scaleSpeed = 0.52
+        particle.color = origColor!.CGColor
+        
+        particle.alphaRange = 0.0
+        particle.redSpeed = 0.0
+        particle.blueSpeed = 0.0
+        particle.alphaSpeed = -0.5
+
         
         emitter.emitterCells = [particle]
+    }
+    
+    func degreesToRadians(degrees: Double) -> CGFloat {
+        return CGFloat(degrees * M_PI / 180.0)
     }
     
     var emitterTimer: NSTimer?
@@ -68,10 +83,56 @@ class StarsOverlay: UIView {
         }
     }
     
+    func setEmitters(value: Bool, spin: Double? = 130.0) {
+        if value == true {
+            print(spin)
+            let zeroDegreesInRadians = degreesToRadians(0.0)
+            particle.spin = degreesToRadians(spin!)
+            particle.spinRange = zeroDegreesInRadians
+            particle.emissionRange = degreesToRadians(360.0)
+            emitterTimer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: "lessRandom", userInfo: nil, repeats: true)
+        } else {
+            emitterTimer?.invalidate()
+        }
+        
+    }
+    
+    func changeColor(color: UIColor?) {
+        emitter.setValue(color!.CGColor, forKeyPath: "emitterCells.spark.color")
+//            var anim: CABasicAnimation = CABasicAnimation(keyPath: "emitterCells.spark.color")
+//            anim.fromValue = origColor?.CGColor
+//            anim.toValue = color!.CGColor
+//            anim.duration = 1.5
+//            anim.fillMode = kCAFillModeForwards
+//                emitter.addAnimation(anim, forKey: "emitterAnim")
+    }
+    
+    func changeSize(scale: Double) {
+        emitter.setValue(scale, forKeyPath: "emitterCells.spark.scale")
+        resize(scale)
+    }
+    
+    func resize (scale: Double) {
+        var anim: CABasicAnimation = CABasicAnimation(keyPath: "emitterCells.spark.scale")
+        anim.fromValue = scale
+        anim.toValue = 0.0
+        anim.duration = 1.5
+        anim.fillMode = kCAFillModeForwards
+        emitter.addAnimation(anim, forKey: "emitterAnim")
+    }
+    
+    
     func randomizeEmitterPosition() {
         let sizeWidth = max(bounds.width, bounds.height)
         let radius = CGFloat(arc4random()) % sizeWidth
         emitter.emitterSize = CGSize(width: radius, height: radius)
+        particle.birthRate = 10 + sqrt(Float(radius))
+    }
+    
+    func lessRandom() {
+        let sizeWidth = max(bounds.width/2, bounds.height/2)
+        let radius = CGFloat(arc4random()) % sizeWidth*4
+        emitter.emitterSize = CGSize(width: 10, height: 10)
         particle.birthRate = 10 + sqrt(Float(radius))
     }
     
