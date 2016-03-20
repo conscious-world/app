@@ -49,7 +49,7 @@ class TiledTriangleView: UIView{
     private var numDown: Int{
         get{
             let decimalCountDown = ceil(self.frame.height / CGFloat(self.tileHeight))
-            return Int( decimalCountDown + 1)
+            return Int( decimalCountDown)
         }
     }
     
@@ -63,7 +63,7 @@ class TiledTriangleView: UIView{
                 let triangleTile = TriangleTile(width: tileWidth, height: tileHeight, xIndex: xindex, yIndex: yindex)
                 self.addSubview(triangleTile)
                 print("self.center = \(triangleTile.center)")
-                let selectionPoint = CGPoint(x: triangleTile.center.x * 0.9, y: triangleTile.center.y * 0.75)
+                let selectionPoint = CGPoint(x: triangleTile.center.x * 0.9, y: triangleTile.center.y * 0.8)
                 print("backgroundImage?.getPixelColor(self.center) = \(selectionPoint)")
                 triangleTile.backgroundColor = backgroundImage?.getPixelColor(selectionPoint)
             }
