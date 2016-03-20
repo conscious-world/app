@@ -8,6 +8,7 @@
 
 import UIKit
 import AudioToolbox
+import StarWars
 
 class TimerViewController: UIViewController, EZMicrophoneDelegate, EZAudioFFTDelegate, TimerSettingsTableViewControllerDelegate, UIViewControllerTransitioningDelegate, MentalStateDelegate {
     
@@ -106,6 +107,10 @@ class TimerViewController: UIViewController, EZMicrophoneDelegate, EZAudioFFTDel
         stopButton.setAttributedTitle(stopTitleStr, forState: .Normal)
     }
     
+    @IBAction func onDoneButtonPressed(sender: UIButton) {
+        onStopButtonPressed(sender)
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
     
     @IBAction func onStopButtonPressed(sender: UIButton) {
         meditation!.end()
@@ -297,17 +302,22 @@ class TimerViewController: UIViewController, EZMicrophoneDelegate, EZAudioFFTDel
         } else {
             finished = true
         }
-        return nil
+        print("animate starwars")
+        let animator = StarWarsGLAnimator()
+        animator.duration = 0.5
+        animator.spriteWidth = 200
+        return animator
     }
 
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let destination = segue.destinationViewController
+        destination.transitioningDelegate = self
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
-    */
+
 
 }

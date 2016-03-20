@@ -5,15 +5,18 @@ PODS:
   - EZAudio/Full (1.1.5):
     - EZAudio/Core
     - TPCircularBuffer (= 1.1)
+  - MMParallaxCell (1.2)
   - StarWars (1.0)
   - TPCircularBuffer (1.1)
 
 DEPENDENCIES:
   - EZAudio (~> 1.0)
+  - MMParallaxCell
   - StarWars (~> 1.0)
 
 SPEC CHECKSUMS:
   EZAudio: 3b1cb4b6d7ebca68f0c2478576d75940aad4aa99
+  MMParallaxCell: 9c9045097743b725076c38ed2c53e3790e90bd14
   StarWars: 01f1731789f738f64c6a9533c209213aaf465014
   TPCircularBuffer: 4960a919e667280f7f38963d771f45871b64fe62
 

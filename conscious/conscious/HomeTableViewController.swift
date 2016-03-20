@@ -59,20 +59,9 @@ class HomeTableViewController: UIViewController, UITableViewDataSource, UITableV
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         switch indexPath.section {
-//        case 0:
-//            let cell = tableView.dequeueReusableCellWithIdentifier("HistoryTableViewCell", forIndexPath: indexPath)      as! HistoryTableViewCell
-//            cell.meditationCountLabel.text = "\(History.count())"
-//            return cell
         case 0:
             let  cell =  tableView.dequeueReusableCellWithIdentifier("CallToActionTableViewCell", forIndexPath: indexPath) as! CallToActionTableViewCell
-            cell.navigationController = self.navigationController
             return cell
-            
-//        case 1:
-//            let cell = tableView.dequeueReusableCellWithIdentifier("CategoryTableViewCell", forIndexPath: indexPath)     as! CategoryTableViewCell
-//            cell.navigationController = self.navigationController
-//            return cell
-//            
         case 1:
             let cell = tableView.dequeueReusableCellWithIdentifier("MediaTableViewCell", forIndexPath: indexPath)        as! MediaTableViewCell
             cell.meditation = meditations[indexPath.row]
@@ -96,7 +85,12 @@ class HomeTableViewController: UIViewController, UITableViewDataSource, UITableV
 extension HomeTableViewController: UIViewControllerTransitioningDelegate {
     
     func animationControllerForDismissedController(dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        return StarWarsGLAnimator()
+        
+        let animator = StarWarsGLAnimator()
+        animator.duration = 1
+        animator.spriteWidth = 60
+        return animator
+        //return StarWarsGLAnimator()
         
     }
 }

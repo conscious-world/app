@@ -21,6 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let s = pathForKeyArchive
         NSLog("String: \(s)")
         print("didFinishLaunchingWithOptions")
+        
         self.history = self.historyFromDisk()
         return true
     }
