@@ -17,12 +17,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Conscious" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ag2-kI-HgP">
-                                <rect key="frame" x="261" y="291" width="80" height="20"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launchHeader2.png" translatesAutoresizingMaskIntoConstraints="NO" id="8ag-aE-boo">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="250"/>
                                 <constraints>
@@ -32,8 +26,6 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Ag2-kI-HgP" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="1d6-ve-E94"/>
-                            <constraint firstItem="Ag2-kI-HgP" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Uuy-sV-aOw"/>
                             <constraint firstItem="8ag-aE-boo" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="WGl-LW-YZk"/>
                             <constraint firstAttribute="trailing" secondItem="8ag-aE-boo" secondAttribute="trailing" id="ihi-eA-AsV"/>
                             <constraint firstItem="8ag-aE-boo" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="ynE-3D-du3"/>

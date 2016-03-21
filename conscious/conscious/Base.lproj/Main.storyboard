@@ -18,14 +18,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="94" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="FxL-kL-33a">
+                            <tableView contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="94" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="FxL-kL-33a">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CallToActionTableViewCell" rowHeight="250" id="dLd-rv-m6f" customClass="CallToActionTableViewCell" customModule="conscious" customModuleProvider="target">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CallToActionTableViewCell" rowHeight="250" id="dLd-rv-m6f" customClass="CallToActionTableViewCell" customModule="conscious" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="92" width="600" height="250"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dLd-rv-m6f" id="kVs-Ba-wIX">
+                                        <tableViewCellContentView key="contentView" opaque="NO" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dLd-rv-m6f" id="kVs-Ba-wIX">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="250"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
@@ -35,7 +35,7 @@
                                                         <constraint firstAttribute="height" constant="250" id="BpA-aJ-OWV"/>
                                                     </constraints>
                                                 </imageView>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lk9-f1-q8H">
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lk9-f1-q8H" customClass="SpringButton" customModule="Spring">
                                                     <rect key="frame" x="169" y="193" width="263" height="45"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="45" id="1Tb-mC-d5Y"/>
@@ -46,6 +46,10 @@
                                                     <state key="normal" title="▶︎ Get Started Now" backgroundImage="orangeBackground">
                                                         <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     </state>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="animation" value="squeezeDown"/>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
+                                                    </userDefinedRuntimeAttributes>
                                                     <variation key="default">
                                                         <mask key="constraints">
                                                             <exclude reference="6VJ-U8-f9A"/>
@@ -55,18 +59,29 @@
                                                         <action selector="onCTAClick:" destination="dLd-rv-m6f" eventType="touchUpInside" id="cLi-5i-v4a"/>
                                                     </connections>
                                                 </button>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="consciousBrainWhite" translatesAutoresizingMaskIntoConstraints="NO" id="gI1-I6-iUM">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="consciousBrainWhite" translatesAutoresizingMaskIntoConstraints="NO" id="gI1-I6-iUM" customClass="SpringImageView" customModule="Spring">
                                                     <rect key="frame" x="200" y="25" width="200" height="200"/>
                                                     <color key="tintColor" red="0.99684053144224694" green="0.98945362657397451" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="200" id="IVY-qQ-j8B"/>
                                                         <constraint firstAttribute="height" constant="200" id="pkj-Ja-TA6"/>
                                                     </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="animation" value="pop"/>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="delay">
+                                                            <real key="value" value="0.5"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="duration">
+                                                            <real key="value" value="1"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="gI1-I6-iUM" firstAttribute="centerY" secondItem="kVs-Ba-wIX" secondAttribute="centerY" id="14x-Gf-k2v"/>
                                                 <constraint firstItem="gI1-I6-iUM" firstAttribute="centerX" secondItem="kVs-Ba-wIX" secondAttribute="centerX" id="1ri-Ld-gfc"/>
+                                                <constraint firstAttribute="bottom" secondItem="4we-iv-Jh3" secondAttribute="bottom" id="67o-fF-r98"/>
                                                 <constraint firstItem="lk9-f1-q8H" firstAttribute="centerX" secondItem="kVs-Ba-wIX" secondAttribute="centerX" id="ESq-tw-QgF"/>
                                                 <constraint firstAttribute="bottom" secondItem="4we-iv-Jh3" secondAttribute="bottom" id="JOW-4M-aca"/>
                                                 <constraint firstItem="4we-iv-Jh3" firstAttribute="leading" secondItem="kVs-Ba-wIX" secondAttribute="leading" id="LVU-ED-NAQ"/>
@@ -82,6 +97,8 @@
                                                 <mask key="constraints">
                                                     <exclude reference="JOW-4M-aca"/>
                                                     <exclude reference="Lfn-jP-DFC"/>
+                                                    <exclude reference="OAR-G3-V16"/>
+                                                    <exclude reference="nDJ-yl-H5P"/>
                                                     <exclude reference="14x-Gf-k2v"/>
                                                     <exclude reference="a3E-r9-rfP"/>
                                                 </mask>
@@ -89,6 +106,8 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="ctaButton" destination="lk9-f1-q8H" id="RnI-Qm-YAa"/>
+                                            <outlet property="headerImage" destination="4we-iv-Jh3" id="S2D-6Y-6Rr"/>
+                                            <outlet property="logoImage" destination="gI1-I6-iUM" id="wOn-4C-uep"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MediaTableViewCell" rowHeight="200" id="q94-2a-WD7" customClass="MediaTableViewCell" customModule="conscious" customModuleProvider="target">

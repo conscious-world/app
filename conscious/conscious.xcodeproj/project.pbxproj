@@ -63,6 +63,7 @@
 		DA4F856D1C97ACDF00C1AEBF /* DynamicColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4F856C1C97ACDF00C1AEBF /* DynamicColor.swift */; };
 		DA4F856F1C97ACED00C1AEBF /* HSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4F856E1C97ACED00C1AEBF /* HSL.swift */; };
 		DA4F85741C9D0DFB00C1AEBF /* radialColors.gif in Resources */ = {isa = PBXBuildFile; fileRef = DA4F85731C9D0DFB00C1AEBF /* radialColors.gif */; };
+		DAF1CEA51C9F7F8E0020D003 /* launchHeader.png in Resources */ = {isa = PBXBuildFile; fileRef = DAF1CEA41C9F7F8E0020D003 /* launchHeader.png */; };
 		DAF29FF71C9F660A00B5649E /* launchHeader2.png in Resources */ = {isa = PBXBuildFile; fileRef = DAF29FF61C9F660A00B5649E /* launchHeader2.png */; };
 /* End PBXBuildFile section */
 
@@ -128,6 +129,7 @@
 		DA4F856C1C97ACDF00C1AEBF /* DynamicColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicColor.swift; sourceTree = "<group>"; };
 		DA4F856E1C97ACED00C1AEBF /* HSL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSL.swift; sourceTree = "<group>"; };
 		DA4F85731C9D0DFB00C1AEBF /* radialColors.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = radialColors.gif; sourceTree = "<group>"; };
+		DAF1CEA41C9F7F8E0020D003 /* launchHeader.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = launchHeader.png; path = icons/launchHeader.png; sourceTree = "<group>"; };
 		DAF29FF61C9F660A00B5649E /* launchHeader2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = launchHeader2.png; path = icons/launchHeader2.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -280,6 +282,7 @@
 				DA35019E1C880A27006A41A5 /* AppDelegate.swift */,
 				DA4F856C1C97ACDF00C1AEBF /* DynamicColor.swift */,
 				DAF29FF61C9F660A00B5649E /* launchHeader2.png */,
+				DAF1CEA41C9F7F8E0020D003 /* launchHeader.png */,
 				DA4F856E1C97ACED00C1AEBF /* HSL.swift */,
 				DA3501A21C880A27006A41A5 /* Main.storyboard */,
 				DA3501A51C880A27006A41A5 /* Assets.xcassets */,
@@ -494,6 +497,7 @@
 				DA3501E31C8FDECA006A41A5 /* cloudssf.gif in Resources */,
 				DA4F85741C9D0DFB00C1AEBF /* radialColors.gif in Resources */,
 				DA3501E71C8FDECA006A41A5 /* waterfall2.gif in Resources */,
+				DAF1CEA51C9F7F8E0020D003 /* launchHeader.png in Resources */,
 				DA3501F61C926A34006A41A5 /* timed_meditation.storyboard in Resources */,
 				DA3501E41C8FDECA006A41A5 /* river1.gif in Resources */,
 				DA35020B1C951869006A41A5 /* bowl.mp3 in Resources */,

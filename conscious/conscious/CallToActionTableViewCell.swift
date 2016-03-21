@@ -7,10 +7,14 @@
 //
 
 import UIKit
+import Spring
 
 class CallToActionTableViewCell: UITableViewCell {
 
     weak var navigationController: UINavigationController!
+    
+    @IBOutlet weak var headerImage: UIImageView!
+    @IBOutlet weak var logoImage: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -27,8 +31,39 @@ class CallToActionTableViewCell: UITableViewCell {
 
 
     }
+    
+    func resizeLogo(height: CGFloat){
+        let heightContraints:[NSLayoutConstraint] = self.logoImage.constraints.filter({ (constraint) -> Bool in
+            //print("\(constraint.firstAttribute)")
+            if constraint.firstItem as! UIImageView == self.logoImage{
+                constraint.constant = height
+                return true
+            }
+            return false
+        })
+        
+        //print("heightContraints.count \(heightContraints.count)")
+        
+        self.layoutIfNeeded()
+    }
+    
+    func resizeHeader(height: CGFloat){
+        print("resizeHeader")
+        let topContraints:[NSLayoutConstraint] = self.headerImage.constraints.filter({ (constraint) -> Bool in
+            print("\(constraint.firstAttribute)")
+            if constraint.firstItem as! UIImageView == self.headerImage && constraint.firstAttribute == NSLayoutAttribute.Height {
+                constraint.constant = height
+                return true
+            }
+            return false
+        })
+        
+        print("heightContraints.count \(topContraints.count)")
+        
+        self.layoutIfNeeded()
+    }
 
-    @IBOutlet weak var ctaButton: UIButton!
+    @IBOutlet weak var ctaButton: SpringButton!
     
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
