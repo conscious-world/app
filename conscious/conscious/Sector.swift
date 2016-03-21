@@ -13,4 +13,6 @@ class Sector: NSObject {
     var maxValue: CGFloat?
     var midValue: CGFloat?
     var sector: Int?
+    var type: String?
+    var color: UIColor?
 }
