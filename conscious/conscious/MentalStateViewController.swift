@@ -20,6 +20,9 @@ class MentalStateViewController: UIViewController, UIViewControllerTransitioning
     @IBOutlet weak var mentalStateGridView: UIView!
     @IBOutlet weak var mentalStateCursorView: UIView!
     @IBOutlet weak var colorFlower: UIImageView!
+    @IBOutlet weak var hintLabel: UILabel!
+    @IBOutlet weak var feelingLabel: UILabel!
+    @IBOutlet weak var continueButton: UIButton!
     
     var animator: PresentationAnimator?
     var newPos: CGPoint?
@@ -29,16 +32,15 @@ class MentalStateViewController: UIViewController, UIViewControllerTransitioning
     var dx: Float!
     var dy: Float!
     var gridCenter: CGPoint?
+    var touched: Bool?
     var sectors: [Sector]? = []
     var numberOfSections: Int = 8
     var deltaAngle: Float?
     var originalColor: UIColor = UIColor(hexString: "#FAC54B")
-    
     let rageColor: UIColor = UIColor(hexString: "#f96c6c")
     let fearColor: UIColor = UIColor(hexString: "#b2f96c")
     var amazementColor: UIColor = UIColor(hexString: "#6cf9f9")
     var loathingColor: UIColor = UIColor(hexString: "#b26cf9")
-    
     var joyColor: UIColor = UIColor(hexString: "#f4eb24")
 
 
@@ -58,6 +60,8 @@ class MentalStateViewController: UIViewController, UIViewControllerTransitioning
         super.viewDidLoad()
         makeColors()
         // setup Grid
+        feelingLabel.alpha = 0.0
+        continueButton.alpha = 0.0
         setupGrid()
         createSectors()
         rotateFlower()
@@ -154,8 +158,10 @@ class MentalStateViewController: UIViewController, UIViewControllerTransitioning
         
         if gesture.state == UIGestureRecognizerState.Began {
             if questionLabel.alpha != 0.0 {
-                UIView.animateWithDuration(0.35, animations: { () -> Void in
+                UIView.animateWithDuration(1.35, animations: { () -> Void in
+                    self.feelingLabel.alpha = 1.0
                     self.questionLabel!.alpha = 0.0
+                    self.hintLabel!.alpha = 0.0
                 })
             }
         } else if gesture.state == UIGestureRecognizerState.Changed {
@@ -192,29 +198,29 @@ class MentalStateViewController: UIViewController, UIViewControllerTransitioning
                 if triangulation > 90  {
                     
                 }
-                switch (sector) {
-                case 0:
-                    if radians > sectors![sector].midValue {
-                        weight = CGFloat(radians/sectors![sector].maxValue!)
-
-                        nextColor = color!.mixWithColor(loathingColor, weight: weight)
-                    }
-                    if radians < sectors![sector].midValue {
-                        weight = CGFloat(radians/sectors![sector].minValue!)
-                        nextColor = color!.mixWithColor(amazementColor, weight: weight)
-                    }
-                case 1:
-                    if radians > sectors![sector].midValue {
-                        weight = CGFloat(radians/sectors![sector].maxValue!)
-                        nextColor = color!.mixWithColor(rageColor, weight: weight)
-                    }
-                    if radians < sectors![sector].midValue {
-                        weight = CGFloat(radians/sectors![sector].minValue!)
-                        nextColor = color!.mixWithColor(sadnessColor, weight: weight)
-                    }
-                default: break
-                    
-                }
+//                switch (sector) {
+//                case 0:
+//                    if radians > sectors![sector].midValue {
+//                        weight = CGFloat(radians/sectors![sector].maxValue!)
+//
+//                        nextColor = color!.mixWithColor(loathingColor, weight: weight)
+//                    }
+//                    if radians < sectors![sector].midValue {
+//                        weight = CGFloat(radians/sectors![sector].minValue!)
+//                        nextColor = color!.mixWithColor(amazementColor, weight: weight)
+//                    }
+//                case 1:
+//                    if radians > sectors![sector].midValue {
+//                        weight = CGFloat(radians/sectors![sector].maxValue!)
+//                        nextColor = color!.mixWithColor(rageColor, weight: weight)
+//                    }
+//                    if radians < sectors![sector].midValue {
+//                        weight = CGFloat(radians/sectors![sector].minValue!)
+//                        nextColor = color!.mixWithColor(sadnessColor, weight: weight)
+//                    }
+//                default: break
+//                    
+//                }
                 //                print(sector)
                 //                switch (sector) {
                 //                    case 0:
@@ -241,12 +247,29 @@ class MentalStateViewController: UIViewController, UIViewControllerTransitioning
             mentalStateCursorView.center = CGPoint(x: newX!, y: newY!)
             
         } else if gesture.state == UIGestureRecognizerState.Ended {
-            makeRipple()
-            delegate?.mentalStateSelected(self, didPickState: self.state, color: color)
-            
-            NSTimer.scheduledTimerWithTimeInterval(0.5, target: self, selector: "dismissView", userInfo:nil ,repeats: false)
+            isSelected()
+            touched = true
+            mentalStateCursorView.alpha = 0.0
+            mentalStateCursorView.center = startPos!
+            UIView.animateWithDuration(1.0, animations: { () -> Void in
+                self.mentalStateCursorView.alpha = 1.0
+            })
         }
     }
+    
+    func isSelected() {
+        UIView.animateWithDuration(1.0) { () -> Void in
+            self.view.tintColor = self.color!
+            self.continueButton.alpha = 1.0
+        }
+    }
+    
+    @IBAction func onContinuePressed(sender: AnyObject) {
+        makeRipple()
+        delegate?.mentalStateSelected(self, didPickState: self.state, color: color)
+        NSTimer.scheduledTimerWithTimeInterval(0.5, target: self, selector: "dismissView", userInfo:nil ,repeats: false)
+    }
+    
     
     func makeTinyRipple(color: UIColor!, size: Float) {
         var option = Ripple.option()
@@ -255,17 +278,17 @@ class MentalStateViewController: UIViewController, UIViewControllerTransitioning
         option.duration = CFTimeInterval(1.0)
         option.borderColor = UIColor.clearColor()
         option.fillColor = color
-        print(size)
         if size == 0 {
-            scale = 0.1
+            scale = 0.75
         } else if size == 1.0 {
-            scale = 0.1
+            scale = 0.75
         }
         else if size < 0.1 {
             scale = 1.0
         } else if size > 0.1 {
-            scale = Float(1.0 - size)
+            scale = Float(1 - size/4)
         }
+        print(scale,size)
         option.scale = CGFloat(4 * scale!)
         option.borderWidth = CGFloat(2.0 * scale!)
         option.radius = CGFloat(20.0 * scale!)
@@ -311,33 +334,56 @@ class MentalStateViewController: UIViewController, UIViewControllerTransitioning
         let fear = ["apprehension", "fear", "terror"]
         let sadness = ["pensiveness", "sadness", "grief"]
         let anger = ["annoyance", "anger", "rage"]
+        let vigilance = ["interest", "anticipation", "vigilance"]
+        let admiration = ["acceptance","trust","admiration"]
+        let amazement = ["distraction","surprise","amazement"]
+        let loathing = ["boredom","disgust","loathing"]
+        let combos = ["remorse", "contempt", "aggressive", "optimistic", "love", "submission", "awe"]
+        
         var index: Int = 0
         
-        if tint < 0.33 {
+        if tint < 0.28 {
+            //TODO: For combos, pull in the radians to determine which combo it should be
             index = 2
         }
-        if tint >= 0.33 && tint <= 0.66 {
+        if tint >= 0.28 && tint <= 0.54 {
             index = 1
         }
-        if tint > 0.66 {
+        if tint > 0.54 && tint < 0.80 {
             index = 0
+        }
+        if tint >= 0.8 {
+            return
         }
         if sector == 0 {
             text = sadness[index]
         }
         if sector == 1 {
-            text = anger[index]
+            text = loathing[index]
         }
         if sector == 2 {
-            text = joy[index]
+            text = anger[index]
         }
         if sector == 3 {
+            text = vigilance[index]
+        }
+        if sector == 4 {
+            text = joy[index]
+        }
+        if sector == 5 {
+            text = admiration[index]
+        }
+        if sector == 6 {
             text = fear[index]
         }
+        if sector == 7 {
+            text = amazement[index]
+        }
         if self.sectors![sector].type != nil {
-            UIView.animateWithDuration(0.35) { () -> Void in
-                self.questionLabel.text = self.sectors![sector].type!
+            UIView.animateWithDuration(1.35) { () -> Void in
                 self.questionLabel!.alpha = 1.0
+                self.questionLabel.text = text
+                self.questionLabel.textColor = self.color
             }
         }
         self.state = text
