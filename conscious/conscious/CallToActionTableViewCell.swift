@@ -7,28 +7,63 @@
 //
 
 import UIKit
+import Spring
 
 class CallToActionTableViewCell: UITableViewCell {
 
     weak var navigationController: UINavigationController!
     
+    @IBOutlet weak var headerImage: UIImageView!
+    @IBOutlet weak var logoImage: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        self.ctaButton.layer.cornerRadius = 10
+        self.ctaButton.clipsToBounds = true
+        if let last_medaition = History.sharedInstance()?.last{
+            let mediationName = last_medaition.meditation_type.stringByReplacingOccurrencesOfString("_", withString: " ")
+            self.ctaButton.setTitle("Start \(mediationName)", forState: UIControlState.Normal)
+        }
     }
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        if let last_medaition = History.sharedInstance()?.last{
-            let mediationName = last_medaition.meditation_type.stringByReplacingOccurrencesOfString("_", withString: " ")
-            self.ctaButton.setTitle("Start \(mediationName)", forState: UIControlState.Normal)
-            self.ctaButton.layer.cornerRadius = 10
-            self.ctaButton.clipsToBounds = true
-        }
+
 
     }
+    
+    func resizeLogo(height: CGFloat){
+        let heightContraints:[NSLayoutConstraint] = self.logoImage.constraints.filter({ (constraint) -> Bool in
+            //print("\(constraint.firstAttribute)")
+            if constraint.firstItem as! UIImageView == self.logoImage{
+                constraint.constant = height
+                return true
+            }
+            return false
+        })
+        
+        //print("heightContraints.count \(heightContraints.count)")
+        
+        self.layoutIfNeeded()
+    }
+    
+    func resizeHeader(height: CGFloat){
+        print("resizeHeader")
+        let topContraints:[NSLayoutConstraint] = self.headerImage.constraints.filter({ (constraint) -> Bool in
+            print("\(constraint.firstAttribute)")
+            if constraint.firstItem as! UIImageView == self.headerImage && constraint.firstAttribute == NSLayoutAttribute.Height {
+                constraint.constant = height
+                return true
+            }
+            return false
+        })
+        
+        print("heightContraints.count \(topContraints.count)")
+        
+        self.layoutIfNeeded()
+    }
 
-    @IBOutlet weak var ctaButton: UIButton!
+    @IBOutlet weak var ctaButton: SpringButton!
     
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)

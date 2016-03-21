@@ -12,5 +12,6 @@
 #import <EZAudio.h>
 #import <AudioToolbox/AudioToolbox.h>
 #import <MMParallaxCell/MMParallaxCell.h>
+#import <MMParallaxCell/MMParallaxCell.h>
 
 #endif /* conscios_Bridging_Header_h */

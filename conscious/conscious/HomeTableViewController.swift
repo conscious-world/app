@@ -8,10 +8,12 @@
 
 import UIKit
 import StarWars
+import Spring
 
-class HomeTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class HomeTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UIScrollViewDelegate {
 
     @IBOutlet weak var tableView: UITableView!
+
     
     var categories = ["Guided Meditations"]
     var histories = ["basics"]
@@ -19,14 +21,20 @@ class HomeTableViewController: UIViewController, UITableViewDataSource, UITableV
     var recomededMediations = ["PM Relaxations"]
     var tableSectionsData:[[String]] = []
     var meditations: [Meditation] = Meditation.getAllPossible()
+    var ctaCell: CallToActionTableViewCell?
         
     override func viewDidLoad() {
         super.viewDidLoad()
         tableSectionsData = [ctas,recomededMediations]
         tableView.dataSource = self
         tableView.delegate = self
-        tableView.rowHeight = UITableViewAutomaticDimension
-        tableView.estimatedRowHeight = 150
+        //tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 250
+        
+//        let layer = ctaCell?.ctaButton.layer
+//        layer.animation = "squeezeDown"
+//        layer.animate()
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
     
@@ -60,8 +68,8 @@ class HomeTableViewController: UIViewController, UITableViewDataSource, UITableV
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         switch indexPath.section {
         case 0:
-            let  cell =  tableView.dequeueReusableCellWithIdentifier("CallToActionTableViewCell", forIndexPath: indexPath) as! CallToActionTableViewCell
-            return cell
+            ctaCell =  tableView.dequeueReusableCellWithIdentifier("CallToActionTableViewCell", forIndexPath: indexPath) as? CallToActionTableViewCell
+            return ctaCell!
         case 1:
             let cell = tableView.dequeueReusableCellWithIdentifier("MediaTableViewCell", forIndexPath: indexPath)        as! MediaTableViewCell
             cell.meditation = meditations[indexPath.row]
@@ -74,12 +82,36 @@ class HomeTableViewController: UIViewController, UITableViewDataSource, UITableV
         
     }
     
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 250.0
+    }
+    
     //there is no segue
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         let destination = segue.destinationViewController
         destination.transitioningDelegate = self
     }
 
+
+    @IBOutlet weak var logoImageHeightConstraint: NSLayoutConstraint!
+    
+    func scrollViewDidEndScrollingAnimation(scrollView: UIScrollView) {
+        print("scrollViewDidEndScrollingAnimation")
+        //self.blurEffectView.alpha = 0
+    }
+        
+    func scrollViewDidScroll(scrollView: UIScrollView) {
+        
+        print(scrollView.contentOffset.y)
+        
+        self.ctaCell?.resizeLogo(200.0 - scrollView.contentOffset.y)
+        
+        if(scrollView.contentOffset.y < 0){
+            print("self.ctaCell?.resizeHeader NOW")
+            self.ctaCell?.resizeHeader(250.0 + abs(scrollView.contentOffset.y))
+        }
+
+    }
 }
 
 extension HomeTableViewController: UIViewControllerTransitioningDelegate {

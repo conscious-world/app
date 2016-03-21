@@ -90,7 +90,7 @@ class TiledTriangleView: UIView{
             super.init(frame: frame)
             
             addTriangleMask(xIndex + yIndex)
-            self.alpha = 0.8
+            self.alpha = 1.0
             
         }
 

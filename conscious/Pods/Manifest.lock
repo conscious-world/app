@@ -6,17 +6,30 @@ PODS:
     - EZAudio/Core
     - TPCircularBuffer (= 1.1)
   - MMParallaxCell (1.2)
+  - Spring (1.0.3)
   - StarWars (1.0)
   - TPCircularBuffer (1.1)
 
 DEPENDENCIES:
   - EZAudio (~> 1.0)
   - MMParallaxCell
+  - Spring (from `https://github.com/MengTo/Spring.git`, branch `swift2`)
   - StarWars (~> 1.0)
+
+EXTERNAL SOURCES:
+  Spring:
+    :branch: swift2
+    :git: https://github.com/MengTo/Spring.git
+
+CHECKOUT OPTIONS:
+  Spring:
+    :commit: 18d5c7b74489de8044e34767f856d1e574f0820e
+    :git: https://github.com/MengTo/Spring.git
 
 SPEC CHECKSUMS:
   EZAudio: 3b1cb4b6d7ebca68f0c2478576d75940aad4aa99
   MMParallaxCell: 9c9045097743b725076c38ed2c53e3790e90bd14
+  Spring: 3f02b5dc3308572ef177b3cad0fa7bbc4b0706f7
   StarWars: 01f1731789f738f64c6a9533c209213aaf465014
   TPCircularBuffer: 4960a919e667280f7f38963d771f45871b64fe62
 
