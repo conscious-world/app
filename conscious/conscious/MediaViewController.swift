@@ -16,6 +16,7 @@ class MediaViewController: UIViewController, AVAudioPlayerDelegate, UIViewContro
     @IBOutlet weak var timeSlider: UISlider!
     @IBOutlet var mediaView: StarsOverlay!
     @IBOutlet weak var playView: UIView!
+    var originalColor: UIColor = UIColor(hexString: "#FAC54B")
     
     var smallerView: StarsOverlay?
     var volumeSlider: UISlider?
@@ -40,6 +41,7 @@ class MediaViewController: UIViewController, AVAudioPlayerDelegate, UIViewContro
         super.viewDidLoad()
         loadAudio()
         setupPlayButton()
+        self.view.backgroundColor = originalColor
         mediaView.setEmitters(true, spin: 130.0)
         if first {
             meditation = Meditation.newGuidedMeditation()

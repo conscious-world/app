@@ -20,6 +20,37 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vaQ-PZ-DFV">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="colorflower" translatesAutoresizingMaskIntoConstraints="NO" id="1Yu-7d-4GJ">
+                                        <rect key="frame" x="125" y="125" width="350" height="350"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="350" id="Ykw-0F-JiJ"/>
+                                            <constraint firstAttribute="width" constant="350" id="wV2-mF-ckZ"/>
+                                        </constraints>
+                                    </imageView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dXs-8X-R0e">
+                                        <rect key="frame" x="117" y="64" width="367" height="128"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I am feeling..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oPv-y1-CAz">
+                                                <rect key="frame" x="131" y="8" width="106" height="22"/>
+                                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="18"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="How are you doing today?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S6w-6K-5oc">
+                                                <rect key="frame" x="13" y="38" width="346" height="36"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <color key="highlightedColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="367" id="H1P-UP-AN2"/>
+                                            <constraint firstItem="oPv-y1-CAz" firstAttribute="centerX" secondItem="dXs-8X-R0e" secondAttribute="centerX" id="HGb-I2-7Lk"/>
+                                            <constraint firstItem="oPv-y1-CAz" firstAttribute="top" secondItem="dXs-8X-R0e" secondAttribute="top" constant="8" id="nAH-2d-sq0"/>
+                                            <constraint firstAttribute="height" constant="128" id="ymo-g6-qgs"/>
+                                        </constraints>
+                                    </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="31a-F1-F9p">
                                         <rect key="frame" x="272" y="272" width="56" height="56"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -32,36 +63,38 @@
                                             <outletCollection property="gestureRecognizers" destination="8yP-gp-fgL" appends="YES" id="gnd-PW-Nmd"/>
                                         </connections>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dXs-8X-R0e">
-                                        <rect key="frame" x="117" y="64" width="367" height="128"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IMD-E7-f9K">
+                                        <rect key="frame" x="80" y="534" width="440" height="33"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="How are you doing today?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S6w-6K-5oc">
-                                                <rect key="frame" x="10" y="46" width="346" height="36"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="I am feeling..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oPv-y1-CAz">
-                                                <rect key="frame" x="10" y="8" width="346" height="36"/>
-                                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="18"/>
-                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap and drag to find your mood" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nx9-Pl-red">
+                                                <rect key="frame" x="114" y="8" width="212.5" height="18"/>
+                                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="15"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="367" id="H1P-UP-AN2"/>
-                                            <constraint firstAttribute="height" constant="128" id="ymo-g6-qgs"/>
+                                            <constraint firstItem="Nx9-Pl-red" firstAttribute="centerX" secondItem="IMD-E7-f9K" secondAttribute="centerX" id="JIP-AP-QMa"/>
+                                            <constraint firstAttribute="height" constant="33" id="MIQ-eX-ubX"/>
+                                            <constraint firstItem="Nx9-Pl-red" firstAttribute="centerY" secondItem="IMD-E7-f9K" secondAttribute="centerY" id="tmz-dE-Q7v"/>
                                         </constraints>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" red="0.51694362279999995" green="1" blue="0.83927488459999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                 <constraints>
+                                    <constraint firstItem="Nx9-Pl-red" firstAttribute="centerX" secondItem="vaQ-PZ-DFV" secondAttribute="centerX" id="3ZM-3m-7ZL"/>
                                     <constraint firstItem="31a-F1-F9p" firstAttribute="centerY" secondItem="vaQ-PZ-DFV" secondAttribute="centerY" id="6bJ-UN-an9"/>
+                                    <constraint firstItem="1Yu-7d-4GJ" firstAttribute="centerY" secondItem="vaQ-PZ-DFV" secondAttribute="centerY" id="Kf2-bl-CJU"/>
                                     <constraint firstItem="dXs-8X-R0e" firstAttribute="centerX" secondItem="vaQ-PZ-DFV" secondAttribute="centerX" id="U6x-rB-8AS"/>
+                                    <constraint firstAttribute="trailing" secondItem="IMD-E7-f9K" secondAttribute="trailing" constant="80" id="UyT-mi-t4j"/>
                                     <constraint firstItem="dXs-8X-R0e" firstAttribute="top" secondItem="vaQ-PZ-DFV" secondAttribute="top" constant="64" id="Wfa-7L-PjJ"/>
                                     <constraint firstItem="31a-F1-F9p" firstAttribute="centerX" secondItem="vaQ-PZ-DFV" secondAttribute="centerX" id="jre-TC-WOZ"/>
+                                    <constraint firstItem="1Yu-7d-4GJ" firstAttribute="centerX" secondItem="vaQ-PZ-DFV" secondAttribute="centerX" id="lBc-Cc-10t"/>
+                                    <constraint firstItem="IMD-E7-f9K" firstAttribute="leading" secondItem="vaQ-PZ-DFV" secondAttribute="leading" constant="80" id="llY-mn-HB7"/>
                                     <constraint firstAttribute="width" constant="400" id="mtv-e2-xvW"/>
+                                    <constraint firstItem="IMD-E7-f9K" firstAttribute="centerX" secondItem="vaQ-PZ-DFV" secondAttribute="centerX" id="nqp-I6-BIP"/>
+                                    <constraint firstAttribute="bottom" secondItem="IMD-E7-f9K" secondAttribute="bottom" constant="33" id="oeI-T6-ayA"/>
                                     <constraint firstAttribute="height" constant="400" id="vb9-V6-eG2"/>
                                 </constraints>
                                 <variation key="default">
@@ -72,7 +105,7 @@
                                 </variation>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
                         <constraints>
                             <constraint firstItem="vaQ-PZ-DFV" firstAttribute="leading" secondItem="C4M-WR-OvB" secondAttribute="leading" id="5mr-AZ-1Ww"/>
                             <constraint firstItem="jCC-Mr-kV6" firstAttribute="top" secondItem="vaQ-PZ-DFV" secondAttribute="bottom" id="Kp5-8x-R9a"/>
@@ -81,6 +114,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="colorFlower" destination="1Yu-7d-4GJ" id="2LA-uz-OZb"/>
                         <outlet property="contentView" destination="C4M-WR-OvB" id="saf-pM-kMh"/>
                         <outlet property="mentalStateCursorView" destination="31a-F1-F9p" id="kWp-4h-qQa"/>
                         <outlet property="mentalStateGridView" destination="vaQ-PZ-DFV" id="uwz-QR-yKm"/>
@@ -94,7 +128,10 @@
                     </connections>
                 </panGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="276" y="388"/>
+            <point key="canvasLocation" x="269" y="356"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="colorflower" width="350" height="350"/>
+    </resources>
 </document>

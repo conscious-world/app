@@ -15,7 +15,6 @@
 		5C822B461C96786C00D085B1 /* Sector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C822B451C96786C00D085B1 /* Sector.swift */; };
 		5CB0BA151C9291C20045901F /* media_meditation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CB0BA141C9291C20045901F /* media_meditation.storyboard */; };
 		5CB34B381C9BDC8F00DF50FF /* VolumeSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB34B371C9BDC8F00DF50FF /* VolumeSliderView.swift */; };
-		5CCB321D1C93FEDA00EB656E /* MentalStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCB321C1C93FEDA00EB656E /* MentalStateView.swift */; };
 		5CCB32231C95044A00EB656E /* MentalStateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCB32221C95044A00EB656E /* MentalStateViewController.swift */; };
 		5CCB32261C9508D500EB656E /* mental_state.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CCB32251C9508D500EB656E /* mental_state.storyboard */; };
 		5CD6E2F81C9B9DBD00AB2770 /* PlayPauseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD6E2F71C9B9DBD00AB2770 /* PlayPauseButton.swift */; };
@@ -72,7 +71,6 @@
 		5C822B451C96786C00D085B1 /* Sector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sector.swift; sourceTree = "<group>"; };
 		5CB0BA141C9291C20045901F /* media_meditation.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = media_meditation.storyboard; sourceTree = "<group>"; };
 		5CB34B371C9BDC8F00DF50FF /* VolumeSliderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VolumeSliderView.swift; sourceTree = "<group>"; };
-		5CCB321C1C93FEDA00EB656E /* MentalStateView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MentalStateView.swift; sourceTree = "<group>"; };
 		5CCB32221C95044A00EB656E /* MentalStateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MentalStateViewController.swift; sourceTree = "<group>"; };
 		5CCB32251C9508D500EB656E /* mental_state.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = mental_state.storyboard; sourceTree = "<group>"; };
 		5CD6E2F71C9B9DBD00AB2770 /* PlayPauseButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayPauseButton.swift; sourceTree = "<group>"; };
@@ -214,7 +212,6 @@
 			children = (
 				5C822B441C96782B00D085B1 /* Controllers */,
 				5C822B431C96782300D085B1 /* Models */,
-				5CCB321C1C93FEDA00EB656E /* MentalStateView.swift */,
 				5CCB32251C9508D500EB656E /* mental_state.storyboard */,
 				5C290EF71C97790E000FF2D9 /* PIRipple.swift */,
 			);
@@ -567,7 +564,6 @@
 				DA3501CD1C8CCE23006A41A5 /* Media.swift in Sources */,
 				DA3502031C94E63C006A41A5 /* SimpleSelectableSetting.swift in Sources */,
 				DA35019F1C880A27006A41A5 /* AppDelegate.swift in Sources */,
-				5CCB321D1C93FEDA00EB656E /* MentalStateView.swift in Sources */,
 				5CCB32231C95044A00EB656E /* MentalStateViewController.swift in Sources */,
 				DA3501CF1C8CCE3D006A41A5 /* TimerSettings.swift in Sources */,
 				5C04E3071C98F0FA003558CF /* mentalStatePresentation.swift in Sources */,

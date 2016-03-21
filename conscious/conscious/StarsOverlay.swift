@@ -32,11 +32,9 @@ class StarsOverlay: UIView {
     
     func setup() {
         emitter.emitterMode = kCAEmitterLayerOutline
-        emitter.emitterShape = kCAEmitterLayerCircle
+        emitter.emitterShape = kCAEmitterLayerSphere
         emitter.renderMode = kCAEmitterLayerOldestFirst
-        emitter.preservesDepth = true
-        emitter.backgroundColor = UIColor.grayColor().CGColor
-        
+        emitter.preservesDepth = true        
         
         particle = CAEmitterCell()
         
@@ -45,17 +43,17 @@ class StarsOverlay: UIView {
         particle.name = "spark"
         
         particle.lifetime = 10
-        particle.lifetimeRange = 5
+        particle.lifetimeRange = 50
         
         particle.velocity = 12
         particle.velocityRange = 10
         
         particle.scale = 0.42
-        particle.scaleRange = 0.1
-        particle.scaleSpeed = 0.52
+        particle.scaleRange = 0.9
+        particle.scaleSpeed = 0.9
         particle.color = origColor!.CGColor
         
-        particle.alphaRange = 0.0
+        particle.alphaRange = 1.0
         particle.redSpeed = 0.0
         particle.blueSpeed = 0.0
         particle.alphaSpeed = -0.5
