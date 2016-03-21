@@ -55,18 +55,16 @@ class MediaTableViewCell: UITableViewCell {
         if let meditation = self.meditation{
             if meditation.meditation_type == Meditation.guided_mediation_type{
                 let storyBoard = UIStoryboard(name: "media_meditation", bundle: nil)
-                if let mediaViewController  = storyBoard.instantiateViewControllerWithIdentifier("MediaViewController") as? MediaViewController{
-                    self.navigationController?.pushViewController(mediaViewController, animated: true)
-                    return
+
+                if let vc = self.window!.rootViewController{
+                    vc.performSegueWithIdentifier("toMediaMeditationSegue", sender: self)
                 }
-                
             }
         }
         //else lets start a timed meditaion
         let storyBoard = UIStoryboard(name: "timed_meditation", bundle: nil)
-        if let timerViewController  = storyBoard.instantiateViewControllerWithIdentifier("TimerViewController") as? TimerViewController{
-            
-            self.navigationController?.pushViewController(timerViewController, animated: true)
+        if let vc = self.window!.rootViewController{
+            vc.performSegueWithIdentifier("toTimedMeditationSegue", sender: self)
         }
     }
 

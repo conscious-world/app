@@ -88,13 +88,9 @@ class CallToActionTableViewCell: UITableViewCell {
         }
         //else lets start a timed meditaion
         let storyBoard = UIStoryboard(name: "timed_meditation", bundle: nil)
-        if let timerViewController  = storyBoard.instantiateViewControllerWithIdentifier("TimerViewController") as? TimerViewController{
             if let vc = self.window!.rootViewController{
                 vc.performSegueWithIdentifier("toTimedMeditationSegue", sender: self)
-
-                //vc.presentViewController(timerViewController, animated: true, completion: nil)
             }
-        }
     }
     
     func openActivityInNavigationController(){

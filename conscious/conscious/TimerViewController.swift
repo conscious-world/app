@@ -13,6 +13,7 @@ class TimerViewController: UIViewController, EZMicrophoneDelegate, EZAudioFFTDel
     
     var settingButton : UIBarButtonItem?
     
+    @IBOutlet var starsOverlay: StarsOverlay!
     // set up mentalState
     var mentalStateDelegate: MentalStateDelegate!
     var animator: PresentationAnimator = PresentationAnimator()
@@ -268,7 +269,7 @@ class TimerViewController: UIViewController, EZMicrophoneDelegate, EZAudioFFTDel
         }
     }
     
-    func mentalStateSelected(picker: MentalStateViewController, didPickState state: String?) {
+    func mentalStateSelected(picker: MentalStateViewController, didPickState state: String?, color: UIColor?) {
         if let mentalState = state {
             if finished == false {
                 meditation?.mentality_before = mentalState
