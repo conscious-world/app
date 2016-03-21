@@ -8,7 +8,6 @@
 
 import UIKit
 import AudioToolbox
-import StarWars
 
 class TimerViewController: UIViewController, EZMicrophoneDelegate, EZAudioFFTDelegate, TimerSettingsTableViewControllerDelegate, UIViewControllerTransitioningDelegate, MentalStateDelegate {
     
@@ -47,7 +46,7 @@ class TimerViewController: UIViewController, EZMicrophoneDelegate, EZAudioFFTDel
 
     @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var timeLeftLabel: UILabel!
-    @IBOutlet weak var tiledBackground: UIView!
+    @IBOutlet weak var tiledBackground: MicVisualizer!
     
     var microphone: EZMicrophone!
     var session: AVAudioSession?
@@ -72,21 +71,14 @@ class TimerViewController: UIViewController, EZMicrophoneDelegate, EZAudioFFTDel
         //startAudio()
         timerLabel.hidden = true
         timeLeftLabel.hidden = true
-        
-        //make Tringles
-        print("self.view.heigh \(self.view.frame.height)")
-        print("self.view.heigh \(self.tiledBackground.frame.height)")
 
         let tiledTriangleView =   TiledTriangleView(frame: tiledBackground.frame, tileWidth: 100, tileHeight: 75)
         tiledBackground.addSubview(tiledTriangleView)
         self.view.bringSubviewToFront(controlContainerView)
-
+        onSettingsBarBtnTap()
         if first {
             meditation = Meditation.newTimedMeditation()
-            presentation()
             self.meditationDescriptionLabel?.text = meditation?.meditation_title
-            first = false
-        } else {
         }
     }
     @IBOutlet weak var conrolContainerBottonConstraint: NSLayoutConstraint!
@@ -109,7 +101,7 @@ class TimerViewController: UIViewController, EZMicrophoneDelegate, EZAudioFFTDel
     
     @IBAction func onDoneButtonPressed(sender: UIButton) {
         onStopButtonPressed(sender)
-        self.dismissViewControllerAnimated(true, completion: nil)
+        presentation()
     }
     
     @IBAction func onStopButtonPressed(sender: UIButton) {
@@ -119,7 +111,7 @@ class TimerViewController: UIViewController, EZMicrophoneDelegate, EZAudioFFTDel
         EZOutput.sharedOutput().stopPlayback()
         EZMicrophone.sharedMicrophone().stopFetchingAudio()
         userSettings.stopBackgroundSound()
-        sender.hidden = true
+        stopButton.hidden = true
         startButton.hidden = false
         //timerLabel.hidden = true
         timer.invalidate()
@@ -130,7 +122,7 @@ class TimerViewController: UIViewController, EZMicrophoneDelegate, EZAudioFFTDel
         startAudio()
         userSettings.playBackgroundSound()
         timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("updateCounter"), userInfo: nil, repeats: true)
-        sender.hidden = true
+        startButton.hidden = true
         stopButton.hidden = false
         timerLabel.hidden = false
         timeLeftLabel.hidden = false
@@ -177,9 +169,9 @@ class TimerViewController: UIViewController, EZMicrophoneDelegate, EZAudioFFTDel
     {
         self.plot?.backgroundColor = UIColor.clearColor()
         self.plot?.color = UIColor.orangeColor()
-        self.plot?.plotType = EZPlotType.Rolling
-        self.plot?.shouldFill = true
-        self.plot?.shouldMirror = true
+        self.plot?.plotType = EZPlotType.Buffer
+        //self.plot?.shouldFill = true
+        //self.plot?.shouldMirror = true
         
         do{
             try session!.setCategory(AVAudioSessionCategoryPlayAndRecord)
@@ -218,14 +210,17 @@ class TimerViewController: UIViewController, EZMicrophoneDelegate, EZAudioFFTDel
         self.fft.computeFFTWithBuffer(buffer[0], withBufferSize: bufferSize)
 
         dispatch_async(dispatch_get_main_queue(), { () -> Void in
-            self.plot?.updateBuffer(buffer[0], withBufferSize: bufferSize);
+            //self.plot?.updateBuffer(buffer[0], withBufferSize: bufferSize);
         });
     }
     
+    override func viewDidAppear(animated: Bool) {
+        onSettingsBarBtnTap()
+    }
+    
     override func viewWillAppear(animated: Bool) {
-        self.title = "Timed Mediation"
-        settingButton = UIBarButtonItem(title: "⚙", style: UIBarButtonItemStyle.Plain, target: self, action: "onSettingsBarBtnTap")
-        self.navigationItem.rightBarButtonItem = settingButton
+        //settingButton = UIBarButtonItem(title: "⚙", style: UIBarButtonItemStyle.Plain, target: self, action: "onSettingsBarBtnTap")
+        //self.navigationItem.rightBarButtonItem = settingButton
     }
 
     override func didReceiveMemoryWarning() {
@@ -250,16 +245,27 @@ class TimerViewController: UIViewController, EZMicrophoneDelegate, EZAudioFFTDel
     }
     
     func fft(fft: EZAudioFFT!, updatedWithFFTData fftData: UnsafeMutablePointer<Float>, bufferSize: vDSP_Length) {
-        let maxFrequency: Float = fft.maxFrequency
         
+    
+        let maxFrequency: Float = fft.maxFrequency
+        let gain = fft.maxFrequencyMagnitude
         let noteName: String = EZAudioUtilities.noteNameStringForFrequency(maxFrequency, includeOctave: true)
         dispatch_async(dispatch_get_main_queue(), {() -> Void in
-            NSLog("Highest Note: \(noteName),\nFrequency: \(maxFrequency)")
+            NSLog("Highest Note: \(noteName),\nFrequency: \(maxFrequency) amplitude: \(gain)")
+            self.tiledBackground.changeSize(Double(gain * 10))
+            let color = UIColor(hue: CGFloat(maxFrequency/3000), saturation: 1.0, brightness: 1.0, alpha: 1.0)
+            self.tiledBackground.changeColor(color)
+
         })
     }
     
-    func settingsUpdated(controller: TimerSettingsTableViewController, settings: TimerSettings){
-        self.userSettings = settings
+    func settingsUpdated(controller: TimerSettingsTableViewController, settings: TimerSettings?){
+        if(settings != nil){
+            print("settings not nil")
+            self.userSettings = settings!
+            presentation()
+            first = false
+        }
     }
     
     func mentalStateSelected(picker: MentalStateViewController, didPickState state: String?) {
@@ -273,7 +279,7 @@ class TimerViewController: UIViewController, EZMicrophoneDelegate, EZAudioFFTDel
     }
     
     func presentation() {
-        return
+        print("ask user how they feel")
         let storyBoard = UIStoryboard(name: "mental_state", bundle: nil)
         next = storyBoard.instantiateViewControllerWithIdentifier("MentalStateViewController") as! MentalStateViewController
         next.animator = animator
@@ -296,17 +302,26 @@ class TimerViewController: UIViewController, EZMicrophoneDelegate, EZAudioFFTDel
         }
     }
     
+    var navigteToHomeScreen = true
     func animationControllerForDismissedController(dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         if finished {
+            
+            if(navigteToHomeScreen){
+                navigteToHomeScreen = false
+                dispatch_after(0,dispatch_get_main_queue(),{
+                    self.dismissViewControllerAnimated(true, completion: nil)
+                })
+                return nil
+            }
+            
+            
             self.navigationController?.popViewControllerAnimated(true)
         } else {
+            //play
+            onStartButtonPressed(UIButton())
             finished = true
         }
-        print("animate starwars")
-        let animator = StarWarsGLAnimator()
-        animator.duration = 0.5
-        animator.spriteWidth = 200
-        return animator
+        return nil
     }
 
     // MARK: - Navigation

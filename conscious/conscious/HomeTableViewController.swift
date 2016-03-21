@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import StarWars
 import Spring
 
 class HomeTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UIScrollViewDelegate {
@@ -88,8 +87,7 @@ class HomeTableViewController: UIViewController, UITableViewDataSource, UITableV
     
     //there is no segue
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        let destination = segue.destinationViewController
-        destination.transitioningDelegate = self
+        //let destination = segue.destinationViewController
     }
 
 
@@ -114,16 +112,4 @@ class HomeTableViewController: UIViewController, UITableViewDataSource, UITableV
     }
 }
 
-extension HomeTableViewController: UIViewControllerTransitioningDelegate {
-    
-    func animationControllerForDismissedController(dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        
-        let animator = StarWarsGLAnimator()
-        animator.duration = 1
-        animator.spriteWidth = 60
-        return animator
-        //return StarWarsGLAnimator()
-        
-    }
-}
 

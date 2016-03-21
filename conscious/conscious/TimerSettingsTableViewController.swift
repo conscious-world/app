@@ -10,7 +10,7 @@ import UIKit
 
 
 protocol TimerSettingsTableViewControllerDelegate : class {
-    func settingsUpdated(controller: TimerSettingsTableViewController, settings: TimerSettings)
+    func settingsUpdated(controller: TimerSettingsTableViewController, settings: TimerSettings?)
 }
 
 class TimerSettingsTableViewController: UITableViewController, SelectableSettingViewControllerDelegate {
@@ -28,7 +28,7 @@ class TimerSettingsTableViewController: UITableViewController, SelectableSetting
     override func viewDidLoad() {
         print("viewDidLoad")
         timePicker.settings = settings
-        timePicker.setValue(UIColor.whiteColor(), forKeyPath:"textColor")
+        timePicker.setValue(UIColor.lightGrayColor(), forKeyPath:"textColor")
         
         updateSelectedSettings()
         self.tableView.backgroundColor = UIColor.redColor()
@@ -49,8 +49,15 @@ class TimerSettingsTableViewController: UITableViewController, SelectableSetting
     @IBAction func onCloseButtonTouched(sender: UIButton) {
         self.settings.stopBackgroundSound()
         self.settings.stopReminderTone()
-        self.delegate?.settingsUpdated(self, settings: self.settings)
+        self.delegate?.settingsUpdated(self, settings: nil)
         self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    @IBAction func onBeginButtonTapped(){
+        self.settings.stopBackgroundSound()
+        self.settings.stopReminderTone()
+        self.dismissViewControllerAnimated(true, completion: nil)
+        self.delegate?.settingsUpdated(self, settings: self.settings)
     }
     
     func updateSelectedSettings(){
