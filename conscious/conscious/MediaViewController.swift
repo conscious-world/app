@@ -43,12 +43,6 @@ class MediaViewController: UIViewController, AVAudioPlayerDelegate, UIViewContro
         setupPlayButton()
         self.view.backgroundColor = originalColor
         mediaView.setEmitters(true, spin: 130.0)
-        if first {
-            meditation = Meditation.newGuidedMeditation()
-            presentation()
-            first = false
-        } else {
-        }
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -57,6 +51,12 @@ class MediaViewController: UIViewController, AVAudioPlayerDelegate, UIViewContro
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
+        if first {
+            meditation = Meditation.newGuidedMeditation()
+            presentation()
+            first = false
+        } else {
+        }
         
         UIView.animateWithDuration(1) { () -> Void in
             self.view.layoutIfNeeded()

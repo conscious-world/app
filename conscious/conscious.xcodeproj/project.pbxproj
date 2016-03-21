@@ -19,6 +19,8 @@
 		5CCB32261C9508D500EB656E /* mental_state.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CCB32251C9508D500EB656E /* mental_state.storyboard */; };
 		5CD6E2F81C9B9DBD00AB2770 /* PlayPauseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD6E2F71C9B9DBD00AB2770 /* PlayPauseButton.swift */; };
 		5CD6E2FE1C9BD96D00AB2770 /* VolumeSliderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CD6E2FD1C9BD96D00AB2770 /* VolumeSliderView.xib */; };
+		DA2F195E1C9E4469002AEA12 /* UIImage+color.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2F195D1C9E4469002AEA12 /* UIImage+color.swift */; };
+		DA2F19601C9E44B2002AEA12 /* TiledTriangleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2F195F1C9E44B2002AEA12 /* TiledTriangleView.swift */; };
 		DA35019F1C880A27006A41A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA35019E1C880A27006A41A5 /* AppDelegate.swift */; };
 		DA3501A11C880A27006A41A5 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3501A01C880A27006A41A5 /* HomeTableViewController.swift */; };
 		DA3501A41C880A27006A41A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA3501A21C880A27006A41A5 /* Main.storyboard */; };
@@ -60,6 +62,8 @@
 		DA4F856D1C97ACDF00C1AEBF /* DynamicColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4F856C1C97ACDF00C1AEBF /* DynamicColor.swift */; };
 		DA4F856F1C97ACED00C1AEBF /* HSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4F856E1C97ACED00C1AEBF /* HSL.swift */; };
 		DA4F85741C9D0DFB00C1AEBF /* radialColors.gif in Resources */ = {isa = PBXBuildFile; fileRef = DA4F85731C9D0DFB00C1AEBF /* radialColors.gif */; };
+		DAF1CEA51C9F7F8E0020D003 /* launchHeader.png in Resources */ = {isa = PBXBuildFile; fileRef = DAF1CEA41C9F7F8E0020D003 /* launchHeader.png */; };
+		DAF29FF71C9F660A00B5649E /* launchHeader2.png in Resources */ = {isa = PBXBuildFile; fileRef = DAF29FF61C9F660A00B5649E /* launchHeader2.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -77,6 +81,8 @@
 		5CD6E2FD1C9BD96D00AB2770 /* VolumeSliderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VolumeSliderView.xib; sourceTree = "<group>"; };
 		8F0A3CA90B5EAA920D64E307 /* Pods-conscious.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-conscious.debug.xcconfig"; path = "Pods/Target Support Files/Pods-conscious/Pods-conscious.debug.xcconfig"; sourceTree = "<group>"; };
 		B24AE942D5D41CCB7D7F2C51 /* Pods-conscious.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-conscious.release.xcconfig"; path = "Pods/Target Support Files/Pods-conscious/Pods-conscious.release.xcconfig"; sourceTree = "<group>"; };
+		DA2F195D1C9E4469002AEA12 /* UIImage+color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+color.swift"; sourceTree = "<group>"; };
+		DA2F195F1C9E44B2002AEA12 /* TiledTriangleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TiledTriangleView.swift; sourceTree = "<group>"; };
 		DA35019B1C880A27006A41A5 /* conscious.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = conscious.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA35019E1C880A27006A41A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DA3501A01C880A27006A41A5 /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
@@ -121,6 +127,8 @@
 		DA4F856C1C97ACDF00C1AEBF /* DynamicColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicColor.swift; sourceTree = "<group>"; };
 		DA4F856E1C97ACED00C1AEBF /* HSL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSL.swift; sourceTree = "<group>"; };
 		DA4F85731C9D0DFB00C1AEBF /* radialColors.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = radialColors.gif; sourceTree = "<group>"; };
+		DAF1CEA41C9F7F8E0020D003 /* launchHeader.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = launchHeader.png; path = icons/launchHeader.png; sourceTree = "<group>"; };
+		DAF29FF61C9F660A00B5649E /* launchHeader2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = launchHeader2.png; path = icons/launchHeader2.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +169,7 @@
 				5CD6E2F71C9B9DBD00AB2770 /* PlayPauseButton.swift */,
 				5CD6E2FD1C9BD96D00AB2770 /* VolumeSliderView.xib */,
 				5CB34B371C9BDC8F00DF50FF /* VolumeSliderView.swift */,
+				DA2F195F1C9E44B2002AEA12 /* TiledTriangleView.swift */,
 			);
 			name = components;
 			sourceTree = "<group>";
@@ -228,6 +237,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		DA2F195C1C9E4442002AEA12 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				DA2F195D1C9E4469002AEA12 /* UIImage+color.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
 		DA3501921C880A27006A41A5 = {
 			isa = PBXGroup;
 			children = (
@@ -249,6 +266,7 @@
 		DA35019D1C880A27006A41A5 /* conscious */ = {
 			isa = PBXGroup;
 			children = (
+				DA2F195C1C9E4442002AEA12 /* Extensions */,
 				5C04E3081C98F26A003558CF /* Animations */,
 				5CCB32241C9508A100EB656E /* mental_state */,
 				5CB0BA111C92916B0045901F /* media_meditation */,
@@ -260,6 +278,8 @@
 				DA3501B01C8810DC006A41A5 /* views */,
 				DA35019E1C880A27006A41A5 /* AppDelegate.swift */,
 				DA4F856C1C97ACDF00C1AEBF /* DynamicColor.swift */,
+				DAF29FF61C9F660A00B5649E /* launchHeader2.png */,
+				DAF1CEA41C9F7F8E0020D003 /* launchHeader.png */,
 				DA4F856E1C97ACED00C1AEBF /* HSL.swift */,
 				DA3501A21C880A27006A41A5 /* Main.storyboard */,
 				DA3501A51C880A27006A41A5 /* Assets.xcassets */,
@@ -474,6 +494,7 @@
 				DA3501E31C8FDECA006A41A5 /* cloudssf.gif in Resources */,
 				DA4F85741C9D0DFB00C1AEBF /* radialColors.gif in Resources */,
 				DA3501E71C8FDECA006A41A5 /* waterfall2.gif in Resources */,
+				DAF1CEA51C9F7F8E0020D003 /* launchHeader.png in Resources */,
 				DA3501F61C926A34006A41A5 /* timed_meditation.storyboard in Resources */,
 				DA3501E41C8FDECA006A41A5 /* river1.gif in Resources */,
 				DA35020B1C951869006A41A5 /* bowl.mp3 in Resources */,
@@ -483,6 +504,7 @@
 				5CD6E2FE1C9BD96D00AB2770 /* VolumeSliderView.xib in Resources */,
 				DA3502091C951803006A41A5 /* bells.mp3 in Resources */,
 				5CCB32261C9508D500EB656E /* mental_state.storyboard in Resources */,
+				DAF29FF71C9F660A00B5649E /* launchHeader2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -564,7 +586,9 @@
 				DA3501CD1C8CCE23006A41A5 /* Media.swift in Sources */,
 				DA3502031C94E63C006A41A5 /* SimpleSelectableSetting.swift in Sources */,
 				DA35019F1C880A27006A41A5 /* AppDelegate.swift in Sources */,
+				DA2F19601C9E44B2002AEA12 /* TiledTriangleView.swift in Sources */,
 				5CCB32231C95044A00EB656E /* MentalStateViewController.swift in Sources */,
+				DA2F195E1C9E4469002AEA12 /* UIImage+color.swift in Sources */,
 				DA3501CF1C8CCE3D006A41A5 /* TimerSettings.swift in Sources */,
 				5C04E3071C98F0FA003558CF /* mentalStatePresentation.swift in Sources */,
 				DA3501C91C8CCDF5006A41A5 /* Category.swift in Sources */,
