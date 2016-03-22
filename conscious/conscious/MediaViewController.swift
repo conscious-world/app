@@ -11,6 +11,14 @@ import AVFoundation
 
 class MediaViewController: UIViewController, AVAudioPlayerDelegate, UIViewControllerTransitioningDelegate, MentalStateDelegate, UIGestureRecognizerDelegate {
 
+    @IBAction func onBackPressed(sender: AnyObject) {
+        dismissViewControllerAnimated(true) { () -> Void in
+            // TODO:
+            // stop audio player and handle saving meditation history
+            // but that should probably happen in the viewWillDissapear method
+        }
+    }
+    
     @IBOutlet weak var currentTimeLabel: UILabel!
     @IBOutlet weak var timeLeftLabel: UILabel!
     @IBOutlet weak var timeSlider: UISlider!
@@ -43,24 +51,28 @@ class MediaViewController: UIViewController, AVAudioPlayerDelegate, UIViewContro
         setupPlayButton()
         self.view.backgroundColor = originalColor
         mediaView.setEmitters(true, spin: 130.0)
+        timeSlider.setThumbImage(UIImage(named: "lotus-pointer"), forState: .Normal)
+        timeSlider.tintColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.9)
+        
     }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
+        if first {
+            meditation = Meditation.newGuidedMeditation()
+            first = false
+        } else {
+        }
+        presentation()
+
+        UIView.animateWithDuration(1) { () -> Void in
+            self.view.layoutIfNeeded()
+        }
     }
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        if first {
-            meditation = Meditation.newGuidedMeditation()
-            presentation()
-            first = false
-        } else {
-        }
-        
-        UIView.animateWithDuration(1) { () -> Void in
-            self.view.layoutIfNeeded()
-        }
+
     }
     
     func setupPlayButton() {
@@ -74,7 +86,6 @@ class MediaViewController: UIViewController, AVAudioPlayerDelegate, UIViewContro
     
     
     func handlePlayTap(sender: UITapGestureRecognizer? = nil){
-        print("hey!")
         togglePlayingSound()
         playPauseButton.togglePlaying(playing)
     }
@@ -109,6 +120,7 @@ class MediaViewController: UIViewController, AVAudioPlayerDelegate, UIViewContro
     }
     
     func updateTimeSlider () {
+        timeSlider.continuous = true
         timeSlider.value = Float(audioPlayer.currentTime)
         currentTimeLabel.text = audioPlayer.currentTime.mmss
         let diff = Float(duration!) - timeSlider.value

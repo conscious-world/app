@@ -33,7 +33,7 @@ public class VolumeSliderView: UIView {
         super.init(frame: frame)
         initSubviews()
     }
-    
+
     func initSubviews() {
         // standard initialization logic
         let nib = UINib(nibName: "VolumeSliderView", bundle: nil)

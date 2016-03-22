@@ -44,29 +44,30 @@ public class PlayPauseButton: UIButton {
     override public func drawRect(rect: CGRect) {
         // Drawing code
         
-        origImage = UIImage(named: "brush_circle");
-        playImage = UIImage(named: "play");
-        pauseImage = UIImage(named: "pause");
+        
+        playImage = UIImage(named: "play_video");
+        pauseImage = UIImage(named: "white_pause_button");
         
         tintedPlay = playImage?.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
         tintedPause = pauseImage?.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
-        tintedImage = origImage?.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
         
+//        tintedImage = origImage?.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
+//        
         self.backgroundColor = UIColor.clearColor()
         self.setImage(tintedImage, forState: UIControlState.Normal)
         self.setBackgroundImage(tintedPlay, forState: UIControlState.Normal)
-        self.tintColor = UIColor.greenColor()
+        self.tintColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.9)
     }
     
     
     public func togglePlaying(playing: Bool) {
         if playing == true {
-            self.tintColor = UIColor.redColor()
             self.setBackgroundImage(tintedPause, forState: UIControlState.Normal)
         } else {
-            self.tintColor = UIColor.greenColor()
             self.setBackgroundImage(tintedPlay, forState: UIControlState.Normal)
         }
+        self.tintColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.9)
+
     }
 
 }
