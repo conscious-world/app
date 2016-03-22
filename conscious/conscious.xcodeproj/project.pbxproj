@@ -67,6 +67,7 @@
 		DAF1CEA91CA0F6EE0020D003 /* launchbackgroundRainbow.png in Resources */ = {isa = PBXBuildFile; fileRef = DAF1CEA81CA0F6EE0020D003 /* launchbackgroundRainbow.png */; };
 		DAF1CEAD1CA0F7E80020D003 /* launchrainbow1.png in Resources */ = {isa = PBXBuildFile; fileRef = DAF1CEAC1CA0F7E80020D003 /* launchrainbow1.png */; };
 		DAF1CEAF1CA0F8330020D003 /* launchrainbow2.png in Resources */ = {isa = PBXBuildFile; fileRef = DAF1CEAE1CA0F8330020D003 /* launchrainbow2.png */; };
+		DAF1CEB11CA1DF3C0020D003 /* Hein-Braat-Maha-Mrityeonjaya-Mantra.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DAF1CEB01CA1DF3C0020D003 /* Hein-Braat-Maha-Mrityeonjaya-Mantra.mp3 */; };
 		DAF29FF71C9F660A00B5649E /* launchHeader2.png in Resources */ = {isa = PBXBuildFile; fileRef = DAF29FF61C9F660A00B5649E /* launchHeader2.png */; };
 /* End PBXBuildFile section */
 
@@ -136,6 +137,7 @@
 		DAF1CEA81CA0F6EE0020D003 /* launchbackgroundRainbow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = launchbackgroundRainbow.png; path = icons/launchbackgroundRainbow.png; sourceTree = "<group>"; };
 		DAF1CEAC1CA0F7E80020D003 /* launchrainbow1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = launchrainbow1.png; path = icons/launchrainbow1.png; sourceTree = "<group>"; };
 		DAF1CEAE1CA0F8330020D003 /* launchrainbow2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = launchrainbow2.png; path = icons/launchrainbow2.png; sourceTree = "<group>"; };
+		DAF1CEB01CA1DF3C0020D003 /* Hein-Braat-Maha-Mrityeonjaya-Mantra.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Hein-Braat-Maha-Mrityeonjaya-Mantra.mp3"; sourceTree = "<group>"; };
 		DAF29FF61C9F660A00B5649E /* launchHeader2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = launchHeader2.png; path = icons/launchHeader2.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -355,6 +357,7 @@
 		DA3501D31C8CE4E1006A41A5 /* Media */ = {
 			isa = PBXGroup;
 			children = (
+				DAF1CEB01CA1DF3C0020D003 /* Hein-Braat-Maha-Mrityeonjaya-Mantra.mp3 */,
 				DA3501D51C8CE4FC006A41A5 /* MARC5MinuteBreathing.mp3 */,
 			);
 			name = Media;
@@ -498,6 +501,7 @@
 				DAF1CEA91CA0F6EE0020D003 /* launchbackgroundRainbow.png in Resources */,
 				DA3501D61C8CE4FC006A41A5 /* MARC5MinuteBreathing.mp3 in Resources */,
 				5CB0BA151C9291C20045901F /* media_meditation.storyboard in Resources */,
+				DAF1CEB11CA1DF3C0020D003 /* Hein-Braat-Maha-Mrityeonjaya-Mantra.mp3 in Resources */,
 				DA3501A91C880A27006A41A5 /* LaunchScreen.storyboard in Resources */,
 				DA3501E51C8FDECA006A41A5 /* sunset1.gif in Resources */,
 				DA3501E61C8FDECA006A41A5 /* waterfall1.gif in Resources */,

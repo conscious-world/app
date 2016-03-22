@@ -87,7 +87,7 @@ class Meditation: NSObject, NSCoding{
     
     static func newTimedMeditation() -> Meditation{
         let meditation = Meditation(meditation_type: Meditation.timed_mediation_type, media_id: nil, mentality_before: nil, mentality_after: nil, durration: nil, time_start: nil, time_end: nil, options: nil)
-        meditation.meditation_title = "Timed medation"
+        //meditation.meditation_title = "Timed medation"
         return meditation
     }
     
@@ -146,10 +146,10 @@ class Meditation: NSObject, NSCoding{
     class HealingMeditation: Meditation{
         static func build() -> Meditation{
             let meditation = Meditation.newGuidedMeditation()
-            meditation.coverImageUrl = "exampleMeditionCover"
+            meditation.coverImageUrl = "maha-mrityunjaya"
             meditation.iconName = "circle-user-7"
-            meditation.meditation_title = "Healing mantra"
-            meditation.meditation_description = "Five minutes is all it takes to reset your day with this simple breathing exercise"
+            meditation.meditation_title = "Hein Braat: Maha Mrityeonjaya Mantra"
+            meditation.meditation_description = "Said to be beneficial for mental, emotional and physical health and to be a moksha mantra which bestows longevity and immortality."
             return meditation
         }
     }
