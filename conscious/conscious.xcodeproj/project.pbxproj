@@ -13,6 +13,8 @@
 		5C290EF81C97790E000FF2D9 /* PIRipple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C290EF71C97790E000FF2D9 /* PIRipple.swift */; };
 		5C49AC481C9D0947003F90F4 /* StarsOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C49AC471C9D0947003F90F4 /* StarsOverlay.swift */; };
 		5C822B461C96786C00D085B1 /* Sector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C822B451C96786C00D085B1 /* Sector.swift */; };
+		5C95097C1CA0CFF000A0E75B /* Evil-Eye-Galaxy.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5C95097B1CA0CFF000A0E75B /* Evil-Eye-Galaxy.jpg */; };
+		5C9509801CA0DD6500A0E75B /* galaxy1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5C95097F1CA0DD6500A0E75B /* galaxy1.jpg */; };
 		5CB0BA151C9291C20045901F /* media_meditation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CB0BA141C9291C20045901F /* media_meditation.storyboard */; };
 		5CB34B381C9BDC8F00DF50FF /* VolumeSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB34B371C9BDC8F00DF50FF /* VolumeSliderView.swift */; };
 		5CCB32231C95044A00EB656E /* MentalStateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCB32221C95044A00EB656E /* MentalStateViewController.swift */; };
@@ -73,6 +75,8 @@
 		5C290EF71C97790E000FF2D9 /* PIRipple.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PIRipple.swift; sourceTree = "<group>"; };
 		5C49AC471C9D0947003F90F4 /* StarsOverlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarsOverlay.swift; sourceTree = "<group>"; };
 		5C822B451C96786C00D085B1 /* Sector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sector.swift; sourceTree = "<group>"; };
+		5C95097B1CA0CFF000A0E75B /* Evil-Eye-Galaxy.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "Evil-Eye-Galaxy.jpg"; path = "../../../../../../../../Desktop/Evil-Eye-Galaxy.jpg"; sourceTree = "<group>"; };
+		5C95097F1CA0DD6500A0E75B /* galaxy1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = galaxy1.jpg; path = ../../../../../../../../Desktop/galaxy1.jpg; sourceTree = "<group>"; };
 		5CB0BA141C9291C20045901F /* media_meditation.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = media_meditation.storyboard; sourceTree = "<group>"; };
 		5CB34B371C9BDC8F00DF50FF /* VolumeSliderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VolumeSliderView.swift; sourceTree = "<group>"; };
 		5CCB32221C95044A00EB656E /* MentalStateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MentalStateViewController.swift; sourceTree = "<group>"; };
@@ -371,6 +375,8 @@
 		DA3501DB1C8FDDA6006A41A5 /* backgroundImages */ = {
 			isa = PBXGroup;
 			children = (
+				5C95097F1CA0DD6500A0E75B /* galaxy1.jpg */,
+				5C95097B1CA0CFF000A0E75B /* Evil-Eye-Galaxy.jpg */,
 				DA4F85731C9D0DFB00C1AEBF /* radialColors.gif */,
 				DA3501DC1C8FDECA006A41A5 /* beach1.gif */,
 				DA3501DD1C8FDECA006A41A5 /* cloudssf.gif */,
@@ -492,6 +498,7 @@
 				DA3501F11C8FFBC0006A41A5 /* rain.mp3 in Resources */,
 				DA35020F1C951CE2006A41A5 /* crickets.mp3 in Resources */,
 				DA3501E31C8FDECA006A41A5 /* cloudssf.gif in Resources */,
+				5C9509801CA0DD6500A0E75B /* galaxy1.jpg in Resources */,
 				DA4F85741C9D0DFB00C1AEBF /* radialColors.gif in Resources */,
 				DA3501E71C8FDECA006A41A5 /* waterfall2.gif in Resources */,
 				DAF1CEA51C9F7F8E0020D003 /* launchHeader.png in Resources */,
@@ -501,6 +508,7 @@
 				DA3502071C951731006A41A5 /* waves.mp3 in Resources */,
 				DA3501A41C880A27006A41A5 /* Main.storyboard in Resources */,
 				DA3501E21C8FDECA006A41A5 /* beach1.gif in Resources */,
+				5C95097C1CA0CFF000A0E75B /* Evil-Eye-Galaxy.jpg in Resources */,
 				5CD6E2FE1C9BD96D00AB2770 /* VolumeSliderView.xib in Resources */,
 				DA3502091C951803006A41A5 /* bells.mp3 in Resources */,
 				5CCB32261C9508D500EB656E /* mental_state.storyboard in Resources */,

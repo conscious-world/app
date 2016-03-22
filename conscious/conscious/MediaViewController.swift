@@ -16,6 +16,7 @@ class MediaViewController: UIViewController, AVAudioPlayerDelegate, UIViewContro
     @IBOutlet weak var timeSlider: UISlider!
     @IBOutlet var mediaView: StarsOverlay!
     @IBOutlet weak var playView: UIView!
+    private var progress: UInt8 = 0
     var originalColor: UIColor = UIColor(hexString: "#FAC54B")
     
     var smallerView: StarsOverlay?
@@ -41,12 +42,29 @@ class MediaViewController: UIViewController, AVAudioPlayerDelegate, UIViewContro
         super.viewDidLoad()
         loadAudio()
         setupPlayButton()
-        self.view.backgroundColor = originalColor
         mediaView.setEmitters(true, spin: 130.0)
+        setBackground()
+    }
+    
+    func setBackground() {
+        UIGraphicsBeginImageContext(self.view.frame.size)
+        UIImage(named: "Evil-Eye-Galaxy.jpg")?.drawInRect(self.view.bounds)
+        
+        var image: UIImage = UIGraphicsGetImageFromCurrentImageContext()
+        
+        UIGraphicsEndImageContext()
+        
+        self.view.backgroundColor = UIColor(patternImage: image)
     }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
+    }
+    
+    func updateProgress() {
+        progress = progress &+ 1
+        let normalizedProgress = Double(progress) / duration!
+        mediaView.changeSize(1.0 - normalizedProgress)
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -81,14 +99,14 @@ class MediaViewController: UIViewController, AVAudioPlayerDelegate, UIViewContro
     
     func togglePlayingSound() {
         if playing {
-            mediaView.setEmitters(true, spin: 130.0)
+//            mediaView.setEmitters(true, spin: 130.0)
             print("togglePlayingSound: fake end of mediation")
             endMeditation()
             audioPlayer.pause()
             timer.invalidate()
             playing = false
         } else {
-//            mediaView.setEmitters(false)
+//            mediaView.setEmitters(true, spin: 130.0)
             meditation!.start()
             audioPlayer.play()
             timer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: Selector("updateTimeSlider"), userInfo: nil, repeats: true)
@@ -99,7 +117,8 @@ class MediaViewController: UIViewController, AVAudioPlayerDelegate, UIViewContro
     func mentalStateSelected(picker: MentalStateViewController, didPickState state: String?, color: UIColor?) {
         if let mentalState = state {
             if finished == false {
-                mediaView.changeSize(5.0)
+//                mediaView.changeSize(1.0)
+                self.view.tintColor = color!
                 mediaView.changeColor(color!)
                 meditation?.mentality_before = mentalState
             } else {
@@ -113,6 +132,7 @@ class MediaViewController: UIViewController, AVAudioPlayerDelegate, UIViewContro
         currentTimeLabel.text = audioPlayer.currentTime.mmss
         let diff = Float(duration!) - timeSlider.value
         timeLeftLabel.text  = NSTimeInterval(diff).mmss
+        updateProgress()
     }
     
     func presentation() {

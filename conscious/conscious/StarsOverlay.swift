@@ -31,9 +31,10 @@ class StarsOverlay: UIView {
     private var particle: CAEmitterCell!
     
     func setup() {
-        emitter.emitterMode = kCAEmitterLayerOutline
-        emitter.emitterShape = kCAEmitterLayerSphere
-        emitter.renderMode = kCAEmitterLayerOldestFirst
+        emitter.emitterMode = kCAEmitterLayerVolume
+        emitter.emitterShape = kCAEmitterLayerPoint
+        emitter.renderMode = kCAEmitterLayerAdditive
+        
         emitter.preservesDepth = true        
         
         particle = CAEmitterCell()
@@ -73,7 +74,7 @@ class StarsOverlay: UIView {
         
         if self.window != nil {
             if emitterTimer == nil {
-                emitterTimer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: "randomizeEmitterPosition", userInfo: nil, repeats: true)
+                emitterTimer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: "lessRandom", userInfo: nil, repeats: true)
             }
         } else if emitterTimer != nil {
             emitterTimer?.invalidate()
@@ -83,7 +84,6 @@ class StarsOverlay: UIView {
     
     func setEmitters(value: Bool, spin: Double? = 130.0) {
         if value == true {
-            print(spin)
             let zeroDegreesInRadians = degreesToRadians(0.0)
             particle.spin = degreesToRadians(spin!)
             particle.spinRange = zeroDegreesInRadians
@@ -92,8 +92,22 @@ class StarsOverlay: UIView {
         } else {
             emitterTimer?.invalidate()
         }
-        
     }
+    
+    func randomizeEmitterPosition() {
+        let sizeWidth = max(bounds.width, bounds.height)
+        let radius = CGFloat(arc4random()) % sizeWidth
+        emitter.emitterSize = CGSize(width: radius, height: radius)
+        particle.birthRate = 10 + sqrt(Float(radius))
+    }
+    
+    func lessRandom() {
+        let sizeWidth = max(bounds.width/4, bounds.height/4)
+        let radius = CGFloat(arc4random()) % sizeWidth*4
+        emitter.emitterSize = CGSize(width: 10, height: 10)
+        particle.birthRate = 10 + sqrt(Float(radius))
+    }
+    
     
     func changeColor(color: UIColor?) {
         emitter.setValue(color!.CGColor, forKeyPath: "emitterCells.spark.color")
@@ -107,32 +121,18 @@ class StarsOverlay: UIView {
     
     func changeSize(scale: Double) {
         emitter.setValue(scale, forKeyPath: "emitterCells.spark.scale")
-        resize(scale)
+//        resize(scale)
     }
     
-    func resize (scale: Double) {
-        var anim: CABasicAnimation = CABasicAnimation(keyPath: "emitterCells.spark.scale")
-        anim.fromValue = scale
-        anim.toValue = 0.0
-        anim.duration = 1.5
-        anim.fillMode = kCAFillModeForwards
-        emitter.addAnimation(anim, forKey: "emitterAnim")
-    }
+//    func resize (scale: Double) {
+//        var anim: CABasicAnimation = CABasicAnimation(keyPath: "emitterCells.spark.scale")
+//        anim.fromValue = scale
+//        anim.toValue = 0.0
+//        anim.duration = 1.5
+//        anim.fillMode = kCAFillModeForwards
+//        emitter.addAnimation(anim, forKey: "emitterAnim")
+//    }
     
-    
-    func randomizeEmitterPosition() {
-        let sizeWidth = max(bounds.width, bounds.height)
-        let radius = CGFloat(arc4random()) % sizeWidth
-        emitter.emitterSize = CGSize(width: radius, height: radius)
-        particle.birthRate = 10 + sqrt(Float(radius))
-    }
-    
-    func lessRandom() {
-        let sizeWidth = max(bounds.width/2, bounds.height/2)
-        let radius = CGFloat(arc4random()) % sizeWidth*4
-        emitter.emitterSize = CGSize(width: 10, height: 10)
-        particle.birthRate = 10 + sqrt(Float(radius))
-    }
     
     override func layoutSubviews() {
         super.layoutSubviews()

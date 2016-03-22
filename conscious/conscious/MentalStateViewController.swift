@@ -198,46 +198,6 @@ class MentalStateViewController: UIViewController, UIViewControllerTransitioning
                 if triangulation > 90  {
                     
                 }
-//                switch (sector) {
-//                case 0:
-//                    if radians > sectors![sector].midValue {
-//                        weight = CGFloat(radians/sectors![sector].maxValue!)
-//
-//                        nextColor = color!.mixWithColor(loathingColor, weight: weight)
-//                    }
-//                    if radians < sectors![sector].midValue {
-//                        weight = CGFloat(radians/sectors![sector].minValue!)
-//                        nextColor = color!.mixWithColor(amazementColor, weight: weight)
-//                    }
-//                case 1:
-//                    if radians > sectors![sector].midValue {
-//                        weight = CGFloat(radians/sectors![sector].maxValue!)
-//                        nextColor = color!.mixWithColor(rageColor, weight: weight)
-//                    }
-//                    if radians < sectors![sector].midValue {
-//                        weight = CGFloat(radians/sectors![sector].minValue!)
-//                        nextColor = color!.mixWithColor(sadnessColor, weight: weight)
-//                    }
-//                default: break
-//                    
-//                }
-                //                print(sector)
-                //                switch (sector) {
-                //                    case 0:
-                //                        distFromCenter = 1 - dy/Float((self.mentalStateGridView.frame.height/2))
-                //                        color = sadnessColor
-                //                        if radians > sectors![sector].midValue {
-                //                            weight = CGFloat(radians/sectors![sector].maxValue!)
-                ////                            print(weight, radians, sectors![sector].minValue!, sectors![sector].midValue, sectors![sector].maxValue!)
-                //                            color = sadnessColor.mixWithColor(fearColor, weight: weight)
-                //                        }
-                //                        if radians < sectors![sector].midValue {
-                //                            weight = CGFloat(radians/sectors![sector].minValue!)
-                ////                            print(weight, radians, sectors![sector].minValue!, sectors![sector].midValue, sectors![sector].maxValue!)
-                //                            color = sadnessColor.mixWithColor(rageColor, weight: weight)
-                //                        }
-
-                
             }
             color = color!.tintColor(amount: CGFloat(distFromCenter))
             makeTinyRipple(color, size: distFromCenter)
@@ -288,12 +248,12 @@ class MentalStateViewController: UIViewController, UIViewControllerTransitioning
         } else if size > 0.1 {
             scale = Float(1 - size/4)
         }
-        print(scale,size)
         option.scale = CGFloat(4 * scale!)
         option.borderWidth = CGFloat(2.0 * scale!)
         option.radius = CGFloat(20.0 * scale!)
     
         Ripple.run(mentalStateCursorView, locationInView: CGPoint(x: 25,y: 20),     option: option){
+            print("printed")
         }
     }
     
