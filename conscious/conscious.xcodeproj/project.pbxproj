@@ -64,6 +64,9 @@
 		DA4F85741C9D0DFB00C1AEBF /* radialColors.gif in Resources */ = {isa = PBXBuildFile; fileRef = DA4F85731C9D0DFB00C1AEBF /* radialColors.gif */; };
 		DAF1CEA51C9F7F8E0020D003 /* launchHeader.png in Resources */ = {isa = PBXBuildFile; fileRef = DAF1CEA41C9F7F8E0020D003 /* launchHeader.png */; };
 		DAF1CEA71C9F9A7E0020D003 /* MicVisualizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF1CEA61C9F9A7E0020D003 /* MicVisualizer.swift */; };
+		DAF1CEA91CA0F6EE0020D003 /* launchbackgroundRainbow.png in Resources */ = {isa = PBXBuildFile; fileRef = DAF1CEA81CA0F6EE0020D003 /* launchbackgroundRainbow.png */; };
+		DAF1CEAD1CA0F7E80020D003 /* launchrainbow1.png in Resources */ = {isa = PBXBuildFile; fileRef = DAF1CEAC1CA0F7E80020D003 /* launchrainbow1.png */; };
+		DAF1CEAF1CA0F8330020D003 /* launchrainbow2.png in Resources */ = {isa = PBXBuildFile; fileRef = DAF1CEAE1CA0F8330020D003 /* launchrainbow2.png */; };
 		DAF29FF71C9F660A00B5649E /* launchHeader2.png in Resources */ = {isa = PBXBuildFile; fileRef = DAF29FF61C9F660A00B5649E /* launchHeader2.png */; };
 /* End PBXBuildFile section */
 
@@ -130,6 +133,9 @@
 		DA4F85731C9D0DFB00C1AEBF /* radialColors.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = radialColors.gif; sourceTree = "<group>"; };
 		DAF1CEA41C9F7F8E0020D003 /* launchHeader.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = launchHeader.png; path = icons/launchHeader.png; sourceTree = "<group>"; };
 		DAF1CEA61C9F9A7E0020D003 /* MicVisualizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MicVisualizer.swift; sourceTree = "<group>"; };
+		DAF1CEA81CA0F6EE0020D003 /* launchbackgroundRainbow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = launchbackgroundRainbow.png; path = icons/launchbackgroundRainbow.png; sourceTree = "<group>"; };
+		DAF1CEAC1CA0F7E80020D003 /* launchrainbow1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = launchrainbow1.png; path = icons/launchrainbow1.png; sourceTree = "<group>"; };
+		DAF1CEAE1CA0F8330020D003 /* launchrainbow2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = launchrainbow2.png; path = icons/launchrainbow2.png; sourceTree = "<group>"; };
 		DAF29FF61C9F660A00B5649E /* launchHeader2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = launchHeader2.png; path = icons/launchHeader2.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -284,6 +290,9 @@
 				DAF29FF61C9F660A00B5649E /* launchHeader2.png */,
 				DAF1CEA41C9F7F8E0020D003 /* launchHeader.png */,
 				DA4F856E1C97ACED00C1AEBF /* HSL.swift */,
+				DAF1CEAC1CA0F7E80020D003 /* launchrainbow1.png */,
+				DAF1CEAE1CA0F8330020D003 /* launchrainbow2.png */,
+				DAF1CEA81CA0F6EE0020D003 /* launchbackgroundRainbow.png */,
 				DA3501A21C880A27006A41A5 /* Main.storyboard */,
 				DA3501A51C880A27006A41A5 /* Assets.xcassets */,
 				DA3501A71C880A27006A41A5 /* LaunchScreen.storyboard */,
@@ -459,7 +468,7 @@
 				TargetAttributes = {
 					DA35019A1C880A27006A41A5 = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = H27A3U4FRN;
+						DevelopmentTeam = 4AS52V979F;
 					};
 				};
 			};
@@ -486,6 +495,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAF1CEA91CA0F6EE0020D003 /* launchbackgroundRainbow.png in Resources */,
 				DA3501D61C8CE4FC006A41A5 /* MARC5MinuteBreathing.mp3 in Resources */,
 				5CB0BA151C9291C20045901F /* media_meditation.storyboard in Resources */,
 				DA3501A91C880A27006A41A5 /* LaunchScreen.storyboard in Resources */,
@@ -496,12 +506,14 @@
 				DA35020F1C951CE2006A41A5 /* crickets.mp3 in Resources */,
 				DA3501E31C8FDECA006A41A5 /* cloudssf.gif in Resources */,
 				DA4F85741C9D0DFB00C1AEBF /* radialColors.gif in Resources */,
+				DAF1CEAD1CA0F7E80020D003 /* launchrainbow1.png in Resources */,
 				DA3501E71C8FDECA006A41A5 /* waterfall2.gif in Resources */,
 				DAF1CEA51C9F7F8E0020D003 /* launchHeader.png in Resources */,
 				DA3501F61C926A34006A41A5 /* timed_meditation.storyboard in Resources */,
 				DA3501E41C8FDECA006A41A5 /* river1.gif in Resources */,
 				DA35020B1C951869006A41A5 /* bowl.mp3 in Resources */,
 				DA3502071C951731006A41A5 /* waves.mp3 in Resources */,
+				DAF1CEAF1CA0F8330020D003 /* launchrainbow2.png in Resources */,
 				DA3501A41C880A27006A41A5 /* Main.storyboard in Resources */,
 				DA3501E21C8FDECA006A41A5 /* beach1.gif in Resources */,
 				5CD6E2FE1C9BD96D00AB2770 /* VolumeSliderView.xib in Resources */,

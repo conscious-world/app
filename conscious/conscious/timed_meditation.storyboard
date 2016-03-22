@@ -2,26 +2,26 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="VOH-ok-XdR">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Timed Meditation-->
+        <!--Timer View Controller-->
         <scene sceneID="0vU-5A-uQH">
             <objects>
-                <viewController storyboardIdentifier="TimerViewController" title="Timed Meditation" id="VOH-ok-XdR" customClass="TimerViewController" customModule="conscious" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TimerViewController" id="VOH-ok-XdR" customClass="TimerViewController" customModule="conscious" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="JG4-UO-tLa"/>
                         <viewControllerLayoutGuide type="bottom" id="bcS-a3-Eb4"/>
                     </layoutGuides>
-                    <view key="view" clipsSubviews="YES" contentMode="scaleToFill" id="jqL-Hz-Xd9">
+                    <view key="view" clipsSubviews="YES" contentMode="scaleToFill" id="jqL-Hz-Xd9" customClass="MicVisualizer" customModule="conscious" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NXH-vg-Dek" customClass="MicVisualizer" customModule="conscious" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NXH-vg-Dek">
                                 <rect key="frame" x="0.0" y="-30" width="600" height="630"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Iw-Xl-Jbr" customClass="EZAudioPlotGL">
+                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Iw-Xl-Jbr" customClass="EZAudioPlotGL">
                                         <rect key="frame" x="0.0" y="50" width="600" height="580"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
@@ -157,17 +157,17 @@
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="7AG-kK-J9b"/>
                                 <exclude reference="7kh-ok-ssm"/>
+                                <exclude reference="7AG-kK-J9b"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="backgroundVisualization" destination="jqL-Hz-Xd9" id="nnh-bW-cL3"/>
                         <outlet property="controlContainerView" destination="8L5-Vc-Rz1" id="QUh-Mm-8oL"/>
                         <outlet property="maxFrequencyLabel" destination="zft-f8-vcQ" id="Xal-hf-SW8"/>
                         <outlet property="meditationDescriptionLabel" destination="x1b-YG-00v" id="x7v-LD-iLd"/>
                         <outlet property="plot" destination="2Iw-Xl-Jbr" id="aix-IJ-7eV"/>
-                        <outlet property="starsOverlay" destination="jqL-Hz-Xd9" id="zNd-AM-5Xa"/>
                         <outlet property="startButton" destination="LbM-aw-Tom" id="zj4-j9-fnZ"/>
                         <outlet property="stopButton" destination="uAG-Ko-9pv" id="wD0-xo-KRT"/>
                         <outlet property="tiledBackground" destination="NXH-vg-Dek" id="Kwm-hT-btP"/>

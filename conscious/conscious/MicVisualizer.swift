@@ -30,26 +30,34 @@ class MicVisualizer: UIView {
     private var particle: CAEmitterCell!
     
     func setup() {
-        emitter.emitterMode = kCAEmitterLayerOutline
-        emitter.emitterShape = kCAEmitterLayerCircle
+        emitter.emitterMode = kCAEmitterLayerSurface
+        emitter.emitterShape = kCAEmitterLayerLine
+        emitter.emitterSize = CGSize(width: 10, height: 10)
         emitter.renderMode = kCAEmitterLayerOldestFirst
         emitter.preservesDepth = true
+        
+        emitter.emitterPosition = CGPointMake(self.center.x, self.center.x);
         
         particle = CAEmitterCell()
         
         particle.contents = UIImage(named: "spark")!.CGImage
         particle.name = "spark"
-        particle.birthRate = 5
+        particle.birthRate = 20
         
-        particle.lifetime = 10
-        particle.lifetimeRange = 5
+        particle.lifetime = 50
+        particle.lifetimeRange = 50
         
-        particle.velocity = 12
+        particle.velocity = 5
         particle.velocityRange = 10
         
-        particle.scale = 0.02
-        particle.scaleRange = 0.1
-        particle.scaleSpeed = 0.02
+        particle.scale = 0.2
+        particle.scaleRange = 0.5
+        particle.scaleSpeed = 0.2
+        
+        particle.alphaRange = 1.0
+        particle.redSpeed = 0.5
+        particle.blueSpeed = 0.5
+        particle.alphaSpeed = -0.5
         
         emitter.emitterCells = [particle]
     }

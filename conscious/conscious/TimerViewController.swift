@@ -13,7 +13,7 @@ class TimerViewController: UIViewController, EZMicrophoneDelegate, EZAudioFFTDel
     
     var settingButton : UIBarButtonItem?
     
-    @IBOutlet var starsOverlay: StarsOverlay!
+    //@IBOutlet var starsOverlay: MicVisualizer!
     // set up mentalState
     var mentalStateDelegate: MentalStateDelegate!
     var animator: PresentationAnimator = PresentationAnimator()
@@ -22,10 +22,10 @@ class TimerViewController: UIViewController, EZMicrophoneDelegate, EZAudioFFTDel
     var finished: Bool = false
     var first: Bool = true
     
+    @IBOutlet var backgroundVisualization: MicVisualizer!
     @IBOutlet weak var controlContainerView: UIView!
     
     @IBOutlet weak var plot: EZAudioPlotGL?
-    @IBOutlet weak var backgroundView: UIWebView!
     @IBOutlet weak var stopButton: UIButton!
     @IBOutlet weak var startButton: UIButton!
     @IBOutlet weak var maxFrequencyLabel: UILabel!
@@ -47,7 +47,7 @@ class TimerViewController: UIViewController, EZMicrophoneDelegate, EZAudioFFTDel
 
     @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var timeLeftLabel: UILabel!
-    @IBOutlet weak var tiledBackground: MicVisualizer!
+    @IBOutlet weak var tiledBackground: UIView!
     
     var microphone: EZMicrophone!
     var session: AVAudioSession?
@@ -57,8 +57,6 @@ class TimerViewController: UIViewController, EZMicrophoneDelegate, EZAudioFFTDel
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
         return UIStatusBarStyle.LightContent;
     }
-    
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -121,17 +119,31 @@ class TimerViewController: UIViewController, EZMicrophoneDelegate, EZAudioFFTDel
     @IBAction func onStartButtonPressed(sender: UIButton) {
         meditation!.start()
         startAudio()
+        startVisualization()
+        updateControlsOnStart()
         userSettings.playBackgroundSound()
-        timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("updateCounter"), userInfo: nil, repeats: true)
+
+        if(userSettings.useAudioReverb()){
+           startMicrophonePassthrough()
+        }
+    }
+    
+    func startVisualization(){
+        self.tiledBackground.alpha = 0.2
+    }
+    
+    func startMicrophonePassthrough(){
+        EZMicrophone.sharedMicrophone().startFetchingAudio()
+        EZOutput.sharedOutput().startPlayback();
+        backgroundTaskId = UIApplication.sharedApplication().beginBackgroundTaskWithExpirationHandler(nil)
+    }
+    
+    func updateControlsOnStart(){
         startButton.hidden = true
         stopButton.hidden = false
         timerLabel.hidden = false
         timeLeftLabel.hidden = false
-        if(userSettings.useAudioReverb()){
-            EZMicrophone.sharedMicrophone().startFetchingAudio()
-            EZOutput.sharedOutput().startPlayback();
-            backgroundTaskId = UIApplication.sharedApplication().beginBackgroundTaskWithExpirationHandler(nil)
-        }
+        timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("updateCounter"), userInfo: nil, repeats: true)
     }
     
     func updateCounter(){
@@ -152,27 +164,11 @@ class TimerViewController: UIViewController, EZMicrophoneDelegate, EZAudioFFTDel
         //return String(format: "%02d:%02d:%02d", hours, minutes, seconds)
     }
     
-    func setBackground(){
-        let path =  NSBundle.mainBundle().bundlePath
-        let baseURL = NSURL.fileURLWithPath(path)
-        let imageHTML  = "<!DOCTYPE html>" +
-            "<html lang=\"ja\"><head>" +
-            "<style type=\"text/css\">" +
-            "html{background: url('\(userSettings.backgroundGif).gif') no-repeat center center fixed;" +
-            " -webkit-background-size: cover; background-size: cover;}" +
-            "</style></head><body></body></html>"
-
-        backgroundView.loadHTMLString(imageHTML, baseURL: baseURL)
-        backgroundView.userInteractionEnabled = false;
-    }
-    
     func startAudio()
     {
         self.plot?.backgroundColor = UIColor.clearColor()
         self.plot?.color = UIColor.orangeColor()
         self.plot?.plotType = EZPlotType.Buffer
-        //self.plot?.shouldFill = true
-        //self.plot?.shouldMirror = true
         
         do{
             try session!.setCategory(AVAudioSessionCategoryPlayAndRecord)
@@ -253,9 +249,13 @@ class TimerViewController: UIViewController, EZMicrophoneDelegate, EZAudioFFTDel
         let noteName: String = EZAudioUtilities.noteNameStringForFrequency(maxFrequency, includeOctave: true)
         dispatch_async(dispatch_get_main_queue(), {() -> Void in
             NSLog("Highest Note: \(noteName),\nFrequency: \(maxFrequency) amplitude: \(gain)")
-            self.tiledBackground.changeSize(Double(gain * 10))
-            let color = UIColor(hue: CGFloat(maxFrequency/3000), saturation: 1.0, brightness: 1.0, alpha: 1.0)
-            self.tiledBackground.changeColor(color)
+            self.backgroundVisualization.changeSize(min(4,Double(gain * 20)))
+            let color = UIColor(hue: CGFloat(min(1.0,maxFrequency/3000)), saturation: 1.0, brightness: 1.0, alpha: 1.0)
+            print("alpha = \(CGFloat(1.0 / Double(gain * 10)))")
+            self.backgroundVisualization.changeColor(color)
+            //self.tiledBackground.alpha = min(CGFloat(9.0),CGFloat(gain))
+                
+            
 
         })
     }
