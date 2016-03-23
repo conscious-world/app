@@ -15,6 +15,7 @@
 		5C822B461C96786C00D085B1 /* Sector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C822B451C96786C00D085B1 /* Sector.swift */; };
 		5CB0BA151C9291C20045901F /* media_meditation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CB0BA141C9291C20045901F /* media_meditation.storyboard */; };
 		5CB34B381C9BDC8F00DF50FF /* VolumeSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB34B371C9BDC8F00DF50FF /* VolumeSliderView.swift */; };
+		5CB377461CA2747D004979E0 /* evileye.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5CB377431CA2747D004979E0 /* evileye.jpg */; };
 		5CCB32231C95044A00EB656E /* MentalStateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCB32221C95044A00EB656E /* MentalStateViewController.swift */; };
 		5CCB32261C9508D500EB656E /* mental_state.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CCB32251C9508D500EB656E /* mental_state.storyboard */; };
 		5CD6E2F81C9B9DBD00AB2770 /* PlayPauseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD6E2F71C9B9DBD00AB2770 /* PlayPauseButton.swift */; };
@@ -83,6 +84,7 @@
 		5C822B451C96786C00D085B1 /* Sector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sector.swift; sourceTree = "<group>"; };
 		5CB0BA141C9291C20045901F /* media_meditation.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = media_meditation.storyboard; sourceTree = "<group>"; };
 		5CB34B371C9BDC8F00DF50FF /* VolumeSliderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VolumeSliderView.swift; sourceTree = "<group>"; };
+		5CB377431CA2747D004979E0 /* evileye.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = evileye.jpg; path = ../../../../../../../../Desktop/evileye.jpg; sourceTree = "<group>"; };
 		5CCB32221C95044A00EB656E /* MentalStateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MentalStateViewController.swift; sourceTree = "<group>"; };
 		5CCB32251C9508D500EB656E /* mental_state.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = mental_state.storyboard; sourceTree = "<group>"; };
 		5CD6E2F71C9B9DBD00AB2770 /* PlayPauseButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayPauseButton.swift; sourceTree = "<group>"; };
@@ -395,6 +397,7 @@
 		DA3501DB1C8FDDA6006A41A5 /* backgroundImages */ = {
 			isa = PBXGroup;
 			children = (
+				5CB377431CA2747D004979E0 /* evileye.jpg */,
 				DA4F85731C9D0DFB00C1AEBF /* radialColors.gif */,
 				DA3501DC1C8FDECA006A41A5 /* beach1.gif */,
 				DA3501DD1C8FDECA006A41A5 /* cloudssf.gif */,
@@ -480,7 +483,7 @@
 				TargetAttributes = {
 					DA35019A1C880A27006A41A5 = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = 4AS52V979F;
+						DevelopmentTeam = H27A3U4FRN;
 					};
 				};
 			};
@@ -524,6 +527,7 @@
 				DAF1CEA51C9F7F8E0020D003 /* launchHeader.png in Resources */,
 				DA3501F61C926A34006A41A5 /* timed_meditation.storyboard in Resources */,
 				DA3501E41C8FDECA006A41A5 /* river1.gif in Resources */,
+				5CB377461CA2747D004979E0 /* evileye.jpg in Resources */,
 				DA35020B1C951869006A41A5 /* bowl.mp3 in Resources */,
 				DA3502071C951731006A41A5 /* waves.mp3 in Resources */,
 				DAF1CEAF1CA0F8330020D003 /* launchrainbow2.png in Resources */,
@@ -742,7 +746,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				HEADER_SEARCH_PATHS = "/Users/isisAnchalee/Desktop/app/conscious/Pods/**";
+				HEADER_SEARCH_PATHS = "/Users/williamjohnson/dev/src/github.com/wcjohnson11/tippo/app/conscious/Pods/**";
 				INFOPLIST_FILE = conscious/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = world.conscious.conscious;
@@ -759,7 +763,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				HEADER_SEARCH_PATHS = "/Users/isisAnchalee/Desktop/app/conscious/Pods/**";
+				HEADER_SEARCH_PATHS = "/Users/williamjohnson/dev/src/github.com/wcjohnson11/tippo/app/conscious/Pods/**";
 				INFOPLIST_FILE = conscious/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = world.conscious.conscious;

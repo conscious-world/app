@@ -1,4 +1,5 @@
 PODS:
+  - DynamicColor (2.4.0)
   - EZAudio (1.1.5):
     - EZAudio/Full (= 1.1.5)
   - EZAudio/Core (1.1.5)
@@ -12,6 +13,7 @@ PODS:
   - TPCircularBuffer (1.1)
 
 DEPENDENCIES:
+  - DynamicColor (~> 2.4.0)
   - EZAudio (~> 1.0)
   - MMParallaxCell
   - Spring (from `https://github.com/MengTo/Spring.git`, branch `swift2`)
@@ -29,6 +31,7 @@ CHECKOUT OPTIONS:
     :git: https://github.com/MengTo/Spring.git
 
 SPEC CHECKSUMS:
+  DynamicColor: 2f3fd61053684667bad9f03045dcf9a2a5a007ea
   EZAudio: 3b1cb4b6d7ebca68f0c2478576d75940aad4aa99
   MMParallaxCell: 9c9045097743b725076c38ed2c53e3790e90bd14
   Spring: 3f02b5dc3308572ef177b3cad0fa7bbc4b0706f7

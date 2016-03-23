@@ -49,8 +49,8 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cYl-MB-qpj">
-                                                <rect key="frame" x="159" y="2" width="122" height="30"/>
-                                                <state key="normal" title="Click here to start"/>
+                                                <rect key="frame" x="153" y="2" width="134" height="30"/>
+                                                <state key="normal" title="Tap here to confirm"/>
                                                 <connections>
                                                     <action selector="onContinuePressed:" destination="AV3-jS-Dr8" eventType="touchUpInside" id="cvJ-ra-wUb"/>
                                                 </connections>
@@ -92,7 +92,7 @@
                                         </constraints>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                <color key="backgroundColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="Nx9-Pl-red" firstAttribute="centerX" secondItem="vaQ-PZ-DFV" secondAttribute="centerX" id="3ZM-3m-7ZL"/>
                                     <constraint firstItem="31a-F1-F9p" firstAttribute="centerY" secondItem="vaQ-PZ-DFV" secondAttribute="centerY" id="6bJ-UN-an9"/>
@@ -116,7 +116,7 @@
                                 </variation>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="vaQ-PZ-DFV" firstAttribute="leading" secondItem="C4M-WR-OvB" secondAttribute="leading" id="5mr-AZ-1Ww"/>
                             <constraint firstItem="jCC-Mr-kV6" firstAttribute="top" secondItem="vaQ-PZ-DFV" secondAttribute="bottom" id="Kp5-8x-R9a"/>
