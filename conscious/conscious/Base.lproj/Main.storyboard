@@ -110,11 +110,11 @@
                                             <outlet property="logoImage" destination="gI1-I6-iUM" id="wOn-4C-uep"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MediaTableViewCell" rowHeight="273" id="q94-2a-WD7" customClass="MediaTableViewCell" customModule="conscious" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="342" width="600" height="273"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MediaTableViewCell" rowHeight="50" id="q94-2a-WD7" customClass="MediaTableViewCell" customModule="conscious" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="342" width="600" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="q94-2a-WD7" id="k6j-Rq-gPz">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="273"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="F1L-dj-xgU">
@@ -193,6 +193,26 @@
                                             <outlet property="iconImageView" destination="1n5-cF-z8W" id="KV0-ZX-ygH"/>
                                             <outlet property="titleLabel" destination="gwh-LU-X9n" id="nvv-of-VZL"/>
                                         </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ContributionStyleHistoryTableViewCell" id="Djc-0d-xLO" customClass="ContributionStyleHistoryTableViewCell" customModule="conscious" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="392" width="600" height="94"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Djc-0d-xLO" id="6Vt-FZ-xMq">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="94"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iyM-ET-QbL">
+                                                    <rect key="frame" x="0.0" y="0.0" width="600" height="94"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="iyM-ET-QbL" secondAttribute="trailing" id="KU9-63-iN3"/>
+                                                <constraint firstItem="iyM-ET-QbL" firstAttribute="top" secondItem="6Vt-FZ-xMq" secondAttribute="top" id="exP-G7-CxD"/>
+                                                <constraint firstAttribute="bottom" secondItem="iyM-ET-QbL" secondAttribute="bottom" id="jhr-8h-wZN"/>
+                                                <constraint firstItem="iyM-ET-QbL" firstAttribute="leading" secondItem="6Vt-FZ-xMq" secondAttribute="leading" id="pSa-qU-B0r"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>

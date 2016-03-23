@@ -34,6 +34,15 @@ class Meditation: NSObject, NSCoding{
     var time_start: NSDate?
     var time_end: NSDate?
     var options: [[String:String]]?
+    var mediaName: String?
+    
+    var pathForMedia: String?{
+        get{
+            return NSBundle.mainBundle().pathForResource(self.mediaName, ofType: "mp3")!
+        }
+    }
+    
+    
     var coverImage: UIImage?{
         get{
             guard let imageName = self.coverImageUrl
@@ -63,13 +72,13 @@ class Meditation: NSObject, NSCoding{
         }
         
         self.init(meditation_type: meditation_type,
-            media_id:           decoder.decodeObjectForKey("media_id") as? String,
-            mentality_before:   decoder.decodeObjectForKey("mentality_before") as? String,
-            mentality_after:    decoder.decodeObjectForKey("mentality_after") as? String,
-            durration:          decoder.decodeObjectForKey("durration") as? NSTimeInterval,
-            time_start:         decoder.decodeObjectForKey("time_start") as? NSDate,
-            time_end:           decoder.decodeObjectForKey("time_end") as? NSDate,
-            options:            decoder.decodeObjectForKey("options") as? [[String:String]]
+            media_id:           decoder.decodeObjectForKey(Meditation.MEIDIA_ID_KEY) as? String,
+            mentality_before:   decoder.decodeObjectForKey(Meditation.MENTALITY_BEFORE_KEY) as? String,
+            mentality_after:    decoder.decodeObjectForKey(Meditation.MENTALITY_AFTER_KEY) as? String,
+            durration:          decoder.decodeObjectForKey(Meditation.DURRATION_KEY) as? NSTimeInterval,
+            time_start:         decoder.decodeObjectForKey(Meditation.TIME_START_KEY) as? NSDate,
+            time_end:           decoder.decodeObjectForKey(Meditation.TIME_END_KEY) as? NSDate,
+            options:            decoder.decodeObjectForKey(Meditation.OPTIONS_KEY) as? [[String:String]]
         )
         
     }
@@ -115,6 +124,7 @@ class Meditation: NSObject, NSCoding{
             let meditation = Meditation.newTimedMeditation()
             meditation.coverImageUrl = "indoorMeditator"
             meditation.iconName = "clock-stopwatch-7"
+            meditation.mediaName = "MARC5MinuteBreathing"
             meditation.meditation_title = "Start a new timed meditation"
             meditation.meditation_description = "Set a timer, selection optional scene, background sound, reminder tone and audio chant reverb"
             return meditation
@@ -126,6 +136,7 @@ class Meditation: NSObject, NSCoding{
             let meditation = Meditation.newGuidedMeditation()
             meditation.coverImageUrl = "guidedBeachMeditation"
             meditation.iconName = "circle-user-7"
+            meditation.mediaName = "MARC5MinuteBreathing"
             meditation.meditation_title = "Five Minute breathing excersise"
             meditation.meditation_description = "Five minutes is all it takes to reset your day with this simple breathing exercise"
             return meditation
@@ -137,6 +148,7 @@ class Meditation: NSObject, NSCoding{
             let meditation = Meditation.newGuidedMeditation()
             meditation.coverImageUrl = "colors"
             meditation.iconName = "circle-user-7"
+            meditation.mediaName = "MARC5MinuteBreathing"
             meditation.meditation_title = "Relaxation Mediation"
             meditation.meditation_description = "Five minutes is all it takes to reset your day with this simple breathing exercise"
             return meditation
@@ -148,6 +160,7 @@ class Meditation: NSObject, NSCoding{
             let meditation = Meditation.newGuidedMeditation()
             meditation.coverImageUrl = "maha-mrityunjaya"
             meditation.iconName = "circle-user-7"
+            meditation.mediaName = "Hein-Braat-Maha-Mrityeonjaya-Mantra"
             meditation.meditation_title = "Hein Braat: Maha Mrityeonjaya Mantra"
             meditation.meditation_description = "Said to be beneficial for mental, emotional and physical health and to be a moksha mantra which bestows longevity and immortality."
             return meditation

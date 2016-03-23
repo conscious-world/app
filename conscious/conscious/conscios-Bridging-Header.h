@@ -10,6 +10,7 @@
 #define conscios_Bridging_Header_h
 
 #import <EZAudio.h>
+#import <TEAChart/TEAChart.h>
 #import <AudioToolbox/AudioToolbox.h>
 #import <MMParallaxCell/MMParallaxCell.h>
 #import <MMParallaxCell/MMParallaxCell.h>

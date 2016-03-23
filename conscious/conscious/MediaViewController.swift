@@ -59,7 +59,9 @@ class MediaViewController: UIViewController, AVAudioPlayerDelegate, UIViewContro
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         if first {
-            meditation = Meditation.newGuidedMeditation()
+            if(meditation == nil){
+                meditation = Meditation.newGuidedMeditation()
+            }
             first = false
         } else {
         }
@@ -165,28 +167,29 @@ class MediaViewController: UIViewController, AVAudioPlayerDelegate, UIViewContro
     }
     
     func loadAudio() {
-        let audioFilePath = NSBundle.mainBundle().pathForResource("MARC5MinuteBreathing", ofType: "mp3")
-         minValue = 0
-        
-        if audioFilePath != nil {
-            let audioFileUrl = NSURL.fileURLWithPath(audioFilePath!)
-            
-            do {
-                audioPlayer = try AVAudioPlayer(contentsOfURL: audioFileUrl, fileTypeHint: nil)
-                audioPlayer.delegate = self
-                currentTimeLabel.text = minValue.mmss
-                duration = self.audioPlayer.duration
-                maxValue = NSDate().dateByAddingTimeInterval(duration!)
-                timeSlider.minimumValue = Float(minValue)
-                timeSlider.maximumValue = Float(duration!)
-                timeLeftLabel.text = maxValue?.timeIntervalSinceNow.mmss
-            }
-            catch {
-                fatalError ("Error loading \(audioFileUrl): \(error)")
-            }
-        } else {
-            print("audio file is not found")
+        guard let  audioFilePath = meditation!.pathForMedia else{
+            print("no audio media to play so this what are we to do?")
+            return //this should probably just crash
         }
+       
+        minValue = 0
+        
+        let audioFileUrl = NSURL.fileURLWithPath(audioFilePath)
+        
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOfURL: audioFileUrl, fileTypeHint: nil)
+            audioPlayer.delegate = self
+            currentTimeLabel.text = minValue.mmss
+            duration = self.audioPlayer.duration
+            maxValue = NSDate().dateByAddingTimeInterval(duration!)
+            timeSlider.minimumValue = Float(minValue)
+            timeSlider.maximumValue = Float(duration!)
+            timeLeftLabel.text = maxValue?.timeIntervalSinceNow.mmss
+        }
+        catch {
+            fatalError ("Error loading \(audioFileUrl): \(error)")
+        }
+
     }
     
     func endMeditation() {

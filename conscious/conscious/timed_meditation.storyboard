@@ -14,7 +14,7 @@
                         <viewControllerLayoutGuide type="top" id="JG4-UO-tLa"/>
                         <viewControllerLayoutGuide type="bottom" id="bcS-a3-Eb4"/>
                     </layoutGuides>
-                    <view key="view" clipsSubviews="YES" contentMode="scaleToFill" id="jqL-Hz-Xd9" customClass="MicVisualizer" customModule="conscious" customModuleProvider="target">
+                    <view key="view" clipsSubviews="YES" contentMode="scaleToFill" id="jqL-Hz-Xd9">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -163,7 +163,6 @@
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="backgroundVisualization" destination="jqL-Hz-Xd9" id="nnh-bW-cL3"/>
                         <outlet property="controlContainerView" destination="8L5-Vc-Rz1" id="QUh-Mm-8oL"/>
                         <outlet property="maxFrequencyLabel" destination="zft-f8-vcQ" id="Xal-hf-SW8"/>
                         <outlet property="meditationDescriptionLabel" destination="x1b-YG-00v" id="x7v-LD-iLd"/>

@@ -81,6 +81,7 @@ class CallToActionTableViewCell: UITableViewCell {
             if last_medaition.meditation_type == Meditation.guided_mediation_type{
                 let storyBoard = UIStoryboard(name: "media_meditation", bundle: nil)
                 if let mediaViewController  = storyBoard.instantiateViewControllerWithIdentifier("MediaViewController") as? MediaViewController{
+                    mediaViewController.meditation = History.sharedInstance()?.last
                     self.window!.rootViewController?.presentViewController(mediaViewController, animated: true, completion: nil)
                     return
                 }

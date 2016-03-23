@@ -8,8 +8,9 @@
 
 import UIKit
 import Spring
+import TEAChart
 
-class HomeTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UIScrollViewDelegate {
+class HomeTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UIScrollViewDelegate, TEAContributionGraphDataSource {
 
     @IBOutlet weak var tableView: UITableView!
 
@@ -66,15 +67,22 @@ class HomeTableViewController: UIViewController, UITableViewDataSource, UITableV
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         switch indexPath.section {
+
         case 0:
             ctaCell =  tableView.dequeueReusableCellWithIdentifier("CallToActionTableViewCell", forIndexPath: indexPath) as? CallToActionTableViewCell
             return ctaCell!
-        case 1:
-            let cell = tableView.dequeueReusableCellWithIdentifier("MediaTableViewCell", forIndexPath: indexPath)        as! MediaTableViewCell
-            cell.meditation = meditations[indexPath.row]
-            cell.navigationController = self.navigationController
-            return cell
             
+        case 1:
+            if(indexPath.row == 0){
+                let cell =  tableView.dequeueReusableCellWithIdentifier("ContributionStyleHistoryTableViewCell", forIndexPath: indexPath) as! ContributionStyleHistoryTableViewCell
+                return cell
+            
+            }else{
+                let cell = tableView.dequeueReusableCellWithIdentifier("MediaTableViewCell", forIndexPath: indexPath) as! MediaTableViewCell
+                cell.meditation = meditations[indexPath.row]
+                cell.navigationController = self.navigationController
+                return cell
+            }
         default:
             return tableView.dequeueReusableCellWithIdentifier("MediaTableViewCell", forIndexPath: indexPath) as! MediaTableViewCell
         }
@@ -87,7 +95,13 @@ class HomeTableViewController: UIViewController, UITableViewDataSource, UITableV
     
     //there is no segue
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        //let destination = segue.destinationViewController
+        let destination = segue.destinationViewController
+        print("destination controller = \(sender.self)")
+        if let cell = sender as? MediaTableViewCell, mediaController = destination as? MediaViewController{
+            print("sender.self")
+            mediaController.meditation = cell.meditation
+        }
+        //destination.transitioningDelegate = self
     }
 
 
@@ -110,6 +124,16 @@ class HomeTableViewController: UIViewController, UITableViewDataSource, UITableV
         }
 
     }
+    
+    func monthForGraph() -> NSDate{
+        return NSDate()
+    }
+    
+    func  valueForDay(day: UInt ) -> Int{
+        
+        return Int(day) % 6;
+    }
+
 }
 
 

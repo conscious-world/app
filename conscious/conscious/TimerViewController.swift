@@ -106,7 +106,6 @@ class TimerViewController: UIViewController, EZMicrophoneDelegate, EZAudioFFTDel
     @IBAction func onStopButtonPressed(sender: UIButton) {
         meditation!.end()
         //TODO there should be a better end, like taking a survey
-        History.append(meditation!)
         EZOutput.sharedOutput().stopPlayback()
         EZMicrophone.sharedMicrophone().stopFetchingAudio()
         userSettings.stopBackgroundSound()
@@ -247,17 +246,17 @@ class TimerViewController: UIViewController, EZMicrophoneDelegate, EZAudioFFTDel
         let maxFrequency: Float = fft.maxFrequency
         let gain = fft.maxFrequencyMagnitude
         let noteName: String = EZAudioUtilities.noteNameStringForFrequency(maxFrequency, includeOctave: true)
-        dispatch_async(dispatch_get_main_queue(), {() -> Void in
-            NSLog("Highest Note: \(noteName),\nFrequency: \(maxFrequency) amplitude: \(gain)")
-            self.backgroundVisualization.changeSize(min(4,Double(gain * 20)))
-            let color = UIColor(hue: CGFloat(min(1.0,maxFrequency/3000)), saturation: 1.0, brightness: 1.0, alpha: 1.0)
-            print("alpha = \(CGFloat(1.0 / Double(gain * 10)))")
-            self.backgroundVisualization.changeColor(color)
-            //self.tiledBackground.alpha = min(CGFloat(9.0),CGFloat(gain))
-                
-            
-
-        })
+//        dispatch_async(dispatch_get_main_queue(), {() -> Void in
+//            NSLog("Highest Note: \(noteName),\nFrequency: \(maxFrequency) amplitude: \(gain)")
+//            self.backgroundVisualization.changeSize(min(4,Double(gain * 20)))
+//            let color = UIColor(hue: CGFloat(min(1.0,maxFrequency/3000)), saturation: 1.0, brightness: 1.0, alpha: 1.0)
+//            print("alpha = \(CGFloat(1.0 / Double(gain * 10)))")
+//            self.backgroundVisualization.changeColor(color)
+//            //self.tiledBackground.alpha = min(CGFloat(9.0),CGFloat(gain))
+//                
+//            
+//
+//        })
     }
     
     func settingsUpdated(controller: TimerSettingsTableViewController, settings: TimerSettings?){
@@ -273,8 +272,11 @@ class TimerViewController: UIViewController, EZMicrophoneDelegate, EZAudioFFTDel
         if let mentalState = state {
             if finished == false {
                 meditation?.mentality_before = mentalState
+                meditation?.time_start = NSDate()
             } else {
                 meditation?.mentality_after = mentalState
+                meditation?.time_end = NSDate()
+                History.append(meditation!)
             }
         }
     }
