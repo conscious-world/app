@@ -104,7 +104,10 @@ class Meditation: NSObject, NSCoding{
     }
     
     static func getAllPossible() -> [Meditation]{
-        return [TimedMeditation.build(), FiveMintueBreathingMeditation.build()]
+        return [TimedMeditation.build(),
+            FiveMintueBreathingMeditation.build(),
+            RelaxMeditation.build(),
+            HealingMeditation.build()]
     }
     
     class TimedMeditation: Meditation{
@@ -124,6 +127,28 @@ class Meditation: NSObject, NSCoding{
             meditation.coverImageUrl = "guidedBeachMeditation"
             meditation.iconName = "circle-user-7"
             meditation.meditation_title = "Five Minute breathing excersise"
+            meditation.meditation_description = "Five minutes is all it takes to reset your day with this simple breathing exercise"
+            return meditation
+        }
+    }
+    
+    class RelaxMeditation: Meditation{
+        static func build() -> Meditation{
+            let meditation = Meditation.newGuidedMeditation()
+            meditation.coverImageUrl = "colors"
+            meditation.iconName = "circle-user-7"
+            meditation.meditation_title = "Relaxation Mediation"
+            meditation.meditation_description = "Five minutes is all it takes to reset your day with this simple breathing exercise"
+            return meditation
+        }
+    }
+    
+    class HealingMeditation: Meditation{
+        static func build() -> Meditation{
+            let meditation = Meditation.newGuidedMeditation()
+            meditation.coverImageUrl = "exampleMeditionCover"
+            meditation.iconName = "circle-user-7"
+            meditation.meditation_title = "Healing mantra"
             meditation.meditation_description = "Five minutes is all it takes to reset your day with this simple breathing exercise"
             return meditation
         }
