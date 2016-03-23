@@ -47,7 +47,7 @@ class HomeTableViewController: UIViewController, UITableViewDataSource, UITableV
             if(history.count < 1){
                 print("Inserty a history item")
                 history.append(_lastMeditaion.meditation_type)
-                tableSectionsData.insert(history, atIndex: 1)
+                tableSectionsData[1].insert(_lastMeditaion.meditation_type, atIndex: 0)
             }
             print("you have \(History.count()) medations and your last mediation was of type \(lastMeditaion?.meditation_type)" )
         }
@@ -78,6 +78,7 @@ class HomeTableViewController: UIViewController, UITableViewDataSource, UITableV
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        print("numberOfSectionsInTableView \(tableSectionsData.count)")
         return tableSectionsData.count
     }
     
@@ -93,11 +94,13 @@ class HomeTableViewController: UIViewController, UITableViewDataSource, UITableV
             let cell =  tableView.dequeueReusableCellWithIdentifier("ContributionStyleHistoryTableViewCell", forIndexPath: indexPath) as! ContributionStyleHistoryTableViewCell
             return cell
         case 2:
+            print("render MediaTableViewCell")
             let cell = tableView.dequeueReusableCellWithIdentifier("MediaTableViewCell", forIndexPath: indexPath) as! MediaTableViewCell
             cell.meditation = meditations[indexPath.row]
             cell.navigationController = self.navigationController
             return cell
         default:
+            print("In default")
             return tableView.dequeueReusableCellWithIdentifier("MediaTableViewCell", forIndexPath: indexPath) as! MediaTableViewCell
         }
         
@@ -110,12 +113,9 @@ class HomeTableViewController: UIViewController, UITableViewDataSource, UITableV
     //there is no segue
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         let destination = segue.destinationViewController
-        print("destination controller = \(sender.self)")
         if let cell = sender as? MediaTableViewCell, mediaController = destination as? MediaViewController{
-            print("sender.self")
             mediaController.meditation = cell.meditation
         }
-        //destination.transitioningDelegate = self
     }
 
 
@@ -123,17 +123,12 @@ class HomeTableViewController: UIViewController, UITableViewDataSource, UITableV
     
     func scrollViewDidEndScrollingAnimation(scrollView: UIScrollView) {
         print("scrollViewDidEndScrollingAnimation")
-        //self.blurEffectView.alpha = 0
     }
         
     func scrollViewDidScroll(scrollView: UIScrollView) {
-        
-        print(scrollView.contentOffset.y)
-        
         self.ctaCell?.resizeLogo(200.0 - scrollView.contentOffset.y)
         
         if(scrollView.contentOffset.y < 0){
-            print("self.ctaCell?.resizeHeader NOW")
             self.ctaCell?.resizeHeader(250.0 + abs(scrollView.contentOffset.y))
         }
 

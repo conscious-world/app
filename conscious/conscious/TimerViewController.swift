@@ -22,7 +22,7 @@ class TimerViewController: UIViewController, EZMicrophoneDelegate, EZAudioFFTDel
     var finished: Bool = false
     var first: Bool = true
     
-    @IBOutlet var backgroundVisualization: StarsOverlay!
+    @IBOutlet var backgroundVisualization: MicVisualizer!
     @IBOutlet weak var controlContainerView: UIView!
     
     @IBOutlet weak var plot: EZAudioPlotGL?
@@ -251,17 +251,14 @@ class TimerViewController: UIViewController, EZMicrophoneDelegate, EZAudioFFTDel
         let maxFrequency: Float = fft.maxFrequency
         let gain = fft.maxFrequencyMagnitude
         let noteName: String = EZAudioUtilities.noteNameStringForFrequency(maxFrequency, includeOctave: true)
-//        dispatch_async(dispatch_get_main_queue(), {() -> Void in
-//            NSLog("Highest Note: \(noteName),\nFrequency: \(maxFrequency) amplitude: \(gain)")
-//            self.backgroundVisualization.changeSize(min(4,Double(gain * 20)))
-//            let color = UIColor(hue: CGFloat(min(1.0,maxFrequency/3000)), saturation: 1.0, brightness: 1.0, alpha: 1.0)
-//            print("alpha = \(CGFloat(1.0 / Double(gain * 10)))")
-//            self.backgroundVisualization.changeColor(color)
-//            //self.tiledBackground.alpha = min(CGFloat(9.0),CGFloat(gain))
-//                
-//            
-//
-//        })
+        dispatch_async(dispatch_get_main_queue(), {() -> Void in
+            NSLog("Highest Note: \(noteName),\nFrequency: \(maxFrequency) amplitude: \(gain)")
+            self.backgroundVisualization.changeSize(min(4,Double(gain * 20)))
+            let color = UIColor(hue: CGFloat(min(1.0,maxFrequency/3000)), saturation: 1.0, brightness: 1.0, alpha: 1.0)
+            print("alpha = \(CGFloat(1.0 / Double(gain * 10)))")
+            self.backgroundVisualization.changeColor(color)
+            //self.tiledBackground.alpha = min(CGFloat(9.0),CGFloat(gain))
+        })
     }
     
     func settingsUpdated(controller: TimerSettingsTableViewController, settings: TimerSettings?){

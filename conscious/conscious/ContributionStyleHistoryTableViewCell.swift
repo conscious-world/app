@@ -29,10 +29,6 @@ class ContributionStyleHistoryTableViewCell: UITableViewCell, TEAContributionGra
             return
         }
         
-        for mediation in history.meditations!{
-            print("mediation = mediation.time_type: \(mediation.meditation_type),mediation.time_start: \(mediation.time_start), mediation.time_end: \(mediation.time_end)")
-        }
-        
         for day in 1...31{
             mediationsDays.append(0)
             for mediation in history.meditations!{
@@ -41,7 +37,7 @@ class ContributionStyleHistoryTableViewCell: UITableViewCell, TEAContributionGra
                     let components = calendar.components([.Month, .Day], fromDate: date)
                     let (_, medDay) = (components.month, components.day)
                     
-                    print(medDay == Int(day))
+
                     
                     if medDay == Int(day){
                         mediationsDays[day] = 1

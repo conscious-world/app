@@ -45,7 +45,7 @@ class TimerSettings{
         }
     }
 
-    var audioEffect: String = ""{
+    var audioEffect: String = "reverb"{
         didSet {
             self.save()
         }

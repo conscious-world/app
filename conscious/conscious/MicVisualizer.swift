@@ -31,7 +31,7 @@ class MicVisualizer: UIView {
     
     func setup() {
         emitter.emitterMode = kCAEmitterLayerSurface
-        emitter.emitterShape = kCAEmitterLayerLine
+        emitter.emitterShape = kCAEmitterLayerCircle
         emitter.emitterSize = CGSize(width: 10, height: 10)
         emitter.renderMode = kCAEmitterLayerOldestFirst
         emitter.preservesDepth = true
