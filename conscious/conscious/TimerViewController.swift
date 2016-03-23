@@ -22,14 +22,14 @@ class TimerViewController: UIViewController, EZMicrophoneDelegate, EZAudioFFTDel
     var finished: Bool = false
     var first: Bool = true
     
-    @IBOutlet var backgroundVisualization: MicVisualizer!
+    @IBOutlet var backgroundVisualization: StarsOverlay!
     @IBOutlet weak var controlContainerView: UIView!
     
     @IBOutlet weak var plot: EZAudioPlotGL?
     @IBOutlet weak var stopButton: UIButton!
     @IBOutlet weak var startButton: UIButton!
     @IBOutlet weak var maxFrequencyLabel: UILabel!
-    @IBOutlet weak var meditationDescriptionLabel: UILabel!
+    //@IBOutlet weak var meditationDescriptionLabel: UILabel!
     
     let FFTViewControllerFFTWindowSize:vDSP_Length = 4096;
     var fft: EZAudioFFTRolling!
@@ -71,13 +71,14 @@ class TimerViewController: UIViewController, EZMicrophoneDelegate, EZAudioFFTDel
         timerLabel.hidden = true
         timeLeftLabel.hidden = true
 
-        let tiledTriangleView =   TiledTriangleView(frame: tiledBackground.frame, tileWidth: 100, tileHeight: 75)
-        tiledBackground.addSubview(tiledTriangleView)
+        //let tiledTriangleView =   TiledTriangleView(frame: tiledBackground.frame, tileWidth: 100, tileHeight: 75)
+        //tiledBackground.addSubview(tiledTriangleView)
         self.view.bringSubviewToFront(controlContainerView)
-        onSettingsBarBtnTap()
+        //onSettingsBarBtnTap()
         if first {
+
             meditation = Meditation.newTimedMeditation()
-            self.meditationDescriptionLabel?.text = meditation?.meditation_title
+            //self.meditationDescriptionLabel?.text = meditation?.meditation_title
         }
     }
     @IBOutlet weak var conrolContainerBottonConstraint: NSLayoutConstraint!
@@ -165,9 +166,11 @@ class TimerViewController: UIViewController, EZMicrophoneDelegate, EZAudioFFTDel
     
     func startAudio()
     {
-        self.plot?.backgroundColor = UIColor.clearColor()
-        self.plot?.color = UIColor.orangeColor()
+        self.plot?.backgroundColor = UIColor.blackColor()
+        self.plot?.color = UIColor.whiteColor()
         self.plot?.plotType = EZPlotType.Buffer
+        self.plot?.shouldFill = true;
+        self.plot?.shouldMirror = true;
         
         do{
             try session!.setCategory(AVAudioSessionCategoryPlayAndRecord)
@@ -206,12 +209,14 @@ class TimerViewController: UIViewController, EZMicrophoneDelegate, EZAudioFFTDel
         self.fft.computeFFTWithBuffer(buffer[0], withBufferSize: bufferSize)
 
         dispatch_async(dispatch_get_main_queue(), { () -> Void in
-            //self.plot?.updateBuffer(buffer[0], withBufferSize: bufferSize);
+            self.plot?.updateBuffer(buffer[0], withBufferSize: bufferSize);
         });
     }
     
     override func viewDidAppear(animated: Bool) {
-        onSettingsBarBtnTap()
+        //onSettingsBarBtnTap()
+        presentation()
+        first = false
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -263,8 +268,8 @@ class TimerViewController: UIViewController, EZMicrophoneDelegate, EZAudioFFTDel
         if(settings != nil){
             print("settings not nil")
             self.userSettings = settings!
-            presentation()
-            first = false
+            //presentation()
+            //first = false
         }
     }
     
