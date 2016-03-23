@@ -53,7 +53,6 @@ class MediaViewController: UIViewController, AVAudioPlayerDelegate, UIViewContro
         mediaView.setEmitters(true, spin: 130.0)
         timeSlider.setThumbImage(UIImage(named: "lotus-pointer"), forState: .Normal)
         timeSlider.tintColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.9)
-        
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -66,6 +65,7 @@ class MediaViewController: UIViewController, AVAudioPlayerDelegate, UIViewContro
         } else {
         }
         presentation()
+        setBackground()
 
         UIView.animateWithDuration(1) { () -> Void in
             self.view.layoutIfNeeded()
@@ -75,6 +75,17 @@ class MediaViewController: UIViewController, AVAudioPlayerDelegate, UIViewContro
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
 
+    }
+    
+    func setBackground() {
+        UIGraphicsBeginImageContext(self.view.frame.size)
+        UIImage(named: "evileye.jpg")?.drawInRect(self.view.bounds)
+        
+        var image: UIImage = UIGraphicsGetImageFromCurrentImageContext()
+        
+        UIGraphicsEndImageContext()
+        
+        self.view.backgroundColor = UIColor(patternImage: image)
     }
     
     func setupPlayButton() {
@@ -112,7 +123,7 @@ class MediaViewController: UIViewController, AVAudioPlayerDelegate, UIViewContro
     func mentalStateSelected(picker: MentalStateViewController, didPickState state: String?, color: UIColor?) {
         if let mentalState = state {
             if finished == false {
-                mediaView.changeSize(5.0)
+                mediaView.changeSize(0.5)
                 mediaView.changeColor(color!)
                 meditation?.mentality_before = mentalState
             } else {

@@ -239,6 +239,7 @@ class MentalStateViewController: UIViewController, UIViewControllerTransitioning
 
                 
             }
+            self.rippleLayer.atIndex = 0
             color = color!.tintColor(amount: CGFloat(distFromCenter))
             makeTinyRipple(color, size: distFromCenter)
             setText(distFromCenter, sector: sector)
