@@ -7,123 +7,129 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00F9CC70B4E1ADEFBFDB3E5BA958DF4E /* EZAudioPlotGL.m in Sources */ = {isa = PBXBuildFile; fileRef = 862D04E0C9B2D0431EE274C242C0D7D8 /* EZAudioPlotGL.m */; };
-		01CA2A3DAE59443912A8D7E91FD1F3FA /* TEAClockChart.h in Headers */ = {isa = PBXBuildFile; fileRef = 930B625E1B9F46AAE72B9524EA2F5EBB /* TEAClockChart.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		024F386737D369CDD27704E6A5C660EE /* StarWarsGLAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 069E820EC033E011DCF9E623B6165F7A /* StarWarsGLAnimator.swift */; };
-		03C7706D5893E839CF98F0FB299688A0 /* EZAudioDisplayLink.m in Sources */ = {isa = PBXBuildFile; fileRef = C61326F8E654351C6267AA50D916260C /* EZAudioDisplayLink.m */; };
-		09107C74F7BE07FD2FA75EEBB6F6A02F /* DesignableTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34EA31CF600BB34DD2EE4EECA5738EC /* DesignableTabBarController.swift */; };
-		0C45C9F55858A5544EACA0EDBAB14289 /* TEAChart-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E0CB5C3E2DEF3DA6B5C471A1D4C4C8C6 /* TEAChart-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0C8A8244AD0E4CE352AF4A581E2B43A7 /* Pods-conscious-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D4BA281AD1500E2F4F83E9E85EDDF165 /* Pods-conscious-dummy.m */; };
-		0D7C15964696524A8C68A15A2E64391F /* TPCircularBuffer-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E3243185A2BB0945C0532D7B8E875C5D /* TPCircularBuffer-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0E06472FAA8DC2A1D4BF0FB871BA5F14 /* Misc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60306A492F6B69F3811D090B6C07BFE6 /* Misc.swift */; };
+		00F9CC70B4E1ADEFBFDB3E5BA958DF4E /* EZAudioPlotGL.m in Sources */ = {isa = PBXBuildFile; fileRef = B6BA6709E1358D356658E8A4A28EFFD8 /* EZAudioPlotGL.m */; };
+		03C7706D5893E839CF98F0FB299688A0 /* EZAudioDisplayLink.m in Sources */ = {isa = PBXBuildFile; fileRef = 02E91F304FFB62FA064D36C772C43C4D /* EZAudioDisplayLink.m */; };
+		064BCAB901624EB79B9012B6536870DA /* Spring-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 76E7A6FE8E56CA1BDDF80FC5087E968E /* Spring-dummy.m */; };
+		0A10C468722A75DECF409FBE8AE3CFDF /* AsyncImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6486A1910F933B8D1DFC123B778E009F /* AsyncImageView.swift */; };
+		0D7C15964696524A8C68A15A2E64391F /* TPCircularBuffer-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CAB4D9E71CD1F7902D8DE5DF4C3CABC /* TPCircularBuffer-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0E0B7B341E8FC2CFFAC14C813BE39F87 /* SpringLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7622A3D993C27AC9E8F3633870E3B8B /* SpringLabel.swift */; };
 		0E88EB8F399AE0FA8C77DF7E39F4190F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 185F80F92E115214017C9CD7E5510733 /* UIKit.framework */; };
-		0EDE0157B6740AA97C83F6F90CF59A0E /* TPCircularBuffer-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D5A3EEF52C027A45594213CBE70B809C /* TPCircularBuffer-dummy.m */; };
-		0EFE7E063B6A30733617C041126F67F8 /* AutoTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE3C8EE0F49B751CB0D06DA58D1B88D /* AutoTextView.swift */; };
-		108E46A98E36D427E46E46C15CEAF307 /* SoundPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52202E6AF3676C124B5148B4F6A9DA59 /* SoundPlayer.swift */; };
-		10E13BC69D69FAA6BD6CFF2E20D5AC36 /* TransitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C126FF28508B0EAB8A0B6EE42A83299B /* TransitionManager.swift */; };
-		10FB742D0890AFB4F6CB2AEDF9FBBB7D /* EZAudioFFT.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B31D5E1C86733F3FCC8EFAFC27D4FDA /* EZAudioFFT.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		14464FA70DE786B46613D5D2E395C1EB /* StarWars-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 96C593B3233F5C9BCBE501066C590FEB /* StarWars-dummy.m */; };
-		1459D573CBBEFDD2FCA1BDAD3DD16941 /* EZAudio-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FD3F7B16A8C6C909E6C8B9553D74D19 /* EZAudio-dummy.m */; };
+		0EDE0157B6740AA97C83F6F90CF59A0E /* TPCircularBuffer-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B60D2394B6985B5032FA926D96164972 /* TPCircularBuffer-dummy.m */; };
+		10FB742D0890AFB4F6CB2AEDF9FBBB7D /* EZAudioFFT.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E0955F109D09FA1D285C967821D374A /* EZAudioFFT.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		114DFF991A76212C6C91275E0EA16C2A /* SpringImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76109179947F9733CDCD4E607E5CCABD /* SpringImageView.swift */; };
+		1459D573CBBEFDD2FCA1BDAD3DD16941 /* EZAudio-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B29358848F8330F931954388BA4CB95E /* EZAudio-dummy.m */; };
+		18E938F95DB58AF7A4E933D7BD645F0B /* DynamicColor-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1BBA42692A026378842412AE7476B5FC /* DynamicColor-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1BF7F18FEF7F4C810778F62DDDC17AA9 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 034FC0F5975877BA58FE2553954356F5 /* AudioToolbox.framework */; };
-		1C7842664C70BC3B21579F0E2B49BAE5 /* TPCircularBuffer+AudioBufferList.c in Sources */ = {isa = PBXBuildFile; fileRef = FAF9B3762A15D79DB1C9774ED5B28DDB /* TPCircularBuffer+AudioBufferList.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		2288ED89AABA9216E9CF2163AF1E6EEB /* MMParallaxCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 273BE60D6BC73F12CDAABC21BA0BB7D9 /* MMParallaxCell.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		23A611D24680CED3C9D2D81FAA05C973 /* DesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD6F1C8F6C34B0C53E65C07FB4701DF3 /* DesignableView.swift */; };
-		23B49B6507754DF0E2B3789D242C3909 /* TEABarChart.h in Headers */ = {isa = PBXBuildFile; fileRef = F71FF0B1AFB5242A6E1C6D84CCCAA8F1 /* TEABarChart.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		23D47569387AA759DC1881B592519A0F /* TPCircularBuffer.c in Sources */ = {isa = PBXBuildFile; fileRef = 610B2415D114B327CE7B7F7F4B67BABD /* TPCircularBuffer.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		273CA95FDE56DCA867153BA8518E91FE /* MMParallaxCell.h in Headers */ = {isa = PBXBuildFile; fileRef = ABA367C132D9A48DF451B68D3F593345 /* MMParallaxCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		28025A93EE99F4F64788D60BEF3F0E7E /* TPCircularBuffer+AudioBufferList.h in Headers */ = {isa = PBXBuildFile; fileRef = C846E34ED5043B98A8EF0944FFAAF09F /* TPCircularBuffer+AudioBufferList.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2EB3FF656E3302B3546AC5B5538F89A2 /* NSDate+TEAExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 36F8BDCEB8462132D52554EF5031724E /* NSDate+TEAExtensions.m */; };
-		2EE8E2A252C7AEFEE422483491155EFB /* TPCircularBuffer.c in Sources */ = {isa = PBXBuildFile; fileRef = 22A30A3269DEB316491284AB98E45B2D /* TPCircularBuffer.c */; };
-		315D1A555607007F0502A71A5FF5FCF6 /* TEAContributionGraph.m in Sources */ = {isa = PBXBuildFile; fileRef = EA171CE2D377A318E8E938D4306EF0A2 /* TEAContributionGraph.m */; };
-		31A87B1B8E3B395BA87B3D3F3A55F908 /* EZMicrophone.h in Headers */ = {isa = PBXBuildFile; fileRef = 10683377BC0AF313D9F43A6FB51CBBF4 /* EZMicrophone.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		32218026DF748C75A85E71D962CB0174 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22634F114B5EEC4E6F1B25C1A43277A /* LoadingView.swift */; };
-		36E2DE13D846A6605AD5DECC4C5A5E69 /* EZPlot.h in Headers */ = {isa = PBXBuildFile; fileRef = AB22D88E81F507AC2277AB8AEFD31448 /* EZPlot.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		389D3BC0DA44A8E832E53C682B0E6A16 /* EZAudioFFT.m in Sources */ = {isa = PBXBuildFile; fileRef = 387D1788A46A7DE6410982A2ADB1546B /* EZAudioFFT.m */; };
-		39947FE3FB9AAE0B4B4546A5C61C8B5C /* MMParallaxCell-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F3F9AFC0049479C15F2AE0AD0593362 /* MMParallaxCell-dummy.m */; };
+		1C7842664C70BC3B21579F0E2B49BAE5 /* TPCircularBuffer+AudioBufferList.c in Sources */ = {isa = PBXBuildFile; fileRef = D93EAF88A40AC9965CBBC7A836BFAEBD /* TPCircularBuffer+AudioBufferList.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		1C7FC24E16BE6A65417615D46A0E062C /* Vector2.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB58F0C3D3E3294D56A0A154C175CA1 /* Vector2.swift */; };
+		2288ED89AABA9216E9CF2163AF1E6EEB /* MMParallaxCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 14AC1175A450FCE8DDF8B33D88DE26B0 /* MMParallaxCell.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		23D47569387AA759DC1881B592519A0F /* TPCircularBuffer.c in Sources */ = {isa = PBXBuildFile; fileRef = FFCAA19BB7B8C32C3B417EFDB858AAE2 /* TPCircularBuffer.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		273CA95FDE56DCA867153BA8518E91FE /* MMParallaxCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 7E33FDFA746B9AB969893F93C4170690 /* MMParallaxCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		28025A93EE99F4F64788D60BEF3F0E7E /* TPCircularBuffer+AudioBufferList.h in Headers */ = {isa = PBXBuildFile; fileRef = 640727131506D9523B6BE1F65ABF0411 /* TPCircularBuffer+AudioBufferList.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2EE8E2A252C7AEFEE422483491155EFB /* TPCircularBuffer.c in Sources */ = {isa = PBXBuildFile; fileRef = 529B9794E450C9DA0F6F4951406F95E1 /* TPCircularBuffer.c */; };
+		2F5C308784E0A8E44F0C9C17FDE9F574 /* SpringAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251CF6125A0434F73330E7BB2DB4079F /* SpringAnimation.swift */; };
+		31A87B1B8E3B395BA87B3D3F3A55F908 /* EZMicrophone.h in Headers */ = {isa = PBXBuildFile; fileRef = 76DD3A9847AA27DBE1ECAA03A0C6FF2A /* EZMicrophone.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		33284590A7D7297D549F91295F608513 /* Misc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339157F82886172EAFA5985315BEFFDC /* Misc.swift */; };
+		36E2DE13D846A6605AD5DECC4C5A5E69 /* EZPlot.h in Headers */ = {isa = PBXBuildFile; fileRef = 23A28A7CD70FFD75C59E4EBD6D663879 /* EZPlot.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		37296DDE946723A0445155C44C97F14F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EBE8107DCCE506AD10F664F43D362D0 /* Foundation.framework */; };
+		3739C5133CB29754A3656F378E1973A4 /* DesignableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA984081A0C368684778B78BACA4373 /* DesignableTextField.swift */; };
+		37B3AC1225FDA65F5E8CBEE245490274 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 185F80F92E115214017C9CD7E5510733 /* UIKit.framework */; };
+		389D3BC0DA44A8E832E53C682B0E6A16 /* EZAudioFFT.m in Sources */ = {isa = PBXBuildFile; fileRef = DB9C0FF8F6494241EA36E789FFB14291 /* EZAudioFFT.m */; };
+		39947FE3FB9AAE0B4B4546A5C61C8B5C /* MMParallaxCell-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 59C337AE0387A5B93F3E39AA20AF9CB3 /* MMParallaxCell-dummy.m */; };
+		3B6244812C72DF293A0EB1809B09AC9F /* NSDate+TEAExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = C2947C6E9F4E3FED936B2B7888F5824A /* NSDate+TEAExtensions.m */; };
+		3E2267B46E3FD977EA3B714E2F7D5E43 /* DesignableImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B768DEAB86A27FF1FAB497EEA8C9F91D /* DesignableImageView.swift */; };
+		3E29951BFBD941B43BBC55FA0FD9D6B8 /* StarWarsGLAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7324D45408C3AB63491DADDC56AB1AFC /* StarWarsGLAnimator.swift */; };
+		3F0F33D7A3D544E726435A7749039AD1 /* KeyboardLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13C71B03BB14B29C4DFBEB08F47FF29 /* KeyboardLayoutConstraint.swift */; };
 		3FAE765D63FCFEF8860655D64EA4DDBB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EBE8107DCCE506AD10F664F43D362D0 /* Foundation.framework */; };
-		3FAECAE8A77140FF63361F10FE2D637A /* EZOutput.m in Sources */ = {isa = PBXBuildFile; fileRef = 17F5BACDF3B809EB26002141271CC047 /* EZOutput.m */; };
-		4011E8E2D936738CA5521980559A65C7 /* Vector2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F5437BE5868973A0D88091B973E772 /* Vector2.swift */; };
-		45F286DE58B20B044B33A5A2CE3D1BF6 /* EZAudioFile.h in Headers */ = {isa = PBXBuildFile; fileRef = 417371A41CB4DD84D8DABEBDE75B0E3A /* EZAudioFile.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		487A6C19F382C3D8FAC3A696095E077C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EBE8107DCCE506AD10F664F43D362D0 /* Foundation.framework */; };
-		4A763FF96386EF1661E8576412BBD8A9 /* EZOutput.h in Headers */ = {isa = PBXBuildFile; fileRef = 20E8D527A7C6E7C4126986561E935BC1 /* EZOutput.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4BDB1A950926BAC947D32FADD8DD14A2 /* SpringButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A560AD4FEE62F02566CBB87343A62559 /* SpringButton.swift */; };
-		4E28FCBC645A257BC302420355D7BDEC /* StarWars-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A44D3DF831162C145615253FB6113C1 /* StarWars-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3FAECAE8A77140FF63361F10FE2D637A /* EZOutput.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1F6BD016E432836D04C77CBF2C0FC5 /* EZOutput.m */; };
+		433CAB6D333AF0B5F47D67CAB7445C83 /* AutoTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5134378B09BD5285A3EAAA0710271916 /* AutoTextView.swift */; };
+		45F286DE58B20B044B33A5A2CE3D1BF6 /* EZAudioFile.h in Headers */ = {isa = PBXBuildFile; fileRef = D85795AC291EFFEB8140BE9395A5F434 /* EZAudioFile.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		48210283DFCD1D858E29E6E3B4744229 /* TEABarChart.h in Headers */ = {isa = PBXBuildFile; fileRef = E07649788694095191B35BBADECE03B0 /* TEABarChart.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4A763FF96386EF1661E8576412BBD8A9 /* EZOutput.h in Headers */ = {isa = PBXBuildFile; fileRef = 015855AC71B8184E3EEC650860EC58FE /* EZOutput.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4E9104126A832EF0562EE7344579ED2A /* TEAClockChart.h in Headers */ = {isa = PBXBuildFile; fileRef = 8DCCD066F6C6A06BC52C5DC9C6454F8F /* TEAClockChart.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4F3E2C762A663C204B8B92EEEBED5C46 /* AsyncButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39CC9B0096CF6A841CBC0712E548222C /* AsyncButton.swift */; };
 		510DA8763255F8F7A94A52A9E490B7B4 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F614A4820FD894F5190484D38F69CE9 /* GLKit.framework */; };
-		51DD75956189455B9E52D661FFE911C1 /* EZAudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C4D70364364732479220375F6AD6A71 /* EZAudioPlayer.m */; };
-		549F269AF7C39242FBA6B8FF6F8EB671 /* EZAudioPlotGL.h in Headers */ = {isa = PBXBuildFile; fileRef = DCD552B7A016DBA6976E5EB6F517CB8B /* EZAudioPlotGL.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		51DD75956189455B9E52D661FFE911C1 /* EZAudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ED8C74736DA2B6060AFD40C18DAB4BE /* EZAudioPlayer.m */; };
+		549F269AF7C39242FBA6B8FF6F8EB671 /* EZAudioPlotGL.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BB328656860841D2EC49F19CB7D171A /* EZAudioPlotGL.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		560643B27617038512AA64E271DD78C3 /* HSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7FDB5A62A8817A85E56C9F7CEE889F /* HSL.swift */; };
 		57A0E1835ACB3B07CA8ACE276B669B8F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EBE8107DCCE506AD10F664F43D362D0 /* Foundation.framework */; };
-		5873A4C141A74E0F9461C442CB3851A6 /* SpringAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82404B6F598016D29FA156C65E8E3E75 /* SpringAnimation.swift */; };
-		5AD56B92F740A11A3FF87E5C0B019E4A /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC46C379ED4E3F4E1EF409BAB787B904 /* LoadingView.xib */; };
-		5B7544AE28BB67F6E8B07EDCB08F9239 /* NSDate+TEAExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 61930798751FFEC994F449FF1D79123F /* NSDate+TEAExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		60F7F749575C3EF78702CFF4E8F88D36 /* TEAChart.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A857A9E4B91A42C8E8C5092E584FC39 /* TEAChart.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		646F9D2617E1BB41CC46AE00354C4277 /* EZAudio.m in Sources */ = {isa = PBXBuildFile; fileRef = C07008D0EE61E40856F9A3F7E449328A /* EZAudio.m */; };
-		69D88BB554F0D8B1F105F298A012F8D5 /* EZRecorder.h in Headers */ = {isa = PBXBuildFile; fileRef = 017DEAC03FEB4620EAF296FD72E1A21B /* EZRecorder.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6E81EF431763CAD28E84506C13290095 /* SpringImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D624A29A795669453D1ABFDA9DBB157D /* SpringImageView.swift */; };
-		7039DF129EF011395D33AEB40F139DB6 /* TEAChart-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B3B9DB43B0CCDF45778E85CC811EE142 /* TEAChart-dummy.m */; };
-		723AB5D96B4692EA6CFDA654CB731790 /* EZAudioPlot.m in Sources */ = {isa = PBXBuildFile; fileRef = C0B5AB95FEA9E46DB6F0438AD1E27398 /* EZAudioPlot.m */; };
-		725DE8F9BCCA401E49E1A5ACEAB19ED7 /* TEABarChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 466170B7245E9E7CAA19B78D22533CCD /* TEABarChart.m */; };
-		73979F42AEA54DDA0143524DF8449F1F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EBE8107DCCE506AD10F664F43D362D0 /* Foundation.framework */; };
-		763B5D8139ED1036E5DEAFC014BBC5F2 /* EZAudioFloatConverter.h in Headers */ = {isa = PBXBuildFile; fileRef = B9EA361B9ACD0FD3DB8D013A26DD90F6 /* EZAudioFloatConverter.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7A3362203E97A0C4D5C243745B14F044 /* EZAudio-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C908668C0F6226AC0C12BD90EB776FCF /* EZAudio-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7ACE4C5B7F60BF59149E57702267607D /* TEATimeRange.m in Sources */ = {isa = PBXBuildFile; fileRef = C11D848FE8050C029AD11773E97E894A /* TEATimeRange.m */; };
-		7DFA64D00C6E72C17318136459528880 /* AsyncImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867266267232917459A5B528399BA14E /* AsyncImageView.swift */; };
-		817B57BF591891A767AAEA740374B5F5 /* EZAudio.h in Headers */ = {isa = PBXBuildFile; fileRef = 956B254F58AF4B6C67B615BA87C84D87 /* EZAudio.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		83254F1BCA20537C714E0179A6F160C0 /* SpriteRender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21DEEF0C91174CCA3071B42A1A1A30E2 /* SpriteRender.swift */; };
-		84417C3D7328DE59506C98A4F58D3A91 /* KeyboardLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC31DF7FF895696B0F5F6B0C4F269340 /* KeyboardLayoutConstraint.swift */; };
-		87E57BD7A74EDCA354B06C414BB7E8E8 /* TEATimeRange.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FC824EEEC5265123E2E0493FD4BB6D0 /* TEATimeRange.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8E007D658F3107909BE1D5B78DD02E03 /* DesignableLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476DDD7B7828E42689A0C628BDAF774B /* DesignableLabel.swift */; };
-		90879D93DB51EEDC73A7DD25CEE854CF /* Spring-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C9CC54939F3C7073F3917752131B732 /* Spring-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9266583C5175F6F3375D30A7DE5F7410 /* EZAudioOSX.h in Headers */ = {isa = PBXBuildFile; fileRef = 7BE929250DDBF9922A72ACA8F17994DE /* EZAudioOSX.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		94318B70E5415ECC68F7FBCE568A1AAE /* EZMicrophone.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AB4E957A216D2B551334051C51691EB /* EZMicrophone.m */; };
-		954580E4FD659DA3EE906FD1DEC66178 /* TPCircularBuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = F06AED0A184015744FCFEFF5981F87AB /* TPCircularBuffer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		62E29425E2735EDFB2FEB127813F4D33 /* DynamicColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A797A8DBAD601D471894B2BCD334DA32 /* DynamicColor.swift */; };
+		646F9D2617E1BB41CC46AE00354C4277 /* EZAudio.m in Sources */ = {isa = PBXBuildFile; fileRef = FF551E3FFCE5C716A6C8935613F3BA80 /* EZAudio.m */; };
+		65E3C6AF430A88317D1D809F000D9358 /* UnwindSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76BE73041050B04ABB76D616B401E3E6 /* UnwindSegue.swift */; };
+		68BB61620DEFB212018BAE3937F5D0AA /* SpringButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B81CA9E11053BC6CCE1F85F723A3DF7 /* SpringButton.swift */; };
+		69CFBB66199A7BDC246764F5E53309A9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EBE8107DCCE506AD10F664F43D362D0 /* Foundation.framework */; };
+		69D88BB554F0D8B1F105F298A012F8D5 /* EZRecorder.h in Headers */ = {isa = PBXBuildFile; fileRef = DB42D90ADD28D9DEDC48480C0EABD4DB /* EZRecorder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6A30E8BBADAEDC95F9B021D5204F8E89 /* TEATimeRange.h in Headers */ = {isa = PBXBuildFile; fileRef = 11483FB893A54C7C7180AA708950C387 /* TEATimeRange.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6BB84DEEFB32C6D2152164E19301ACC0 /* Spring.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1035E331E8F22A682EFE50D7BEFB418F /* Spring.swift */; };
+		6EF80D5E0004B461F073715CA481BF9F /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4986862B2AFEC660E895499AED15CE54 /* BlurView.swift */; };
+		6FE90399CC4D5C252271DE969A387871 /* Spring-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C442D7CBDD5BFEA3B1501D796F299B6C /* Spring-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		70B99CE02F55C559142905433C06B0E4 /* TEAContributionGraph.m in Sources */ = {isa = PBXBuildFile; fileRef = BDDDF996BE3B40CC2FF458DE5BB28A55 /* TEAContributionGraph.m */; };
+		713385B5F393D1482CA5BA4359E641A9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EBE8107DCCE506AD10F664F43D362D0 /* Foundation.framework */; };
+		723AB5D96B4692EA6CFDA654CB731790 /* EZAudioPlot.m in Sources */ = {isa = PBXBuildFile; fileRef = 05197D013D56C4A86948C729E73941F9 /* EZAudioPlot.m */; };
+		75F7DB2E8187F52BA188123C65AB1285 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EBE8107DCCE506AD10F664F43D362D0 /* Foundation.framework */; };
+		763B5D8139ED1036E5DEAFC014BBC5F2 /* EZAudioFloatConverter.h in Headers */ = {isa = PBXBuildFile; fileRef = 071CE9A05CCF921E8972CF2D510BD034 /* EZAudioFloatConverter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7A3362203E97A0C4D5C243745B14F044 /* EZAudio-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8FCF9C83C9C4EAF29701323053FDD8B7 /* EZAudio-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		817B57BF591891A767AAEA740374B5F5 /* EZAudio.h in Headers */ = {isa = PBXBuildFile; fileRef = 8F212671D20E0411B3A430F4011C7D21 /* EZAudio.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8A3B47E18F7A343340141C793AFF8487 /* SpriteRender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3117FEFC0B57DEB790B133A854E4A5B4 /* SpriteRender.swift */; };
+		8C01A7F742841CA0DC963B4085905C77 /* TEAContributionGraph.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B1CF07AA49AF3D9BA0262A79A4A33DF /* TEAContributionGraph.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8E4474CA0C2447A357443D4CDB0D7F0A /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 048E6754C7B240D79BF8475403EB7443 /* LoadingView.xib */; };
+		9266583C5175F6F3375D30A7DE5F7410 /* EZAudioOSX.h in Headers */ = {isa = PBXBuildFile; fileRef = 2651B7FEB4452BD2E906BF2DC49E0C17 /* EZAudioOSX.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		94318B70E5415ECC68F7FBCE568A1AAE /* EZMicrophone.m in Sources */ = {isa = PBXBuildFile; fileRef = 876E02A973EBE428086E0F5F7C0DF6D3 /* EZMicrophone.m */; };
+		946936C6A335C8E3E757FDA368BAE9C3 /* DesignableLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929110A21BF914DF2716914A176352E1 /* DesignableLabel.swift */; };
+		947E4023F99CB27C08F73AFCEA2BD1A0 /* TEAChart-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F681E4D57ABEE09D54DBD713375C3297 /* TEAChart-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		954580E4FD659DA3EE906FD1DEC66178 /* TPCircularBuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 91BCE69F5ED5FAF69D0B55EC7B06932B /* TPCircularBuffer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		97120EAF8E8D119D6F30C4987FD2651F /* SpringTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D46AD3511B3B83F9894E58A3CAEC09 /* SpringTextField.swift */; };
 		9951D55DFCA91501C59938CB3D8CF16D /* TPCircularBuffer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76D10FBA7D81B9893DFC76DD0EF4F3E8 /* TPCircularBuffer.framework */; };
-		99C158E1C5C43E87641955FC6DE69AE3 /* EZAudioDisplayLink.h in Headers */ = {isa = PBXBuildFile; fileRef = 7ED9EAF5D70B0C41D45FECD08C88EA4E /* EZAudioDisplayLink.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9CE738674051A051CD7A077ECA8972CB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06E421DC64210519B3B2622FA33A7779 /* Images.xcassets */; };
-		9E1D03200B968628A9D8F34D30037D34 /* EZAudioFloatData.h in Headers */ = {isa = PBXBuildFile; fileRef = 4FF0567707EE9FF55345F10E4735E9B5 /* EZAudioFloatData.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A63A3F8997E00E34B6297BE1CD74A757 /* DesignableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59DF3D44F9327987EDF51335071451ED /* DesignableTextField.swift */; };
-		A7DC546A4CD847CC746AA78124018273 /* SpringView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB59C6BD77361C6924D13AE8EB690CE /* SpringView.swift */; };
-		ADE3AA5190E52E28BC09810C4BABC243 /* EZAudioFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE805C6775C6E155191CD1B9638FFED /* EZAudioFile.m */; };
+		99C158E1C5C43E87641955FC6DE69AE3 /* EZAudioDisplayLink.h in Headers */ = {isa = PBXBuildFile; fileRef = 0FF5DB3AD117FA8FBA50D92EE9AF13EE /* EZAudioDisplayLink.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9D3062BB7E254CDFA8DCA4FC463D69FB /* NSDate+TEAExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1A799547CA81859E8341DD4991845C /* NSDate+TEAExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9E1D03200B968628A9D8F34D30037D34 /* EZAudioFloatData.h in Headers */ = {isa = PBXBuildFile; fileRef = 74033015A1AC174C397CFA46CA4D290E /* EZAudioFloatData.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A0B2A59347DC0C3D874946BEC3D51A2A /* SpringView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBBC117F9445176DAD27B94C8BF71A14 /* SpringView.swift */; };
+		A5C1F7FE471621FD6FA59D6FB788BB89 /* TEAChart.h in Headers */ = {isa = PBXBuildFile; fileRef = 570F35E29567EE50D89111877263849A /* TEAChart.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A642AD31442668DE4D802AC59D01BCA0 /* Sprite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1833C424864576C6CD8F4A28EA58A132 /* Sprite.swift */; };
+		A8D780371D19DFE307CD9187C977816C /* TEATimeRange.m in Sources */ = {isa = PBXBuildFile; fileRef = D86B60E94BF6DAB9CEC44E8B7125C0D0 /* TEATimeRange.m */; };
+		AABF86D3271020E1177D0D241FDFFAB9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EBE8107DCCE506AD10F664F43D362D0 /* Foundation.framework */; };
+		ADE3AA5190E52E28BC09810C4BABC243 /* EZAudioFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 7846466F20AF9318A00B30A390CF3F82 /* EZAudioFile.m */; };
+		AEBE0DDE9D0155AE61C4B2F454A46ABA /* DesignableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904347E859096B422380E3E6E6435CCC /* DesignableButton.swift */; };
 		AEEC3C82DA41C5A47F010FB1EEC3A8EE /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 527F76B27E6128305C03DC0D6333E76B /* Accelerate.framework */; };
-		AF7C9645E35EB31BAD2410178E33390B /* EZAudioPlot.h in Headers */ = {isa = PBXBuildFile; fileRef = EBE6B1CBA727D80A638984E95A1F2CAA /* EZAudioPlot.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B22CB7415E8FC3D4DF4AF7F9E9823439 /* EZAudioDevice.h in Headers */ = {isa = PBXBuildFile; fileRef = 929AF71AC35BA5F74E96A7C171684136 /* EZAudioDevice.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B2871737A1705D34F28985CDC275E2F4 /* TPCircularBuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 2248EFEBEE6B9B9AA7FA103D021040B4 /* TPCircularBuffer.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B4EFC4DA40E83720C003F18CF5E502E8 /* EZAudioiOS.h in Headers */ = {isa = PBXBuildFile; fileRef = BBDD107DE527A8C2D08DDE368F82E2DA /* EZAudioiOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B7A687AB3AFF3D6A3BD6ADA277878BD0 /* DesignableImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936E4772485B01B578DCB01DDEC3B54B /* DesignableImageView.swift */; };
-		B968F1BA4341EDE6587A68A5A194E2CB /* TransitionZoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664B1E8488F3613B2D125456AB2158C1 /* TransitionZoom.swift */; };
-		BC6F2D74D6CA952604B9FAB60DA9772D /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125EDA5D66DD02761C4044FE7463BC9C /* ImageLoader.swift */; };
+		AF7C9645E35EB31BAD2410178E33390B /* EZAudioPlot.h in Headers */ = {isa = PBXBuildFile; fileRef = 6A90F5B9583E92565082C8ACC3D7FBCD /* EZAudioPlot.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B1CCCE4F015040B2416D54EE0701CFB4 /* DesignableTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CFDD9B09259018D9FC998E23C70F33 /* DesignableTextView.swift */; };
+		B22CB7415E8FC3D4DF4AF7F9E9823439 /* EZAudioDevice.h in Headers */ = {isa = PBXBuildFile; fileRef = 498418BD35BFD3D2CD107774B6643861 /* EZAudioDevice.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B2871737A1705D34F28985CDC275E2F4 /* TPCircularBuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 67B25F8FB003B4AA4DD786E64F19D0B2 /* TPCircularBuffer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B4405C34BFEC477D8078FD005B85ACC0 /* TEABarChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 626B365DD4AB4CE5B757179C7CC7C210 /* TEABarChart.m */; };
+		B4EFC4DA40E83720C003F18CF5E502E8 /* EZAudioiOS.h in Headers */ = {isa = PBXBuildFile; fileRef = A6EC938F82DCE1F1322F7AABB1CAA0F6 /* EZAudioiOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B93FDBD378904FC79D6B393C854B1F16 /* Pods-conscious-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = ECABC837305CE86DD00F065D5587B48D /* Pods-conscious-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BBA7076087940353678B18471C8BBB42 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77AA380C0A4D915D3BC179555739F452 /* ImageLoader.swift */; };
 		BCFB51ABF145301BAFE002530747B299 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 034FC0F5975877BA58FE2553954356F5 /* AudioToolbox.framework */; };
-		BF6B2B67C0D49ABB2D7FF4C37E545882 /* EZAudioFloatData.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A60643C854C3E2C08F0FD497804E864 /* EZAudioFloatData.m */; };
-		C187737F2373C6CD8612C08AFC4FF10F /* SpringLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922D6120578723F02D8A9E529DE8B2A2 /* SpringLabel.swift */; };
-		C346D593B5F0185BCAE937F48DD7219C /* AsyncButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9843B3056F5C0A9C0371195518152DAF /* AsyncButton.swift */; };
-		C51838ED407E1C80EF17DC25723BC3E5 /* EZRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D46E455462A1BC66D262D0D1CE4DF8E /* EZRecorder.m */; };
-		C98749A9A88B5950A6C7AA81ABC77F7A /* EZPlot.m in Sources */ = {isa = PBXBuildFile; fileRef = BAFE3B627EB8B98AF23C6E8B03F369A3 /* EZPlot.m */; };
-		CAD13ACF636D02D8CADCFF48F79764FB /* EZAudioUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = DAAAF64C7B403E12185F136A6B5871AB /* EZAudioUtilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CBFF456AC541374DF15ED320003BA85E /* Pods-conscious-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = ECABC837305CE86DD00F065D5587B48D /* Pods-conscious-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D12496FDE063AF8BDDD98A27EFAC1287 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EBE8107DCCE506AD10F664F43D362D0 /* Foundation.framework */; };
-		D174B18EC5874A228F3D3A5225ADF05A /* SpringTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79191A73A0CBCBF40CC61582A6993CC4 /* SpringTextField.swift */; };
-		D1BCCDE6FEE8E62DFC652441BCA1B93F /* UnwindSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25BA5967B5F2BAEA0097256352160C9 /* UnwindSegue.swift */; };
+		BF6B2B67C0D49ABB2D7FF4C37E545882 /* EZAudioFloatData.m in Sources */ = {isa = PBXBuildFile; fileRef = ED9C068A2DB9747D165011FDF4AA6067 /* EZAudioFloatData.m */; };
+		C0D281C7AE69816251A8352B9EBE9486 /* StarWars-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 67CF6D200AD43A1B4EEED9A24602E539 /* StarWars-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C30C38E0DF49EF31E33A12DAEF3972D3 /* DesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C4C862B56833541FE6F2D98B835568 /* DesignableView.swift */; };
+		C51838ED407E1C80EF17DC25723BC3E5 /* EZRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DB996793746F2E3F9A959C28337CA6B /* EZRecorder.m */; };
+		C98749A9A88B5950A6C7AA81ABC77F7A /* EZPlot.m in Sources */ = {isa = PBXBuildFile; fileRef = E80F8A3DEF454AB47D650B44EC1633C1 /* EZPlot.m */; };
+		CAD13ACF636D02D8CADCFF48F79764FB /* EZAudioUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D95AF867AE9F1AC5A81ED5ABA0039C2 /* EZAudioUtilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CF1DC2DD161551CCD9FA09F6FEBA8315 /* TransitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61BDD01D255850C8E0E5062BD7B44ADB /* TransitionManager.swift */; };
 		D3CCC819DBFA86ABD40387730B1E1002 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EBE8107DCCE506AD10F664F43D362D0 /* Foundation.framework */; };
-		D4BD965990AE8E36EA2AB61BE43061C0 /* EZAudioFloatConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BC1D0C0D8B55EEE02142264FD7C7369 /* EZAudioFloatConverter.m */; };
-		D829AB4DDF77BF1F5300F4D36A62E9B3 /* Spring.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97757C1C674470236A3C6CEF8A94DF2 /* Spring.swift */; };
-		DA426FAAE724F670697CBA43ED2EAB79 /* DesignableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF6B5EB7564F7C24B813AFF2CCBB9A8 /* DesignableButton.swift */; };
-		DAC56522FF3439B4229FAC389B50BD3E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EBE8107DCCE506AD10F664F43D362D0 /* Foundation.framework */; };
-		DB84965792947585F3571D669CB0A95D /* Spring-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4061B3DB23A9669C4913A9468445840B /* Spring-dummy.m */; };
-		DBB3094E343448B45965010207ECD486 /* DesignableTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB937080B7516334687095B087C25730 /* DesignableTextView.swift */; };
-		E3BFBAED02198E63DF398D380E6090EE /* SpringTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1582B0BB83BDCA77E33B6B730027896A /* SpringTextView.swift */; };
-		E6D9EBC13A455A09D420EA392F0FDD8A /* TEAClockChart.m in Sources */ = {isa = PBXBuildFile; fileRef = B4E8F4373AA1583480279C1842B1A6FC /* TEAClockChart.m */; };
-		E7CD6A597EAD2590255DDF51434EC300 /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E531F12D57970460DA166F8052CC0082 /* BlurView.swift */; };
-		EB120DC24B01255B7C8D241CF45D2804 /* EZAudioDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CBDEA13F162C1D7452EEEDB8706088A /* EZAudioDevice.m */; };
-		F02D72AF98DC28643386FAD306A1551A /* ViewTexture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA3709D5E6288E5E9EB2A1A4EC19B14 /* ViewTexture.swift */; };
-		F2B43BC74D4D6E1E70FA3EAC2A742CE3 /* Sprite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E308B59A43A0263764BDB43A172FA96 /* Sprite.swift */; };
-		F3DAE8E740D5F16CDB37275A721883FA /* MMParallaxCell-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CF1A385A5C9D338544EC150FE731A9E /* MMParallaxCell-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F42DE685B10E0B206F68F5B7C012F65C /* TEAContributionGraph.h in Headers */ = {isa = PBXBuildFile; fileRef = 29BB7BCA7604824D0D2F50C8C645ED55 /* TEAContributionGraph.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F5852382897EDCCDBE2F71B9D171EB97 /* EZAudioPlayer.h in Headers */ = {isa = PBXBuildFile; fileRef = F4A49E01ADAEDC8D03EC506084FA54E9 /* EZAudioPlayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D4BD965990AE8E36EA2AB61BE43061C0 /* EZAudioFloatConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = C38B7D7B634B84385FAA6DD43A0C3D5F /* EZAudioFloatConverter.m */; };
+		D51B46C8A3256FC95A96395ED1E12616 /* TransitionZoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD7529FA6A27BA3F668E037761C9FBA /* TransitionZoom.swift */; };
+		D83D2713B45908453FE025294527CCFE /* SpringTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3DA63EE5A6FA0362179172DC1B096A7 /* SpringTextView.swift */; };
+		D8DC374DFBC8992604838AE03B536769 /* DesignableTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37380DD4FB41D5D9CB6ED4EBF6B3CB73 /* DesignableTabBarController.swift */; };
+		DD42C398D2CCA78F5386849CC213999B /* ViewTexture.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B8F1597BE13F2CBA3512BED1EFA1F9 /* ViewTexture.swift */; };
+		DD608DF13F72C529CD77CC0FA2DA386C /* StarWars-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B5B27D2B18830A82027623641BA0A816 /* StarWars-dummy.m */; };
+		DDAE2730611AEF6250382CE67A9AD99A /* DynamicColor-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 77202E541AAF352C80414F0BA1134559 /* DynamicColor-dummy.m */; };
+		E06F280A43420A82C563260133835EB3 /* TEAChart-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED6DB744B7F9C4936716F24BE3E87F4 /* TEAChart-dummy.m */; };
+		E121A76E21E9F36D48B625541039DCB9 /* Pods-conscious-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D4BA281AD1500E2F4F83E9E85EDDF165 /* Pods-conscious-dummy.m */; };
+		EB120DC24B01255B7C8D241CF45D2804 /* EZAudioDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F7B12EAEAFA02C4109A8BA9E21C5F6E /* EZAudioDevice.m */; };
+		EC4FFBDCB8CC8308320FDE42E70019CB /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2EFA3D32E9CE921877F0593B875F20A /* LoadingView.swift */; };
+		F343499577AC1672787EBA2FA4CFA7D6 /* TEAClockChart.m in Sources */ = {isa = PBXBuildFile; fileRef = BF3D95A180FF947788525391651A04EE /* TEAClockChart.m */; };
+		F3DAE8E740D5F16CDB37275A721883FA /* MMParallaxCell-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5E229A847D0FD81994DC9A52D9A163BF /* MMParallaxCell-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F4AF1A1CAA783F7BD0FBBF7AC386C995 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B15B3F0D0099DD16780CF4783F4F2D10 /* Images.xcassets */; };
+		F5852382897EDCCDBE2F71B9D171EB97 /* EZAudioPlayer.h in Headers */ = {isa = PBXBuildFile; fileRef = A72A9A69CA31E506BB686FFB81B66570 /* EZAudioPlayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F5B483A169C66B769CB414C6143C1CC6 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B238026127A919A6E49B5684456D7347 /* AVFoundation.framework */; };
-		FCC86673588E4DE4ECBF2DCDA1F6E5F5 /* EZAudioUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = E91A74CD32EADD3EA1709064A6CD7A94 /* EZAudioUtilities.m */; };
+		F7330D94C270FFB2A8879F0880E91B7D /* SoundPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93A09EC1EFA4793BD69D0CB9ADA6581 /* SoundPlayer.swift */; };
+		FCC86673588E4DE4ECBF2DCDA1F6E5F5 /* EZAudioUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = DC604D0C752A2DAFF1DC5C32128E60A0 /* EZAudioUtilities.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		0468A54FAB09EAD0274EB95522FD6B01 /* PBXContainerItemProxy */ = {
+		11A7AE9AC7487E088D4E224B7E58FA43 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
@@ -137,209 +143,209 @@
 			remoteGlobalIDString = 630A3F469E1A8B405B5870DD8091D195;
 			remoteInfo = TPCircularBuffer;
 		};
-		4FEF05F8ABE44F53A5841B2D5072EB23 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 94931FF7954CA66EDC464693A841051F;
-			remoteInfo = Spring;
-		};
-		B0E2AC28962C260A998D5FD63E4D63C3 /* PBXContainerItemProxy */ = {
+		35F9E7148B8F750179BA8CD1945EA588 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = B998D1794C76C66865824BD5511C74FF;
 			remoteInfo = EZAudio;
 		};
-		CA16A3C748B35541DB46CBC003ADBC3C /* PBXContainerItemProxy */ = {
+		8C8145716382EEFF939C89ABDAA478B8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = A2E2679428BA9775D04879295CDAAAE0;
+			remoteGlobalIDString = CCE3CAB106F5B95784DB7B18B29EC9CE;
 			remoteInfo = StarWars;
 		};
-		D9E3D1F613CFD78F8302D7AA14B10DAD /* PBXContainerItemProxy */ = {
+		BBD5C30D5EA1B0EDB902BC42158C781E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 08F6A5AF8E89681F880EB03F167AACB7;
+			remoteInfo = DynamicColor;
+		};
+		CC600AC713A56957E30DA7DF54E936DE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 861B30325D0D623E0CC16053A9E06154;
+			remoteInfo = Spring;
+		};
+		D7CF39508B17A918E63B0777DD8CF8E1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 630A3F469E1A8B405B5870DD8091D195;
 			remoteInfo = TPCircularBuffer;
 		};
-		E9CD1A28F3B0F70E79F68A799AE063D9 /* PBXContainerItemProxy */ = {
+		FD162D10538470DA7ECBA50541D6BBEC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = E89E090A93F018B5F84F3907AABE9FBC;
+			remoteGlobalIDString = 3AE9CDA7325BD6949997462243A89ACE;
 			remoteInfo = TEAChart;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		017DEAC03FEB4620EAF296FD72E1A21B /* EZRecorder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EZRecorder.h; path = EZAudio/EZRecorder.h; sourceTree = "<group>"; };
+		00D17056A4BAD2569108AC8890106D44 /* DynamicColor-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DynamicColor-prefix.pch"; sourceTree = "<group>"; };
+		015855AC71B8184E3EEC650860EC58FE /* EZOutput.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EZOutput.h; path = EZAudio/EZOutput.h; sourceTree = "<group>"; };
+		02E91F304FFB62FA064D36C772C43C4D /* EZAudioDisplayLink.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EZAudioDisplayLink.m; path = EZAudio/EZAudioDisplayLink.m; sourceTree = "<group>"; };
 		034FC0F5975877BA58FE2553954356F5 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/AudioToolbox.framework; sourceTree = DEVELOPER_DIR; };
-		069E820EC033E011DCF9E623B6165F7A /* StarWarsGLAnimator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StarWarsGLAnimator.swift; path = StarWars/StarWarsGLAnimator/StarWarsGLAnimator.swift; sourceTree = "<group>"; };
-		06E421DC64210519B3B2622FA33A7779 /* Images.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = SpringApp/Images.xcassets; sourceTree = "<group>"; };
-		0AA3709D5E6288E5E9EB2A1A4EC19B14 /* ViewTexture.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ViewTexture.swift; path = StarWars/StarWarsGLAnimator/ViewTexture.swift; sourceTree = "<group>"; };
-		0B31D5E1C86733F3FCC8EFAFC27D4FDA /* EZAudioFFT.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EZAudioFFT.h; path = EZAudio/EZAudioFFT.h; sourceTree = "<group>"; };
-		0E308B59A43A0263764BDB43A172FA96 /* Sprite.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Sprite.swift; path = StarWars/StarWarsGLAnimator/Sprite.swift; sourceTree = "<group>"; };
-		10683377BC0AF313D9F43A6FB51CBBF4 /* EZMicrophone.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EZMicrophone.h; path = EZAudio/EZMicrophone.h; sourceTree = "<group>"; };
+		048E6754C7B240D79BF8475403EB7443 /* LoadingView.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = LoadingView.xib; path = Spring/LoadingView.xib; sourceTree = "<group>"; };
+		04DA2F0007EF972295D1510733615D67 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		05197D013D56C4A86948C729E73941F9 /* EZAudioPlot.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EZAudioPlot.m; path = EZAudio/EZAudioPlot.m; sourceTree = "<group>"; };
+		071CE9A05CCF921E8972CF2D510BD034 /* EZAudioFloatConverter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EZAudioFloatConverter.h; path = EZAudio/EZAudioFloatConverter.h; sourceTree = "<group>"; };
+		0BB328656860841D2EC49F19CB7D171A /* EZAudioPlotGL.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EZAudioPlotGL.h; path = EZAudio/EZAudioPlotGL.h; sourceTree = "<group>"; };
+		0D95AF867AE9F1AC5A81ED5ABA0039C2 /* EZAudioUtilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EZAudioUtilities.h; path = EZAudio/EZAudioUtilities.h; sourceTree = "<group>"; };
+		0ED8C74736DA2B6060AFD40C18DAB4BE /* EZAudioPlayer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EZAudioPlayer.m; path = EZAudio/EZAudioPlayer.m; sourceTree = "<group>"; };
+		0FF5DB3AD117FA8FBA50D92EE9AF13EE /* EZAudioDisplayLink.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EZAudioDisplayLink.h; path = EZAudio/EZAudioDisplayLink.h; sourceTree = "<group>"; };
+		1035E331E8F22A682EFE50D7BEFB418F /* Spring.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Spring.swift; path = Spring/Spring.swift; sourceTree = "<group>"; };
 		10B7B357D2310F7DE4D323D5F56FF747 /* Pods-conscious.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-conscious.modulemap"; sourceTree = "<group>"; };
-		125EDA5D66DD02761C4044FE7463BC9C /* ImageLoader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageLoader.swift; path = Spring/ImageLoader.swift; sourceTree = "<group>"; };
-		13B415B1DBF3C0B8F72442E62BBE7F47 /* TEAChart.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TEAChart.xcconfig; sourceTree = "<group>"; };
-		1582B0BB83BDCA77E33B6B730027896A /* SpringTextView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SpringTextView.swift; path = Spring/SpringTextView.swift; sourceTree = "<group>"; };
-		17F5BACDF3B809EB26002141271CC047 /* EZOutput.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EZOutput.m; path = EZAudio/EZOutput.m; sourceTree = "<group>"; };
+		11483FB893A54C7C7180AA708950C387 /* TEATimeRange.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TEATimeRange.h; path = TEAChart/TEATimeRange.h; sourceTree = "<group>"; };
+		14AC1175A450FCE8DDF8B33D88DE26B0 /* MMParallaxCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMParallaxCell.m; path = Classes/MMParallaxCell.m; sourceTree = "<group>"; };
+		1833C424864576C6CD8F4A28EA58A132 /* Sprite.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Sprite.swift; path = StarWars/StarWarsGLAnimator/Sprite.swift; sourceTree = "<group>"; };
 		185F80F92E115214017C9CD7E5510733 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		1A44D3DF831162C145615253FB6113C1 /* StarWars-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "StarWars-umbrella.h"; sourceTree = "<group>"; };
-		1DE805C6775C6E155191CD1B9638FFED /* EZAudioFile.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EZAudioFile.m; path = EZAudio/EZAudioFile.m; sourceTree = "<group>"; };
+		1B1CF07AA49AF3D9BA0262A79A4A33DF /* TEAContributionGraph.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TEAContributionGraph.h; path = TEAChart/TEAContributionGraph.h; sourceTree = "<group>"; };
+		1BBA42692A026378842412AE7476B5FC /* DynamicColor-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DynamicColor-umbrella.h"; sourceTree = "<group>"; };
 		1EBE8107DCCE506AD10F664F43D362D0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		20E8D527A7C6E7C4126986561E935BC1 /* EZOutput.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EZOutput.h; path = EZAudio/EZOutput.h; sourceTree = "<group>"; };
-		21DEEF0C91174CCA3071B42A1A1A30E2 /* SpriteRender.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SpriteRender.swift; path = StarWars/StarWarsGLAnimator/SpriteRender.swift; sourceTree = "<group>"; };
-		2248EFEBEE6B9B9AA7FA103D021040B4 /* TPCircularBuffer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TPCircularBuffer.h; sourceTree = "<group>"; };
-		22A30A3269DEB316491284AB98E45B2D /* TPCircularBuffer.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = TPCircularBuffer.c; path = EZAudio/TPCircularBuffer.c; sourceTree = "<group>"; };
-		273BE60D6BC73F12CDAABC21BA0BB7D9 /* MMParallaxCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMParallaxCell.m; path = Classes/MMParallaxCell.m; sourceTree = "<group>"; };
-		29BB7BCA7604824D0D2F50C8C645ED55 /* TEAContributionGraph.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TEAContributionGraph.h; path = TEAChart/TEAContributionGraph.h; sourceTree = "<group>"; };
+		20F54D8A76D4731478A843DA414824D7 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		23A28A7CD70FFD75C59E4EBD6D663879 /* EZPlot.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EZPlot.h; path = EZAudio/EZPlot.h; sourceTree = "<group>"; };
+		251CF6125A0434F73330E7BB2DB4079F /* SpringAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SpringAnimation.swift; path = Spring/SpringAnimation.swift; sourceTree = "<group>"; };
+		2651B7FEB4452BD2E906BF2DC49E0C17 /* EZAudioOSX.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EZAudioOSX.h; path = EZAudio/EZAudioOSX.h; sourceTree = "<group>"; };
+		27C27B579794DD8AF7DD1FED776BE87A /* MMParallaxCell-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MMParallaxCell-prefix.pch"; sourceTree = "<group>"; };
 		2BAC5AED08CDBFB57897232F3F7EED95 /* Pods-conscious.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-conscious.release.xcconfig"; sourceTree = "<group>"; };
-		2F377F0DE60FF36FC0F0B2180272D399 /* StarWars.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = StarWars.modulemap; sourceTree = "<group>"; };
-		3277FAC93A910CA5962B21961504A342 /* Spring-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Spring-prefix.pch"; sourceTree = "<group>"; };
-		34B61526CE59999D8C351CD9FB33EB01 /* TEAChart-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TEAChart-prefix.pch"; sourceTree = "<group>"; };
-		36F8BDCEB8462132D52554EF5031724E /* NSDate+TEAExtensions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSDate+TEAExtensions.m"; path = "TEAChart/NSDate+TEAExtensions.m"; sourceTree = "<group>"; };
-		3867872EF1B46E69C9002E6ADDE7FF1C /* EZAudio.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = EZAudio.modulemap; sourceTree = "<group>"; };
-		387D1788A46A7DE6410982A2ADB1546B /* EZAudioFFT.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EZAudioFFT.m; path = EZAudio/EZAudioFFT.m; sourceTree = "<group>"; };
-		3B10C6C09CEC9940FE20951AB126A52F /* TEAChart.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = TEAChart.modulemap; sourceTree = "<group>"; };
-		3D46E455462A1BC66D262D0D1CE4DF8E /* EZRecorder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EZRecorder.m; path = EZAudio/EZRecorder.m; sourceTree = "<group>"; };
-		4061B3DB23A9669C4913A9468445840B /* Spring-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Spring-dummy.m"; sourceTree = "<group>"; };
-		40F5437BE5868973A0D88091B973E772 /* Vector2.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Vector2.swift; path = StarWars/StarWarsGLAnimator/Vector2.swift; sourceTree = "<group>"; };
-		417371A41CB4DD84D8DABEBDE75B0E3A /* EZAudioFile.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EZAudioFile.h; path = EZAudio/EZAudioFile.h; sourceTree = "<group>"; };
-		466170B7245E9E7CAA19B78D22533CCD /* TEABarChart.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TEABarChart.m; path = TEAChart/TEABarChart.m; sourceTree = "<group>"; };
-		476DDD7B7828E42689A0C628BDAF774B /* DesignableLabel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DesignableLabel.swift; path = Spring/DesignableLabel.swift; sourceTree = "<group>"; };
-		4BC1D0C0D8B55EEE02142264FD7C7369 /* EZAudioFloatConverter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EZAudioFloatConverter.m; path = EZAudio/EZAudioFloatConverter.m; sourceTree = "<group>"; };
-		4C8B7B6809391E30B565CC0D3F0805A1 /* StarWars.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = StarWars.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4F3F9AFC0049479C15F2AE0AD0593362 /* MMParallaxCell-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MMParallaxCell-dummy.m"; sourceTree = "<group>"; };
+		2CAB4D9E71CD1F7902D8DE5DF4C3CABC /* TPCircularBuffer-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TPCircularBuffer-umbrella.h"; sourceTree = "<group>"; };
+		2DDB1D07E165F2A6189F0270A1C295A8 /* MMParallaxCell.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = MMParallaxCell.modulemap; sourceTree = "<group>"; };
+		2F7B12EAEAFA02C4109A8BA9E21C5F6E /* EZAudioDevice.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EZAudioDevice.m; path = EZAudio/EZAudioDevice.m; sourceTree = "<group>"; };
+		3117FEFC0B57DEB790B133A854E4A5B4 /* SpriteRender.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SpriteRender.swift; path = StarWars/StarWarsGLAnimator/SpriteRender.swift; sourceTree = "<group>"; };
+		339157F82886172EAFA5985315BEFFDC /* Misc.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Misc.swift; path = Spring/Misc.swift; sourceTree = "<group>"; };
+		37380DD4FB41D5D9CB6ED4EBF6B3CB73 /* DesignableTabBarController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DesignableTabBarController.swift; path = Spring/DesignableTabBarController.swift; sourceTree = "<group>"; };
+		392F4A60F84F8B8828216FCEE07D8B88 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		39CC9B0096CF6A841CBC0712E548222C /* AsyncButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AsyncButton.swift; path = Spring/AsyncButton.swift; sourceTree = "<group>"; };
+		3A630D56E4BEF2E6D396A14AAA19FACC /* EZAudio.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = EZAudio.xcconfig; sourceTree = "<group>"; };
+		3DE3EA756622C2B22731A0E43C1287DD /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		42CFDD9B09259018D9FC998E23C70F33 /* DesignableTextView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DesignableTextView.swift; path = Spring/DesignableTextView.swift; sourceTree = "<group>"; };
+		498418BD35BFD3D2CD107774B6643861 /* EZAudioDevice.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EZAudioDevice.h; path = EZAudio/EZAudioDevice.h; sourceTree = "<group>"; };
+		4986862B2AFEC660E895499AED15CE54 /* BlurView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BlurView.swift; path = Spring/BlurView.swift; sourceTree = "<group>"; };
+		4A2A53AEC5E4EE350EC5C9FCF0E1762D /* MMParallaxCell.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MMParallaxCell.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B81CA9E11053BC6CCE1F85F723A3DF7 /* SpringButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SpringButton.swift; path = Spring/SpringButton.swift; sourceTree = "<group>"; };
+		4BA984081A0C368684778B78BACA4373 /* DesignableTextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DesignableTextField.swift; path = Spring/DesignableTextField.swift; sourceTree = "<group>"; };
+		4DB996793746F2E3F9A959C28337CA6B /* EZRecorder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EZRecorder.m; path = EZAudio/EZRecorder.m; sourceTree = "<group>"; };
 		4F614A4820FD894F5190484D38F69CE9 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/GLKit.framework; sourceTree = DEVELOPER_DIR; };
-		4FF0567707EE9FF55345F10E4735E9B5 /* EZAudioFloatData.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EZAudioFloatData.h; path = EZAudio/EZAudioFloatData.h; sourceTree = "<group>"; };
-		5123CE88977E8DCBB45DA74664DF7115 /* MMParallaxCell.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MMParallaxCell.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		52202E6AF3676C124B5148B4F6A9DA59 /* SoundPlayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SoundPlayer.swift; path = Spring/SoundPlayer.swift; sourceTree = "<group>"; };
+		5134378B09BD5285A3EAAA0710271916 /* AutoTextView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AutoTextView.swift; path = Spring/AutoTextView.swift; sourceTree = "<group>"; };
 		527F76B27E6128305C03DC0D6333E76B /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Accelerate.framework; sourceTree = DEVELOPER_DIR; };
-		5353D22375F433E50D563C0EC07A8A9D /* TEAChart.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TEAChart.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		59DF3D44F9327987EDF51335071451ED /* DesignableTextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DesignableTextField.swift; path = Spring/DesignableTextField.swift; sourceTree = "<group>"; };
-		5A60643C854C3E2C08F0FD497804E864 /* EZAudioFloatData.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EZAudioFloatData.m; path = EZAudio/EZAudioFloatData.m; sourceTree = "<group>"; };
-		5AB4E957A216D2B551334051C51691EB /* EZMicrophone.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EZMicrophone.m; path = EZAudio/EZMicrophone.m; sourceTree = "<group>"; };
-		5CBDEA13F162C1D7452EEEDB8706088A /* EZAudioDevice.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EZAudioDevice.m; path = EZAudio/EZAudioDevice.m; sourceTree = "<group>"; };
-		5EE3C8EE0F49B751CB0D06DA58D1B88D /* AutoTextView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AutoTextView.swift; path = Spring/AutoTextView.swift; sourceTree = "<group>"; };
-		60306A492F6B69F3811D090B6C07BFE6 /* Misc.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Misc.swift; path = Spring/Misc.swift; sourceTree = "<group>"; };
-		610B2415D114B327CE7B7F7F4B67BABD /* TPCircularBuffer.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; path = TPCircularBuffer.c; sourceTree = "<group>"; };
-		61930798751FFEC994F449FF1D79123F /* NSDate+TEAExtensions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSDate+TEAExtensions.h"; path = "TEAChart/NSDate+TEAExtensions.h"; sourceTree = "<group>"; };
-		64C0FE8B6A2D8A984EEA44E25D7CE5F4 /* MMParallaxCell.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = MMParallaxCell.modulemap; sourceTree = "<group>"; };
-		664B1E8488F3613B2D125456AB2158C1 /* TransitionZoom.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TransitionZoom.swift; path = Spring/TransitionZoom.swift; sourceTree = "<group>"; };
+		529B9794E450C9DA0F6F4951406F95E1 /* TPCircularBuffer.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = TPCircularBuffer.c; path = EZAudio/TPCircularBuffer.c; sourceTree = "<group>"; };
+		570F35E29567EE50D89111877263849A /* TEAChart.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TEAChart.h; path = TEAChart/TEAChart.h; sourceTree = "<group>"; };
+		5974827555FA328929CE8EC37486CC4B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		599ECDC486BEB96E80334655F6456DD5 /* Spring.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Spring.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		59C337AE0387A5B93F3E39AA20AF9CB3 /* MMParallaxCell-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MMParallaxCell-dummy.m"; sourceTree = "<group>"; };
+		5B25BC917CBBFFBDA101D36563BFD3A4 /* DynamicColor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DynamicColor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5E229A847D0FD81994DC9A52D9A163BF /* MMParallaxCell-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MMParallaxCell-umbrella.h"; sourceTree = "<group>"; };
+		5ED6DB744B7F9C4936716F24BE3E87F4 /* TEAChart-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TEAChart-dummy.m"; sourceTree = "<group>"; };
+		61BDD01D255850C8E0E5062BD7B44ADB /* TransitionManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TransitionManager.swift; path = Spring/TransitionManager.swift; sourceTree = "<group>"; };
+		626B365DD4AB4CE5B757179C7CC7C210 /* TEABarChart.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TEABarChart.m; path = TEAChart/TEABarChart.m; sourceTree = "<group>"; };
+		640727131506D9523B6BE1F65ABF0411 /* TPCircularBuffer+AudioBufferList.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TPCircularBuffer+AudioBufferList.h"; sourceTree = "<group>"; };
+		6486A1910F933B8D1DFC123B778E009F /* AsyncImageView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AsyncImageView.swift; path = Spring/AsyncImageView.swift; sourceTree = "<group>"; };
 		669223F0D7B67852E76B4EDF581DDAC8 /* Pods-conscious.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-conscious.debug.xcconfig"; sourceTree = "<group>"; };
-		6C4190414FD2C025B093994E2E9AE120 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6F615BC76A327CD2F8D80C894195917C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		723B0485256937C95E1EF5BA8D0E445B /* TPCircularBuffer.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = TPCircularBuffer.modulemap; sourceTree = "<group>"; };
-		724B47A6839934A0D8B8560BFDB5601F /* Spring.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Spring.xcconfig; sourceTree = "<group>"; };
+		67B25F8FB003B4AA4DD786E64F19D0B2 /* TPCircularBuffer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TPCircularBuffer.h; sourceTree = "<group>"; };
+		67CF6D200AD43A1B4EEED9A24602E539 /* StarWars-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "StarWars-umbrella.h"; sourceTree = "<group>"; };
+		6866178E497EC84563B01619B2B78868 /* EZAudio.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EZAudio.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A90F5B9583E92565082C8ACC3D7FBCD /* EZAudioPlot.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EZAudioPlot.h; path = EZAudio/EZAudioPlot.h; sourceTree = "<group>"; };
+		6E1F6BD016E432836D04C77CBF2C0FC5 /* EZOutput.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EZOutput.m; path = EZAudio/EZOutput.m; sourceTree = "<group>"; };
+		707DE5888D52B5C710DA79BE5D2FD205 /* StarWars.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = StarWars.modulemap; sourceTree = "<group>"; };
+		71C4C862B56833541FE6F2D98B835568 /* DesignableView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DesignableView.swift; path = Spring/DesignableView.swift; sourceTree = "<group>"; };
+		7324D45408C3AB63491DADDC56AB1AFC /* StarWarsGLAnimator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StarWarsGLAnimator.swift; path = StarWars/StarWarsGLAnimator/StarWarsGLAnimator.swift; sourceTree = "<group>"; };
+		74033015A1AC174C397CFA46CA4D290E /* EZAudioFloatData.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EZAudioFloatData.h; path = EZAudio/EZAudioFloatData.h; sourceTree = "<group>"; };
+		74D8700F6B4085316F38DBB9D8E2B584 /* Spring-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Spring-prefix.pch"; sourceTree = "<group>"; };
+		76109179947F9733CDCD4E607E5CCABD /* SpringImageView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SpringImageView.swift; path = Spring/SpringImageView.swift; sourceTree = "<group>"; };
+		76BE73041050B04ABB76D616B401E3E6 /* UnwindSegue.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UnwindSegue.swift; path = Spring/UnwindSegue.swift; sourceTree = "<group>"; };
 		76D10FBA7D81B9893DFC76DD0EF4F3E8 /* TPCircularBuffer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TPCircularBuffer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		76DD3A9847AA27DBE1ECAA03A0C6FF2A /* EZMicrophone.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EZMicrophone.h; path = EZAudio/EZMicrophone.h; sourceTree = "<group>"; };
+		76E7A6FE8E56CA1BDDF80FC5087E968E /* Spring-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Spring-dummy.m"; sourceTree = "<group>"; };
+		77202E541AAF352C80414F0BA1134559 /* DynamicColor-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DynamicColor-dummy.m"; sourceTree = "<group>"; };
+		77AA380C0A4D915D3BC179555739F452 /* ImageLoader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageLoader.swift; path = Spring/ImageLoader.swift; sourceTree = "<group>"; };
 		783498A8F25B7CEC3B1D751766348A03 /* Pods-conscious-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-conscious-resources.sh"; sourceTree = "<group>"; };
-		79191A73A0CBCBF40CC61582A6993CC4 /* SpringTextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SpringTextField.swift; path = Spring/SpringTextField.swift; sourceTree = "<group>"; };
-		7A857A9E4B91A42C8E8C5092E584FC39 /* TEAChart.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TEAChart.h; path = TEAChart/TEAChart.h; sourceTree = "<group>"; };
-		7BB59C6BD77361C6924D13AE8EB690CE /* SpringView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SpringView.swift; path = Spring/SpringView.swift; sourceTree = "<group>"; };
-		7BE929250DDBF9922A72ACA8F17994DE /* EZAudioOSX.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EZAudioOSX.h; path = EZAudio/EZAudioOSX.h; sourceTree = "<group>"; };
-		7ED9EAF5D70B0C41D45FECD08C88EA4E /* EZAudioDisplayLink.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EZAudioDisplayLink.h; path = EZAudio/EZAudioDisplayLink.h; sourceTree = "<group>"; };
-		7EFCFE5716FC7A606D29AC51F2E42FEF /* StarWars-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "StarWars-prefix.pch"; sourceTree = "<group>"; };
-		7FD3F7B16A8C6C909E6C8B9553D74D19 /* EZAudio-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "EZAudio-dummy.m"; sourceTree = "<group>"; };
-		82404B6F598016D29FA156C65E8E3E75 /* SpringAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SpringAnimation.swift; path = Spring/SpringAnimation.swift; sourceTree = "<group>"; };
-		862D04E0C9B2D0431EE274C242C0D7D8 /* EZAudioPlotGL.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EZAudioPlotGL.m; path = EZAudio/EZAudioPlotGL.m; sourceTree = "<group>"; };
-		867266267232917459A5B528399BA14E /* AsyncImageView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AsyncImageView.swift; path = Spring/AsyncImageView.swift; sourceTree = "<group>"; };
-		872A1F5D77ACB225EA7C39BC9754F781 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8AE5537C10E7BE5265829A7135E6B09E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8AE691DACE91922C93C3E031AE16A04B /* EZAudio.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EZAudio.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7846466F20AF9318A00B30A390CF3F82 /* EZAudioFile.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EZAudioFile.m; path = EZAudio/EZAudioFile.m; sourceTree = "<group>"; };
+		7B903F6BB1CFF77BB1F7E6F53C28203D /* TPCircularBuffer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TPCircularBuffer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E33FDFA746B9AB969893F93C4170690 /* MMParallaxCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMParallaxCell.h; path = Classes/MMParallaxCell.h; sourceTree = "<group>"; };
+		7F743626B6D72623FC1012E08C468A58 /* EZAudio-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "EZAudio-prefix.pch"; sourceTree = "<group>"; };
+		876E02A973EBE428086E0F5F7C0DF6D3 /* EZMicrophone.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EZMicrophone.m; path = EZAudio/EZMicrophone.m; sourceTree = "<group>"; };
 		8B9BCC41EA4B120BA6C637D6807B4CF9 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8C4D70364364732479220375F6AD6A71 /* EZAudioPlayer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EZAudioPlayer.m; path = EZAudio/EZAudioPlayer.m; sourceTree = "<group>"; };
-		8E02C61EB4F0648ED489C2F5C6E93B8C /* EZAudio-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "EZAudio-prefix.pch"; sourceTree = "<group>"; };
-		8F6495E1743415F4B2C6B2638314ED39 /* Pods_conscious.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_conscious.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		922D6120578723F02D8A9E529DE8B2A2 /* SpringLabel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SpringLabel.swift; path = Spring/SpringLabel.swift; sourceTree = "<group>"; };
-		929AF71AC35BA5F74E96A7C171684136 /* EZAudioDevice.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EZAudioDevice.h; path = EZAudio/EZAudioDevice.h; sourceTree = "<group>"; };
-		930B625E1B9F46AAE72B9524EA2F5EBB /* TEAClockChart.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TEAClockChart.h; path = TEAChart/TEAClockChart.h; sourceTree = "<group>"; };
+		8DCCD066F6C6A06BC52C5DC9C6454F8F /* TEAClockChart.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TEAClockChart.h; path = TEAChart/TEAClockChart.h; sourceTree = "<group>"; };
+		8F212671D20E0411B3A430F4011C7D21 /* EZAudio.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EZAudio.h; path = EZAudio/EZAudio.h; sourceTree = "<group>"; };
+		8FCF9C83C9C4EAF29701323053FDD8B7 /* EZAudio-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "EZAudio-umbrella.h"; sourceTree = "<group>"; };
+		904347E859096B422380E3E6E6435CCC /* DesignableButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DesignableButton.swift; path = Spring/DesignableButton.swift; sourceTree = "<group>"; };
+		91BCE69F5ED5FAF69D0B55EC7B06932B /* TPCircularBuffer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TPCircularBuffer.h; path = EZAudio/TPCircularBuffer.h; sourceTree = "<group>"; };
+		929110A21BF914DF2716914A176352E1 /* DesignableLabel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DesignableLabel.swift; path = Spring/DesignableLabel.swift; sourceTree = "<group>"; };
 		93300C68A6E92F7345B0E2585892A924 /* Pods-conscious-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-conscious-acknowledgements.plist"; sourceTree = "<group>"; };
-		936E4772485B01B578DCB01DDEC3B54B /* DesignableImageView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DesignableImageView.swift; path = Spring/DesignableImageView.swift; sourceTree = "<group>"; };
-		94106D944A16CBEF98666D1A31295018 /* StarWars.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = StarWars.xcconfig; sourceTree = "<group>"; };
-		954DF65B137E678D4C809003D966D4D7 /* TPCircularBuffer.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TPCircularBuffer.xcconfig; sourceTree = "<group>"; };
-		956B254F58AF4B6C67B615BA87C84D87 /* EZAudio.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EZAudio.h; path = EZAudio/EZAudio.h; sourceTree = "<group>"; };
-		96C593B3233F5C9BCBE501066C590FEB /* StarWars-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "StarWars-dummy.m"; sourceTree = "<group>"; };
-		9843B3056F5C0A9C0371195518152DAF /* AsyncButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AsyncButton.swift; path = Spring/AsyncButton.swift; sourceTree = "<group>"; };
-		990A4789FD59F2DDED0C8AB92DB17D70 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9C9CC54939F3C7073F3917752131B732 /* Spring-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Spring-umbrella.h"; sourceTree = "<group>"; };
-		9CF1A385A5C9D338544EC150FE731A9E /* MMParallaxCell-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MMParallaxCell-umbrella.h"; sourceTree = "<group>"; };
-		9FC824EEEC5265123E2E0493FD4BB6D0 /* TEATimeRange.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TEATimeRange.h; path = TEAChart/TEATimeRange.h; sourceTree = "<group>"; };
-		A178978516816071D062691737DB9792 /* TPCircularBuffer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TPCircularBuffer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A560AD4FEE62F02566CBB87343A62559 /* SpringButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SpringButton.swift; path = Spring/SpringButton.swift; sourceTree = "<group>"; };
-		AB22D88E81F507AC2277AB8AEFD31448 /* EZPlot.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EZPlot.h; path = EZAudio/EZPlot.h; sourceTree = "<group>"; };
-		ABA367C132D9A48DF451B68D3F593345 /* MMParallaxCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMParallaxCell.h; path = Classes/MMParallaxCell.h; sourceTree = "<group>"; };
-		ACF6B5EB7564F7C24B813AFF2CCBB9A8 /* DesignableButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DesignableButton.swift; path = Spring/DesignableButton.swift; sourceTree = "<group>"; };
+		95C1F22DF7AB6B4197B8E57FE31E1E43 /* TPCircularBuffer.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TPCircularBuffer.xcconfig; sourceTree = "<group>"; };
+		9C7A6FFD2672CC88D0BA9FE24A77CC00 /* StarWars.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = StarWars.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9DD7529FA6A27BA3F668E037761C9FBA /* TransitionZoom.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TransitionZoom.swift; path = Spring/TransitionZoom.swift; sourceTree = "<group>"; };
+		9E0955F109D09FA1D285C967821D374A /* EZAudioFFT.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EZAudioFFT.h; path = EZAudio/EZAudioFFT.h; sourceTree = "<group>"; };
+		A031B1127A6A1BCAB0699D1EB0EC5047 /* Pods_conscious.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_conscious.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2206C5EC11E8B8869B6A02509B6B665 /* EZAudio.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = EZAudio.modulemap; sourceTree = "<group>"; };
+		A3DF2EDB64718735ADD1525B2775DB23 /* TEAChart.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TEAChart.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A6EC938F82DCE1F1322F7AABB1CAA0F6 /* EZAudioiOS.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EZAudioiOS.h; path = EZAudio/EZAudioiOS.h; sourceTree = "<group>"; };
+		A72A9A69CA31E506BB686FFB81B66570 /* EZAudioPlayer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EZAudioPlayer.h; path = EZAudio/EZAudioPlayer.h; sourceTree = "<group>"; };
+		A797A8DBAD601D471894B2BCD334DA32 /* DynamicColor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DynamicColor.swift; path = Sources/DynamicColor.swift; sourceTree = "<group>"; };
+		AA0997BCB5DAA8D6D1CC40CB02EB9776 /* Spring.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Spring.modulemap; sourceTree = "<group>"; };
+		AAB58F0C3D3E3294D56A0A154C175CA1 /* Vector2.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Vector2.swift; path = StarWars/StarWarsGLAnimator/Vector2.swift; sourceTree = "<group>"; };
+		AC2B38C7BB05D6A0AC0CEEC22261ECD4 /* TEAChart.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = TEAChart.modulemap; sourceTree = "<group>"; };
 		AD5F9E16BBB7B12B534B5624433C70A0 /* Pods-conscious-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-conscious-acknowledgements.markdown"; sourceTree = "<group>"; };
+		B15B3F0D0099DD16780CF4783F4F2D10 /* Images.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = SpringApp/Images.xcassets; sourceTree = "<group>"; };
+		B2208FF69842D157E5D72EFC33CB0770 /* DynamicColor.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = DynamicColor.modulemap; sourceTree = "<group>"; };
 		B238026127A919A6E49B5684456D7347 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/AVFoundation.framework; sourceTree = DEVELOPER_DIR; };
-		B3B9DB43B0CCDF45778E85CC811EE142 /* TEAChart-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TEAChart-dummy.m"; sourceTree = "<group>"; };
-		B4E8F4373AA1583480279C1842B1A6FC /* TEAClockChart.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TEAClockChart.m; path = TEAChart/TEAClockChart.m; sourceTree = "<group>"; };
-		B97757C1C674470236A3C6CEF8A94DF2 /* Spring.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Spring.swift; path = Spring/Spring.swift; sourceTree = "<group>"; };
-		B9EA361B9ACD0FD3DB8D013A26DD90F6 /* EZAudioFloatConverter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EZAudioFloatConverter.h; path = EZAudio/EZAudioFloatConverter.h; sourceTree = "<group>"; };
+		B29358848F8330F931954388BA4CB95E /* EZAudio-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "EZAudio-dummy.m"; sourceTree = "<group>"; };
+		B5B27D2B18830A82027623641BA0A816 /* StarWars-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "StarWars-dummy.m"; sourceTree = "<group>"; };
+		B60D2394B6985B5032FA926D96164972 /* TPCircularBuffer-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TPCircularBuffer-dummy.m"; sourceTree = "<group>"; };
+		B6BA6709E1358D356658E8A4A28EFFD8 /* EZAudioPlotGL.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EZAudioPlotGL.m; path = EZAudio/EZAudioPlotGL.m; sourceTree = "<group>"; };
+		B768DEAB86A27FF1FAB497EEA8C9F91D /* DesignableImageView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DesignableImageView.swift; path = Spring/DesignableImageView.swift; sourceTree = "<group>"; };
+		B93A09EC1EFA4793BD69D0CB9ADA6581 /* SoundPlayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SoundPlayer.swift; path = Spring/SoundPlayer.swift; sourceTree = "<group>"; };
 		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		BAFE3B627EB8B98AF23C6E8B03F369A3 /* EZPlot.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EZPlot.m; path = EZAudio/EZPlot.m; sourceTree = "<group>"; };
-		BB5B7ED649A2147DD4985406EF66593C /* Spring.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Spring.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BBDD107DE527A8C2D08DDE368F82E2DA /* EZAudioiOS.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EZAudioiOS.h; path = EZAudio/EZAudioiOS.h; sourceTree = "<group>"; };
-		C07008D0EE61E40856F9A3F7E449328A /* EZAudio.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EZAudio.m; path = EZAudio/EZAudio.m; sourceTree = "<group>"; };
-		C0B5AB95FEA9E46DB6F0438AD1E27398 /* EZAudioPlot.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EZAudioPlot.m; path = EZAudio/EZAudioPlot.m; sourceTree = "<group>"; };
-		C11D848FE8050C029AD11773E97E894A /* TEATimeRange.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TEATimeRange.m; path = TEAChart/TEATimeRange.m; sourceTree = "<group>"; };
-		C126FF28508B0EAB8A0B6EE42A83299B /* TransitionManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TransitionManager.swift; path = Spring/TransitionManager.swift; sourceTree = "<group>"; };
-		C29A0638089258F96DFFDD56E8FDFF21 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C34EA31CF600BB34DD2EE4EECA5738EC /* DesignableTabBarController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DesignableTabBarController.swift; path = Spring/DesignableTabBarController.swift; sourceTree = "<group>"; };
-		C4C8E84FFF8D11135E619C66AB1F401F /* EZAudio.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = EZAudio.xcconfig; sourceTree = "<group>"; };
-		C61326F8E654351C6267AA50D916260C /* EZAudioDisplayLink.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EZAudioDisplayLink.m; path = EZAudio/EZAudioDisplayLink.m; sourceTree = "<group>"; };
-		C846E34ED5043B98A8EF0944FFAAF09F /* TPCircularBuffer+AudioBufferList.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TPCircularBuffer+AudioBufferList.h"; sourceTree = "<group>"; };
-		C908668C0F6226AC0C12BD90EB776FCF /* EZAudio-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "EZAudio-umbrella.h"; sourceTree = "<group>"; };
-		CB937080B7516334687095B087C25730 /* DesignableTextView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DesignableTextView.swift; path = Spring/DesignableTextView.swift; sourceTree = "<group>"; };
-		D25BA5967B5F2BAEA0097256352160C9 /* UnwindSegue.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UnwindSegue.swift; path = Spring/UnwindSegue.swift; sourceTree = "<group>"; };
+		BDDDF996BE3B40CC2FF458DE5BB28A55 /* TEAContributionGraph.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TEAContributionGraph.m; path = TEAChart/TEAContributionGraph.m; sourceTree = "<group>"; };
+		BF3D95A180FF947788525391651A04EE /* TEAClockChart.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TEAClockChart.m; path = TEAChart/TEAClockChart.m; sourceTree = "<group>"; };
+		C13C71B03BB14B29C4DFBEB08F47FF29 /* KeyboardLayoutConstraint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeyboardLayoutConstraint.swift; path = Spring/KeyboardLayoutConstraint.swift; sourceTree = "<group>"; };
+		C2947C6E9F4E3FED936B2B7888F5824A /* NSDate+TEAExtensions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSDate+TEAExtensions.m"; path = "TEAChart/NSDate+TEAExtensions.m"; sourceTree = "<group>"; };
+		C38B7D7B634B84385FAA6DD43A0C3D5F /* EZAudioFloatConverter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EZAudioFloatConverter.m; path = EZAudio/EZAudioFloatConverter.m; sourceTree = "<group>"; };
+		C442D7CBDD5BFEA3B1501D796F299B6C /* Spring-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Spring-umbrella.h"; sourceTree = "<group>"; };
+		C7A07F72AFD86BFF6BC3DF5992D8E0C6 /* TEAChart.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TEAChart.xcconfig; sourceTree = "<group>"; };
+		CBBC117F9445176DAD27B94C8BF71A14 /* SpringView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SpringView.swift; path = Spring/SpringView.swift; sourceTree = "<group>"; };
+		D2EFA3D32E9CE921877F0593B875F20A /* LoadingView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LoadingView.swift; path = Spring/LoadingView.swift; sourceTree = "<group>"; };
+		D3D46AD3511B3B83F9894E58A3CAEC09 /* SpringTextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SpringTextField.swift; path = Spring/SpringTextField.swift; sourceTree = "<group>"; };
 		D4BA281AD1500E2F4F83E9E85EDDF165 /* Pods-conscious-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-conscious-dummy.m"; sourceTree = "<group>"; };
-		D5A3EEF52C027A45594213CBE70B809C /* TPCircularBuffer-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TPCircularBuffer-dummy.m"; sourceTree = "<group>"; };
-		D624A29A795669453D1ABFDA9DBB157D /* SpringImageView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SpringImageView.swift; path = Spring/SpringImageView.swift; sourceTree = "<group>"; };
+		D59EC81E5CBADF00B65270643187FBED /* StarWars.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = StarWars.xcconfig; sourceTree = "<group>"; };
 		D8530786ADE965537C8D86261AAABA98 /* Pods-conscious-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-conscious-frameworks.sh"; sourceTree = "<group>"; };
-		DAAAF64C7B403E12185F136A6B5871AB /* EZAudioUtilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EZAudioUtilities.h; path = EZAudio/EZAudioUtilities.h; sourceTree = "<group>"; };
-		DC31DF7FF895696B0F5F6B0C4F269340 /* KeyboardLayoutConstraint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeyboardLayoutConstraint.swift; path = Spring/KeyboardLayoutConstraint.swift; sourceTree = "<group>"; };
-		DC46C379ED4E3F4E1EF409BAB787B904 /* LoadingView.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = LoadingView.xib; path = Spring/LoadingView.xib; sourceTree = "<group>"; };
-		DCD552B7A016DBA6976E5EB6F517CB8B /* EZAudioPlotGL.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EZAudioPlotGL.h; path = EZAudio/EZAudioPlotGL.h; sourceTree = "<group>"; };
-		E0CB5C3E2DEF3DA6B5C471A1D4C4C8C6 /* TEAChart-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TEAChart-umbrella.h"; sourceTree = "<group>"; };
-		E22634F114B5EEC4E6F1B25C1A43277A /* LoadingView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LoadingView.swift; path = Spring/LoadingView.swift; sourceTree = "<group>"; };
-		E3243185A2BB0945C0532D7B8E875C5D /* TPCircularBuffer-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TPCircularBuffer-umbrella.h"; sourceTree = "<group>"; };
-		E531F12D57970460DA166F8052CC0082 /* BlurView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BlurView.swift; path = Spring/BlurView.swift; sourceTree = "<group>"; };
-		E545F99574C39E29CEA384CA19C5E7FA /* MMParallaxCell-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MMParallaxCell-prefix.pch"; sourceTree = "<group>"; };
-		E7412A298CD41E2CC04D4666CC0531D9 /* Spring.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Spring.modulemap; sourceTree = "<group>"; };
-		E91A74CD32EADD3EA1709064A6CD7A94 /* EZAudioUtilities.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EZAudioUtilities.m; path = EZAudio/EZAudioUtilities.m; sourceTree = "<group>"; };
-		EA171CE2D377A318E8E938D4306EF0A2 /* TEAContributionGraph.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TEAContributionGraph.m; path = TEAChart/TEAContributionGraph.m; sourceTree = "<group>"; };
-		EBE6B1CBA727D80A638984E95A1F2CAA /* EZAudioPlot.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EZAudioPlot.h; path = EZAudio/EZAudioPlot.h; sourceTree = "<group>"; };
+		D85795AC291EFFEB8140BE9395A5F434 /* EZAudioFile.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EZAudioFile.h; path = EZAudio/EZAudioFile.h; sourceTree = "<group>"; };
+		D86B60E94BF6DAB9CEC44E8B7125C0D0 /* TEATimeRange.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TEATimeRange.m; path = TEAChart/TEATimeRange.m; sourceTree = "<group>"; };
+		D93EAF88A40AC9965CBBC7A836BFAEBD /* TPCircularBuffer+AudioBufferList.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; path = "TPCircularBuffer+AudioBufferList.c"; sourceTree = "<group>"; };
+		D9699F0F2FDD3430ED456734B9D8876D /* StarWars-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "StarWars-prefix.pch"; sourceTree = "<group>"; };
+		D9EF11A7077C2306F66CAA5F523F08F8 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DB42D90ADD28D9DEDC48480C0EABD4DB /* EZRecorder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EZRecorder.h; path = EZAudio/EZRecorder.h; sourceTree = "<group>"; };
+		DB9C0FF8F6494241EA36E789FFB14291 /* EZAudioFFT.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EZAudioFFT.m; path = EZAudio/EZAudioFFT.m; sourceTree = "<group>"; };
+		DC1A799547CA81859E8341DD4991845C /* NSDate+TEAExtensions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSDate+TEAExtensions.h"; path = "TEAChart/NSDate+TEAExtensions.h"; sourceTree = "<group>"; };
+		DC604D0C752A2DAFF1DC5C32128E60A0 /* EZAudioUtilities.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EZAudioUtilities.m; path = EZAudio/EZAudioUtilities.m; sourceTree = "<group>"; };
+		E07649788694095191B35BBADECE03B0 /* TEABarChart.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TEABarChart.h; path = TEAChart/TEABarChart.h; sourceTree = "<group>"; };
+		E3DA63EE5A6FA0362179172DC1B096A7 /* SpringTextView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SpringTextView.swift; path = Spring/SpringTextView.swift; sourceTree = "<group>"; };
+		E53CB24F5E6E217B4E548A26E232FC18 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E7622A3D993C27AC9E8F3633870E3B8B /* SpringLabel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SpringLabel.swift; path = Spring/SpringLabel.swift; sourceTree = "<group>"; };
+		E7DC6304E4CC4A53ABB557736A732CB3 /* Spring.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Spring.xcconfig; sourceTree = "<group>"; };
+		E80F8A3DEF454AB47D650B44EC1633C1 /* EZPlot.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EZPlot.m; path = EZAudio/EZPlot.m; sourceTree = "<group>"; };
+		E85D273E42FBD6C3084CC52967199A53 /* MMParallaxCell.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MMParallaxCell.xcconfig; sourceTree = "<group>"; };
 		ECABC837305CE86DD00F065D5587B48D /* Pods-conscious-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-conscious-umbrella.h"; sourceTree = "<group>"; };
-		EDAA7F25DE4C825385E0FBA494FBB61A /* MMParallaxCell.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MMParallaxCell.xcconfig; sourceTree = "<group>"; };
-		F06AED0A184015744FCFEFF5981F87AB /* TPCircularBuffer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TPCircularBuffer.h; path = EZAudio/TPCircularBuffer.h; sourceTree = "<group>"; };
-		F32B53F1689E1B4328BEBF138E2F84FF /* TPCircularBuffer-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TPCircularBuffer-prefix.pch"; sourceTree = "<group>"; };
-		F4A49E01ADAEDC8D03EC506084FA54E9 /* EZAudioPlayer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EZAudioPlayer.h; path = EZAudio/EZAudioPlayer.h; sourceTree = "<group>"; };
-		F71FF0B1AFB5242A6E1C6D84CCCAA8F1 /* TEABarChart.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TEABarChart.h; path = TEAChart/TEABarChart.h; sourceTree = "<group>"; };
-		FAF9B3762A15D79DB1C9774ED5B28DDB /* TPCircularBuffer+AudioBufferList.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; path = "TPCircularBuffer+AudioBufferList.c"; sourceTree = "<group>"; };
-		FD6F1C8F6C34B0C53E65C07FB4701DF3 /* DesignableView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DesignableView.swift; path = Spring/DesignableView.swift; sourceTree = "<group>"; };
+		ED1CBEB46ACF7E41D9BE35CB3F7B3157 /* TEAChart-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TEAChart-prefix.pch"; sourceTree = "<group>"; };
+		ED60994ADC5E1CA5EF8BF4896D774DAA /* TPCircularBuffer-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TPCircularBuffer-prefix.pch"; sourceTree = "<group>"; };
+		ED9C068A2DB9747D165011FDF4AA6067 /* EZAudioFloatData.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EZAudioFloatData.m; path = EZAudio/EZAudioFloatData.m; sourceTree = "<group>"; };
+		EE7FDB5A62A8817A85E56C9F7CEE889F /* HSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HSL.swift; path = Sources/HSL.swift; sourceTree = "<group>"; };
+		F2A9CD65927CFC06321708C0E2984080 /* DynamicColor.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DynamicColor.xcconfig; sourceTree = "<group>"; };
+		F51031721B202381FA5CDA49ABA5BE65 /* TPCircularBuffer.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = TPCircularBuffer.modulemap; sourceTree = "<group>"; };
+		F681E4D57ABEE09D54DBD713375C3297 /* TEAChart-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TEAChart-umbrella.h"; sourceTree = "<group>"; };
+		F6B8F1597BE13F2CBA3512BED1EFA1F9 /* ViewTexture.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ViewTexture.swift; path = StarWars/StarWarsGLAnimator/ViewTexture.swift; sourceTree = "<group>"; };
+		FF551E3FFCE5C716A6C8935613F3BA80 /* EZAudio.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EZAudio.m; path = EZAudio/EZAudio.m; sourceTree = "<group>"; };
+		FFCAA19BB7B8C32C3B417EFDB858AAE2 /* TPCircularBuffer.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; path = TPCircularBuffer.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		06E0470106FEB58E98AB72EC4AA7C340 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				73979F42AEA54DDA0143524DF8449F1F /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0F1EF3148571502804AFBD22FFDA22BA /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				487A6C19F382C3D8FAC3A696095E077C /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		17D82EB93019D54BD7076326C7250BBF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -353,6 +359,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2238FCD94A4DA0978EF3DBA51EAB157A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				75F7DB2E8187F52BA188123C65AB1285 /* Foundation.framework in Frameworks */,
+				37B3AC1225FDA65F5E8CBEE245490274 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		32A971F48E77E7BE5970CF05417FFB6D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -362,11 +377,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4F21B46974E48B322B96BB4D4277DC62 /* Frameworks */ = {
+		5B08B6D2E86DA1CD046C6DD684415C0F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DAC56522FF3439B4229FAC389B50BD3E /* Foundation.framework in Frameworks */,
+				69CFBB66199A7BDC246764F5E53309A9 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6602776B0D621940DA45C07DE3A53671 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				713385B5F393D1482CA5BA4359E641A9 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -379,65 +402,51 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D5C1AA9B035E6905BDEFBB5D3049A696 /* Frameworks */ = {
+		A6657052CB6CC214854A11070CEF02FA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D12496FDE063AF8BDDD98A27EFAC1287 /* Foundation.framework in Frameworks */,
+				37296DDE946723A0445155C44C97F14F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BFA1DCA802BE8EC4A799BF620828521C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AABF86D3271020E1177D0D241FDFFAB9 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0B74FAF1AC74C28F566F8466B3BB4259 /* Products */ = {
+		0957DEAD7C1D4676784F6B6D4EABD705 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				8AE691DACE91922C93C3E031AE16A04B /* EZAudio.framework */,
-				5123CE88977E8DCBB45DA74664DF7115 /* MMParallaxCell.framework */,
-				8F6495E1743415F4B2C6B2638314ED39 /* Pods_conscious.framework */,
-				BB5B7ED649A2147DD4985406EF66593C /* Spring.framework */,
-				4C8B7B6809391E30B565CC0D3F0805A1 /* StarWars.framework */,
-				5353D22375F433E50D563C0EC07A8A9D /* TEAChart.framework */,
-				A178978516816071D062691737DB9792 /* TPCircularBuffer.framework */,
+				A2206C5EC11E8B8869B6A02509B6B665 /* EZAudio.modulemap */,
+				3A630D56E4BEF2E6D396A14AAA19FACC /* EZAudio.xcconfig */,
+				B29358848F8330F931954388BA4CB95E /* EZAudio-dummy.m */,
+				7F743626B6D72623FC1012E08C468A58 /* EZAudio-prefix.pch */,
+				8FCF9C83C9C4EAF29701323053FDD8B7 /* EZAudio-umbrella.h */,
+				392F4A60F84F8B8828216FCEE07D8B88 /* Info.plist */,
 			);
-			name = Products;
+			name = "Support Files";
+			path = "../Target Support Files/EZAudio";
 			sourceTree = "<group>";
 		};
-		11EE354F5C0EE9A1AD5BB691C0E670AF /* Spring */ = {
+		127C2E35E7DBF7338875F315B647342B /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				9843B3056F5C0A9C0371195518152DAF /* AsyncButton.swift */,
-				867266267232917459A5B528399BA14E /* AsyncImageView.swift */,
-				5EE3C8EE0F49B751CB0D06DA58D1B88D /* AutoTextView.swift */,
-				E531F12D57970460DA166F8052CC0082 /* BlurView.swift */,
-				ACF6B5EB7564F7C24B813AFF2CCBB9A8 /* DesignableButton.swift */,
-				936E4772485B01B578DCB01DDEC3B54B /* DesignableImageView.swift */,
-				476DDD7B7828E42689A0C628BDAF774B /* DesignableLabel.swift */,
-				C34EA31CF600BB34DD2EE4EECA5738EC /* DesignableTabBarController.swift */,
-				59DF3D44F9327987EDF51335071451ED /* DesignableTextField.swift */,
-				CB937080B7516334687095B087C25730 /* DesignableTextView.swift */,
-				FD6F1C8F6C34B0C53E65C07FB4701DF3 /* DesignableView.swift */,
-				125EDA5D66DD02761C4044FE7463BC9C /* ImageLoader.swift */,
-				DC31DF7FF895696B0F5F6B0C4F269340 /* KeyboardLayoutConstraint.swift */,
-				E22634F114B5EEC4E6F1B25C1A43277A /* LoadingView.swift */,
-				60306A492F6B69F3811D090B6C07BFE6 /* Misc.swift */,
-				52202E6AF3676C124B5148B4F6A9DA59 /* SoundPlayer.swift */,
-				B97757C1C674470236A3C6CEF8A94DF2 /* Spring.swift */,
-				82404B6F598016D29FA156C65E8E3E75 /* SpringAnimation.swift */,
-				A560AD4FEE62F02566CBB87343A62559 /* SpringButton.swift */,
-				D624A29A795669453D1ABFDA9DBB157D /* SpringImageView.swift */,
-				922D6120578723F02D8A9E529DE8B2A2 /* SpringLabel.swift */,
-				79191A73A0CBCBF40CC61582A6993CC4 /* SpringTextField.swift */,
-				1582B0BB83BDCA77E33B6B730027896A /* SpringTextView.swift */,
-				7BB59C6BD77361C6924D13AE8EB690CE /* SpringView.swift */,
-				C126FF28508B0EAB8A0B6EE42A83299B /* TransitionManager.swift */,
-				664B1E8488F3613B2D125456AB2158C1 /* TransitionZoom.swift */,
-				D25BA5967B5F2BAEA0097256352160C9 /* UnwindSegue.swift */,
-				E51544C880B7C35AEEC432AF2D65D9B1 /* Resources */,
-				2591367FCA655FD4C94ED1C8ED7913CA /* Support Files */,
+				3DE3EA756622C2B22731A0E43C1287DD /* Info.plist */,
+				AC2B38C7BB05D6A0AC0CEEC22261ECD4 /* TEAChart.modulemap */,
+				C7A07F72AFD86BFF6BC3DF5992D8E0C6 /* TEAChart.xcconfig */,
+				5ED6DB744B7F9C4936716F24BE3E87F4 /* TEAChart-dummy.m */,
+				ED1CBEB46ACF7E41D9BE35CB3F7B3157 /* TEAChart-prefix.pch */,
+				F681E4D57ABEE09D54DBD713375C3297 /* TEAChart-umbrella.h */,
 			);
-			path = Spring;
+			name = "Support Files";
+			path = "../Target Support Files/TEAChart";
 			sourceTree = "<group>";
 		};
 		1F28A64F6BE4F0BF5D17B332E7ADAA77 /* Frameworks */ = {
@@ -447,34 +456,6 @@
 				609A741047BCBB59BA3711B551DCF99B /* iOS */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		2591367FCA655FD4C94ED1C8ED7913CA /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				C29A0638089258F96DFFDD56E8FDFF21 /* Info.plist */,
-				E7412A298CD41E2CC04D4666CC0531D9 /* Spring.modulemap */,
-				724B47A6839934A0D8B8560BFDB5601F /* Spring.xcconfig */,
-				4061B3DB23A9669C4913A9468445840B /* Spring-dummy.m */,
-				3277FAC93A910CA5962B21961504A342 /* Spring-prefix.pch */,
-				9C9CC54939F3C7073F3917752131B732 /* Spring-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/Spring";
-			sourceTree = "<group>";
-		};
-		2B63AB10612FC83F171EEACA7F87FEFC /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				6C4190414FD2C025B093994E2E9AE120 /* Info.plist */,
-				2F377F0DE60FF36FC0F0B2180272D399 /* StarWars.modulemap */,
-				94106D944A16CBEF98666D1A31295018 /* StarWars.xcconfig */,
-				96C593B3233F5C9BCBE501066C590FEB /* StarWars-dummy.m */,
-				7EFCFE5716FC7A606D29AC51F2E42FEF /* StarWars-prefix.pch */,
-				1A44D3DF831162C145615253FB6113C1 /* StarWars-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/StarWars";
 			sourceTree = "<group>";
 		};
 		2D31EA90B9CAF4958F13B228A85BB1B9 /* Pods-conscious */ = {
@@ -495,59 +476,140 @@
 			path = "Target Support Files/Pods-conscious";
 			sourceTree = "<group>";
 		};
-		2F4937661678E9C48EF0225AAD00BA34 /* StarWars */ = {
+		30C90007738F0F2AC40EF75E1A7A6F89 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				0E308B59A43A0263764BDB43A172FA96 /* Sprite.swift */,
-				21DEEF0C91174CCA3071B42A1A1A30E2 /* SpriteRender.swift */,
-				069E820EC033E011DCF9E623B6165F7A /* StarWarsGLAnimator.swift */,
-				40F5437BE5868973A0D88091B973E772 /* Vector2.swift */,
-				0AA3709D5E6288E5E9EB2A1A4EC19B14 /* ViewTexture.swift */,
-				2B63AB10612FC83F171EEACA7F87FEFC /* Support Files */,
+				20F54D8A76D4731478A843DA414824D7 /* Info.plist */,
+				AA0997BCB5DAA8D6D1CC40CB02EB9776 /* Spring.modulemap */,
+				E7DC6304E4CC4A53ABB557736A732CB3 /* Spring.xcconfig */,
+				76E7A6FE8E56CA1BDDF80FC5087E968E /* Spring-dummy.m */,
+				74D8700F6B4085316F38DBB9D8E2B584 /* Spring-prefix.pch */,
+				C442D7CBDD5BFEA3B1501D796F299B6C /* Spring-umbrella.h */,
 			);
-			path = StarWars;
+			name = "Support Files";
+			path = "../Target Support Files/Spring";
 			sourceTree = "<group>";
 		};
-		35D639F92BF0D95F4B9066F5316D3ACA /* EZAudio */ = {
+		354BADFA4DC0ABE2846ECAFE9ACB256D /* Spring */ = {
 			isa = PBXGroup;
 			children = (
-				64C10839D3253EFAEC1D57EDB4E8B93C /* Core */,
-				480607604B64EE8A11DBC5713CB7590A /* Support Files */,
+				39CC9B0096CF6A841CBC0712E548222C /* AsyncButton.swift */,
+				6486A1910F933B8D1DFC123B778E009F /* AsyncImageView.swift */,
+				5134378B09BD5285A3EAAA0710271916 /* AutoTextView.swift */,
+				4986862B2AFEC660E895499AED15CE54 /* BlurView.swift */,
+				904347E859096B422380E3E6E6435CCC /* DesignableButton.swift */,
+				B768DEAB86A27FF1FAB497EEA8C9F91D /* DesignableImageView.swift */,
+				929110A21BF914DF2716914A176352E1 /* DesignableLabel.swift */,
+				37380DD4FB41D5D9CB6ED4EBF6B3CB73 /* DesignableTabBarController.swift */,
+				4BA984081A0C368684778B78BACA4373 /* DesignableTextField.swift */,
+				42CFDD9B09259018D9FC998E23C70F33 /* DesignableTextView.swift */,
+				71C4C862B56833541FE6F2D98B835568 /* DesignableView.swift */,
+				77AA380C0A4D915D3BC179555739F452 /* ImageLoader.swift */,
+				C13C71B03BB14B29C4DFBEB08F47FF29 /* KeyboardLayoutConstraint.swift */,
+				D2EFA3D32E9CE921877F0593B875F20A /* LoadingView.swift */,
+				339157F82886172EAFA5985315BEFFDC /* Misc.swift */,
+				B93A09EC1EFA4793BD69D0CB9ADA6581 /* SoundPlayer.swift */,
+				1035E331E8F22A682EFE50D7BEFB418F /* Spring.swift */,
+				251CF6125A0434F73330E7BB2DB4079F /* SpringAnimation.swift */,
+				4B81CA9E11053BC6CCE1F85F723A3DF7 /* SpringButton.swift */,
+				76109179947F9733CDCD4E607E5CCABD /* SpringImageView.swift */,
+				E7622A3D993C27AC9E8F3633870E3B8B /* SpringLabel.swift */,
+				D3D46AD3511B3B83F9894E58A3CAEC09 /* SpringTextField.swift */,
+				E3DA63EE5A6FA0362179172DC1B096A7 /* SpringTextView.swift */,
+				CBBC117F9445176DAD27B94C8BF71A14 /* SpringView.swift */,
+				61BDD01D255850C8E0E5062BD7B44ADB /* TransitionManager.swift */,
+				9DD7529FA6A27BA3F668E037761C9FBA /* TransitionZoom.swift */,
+				76BE73041050B04ABB76D616B401E3E6 /* UnwindSegue.swift */,
+				6D1D3FF411CDE5FF217D13267D0313C3 /* Resources */,
+				30C90007738F0F2AC40EF75E1A7A6F89 /* Support Files */,
 			);
-			path = EZAudio;
+			path = Spring;
 			sourceTree = "<group>";
 		};
-		3BB1445BC34F2C57493E9A654241904C /* TEAChart */ = {
+		397F78FECBAE8A8E92BA967E2DB22FF7 /* TPCircularBuffer */ = {
 			isa = PBXGroup;
 			children = (
-				61930798751FFEC994F449FF1D79123F /* NSDate+TEAExtensions.h */,
-				36F8BDCEB8462132D52554EF5031724E /* NSDate+TEAExtensions.m */,
-				F71FF0B1AFB5242A6E1C6D84CCCAA8F1 /* TEABarChart.h */,
-				466170B7245E9E7CAA19B78D22533CCD /* TEABarChart.m */,
-				7A857A9E4B91A42C8E8C5092E584FC39 /* TEAChart.h */,
-				930B625E1B9F46AAE72B9524EA2F5EBB /* TEAClockChart.h */,
-				B4E8F4373AA1583480279C1842B1A6FC /* TEAClockChart.m */,
-				29BB7BCA7604824D0D2F50C8C645ED55 /* TEAContributionGraph.h */,
-				EA171CE2D377A318E8E938D4306EF0A2 /* TEAContributionGraph.m */,
-				9FC824EEEC5265123E2E0493FD4BB6D0 /* TEATimeRange.h */,
-				C11D848FE8050C029AD11773E97E894A /* TEATimeRange.m */,
-				8C0EA8541CA392A92A7271600700F683 /* Support Files */,
+				FFCAA19BB7B8C32C3B417EFDB858AAE2 /* TPCircularBuffer.c */,
+				67B25F8FB003B4AA4DD786E64F19D0B2 /* TPCircularBuffer.h */,
+				D93EAF88A40AC9965CBBC7A836BFAEBD /* TPCircularBuffer+AudioBufferList.c */,
+				640727131506D9523B6BE1F65ABF0411 /* TPCircularBuffer+AudioBufferList.h */,
+				95ACAF85F48D1A49008644D95D5749FB /* Support Files */,
+			);
+			path = TPCircularBuffer;
+			sourceTree = "<group>";
+		};
+		44AF036C3861BFA199AE335A567B6ED6 /* TEAChart */ = {
+			isa = PBXGroup;
+			children = (
+				DC1A799547CA81859E8341DD4991845C /* NSDate+TEAExtensions.h */,
+				C2947C6E9F4E3FED936B2B7888F5824A /* NSDate+TEAExtensions.m */,
+				E07649788694095191B35BBADECE03B0 /* TEABarChart.h */,
+				626B365DD4AB4CE5B757179C7CC7C210 /* TEABarChart.m */,
+				570F35E29567EE50D89111877263849A /* TEAChart.h */,
+				8DCCD066F6C6A06BC52C5DC9C6454F8F /* TEAClockChart.h */,
+				BF3D95A180FF947788525391651A04EE /* TEAClockChart.m */,
+				1B1CF07AA49AF3D9BA0262A79A4A33DF /* TEAContributionGraph.h */,
+				BDDDF996BE3B40CC2FF458DE5BB28A55 /* TEAContributionGraph.m */,
+				11483FB893A54C7C7180AA708950C387 /* TEATimeRange.h */,
+				D86B60E94BF6DAB9CEC44E8B7125C0D0 /* TEATimeRange.m */,
+				127C2E35E7DBF7338875F315B647342B /* Support Files */,
 			);
 			path = TEAChart;
 			sourceTree = "<group>";
 		};
-		480607604B64EE8A11DBC5713CB7590A /* Support Files */ = {
+		4903CA6B51388E9B128D35CD5BF5E53E /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				3867872EF1B46E69C9002E6ADDE7FF1C /* EZAudio.modulemap */,
-				C4C8E84FFF8D11135E619C66AB1F401F /* EZAudio.xcconfig */,
-				7FD3F7B16A8C6C909E6C8B9553D74D19 /* EZAudio-dummy.m */,
-				8E02C61EB4F0648ED489C2F5C6E93B8C /* EZAudio-prefix.pch */,
-				C908668C0F6226AC0C12BD90EB776FCF /* EZAudio-umbrella.h */,
-				6F615BC76A327CD2F8D80C894195917C /* Info.plist */,
+				E53CB24F5E6E217B4E548A26E232FC18 /* Info.plist */,
+				707DE5888D52B5C710DA79BE5D2FD205 /* StarWars.modulemap */,
+				D59EC81E5CBADF00B65270643187FBED /* StarWars.xcconfig */,
+				B5B27D2B18830A82027623641BA0A816 /* StarWars-dummy.m */,
+				D9699F0F2FDD3430ED456734B9D8876D /* StarWars-prefix.pch */,
+				67CF6D200AD43A1B4EEED9A24602E539 /* StarWars-umbrella.h */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/EZAudio";
+			path = "../Target Support Files/StarWars";
+			sourceTree = "<group>";
+		};
+		4C38DEB99DA2A8CBE363D47EDC160749 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				8F212671D20E0411B3A430F4011C7D21 /* EZAudio.h */,
+				FF551E3FFCE5C716A6C8935613F3BA80 /* EZAudio.m */,
+				498418BD35BFD3D2CD107774B6643861 /* EZAudioDevice.h */,
+				2F7B12EAEAFA02C4109A8BA9E21C5F6E /* EZAudioDevice.m */,
+				0FF5DB3AD117FA8FBA50D92EE9AF13EE /* EZAudioDisplayLink.h */,
+				02E91F304FFB62FA064D36C772C43C4D /* EZAudioDisplayLink.m */,
+				9E0955F109D09FA1D285C967821D374A /* EZAudioFFT.h */,
+				DB9C0FF8F6494241EA36E789FFB14291 /* EZAudioFFT.m */,
+				D85795AC291EFFEB8140BE9395A5F434 /* EZAudioFile.h */,
+				7846466F20AF9318A00B30A390CF3F82 /* EZAudioFile.m */,
+				071CE9A05CCF921E8972CF2D510BD034 /* EZAudioFloatConverter.h */,
+				C38B7D7B634B84385FAA6DD43A0C3D5F /* EZAudioFloatConverter.m */,
+				74033015A1AC174C397CFA46CA4D290E /* EZAudioFloatData.h */,
+				ED9C068A2DB9747D165011FDF4AA6067 /* EZAudioFloatData.m */,
+				A6EC938F82DCE1F1322F7AABB1CAA0F6 /* EZAudioiOS.h */,
+				2651B7FEB4452BD2E906BF2DC49E0C17 /* EZAudioOSX.h */,
+				A72A9A69CA31E506BB686FFB81B66570 /* EZAudioPlayer.h */,
+				0ED8C74736DA2B6060AFD40C18DAB4BE /* EZAudioPlayer.m */,
+				6A90F5B9583E92565082C8ACC3D7FBCD /* EZAudioPlot.h */,
+				05197D013D56C4A86948C729E73941F9 /* EZAudioPlot.m */,
+				0BB328656860841D2EC49F19CB7D171A /* EZAudioPlotGL.h */,
+				B6BA6709E1358D356658E8A4A28EFFD8 /* EZAudioPlotGL.m */,
+				0D95AF867AE9F1AC5A81ED5ABA0039C2 /* EZAudioUtilities.h */,
+				DC604D0C752A2DAFF1DC5C32128E60A0 /* EZAudioUtilities.m */,
+				76DD3A9847AA27DBE1ECAA03A0C6FF2A /* EZMicrophone.h */,
+				876E02A973EBE428086E0F5F7C0DF6D3 /* EZMicrophone.m */,
+				015855AC71B8184E3EEC650860EC58FE /* EZOutput.h */,
+				6E1F6BD016E432836D04C77CBF2C0FC5 /* EZOutput.m */,
+				23A28A7CD70FFD75C59E4EBD6D663879 /* EZPlot.h */,
+				E80F8A3DEF454AB47D650B44EC1633C1 /* EZPlot.m */,
+				DB42D90ADD28D9DEDC48480C0EABD4DB /* EZRecorder.h */,
+				4DB996793746F2E3F9A959C28337CA6B /* EZRecorder.m */,
+				529B9794E450C9DA0F6F4951406F95E1 /* TPCircularBuffer.c */,
+				91BCE69F5ED5FAF69D0B55EC7B06932B /* TPCircularBuffer.h */,
+			);
+			name = Core;
 			sourceTree = "<group>";
 		};
 		5F0C663243CC63672B9988C3EDC47653 /* Targets Support Files */ = {
@@ -571,59 +633,23 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		64C10839D3253EFAEC1D57EDB4E8B93C /* Core */ = {
+		6D1D3FF411CDE5FF217D13267D0313C3 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				956B254F58AF4B6C67B615BA87C84D87 /* EZAudio.h */,
-				C07008D0EE61E40856F9A3F7E449328A /* EZAudio.m */,
-				929AF71AC35BA5F74E96A7C171684136 /* EZAudioDevice.h */,
-				5CBDEA13F162C1D7452EEEDB8706088A /* EZAudioDevice.m */,
-				7ED9EAF5D70B0C41D45FECD08C88EA4E /* EZAudioDisplayLink.h */,
-				C61326F8E654351C6267AA50D916260C /* EZAudioDisplayLink.m */,
-				0B31D5E1C86733F3FCC8EFAFC27D4FDA /* EZAudioFFT.h */,
-				387D1788A46A7DE6410982A2ADB1546B /* EZAudioFFT.m */,
-				417371A41CB4DD84D8DABEBDE75B0E3A /* EZAudioFile.h */,
-				1DE805C6775C6E155191CD1B9638FFED /* EZAudioFile.m */,
-				B9EA361B9ACD0FD3DB8D013A26DD90F6 /* EZAudioFloatConverter.h */,
-				4BC1D0C0D8B55EEE02142264FD7C7369 /* EZAudioFloatConverter.m */,
-				4FF0567707EE9FF55345F10E4735E9B5 /* EZAudioFloatData.h */,
-				5A60643C854C3E2C08F0FD497804E864 /* EZAudioFloatData.m */,
-				BBDD107DE527A8C2D08DDE368F82E2DA /* EZAudioiOS.h */,
-				7BE929250DDBF9922A72ACA8F17994DE /* EZAudioOSX.h */,
-				F4A49E01ADAEDC8D03EC506084FA54E9 /* EZAudioPlayer.h */,
-				8C4D70364364732479220375F6AD6A71 /* EZAudioPlayer.m */,
-				EBE6B1CBA727D80A638984E95A1F2CAA /* EZAudioPlot.h */,
-				C0B5AB95FEA9E46DB6F0438AD1E27398 /* EZAudioPlot.m */,
-				DCD552B7A016DBA6976E5EB6F517CB8B /* EZAudioPlotGL.h */,
-				862D04E0C9B2D0431EE274C242C0D7D8 /* EZAudioPlotGL.m */,
-				DAAAF64C7B403E12185F136A6B5871AB /* EZAudioUtilities.h */,
-				E91A74CD32EADD3EA1709064A6CD7A94 /* EZAudioUtilities.m */,
-				10683377BC0AF313D9F43A6FB51CBBF4 /* EZMicrophone.h */,
-				5AB4E957A216D2B551334051C51691EB /* EZMicrophone.m */,
-				20E8D527A7C6E7C4126986561E935BC1 /* EZOutput.h */,
-				17F5BACDF3B809EB26002141271CC047 /* EZOutput.m */,
-				AB22D88E81F507AC2277AB8AEFD31448 /* EZPlot.h */,
-				BAFE3B627EB8B98AF23C6E8B03F369A3 /* EZPlot.m */,
-				017DEAC03FEB4620EAF296FD72E1A21B /* EZRecorder.h */,
-				3D46E455462A1BC66D262D0D1CE4DF8E /* EZRecorder.m */,
-				22A30A3269DEB316491284AB98E45B2D /* TPCircularBuffer.c */,
-				F06AED0A184015744FCFEFF5981F87AB /* TPCircularBuffer.h */,
+				B15B3F0D0099DD16780CF4783F4F2D10 /* Images.xcassets */,
+				048E6754C7B240D79BF8475403EB7443 /* LoadingView.xib */,
 			);
-			name = Core;
+			name = Resources;
 			sourceTree = "<group>";
 		};
-		741041BD8F86BC272047788517AD2D01 /* Support Files */ = {
+		6F81DAE53311D8CA17C999C594F3F1A7 /* MMParallaxCell */ = {
 			isa = PBXGroup;
 			children = (
-				8AE5537C10E7BE5265829A7135E6B09E /* Info.plist */,
-				723B0485256937C95E1EF5BA8D0E445B /* TPCircularBuffer.modulemap */,
-				954DF65B137E678D4C809003D966D4D7 /* TPCircularBuffer.xcconfig */,
-				D5A3EEF52C027A45594213CBE70B809C /* TPCircularBuffer-dummy.m */,
-				F32B53F1689E1B4328BEBF138E2F84FF /* TPCircularBuffer-prefix.pch */,
-				E3243185A2BB0945C0532D7B8E875C5D /* TPCircularBuffer-umbrella.h */,
+				7E33FDFA746B9AB969893F93C4170690 /* MMParallaxCell.h */,
+				14AC1175A450FCE8DDF8B33D88DE26B0 /* MMParallaxCell.m */,
+				AC4125F84FF3692684AD91011F499B65 /* Support Files */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/TPCircularBuffer";
+			path = MMParallaxCell;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
@@ -631,87 +657,132 @@
 			children = (
 				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
 				1F28A64F6BE4F0BF5D17B332E7ADAA77 /* Frameworks */,
-				7E29A072E8AD2F5BCCE5C237A5E31BF4 /* Pods */,
-				0B74FAF1AC74C28F566F8466B3BB4259 /* Products */,
+				EF345890CFBF625E477D5959E859FA6B /* Pods */,
+				CC894FA3D889D40AD248287F768FE408 /* Products */,
 				5F0C663243CC63672B9988C3EDC47653 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		7E29A072E8AD2F5BCCE5C237A5E31BF4 /* Pods */ = {
+		95ACAF85F48D1A49008644D95D5749FB /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				35D639F92BF0D95F4B9066F5316D3ACA /* EZAudio */,
-				F0BA6FDFD690E04E84AA8B39C9816116 /* MMParallaxCell */,
-				11EE354F5C0EE9A1AD5BB691C0E670AF /* Spring */,
-				2F4937661678E9C48EF0225AAD00BA34 /* StarWars */,
-				3BB1445BC34F2C57493E9A654241904C /* TEAChart */,
-				8652409D8B3A4E6BECC46BE38753E3E6 /* TPCircularBuffer */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		8652409D8B3A4E6BECC46BE38753E3E6 /* TPCircularBuffer */ = {
-			isa = PBXGroup;
-			children = (
-				610B2415D114B327CE7B7F7F4B67BABD /* TPCircularBuffer.c */,
-				2248EFEBEE6B9B9AA7FA103D021040B4 /* TPCircularBuffer.h */,
-				FAF9B3762A15D79DB1C9774ED5B28DDB /* TPCircularBuffer+AudioBufferList.c */,
-				C846E34ED5043B98A8EF0944FFAAF09F /* TPCircularBuffer+AudioBufferList.h */,
-				741041BD8F86BC272047788517AD2D01 /* Support Files */,
-			);
-			path = TPCircularBuffer;
-			sourceTree = "<group>";
-		};
-		8C0EA8541CA392A92A7271600700F683 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				990A4789FD59F2DDED0C8AB92DB17D70 /* Info.plist */,
-				3B10C6C09CEC9940FE20951AB126A52F /* TEAChart.modulemap */,
-				13B415B1DBF3C0B8F72442E62BBE7F47 /* TEAChart.xcconfig */,
-				B3B9DB43B0CCDF45778E85CC811EE142 /* TEAChart-dummy.m */,
-				34B61526CE59999D8C351CD9FB33EB01 /* TEAChart-prefix.pch */,
-				E0CB5C3E2DEF3DA6B5C471A1D4C4C8C6 /* TEAChart-umbrella.h */,
+				D9EF11A7077C2306F66CAA5F523F08F8 /* Info.plist */,
+				F51031721B202381FA5CDA49ABA5BE65 /* TPCircularBuffer.modulemap */,
+				95C1F22DF7AB6B4197B8E57FE31E1E43 /* TPCircularBuffer.xcconfig */,
+				B60D2394B6985B5032FA926D96164972 /* TPCircularBuffer-dummy.m */,
+				ED60994ADC5E1CA5EF8BF4896D774DAA /* TPCircularBuffer-prefix.pch */,
+				2CAB4D9E71CD1F7902D8DE5DF4C3CABC /* TPCircularBuffer-umbrella.h */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/TEAChart";
+			path = "../Target Support Files/TPCircularBuffer";
 			sourceTree = "<group>";
 		};
-		B4FE57E733491404FB07A60D358F37EA /* Support Files */ = {
+		A9C056EBE74049DBB0E928C5A975334E /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				872A1F5D77ACB225EA7C39BC9754F781 /* Info.plist */,
-				64C0FE8B6A2D8A984EEA44E25D7CE5F4 /* MMParallaxCell.modulemap */,
-				EDAA7F25DE4C825385E0FBA494FBB61A /* MMParallaxCell.xcconfig */,
-				4F3F9AFC0049479C15F2AE0AD0593362 /* MMParallaxCell-dummy.m */,
-				E545F99574C39E29CEA384CA19C5E7FA /* MMParallaxCell-prefix.pch */,
-				9CF1A385A5C9D338544EC150FE731A9E /* MMParallaxCell-umbrella.h */,
+				B2208FF69842D157E5D72EFC33CB0770 /* DynamicColor.modulemap */,
+				F2A9CD65927CFC06321708C0E2984080 /* DynamicColor.xcconfig */,
+				77202E541AAF352C80414F0BA1134559 /* DynamicColor-dummy.m */,
+				00D17056A4BAD2569108AC8890106D44 /* DynamicColor-prefix.pch */,
+				1BBA42692A026378842412AE7476B5FC /* DynamicColor-umbrella.h */,
+				04DA2F0007EF972295D1510733615D67 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/DynamicColor";
+			sourceTree = "<group>";
+		};
+		AC4125F84FF3692684AD91011F499B65 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				5974827555FA328929CE8EC37486CC4B /* Info.plist */,
+				2DDB1D07E165F2A6189F0270A1C295A8 /* MMParallaxCell.modulemap */,
+				E85D273E42FBD6C3084CC52967199A53 /* MMParallaxCell.xcconfig */,
+				59C337AE0387A5B93F3E39AA20AF9CB3 /* MMParallaxCell-dummy.m */,
+				27C27B579794DD8AF7DD1FED776BE87A /* MMParallaxCell-prefix.pch */,
+				5E229A847D0FD81994DC9A52D9A163BF /* MMParallaxCell-umbrella.h */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/MMParallaxCell";
 			sourceTree = "<group>";
 		};
-		E51544C880B7C35AEEC432AF2D65D9B1 /* Resources */ = {
+		B837D1B9E7B66FBAF0735BD51760E393 /* EZAudio */ = {
 			isa = PBXGroup;
 			children = (
-				06E421DC64210519B3B2622FA33A7779 /* Images.xcassets */,
-				DC46C379ED4E3F4E1EF409BAB787B904 /* LoadingView.xib */,
+				4C38DEB99DA2A8CBE363D47EDC160749 /* Core */,
+				0957DEAD7C1D4676784F6B6D4EABD705 /* Support Files */,
 			);
-			name = Resources;
+			path = EZAudio;
 			sourceTree = "<group>";
 		};
-		F0BA6FDFD690E04E84AA8B39C9816116 /* MMParallaxCell */ = {
+		CC894FA3D889D40AD248287F768FE408 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				ABA367C132D9A48DF451B68D3F593345 /* MMParallaxCell.h */,
-				273BE60D6BC73F12CDAABC21BA0BB7D9 /* MMParallaxCell.m */,
-				B4FE57E733491404FB07A60D358F37EA /* Support Files */,
+				5B25BC917CBBFFBDA101D36563BFD3A4 /* DynamicColor.framework */,
+				6866178E497EC84563B01619B2B78868 /* EZAudio.framework */,
+				4A2A53AEC5E4EE350EC5C9FCF0E1762D /* MMParallaxCell.framework */,
+				A031B1127A6A1BCAB0699D1EB0EC5047 /* Pods_conscious.framework */,
+				599ECDC486BEB96E80334655F6456DD5 /* Spring.framework */,
+				9C7A6FFD2672CC88D0BA9FE24A77CC00 /* StarWars.framework */,
+				A3DF2EDB64718735ADD1525B2775DB23 /* TEAChart.framework */,
+				7B903F6BB1CFF77BB1F7E6F53C28203D /* TPCircularBuffer.framework */,
 			);
-			path = MMParallaxCell;
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D05109C374B4D04F5E83A02D3CDE153B /* DynamicColor */ = {
+			isa = PBXGroup;
+			children = (
+				A797A8DBAD601D471894B2BCD334DA32 /* DynamicColor.swift */,
+				EE7FDB5A62A8817A85E56C9F7CEE889F /* HSL.swift */,
+				A9C056EBE74049DBB0E928C5A975334E /* Support Files */,
+			);
+			path = DynamicColor;
+			sourceTree = "<group>";
+		};
+		E133B80EF3A66AE7A069CCFA2F830F2A /* StarWars */ = {
+			isa = PBXGroup;
+			children = (
+				1833C424864576C6CD8F4A28EA58A132 /* Sprite.swift */,
+				3117FEFC0B57DEB790B133A854E4A5B4 /* SpriteRender.swift */,
+				7324D45408C3AB63491DADDC56AB1AFC /* StarWarsGLAnimator.swift */,
+				AAB58F0C3D3E3294D56A0A154C175CA1 /* Vector2.swift */,
+				F6B8F1597BE13F2CBA3512BED1EFA1F9 /* ViewTexture.swift */,
+				4903CA6B51388E9B128D35CD5BF5E53E /* Support Files */,
+			);
+			path = StarWars;
+			sourceTree = "<group>";
+		};
+		EF345890CFBF625E477D5959E859FA6B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D05109C374B4D04F5E83A02D3CDE153B /* DynamicColor */,
+				B837D1B9E7B66FBAF0735BD51760E393 /* EZAudio */,
+				6F81DAE53311D8CA17C999C594F3F1A7 /* MMParallaxCell */,
+				354BADFA4DC0ABE2846ECAFE9ACB256D /* Spring */,
+				E133B80EF3A66AE7A069CCFA2F830F2A /* StarWars */,
+				44AF036C3861BFA199AE335A567B6ED6 /* TEAChart */,
+				397F78FECBAE8A8E92BA967E2DB22FF7 /* TPCircularBuffer */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		044098117299E73AE3FB3FE0952CE5C6 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9D3062BB7E254CDFA8DCA4FC463D69FB /* NSDate+TEAExtensions.h in Headers */,
+				48210283DFCD1D858E29E6E3B4744229 /* TEABarChart.h in Headers */,
+				947E4023F99CB27C08F73AFCEA2BD1A0 /* TEAChart-umbrella.h in Headers */,
+				A5C1F7FE471621FD6FA59D6FB788BB89 /* TEAChart.h in Headers */,
+				4E9104126A832EF0562EE7344579ED2A /* TEAClockChart.h in Headers */,
+				8C01A7F742841CA0DC963B4085905C77 /* TEAContributionGraph.h in Headers */,
+				6A30E8BBADAEDC95F9B021D5204F8E89 /* TEATimeRange.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0825FA894503A22DA5F048D72845E8CB /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -738,25 +809,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0DB8FA10690EE94ADB3A967E0DB2E6A7 /* Headers */ = {
+		26A2A68BA957947538913A1DF760E7C8 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CBFF456AC541374DF15ED320003BA85E /* Pods-conscious-umbrella.h in Headers */,
+				6FE90399CC4D5C252271DE969A387871 /* Spring-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		19F2699F3084501F6877979CBE253D81 /* Headers */ = {
+		3BFF84ABEC5339F795A38C39FB572E18 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5B7544AE28BB67F6E8B07EDCB08F9239 /* NSDate+TEAExtensions.h in Headers */,
-				23B49B6507754DF0E2B3789D242C3909 /* TEABarChart.h in Headers */,
-				0C45C9F55858A5544EACA0EDBAB14289 /* TEAChart-umbrella.h in Headers */,
-				60F7F749575C3EF78702CFF4E8F88D36 /* TEAChart.h in Headers */,
-				01CA2A3DAE59443912A8D7E91FD1F3FA /* TEAClockChart.h in Headers */,
-				F42DE685B10E0B206F68F5B7C012F65C /* TEAContributionGraph.h in Headers */,
-				87E57BD7A74EDCA354B06C414BB7E8E8 /* TEATimeRange.h in Headers */,
+				B93FDBD378904FC79D6B393C854B1F16 /* Pods-conscious-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -766,14 +831,6 @@
 			files = (
 				F3DAE8E740D5F16CDB37275A721883FA /* MMParallaxCell-umbrella.h in Headers */,
 				273CA95FDE56DCA867153BA8518E91FE /* MMParallaxCell.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4524EA8CC058934D6F25C63EDEEC282C /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				90879D93DB51EEDC73A7DD25CEE854CF /* Spring-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -787,38 +844,57 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B9FCB266B3FF2CEFF7394E83DA4CDD19 /* Headers */ = {
+		846E6B8914EE7590BBB98C2244EC5D6E /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4E28FCBC645A257BC302420355D7BDEC /* StarWars-umbrella.h in Headers */,
+				C0D281C7AE69816251A8352B9EBE9486 /* StarWars-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD7231EDA24F70411F42E6452B8618E5 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18E938F95DB58AF7A4E933D7BD645F0B /* DynamicColor-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		177A68ED76FC71F7B0EF647AAA722136 /* Pods-conscious */ = {
+		08F6A5AF8E89681F880EB03F167AACB7 /* DynamicColor */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 953C0891A9D5D46A4B971B37A06FDA41 /* Build configuration list for PBXNativeTarget "Pods-conscious" */;
+			buildConfigurationList = FC4702B144C514B41D51E60E93CA52C5 /* Build configuration list for PBXNativeTarget "DynamicColor" */;
 			buildPhases = (
-				D433BEBEFF42483854B006C1487271E7 /* Sources */,
-				4F21B46974E48B322B96BB4D4277DC62 /* Frameworks */,
-				0DB8FA10690EE94ADB3A967E0DB2E6A7 /* Headers */,
+				C8D6A9BD06E5CEFF7F6CD051253FDE6C /* Sources */,
+				2238FCD94A4DA0978EF3DBA51EAB157A /* Frameworks */,
+				CD7231EDA24F70411F42E6452B8618E5 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				4467182BB92F5C596D9358EBF3EB6BFC /* PBXTargetDependency */,
-				F31724A180CDC431E9C82F064078EFB6 /* PBXTargetDependency */,
-				AAB82894BE85035AE4E6FCEE7644E1BA /* PBXTargetDependency */,
-				079E1E1577E1F9D6554CEA78F2263D41 /* PBXTargetDependency */,
-				5B2D1F5A953750758B8CFABFE2841E15 /* PBXTargetDependency */,
-				A86C628762A80CA9B8BEE15B1474EF30 /* PBXTargetDependency */,
 			);
-			name = "Pods-conscious";
-			productName = "Pods-conscious";
-			productReference = 8F6495E1743415F4B2C6B2638314ED39 /* Pods_conscious.framework */;
+			name = DynamicColor;
+			productName = DynamicColor;
+			productReference = 5B25BC917CBBFFBDA101D36563BFD3A4 /* DynamicColor.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		3AE9CDA7325BD6949997462243A89ACE /* TEAChart */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9AFDD862C5CBFBACD0C03AD0AE66F9E3 /* Build configuration list for PBXNativeTarget "TEAChart" */;
+			buildPhases = (
+				D6697FAB4C28FFE5580616B1590F57C9 /* Sources */,
+				5B08B6D2E86DA1CD046C6DD684415C0F /* Frameworks */,
+				044098117299E73AE3FB3FE0952CE5C6 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TEAChart;
+			productName = TEAChart;
+			productReference = A3DF2EDB64718735ADD1525B2775DB23 /* TEAChart.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		62A7DC505700CB33FECD5F4D9B2D3805 /* MMParallaxCell */ = {
@@ -835,7 +911,7 @@
 			);
 			name = MMParallaxCell;
 			productName = MMParallaxCell;
-			productReference = 5123CE88977E8DCBB45DA74664DF7115 /* MMParallaxCell.framework */;
+			productReference = 4A2A53AEC5E4EE350EC5C9FCF0E1762D /* MMParallaxCell.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		630A3F469E1A8B405B5870DD8091D195 /* TPCircularBuffer */ = {
@@ -852,17 +928,17 @@
 			);
 			name = TPCircularBuffer;
 			productName = TPCircularBuffer;
-			productReference = A178978516816071D062691737DB9792 /* TPCircularBuffer.framework */;
+			productReference = 7B903F6BB1CFF77BB1F7E6F53C28203D /* TPCircularBuffer.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		94931FF7954CA66EDC464693A841051F /* Spring */ = {
+		861B30325D0D623E0CC16053A9E06154 /* Spring */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3D3A5464A6E0140B97A0011862DA067D /* Build configuration list for PBXNativeTarget "Spring" */;
+			buildConfigurationList = E9E5008F639D7465EB403EDD8ACCD673 /* Build configuration list for PBXNativeTarget "Spring" */;
 			buildPhases = (
-				3E390B67CA6D5E240FD900B613578708 /* Sources */,
-				06E0470106FEB58E98AB72EC4AA7C340 /* Frameworks */,
-				E78DA0FD5F810D6094D6353513521DF7 /* Resources */,
-				4524EA8CC058934D6F25C63EDEEC282C /* Headers */,
+				39C2BB1A23EAA92569962701F9490EA2 /* Sources */,
+				BFA1DCA802BE8EC4A799BF620828521C /* Frameworks */,
+				0433986B7B5760751BADCB99CDE04FAA /* Resources */,
+				26A2A68BA957947538913A1DF760E7C8 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -870,24 +946,31 @@
 			);
 			name = Spring;
 			productName = Spring;
-			productReference = BB5B7ED649A2147DD4985406EF66593C /* Spring.framework */;
+			productReference = 599ECDC486BEB96E80334655F6456DD5 /* Spring.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		A2E2679428BA9775D04879295CDAAAE0 /* StarWars */ = {
+		9E04B7B3F4C7BB5A32545AA8FD6721F3 /* Pods-conscious */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D95FF91F93D3715223B59F840BF0B18A /* Build configuration list for PBXNativeTarget "StarWars" */;
+			buildConfigurationList = 04A85D13F998EC82A7A45BA11588F2B6 /* Build configuration list for PBXNativeTarget "Pods-conscious" */;
 			buildPhases = (
-				5CA561FE0071B5C9C8BD5BA828AAC989 /* Sources */,
-				0F1EF3148571502804AFBD22FFDA22BA /* Frameworks */,
-				B9FCB266B3FF2CEFF7394E83DA4CDD19 /* Headers */,
+				3B4D1ABA8CD6D19476978F0CFF6105C4 /* Sources */,
+				A6657052CB6CC214854A11070CEF02FA /* Frameworks */,
+				3BFF84ABEC5339F795A38C39FB572E18 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				98BF7BB8B34E87C1E486734F0782A70F /* PBXTargetDependency */,
+				76D3CBFAD8369BCC5B489EBE1110A8A5 /* PBXTargetDependency */,
+				0D86C74A9BBFDC4BA34AEE3D0C51DBB9 /* PBXTargetDependency */,
+				EE0003279EEBC5CB6BEB946BFCEA1CE9 /* PBXTargetDependency */,
+				2046DAEE3F714BA1C40B40AA4ED93970 /* PBXTargetDependency */,
+				411C5A6F9A3022388D52237F63F161C6 /* PBXTargetDependency */,
+				05FC67E2ECE666438B73A5432AC54968 /* PBXTargetDependency */,
 			);
-			name = StarWars;
-			productName = StarWars;
-			productReference = 4C8B7B6809391E30B565CC0D3F0805A1 /* StarWars.framework */;
+			name = "Pods-conscious";
+			productName = "Pods-conscious";
+			productReference = A031B1127A6A1BCAB0699D1EB0EC5047 /* Pods_conscious.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		B998D1794C76C66865824BD5511C74FF /* EZAudio */ = {
@@ -905,24 +988,24 @@
 			);
 			name = EZAudio;
 			productName = EZAudio;
-			productReference = 8AE691DACE91922C93C3E031AE16A04B /* EZAudio.framework */;
+			productReference = 6866178E497EC84563B01619B2B78868 /* EZAudio.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		E89E090A93F018B5F84F3907AABE9FBC /* TEAChart */ = {
+		CCE3CAB106F5B95784DB7B18B29EC9CE /* StarWars */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E0B21ACB2DF228F3A97DC8FC562FEB66 /* Build configuration list for PBXNativeTarget "TEAChart" */;
+			buildConfigurationList = 3BA7D67ED66CE7C02A437CFA3E82D89E /* Build configuration list for PBXNativeTarget "StarWars" */;
 			buildPhases = (
-				B43FC1434F5589294D43EE88E9FC5E4E /* Sources */,
-				D5C1AA9B035E6905BDEFBB5D3049A696 /* Frameworks */,
-				19F2699F3084501F6877979CBE253D81 /* Headers */,
+				7B6C07B2265F131546DDE16BC27251EB /* Sources */,
+				6602776B0D621940DA45C07DE3A53671 /* Frameworks */,
+				846E6B8914EE7590BBB98C2244EC5D6E /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = TEAChart;
-			productName = TEAChart;
-			productReference = 5353D22375F433E50D563C0EC07A8A9D /* TEAChart.framework */;
+			name = StarWars;
+			productName = StarWars;
+			productReference = 9C7A6FFD2672CC88D0BA9FE24A77CC00 /* StarWars.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -942,66 +1025,75 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 0B74FAF1AC74C28F566F8466B3BB4259 /* Products */;
+			productRefGroup = CC894FA3D889D40AD248287F768FE408 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				08F6A5AF8E89681F880EB03F167AACB7 /* DynamicColor */,
 				B998D1794C76C66865824BD5511C74FF /* EZAudio */,
 				62A7DC505700CB33FECD5F4D9B2D3805 /* MMParallaxCell */,
-				177A68ED76FC71F7B0EF647AAA722136 /* Pods-conscious */,
-				94931FF7954CA66EDC464693A841051F /* Spring */,
-				A2E2679428BA9775D04879295CDAAAE0 /* StarWars */,
-				E89E090A93F018B5F84F3907AABE9FBC /* TEAChart */,
+				9E04B7B3F4C7BB5A32545AA8FD6721F3 /* Pods-conscious */,
+				861B30325D0D623E0CC16053A9E06154 /* Spring */,
+				CCE3CAB106F5B95784DB7B18B29EC9CE /* StarWars */,
+				3AE9CDA7325BD6949997462243A89ACE /* TEAChart */,
 				630A3F469E1A8B405B5870DD8091D195 /* TPCircularBuffer */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		E78DA0FD5F810D6094D6353513521DF7 /* Resources */ = {
+		0433986B7B5760751BADCB99CDE04FAA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9CE738674051A051CD7A077ECA8972CB /* Images.xcassets in Resources */,
-				5AD56B92F740A11A3FF87E5C0B019E4A /* LoadingView.xib in Resources */,
+				F4AF1A1CAA783F7BD0FBBF7AC386C995 /* Images.xcassets in Resources */,
+				8E4474CA0C2447A357443D4CDB0D7F0A /* LoadingView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		3E390B67CA6D5E240FD900B613578708 /* Sources */ = {
+		39C2BB1A23EAA92569962701F9490EA2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C346D593B5F0185BCAE937F48DD7219C /* AsyncButton.swift in Sources */,
-				7DFA64D00C6E72C17318136459528880 /* AsyncImageView.swift in Sources */,
-				0EFE7E063B6A30733617C041126F67F8 /* AutoTextView.swift in Sources */,
-				E7CD6A597EAD2590255DDF51434EC300 /* BlurView.swift in Sources */,
-				DA426FAAE724F670697CBA43ED2EAB79 /* DesignableButton.swift in Sources */,
-				B7A687AB3AFF3D6A3BD6ADA277878BD0 /* DesignableImageView.swift in Sources */,
-				8E007D658F3107909BE1D5B78DD02E03 /* DesignableLabel.swift in Sources */,
-				09107C74F7BE07FD2FA75EEBB6F6A02F /* DesignableTabBarController.swift in Sources */,
-				A63A3F8997E00E34B6297BE1CD74A757 /* DesignableTextField.swift in Sources */,
-				DBB3094E343448B45965010207ECD486 /* DesignableTextView.swift in Sources */,
-				23A611D24680CED3C9D2D81FAA05C973 /* DesignableView.swift in Sources */,
-				BC6F2D74D6CA952604B9FAB60DA9772D /* ImageLoader.swift in Sources */,
-				84417C3D7328DE59506C98A4F58D3A91 /* KeyboardLayoutConstraint.swift in Sources */,
-				32218026DF748C75A85E71D962CB0174 /* LoadingView.swift in Sources */,
-				0E06472FAA8DC2A1D4BF0FB871BA5F14 /* Misc.swift in Sources */,
-				108E46A98E36D427E46E46C15CEAF307 /* SoundPlayer.swift in Sources */,
-				DB84965792947585F3571D669CB0A95D /* Spring-dummy.m in Sources */,
-				D829AB4DDF77BF1F5300F4D36A62E9B3 /* Spring.swift in Sources */,
-				5873A4C141A74E0F9461C442CB3851A6 /* SpringAnimation.swift in Sources */,
-				4BDB1A950926BAC947D32FADD8DD14A2 /* SpringButton.swift in Sources */,
-				6E81EF431763CAD28E84506C13290095 /* SpringImageView.swift in Sources */,
-				C187737F2373C6CD8612C08AFC4FF10F /* SpringLabel.swift in Sources */,
-				D174B18EC5874A228F3D3A5225ADF05A /* SpringTextField.swift in Sources */,
-				E3BFBAED02198E63DF398D380E6090EE /* SpringTextView.swift in Sources */,
-				A7DC546A4CD847CC746AA78124018273 /* SpringView.swift in Sources */,
-				10E13BC69D69FAA6BD6CFF2E20D5AC36 /* TransitionManager.swift in Sources */,
-				B968F1BA4341EDE6587A68A5A194E2CB /* TransitionZoom.swift in Sources */,
-				D1BCCDE6FEE8E62DFC652441BCA1B93F /* UnwindSegue.swift in Sources */,
+				4F3E2C762A663C204B8B92EEEBED5C46 /* AsyncButton.swift in Sources */,
+				0A10C468722A75DECF409FBE8AE3CFDF /* AsyncImageView.swift in Sources */,
+				433CAB6D333AF0B5F47D67CAB7445C83 /* AutoTextView.swift in Sources */,
+				6EF80D5E0004B461F073715CA481BF9F /* BlurView.swift in Sources */,
+				AEBE0DDE9D0155AE61C4B2F454A46ABA /* DesignableButton.swift in Sources */,
+				3E2267B46E3FD977EA3B714E2F7D5E43 /* DesignableImageView.swift in Sources */,
+				946936C6A335C8E3E757FDA368BAE9C3 /* DesignableLabel.swift in Sources */,
+				D8DC374DFBC8992604838AE03B536769 /* DesignableTabBarController.swift in Sources */,
+				3739C5133CB29754A3656F378E1973A4 /* DesignableTextField.swift in Sources */,
+				B1CCCE4F015040B2416D54EE0701CFB4 /* DesignableTextView.swift in Sources */,
+				C30C38E0DF49EF31E33A12DAEF3972D3 /* DesignableView.swift in Sources */,
+				BBA7076087940353678B18471C8BBB42 /* ImageLoader.swift in Sources */,
+				3F0F33D7A3D544E726435A7749039AD1 /* KeyboardLayoutConstraint.swift in Sources */,
+				EC4FFBDCB8CC8308320FDE42E70019CB /* LoadingView.swift in Sources */,
+				33284590A7D7297D549F91295F608513 /* Misc.swift in Sources */,
+				F7330D94C270FFB2A8879F0880E91B7D /* SoundPlayer.swift in Sources */,
+				064BCAB901624EB79B9012B6536870DA /* Spring-dummy.m in Sources */,
+				6BB84DEEFB32C6D2152164E19301ACC0 /* Spring.swift in Sources */,
+				2F5C308784E0A8E44F0C9C17FDE9F574 /* SpringAnimation.swift in Sources */,
+				68BB61620DEFB212018BAE3937F5D0AA /* SpringButton.swift in Sources */,
+				114DFF991A76212C6C91275E0EA16C2A /* SpringImageView.swift in Sources */,
+				0E0B7B341E8FC2CFFAC14C813BE39F87 /* SpringLabel.swift in Sources */,
+				97120EAF8E8D119D6F30C4987FD2651F /* SpringTextField.swift in Sources */,
+				D83D2713B45908453FE025294527CCFE /* SpringTextView.swift in Sources */,
+				A0B2A59347DC0C3D874946BEC3D51A2A /* SpringView.swift in Sources */,
+				CF1DC2DD161551CCD9FA09F6FEBA8315 /* TransitionManager.swift in Sources */,
+				D51B46C8A3256FC95A96395ED1E12616 /* TransitionZoom.swift in Sources */,
+				65E3C6AF430A88317D1D809F000D9358 /* UnwindSegue.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B4D1ABA8CD6D19476978F0CFF6105C4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E121A76E21E9F36D48B625541039DCB9 /* Pods-conscious-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1014,37 +1106,39 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5CA561FE0071B5C9C8BD5BA828AAC989 /* Sources */ = {
+		7B6C07B2265F131546DDE16BC27251EB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F2B43BC74D4D6E1E70FA3EAC2A742CE3 /* Sprite.swift in Sources */,
-				83254F1BCA20537C714E0179A6F160C0 /* SpriteRender.swift in Sources */,
-				14464FA70DE786B46613D5D2E395C1EB /* StarWars-dummy.m in Sources */,
-				024F386737D369CDD27704E6A5C660EE /* StarWarsGLAnimator.swift in Sources */,
-				4011E8E2D936738CA5521980559A65C7 /* Vector2.swift in Sources */,
-				F02D72AF98DC28643386FAD306A1551A /* ViewTexture.swift in Sources */,
+				A642AD31442668DE4D802AC59D01BCA0 /* Sprite.swift in Sources */,
+				8A3B47E18F7A343340141C793AFF8487 /* SpriteRender.swift in Sources */,
+				DD608DF13F72C529CD77CC0FA2DA386C /* StarWars-dummy.m in Sources */,
+				3E29951BFBD941B43BBC55FA0FD9D6B8 /* StarWarsGLAnimator.swift in Sources */,
+				1C7FC24E16BE6A65417615D46A0E062C /* Vector2.swift in Sources */,
+				DD42C398D2CCA78F5386849CC213999B /* ViewTexture.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B43FC1434F5589294D43EE88E9FC5E4E /* Sources */ = {
+		C8D6A9BD06E5CEFF7F6CD051253FDE6C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2EB3FF656E3302B3546AC5B5538F89A2 /* NSDate+TEAExtensions.m in Sources */,
-				725DE8F9BCCA401E49E1A5ACEAB19ED7 /* TEABarChart.m in Sources */,
-				7039DF129EF011395D33AEB40F139DB6 /* TEAChart-dummy.m in Sources */,
-				E6D9EBC13A455A09D420EA392F0FDD8A /* TEAClockChart.m in Sources */,
-				315D1A555607007F0502A71A5FF5FCF6 /* TEAContributionGraph.m in Sources */,
-				7ACE4C5B7F60BF59149E57702267607D /* TEATimeRange.m in Sources */,
+				DDAE2730611AEF6250382CE67A9AD99A /* DynamicColor-dummy.m in Sources */,
+				62E29425E2735EDFB2FEB127813F4D33 /* DynamicColor.swift in Sources */,
+				560643B27617038512AA64E271DD78C3 /* HSL.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D433BEBEFF42483854B006C1487271E7 /* Sources */ = {
+		D6697FAB4C28FFE5580616B1590F57C9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C8A8244AD0E4CE352AF4A581E2B43A7 /* Pods-conscious-dummy.m in Sources */,
+				3B6244812C72DF293A0EB1809B09AC9F /* NSDate+TEAExtensions.m in Sources */,
+				B4405C34BFEC477D8078FD005B85ACC0 /* TEABarChart.m in Sources */,
+				E06F280A43420A82C563260133835EB3 /* TEAChart-dummy.m in Sources */,
+				F343499577AC1672787EBA2FA4CFA7D6 /* TEAClockChart.m in Sources */,
+				70B99CE02F55C559142905433C06B0E4 /* TEAContributionGraph.m in Sources */,
+				A8D780371D19DFE307CD9187C977816C /* TEATimeRange.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1085,35 +1179,41 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		079E1E1577E1F9D6554CEA78F2263D41 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = StarWars;
-			target = A2E2679428BA9775D04879295CDAAAE0 /* StarWars */;
-			targetProxy = CA16A3C748B35541DB46CBC003ADBC3C /* PBXContainerItemProxy */;
-		};
-		4467182BB92F5C596D9358EBF3EB6BFC /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = EZAudio;
-			target = B998D1794C76C66865824BD5511C74FF /* EZAudio */;
-			targetProxy = B0E2AC28962C260A998D5FD63E4D63C3 /* PBXContainerItemProxy */;
-		};
-		5B2D1F5A953750758B8CFABFE2841E15 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = TEAChart;
-			target = E89E090A93F018B5F84F3907AABE9FBC /* TEAChart */;
-			targetProxy = E9CD1A28F3B0F70E79F68A799AE063D9 /* PBXContainerItemProxy */;
-		};
-		A86C628762A80CA9B8BEE15B1474EF30 /* PBXTargetDependency */ = {
+		05FC67E2ECE666438B73A5432AC54968 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = TPCircularBuffer;
 			target = 630A3F469E1A8B405B5870DD8091D195 /* TPCircularBuffer */;
-			targetProxy = D9E3D1F613CFD78F8302D7AA14B10DAD /* PBXContainerItemProxy */;
+			targetProxy = D7CF39508B17A918E63B0777DD8CF8E1 /* PBXContainerItemProxy */;
 		};
-		AAB82894BE85035AE4E6FCEE7644E1BA /* PBXTargetDependency */ = {
+		0D86C74A9BBFDC4BA34AEE3D0C51DBB9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = Spring;
-			target = 94931FF7954CA66EDC464693A841051F /* Spring */;
-			targetProxy = 4FEF05F8ABE44F53A5841B2D5072EB23 /* PBXContainerItemProxy */;
+			name = MMParallaxCell;
+			target = 62A7DC505700CB33FECD5F4D9B2D3805 /* MMParallaxCell */;
+			targetProxy = 11A7AE9AC7487E088D4E224B7E58FA43 /* PBXContainerItemProxy */;
+		};
+		2046DAEE3F714BA1C40B40AA4ED93970 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = StarWars;
+			target = CCE3CAB106F5B95784DB7B18B29EC9CE /* StarWars */;
+			targetProxy = 8C8145716382EEFF939C89ABDAA478B8 /* PBXContainerItemProxy */;
+		};
+		411C5A6F9A3022388D52237F63F161C6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = TEAChart;
+			target = 3AE9CDA7325BD6949997462243A89ACE /* TEAChart */;
+			targetProxy = FD162D10538470DA7ECBA50541D6BBEC /* PBXContainerItemProxy */;
+		};
+		76D3CBFAD8369BCC5B489EBE1110A8A5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = EZAudio;
+			target = B998D1794C76C66865824BD5511C74FF /* EZAudio */;
+			targetProxy = 35F9E7148B8F750179BA8CD1945EA588 /* PBXContainerItemProxy */;
+		};
+		98BF7BB8B34E87C1E486734F0782A70F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = DynamicColor;
+			target = 08F6A5AF8E89681F880EB03F167AACB7 /* DynamicColor */;
+			targetProxy = BBD5C30D5EA1B0EDB902BC42158C781E /* PBXContainerItemProxy */;
 		};
 		BF197C425D4B703B46965B70BD4E37E1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1121,18 +1221,18 @@
 			target = 630A3F469E1A8B405B5870DD8091D195 /* TPCircularBuffer */;
 			targetProxy = 135B5DA7C77BE9E22619AAD720F7A8A9 /* PBXContainerItemProxy */;
 		};
-		F31724A180CDC431E9C82F064078EFB6 /* PBXTargetDependency */ = {
+		EE0003279EEBC5CB6BEB946BFCEA1CE9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = MMParallaxCell;
-			target = 62A7DC505700CB33FECD5F4D9B2D3805 /* MMParallaxCell */;
-			targetProxy = 0468A54FAB09EAD0274EB95522FD6B01 /* PBXContainerItemProxy */;
+			name = Spring;
+			target = 861B30325D0D623E0CC16053A9E06154 /* Spring */;
+			targetProxy = CC600AC713A56957E30DA7DF54E936DE /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		01F8D1014CBB1A88961E9B3C9317E00D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EDAA7F25DE4C825385E0FBA494FBB61A /* MMParallaxCell.xcconfig */;
+			baseConfigurationReference = E85D273E42FBD6C3084CC52967199A53 /* MMParallaxCell.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -1157,36 +1257,9 @@
 			};
 			name = Debug;
 		};
-		05A018DD1AD5AFBE1801869016DBD7C9 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 13B415B1DBF3C0B8F72442E62BBE7F47 /* TEAChart.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/TEAChart/TEAChart-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/TEAChart/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/TEAChart/TEAChart.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = TEAChart;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		0C698760953FAF63C8606F32EAECE1C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C4C8E84FFF8D11135E619C66AB1F401F /* EZAudio.xcconfig */;
+			baseConfigurationReference = 3A630D56E4BEF2E6D396A14AAA19FACC /* EZAudio.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -1213,7 +1286,7 @@
 		};
 		17CE9AE0B376327ECF53456DCF10FE93 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C4C8E84FFF8D11135E619C66AB1F401F /* EZAudio.xcconfig */;
+			baseConfigurationReference = 3A630D56E4BEF2E6D396A14AAA19FACC /* EZAudio.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -1240,7 +1313,7 @@
 		};
 		372A7648A106D39AA6053505DEC1852A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EDAA7F25DE4C825385E0FBA494FBB61A /* MMParallaxCell.xcconfig */;
+			baseConfigurationReference = E85D273E42FBD6C3084CC52967199A53 /* MMParallaxCell.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -1267,7 +1340,7 @@
 		};
 		3B36161B892FA288475A1C32D115D6E3 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 954DF65B137E678D4C809003D966D4D7 /* TPCircularBuffer.xcconfig */;
+			baseConfigurationReference = 95C1F22DF7AB6B4197B8E57FE31E1E43 /* TPCircularBuffer.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -1292,9 +1365,9 @@
 			};
 			name = Release;
 		};
-		56D463118DC5B17361D13997C3A1E0A3 /* Release */ = {
+		404BD2E9EFBB4D261815E8809436627E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 724B47A6839934A0D8B8560BFDB5601F /* Spring.xcconfig */;
+			baseConfigurationReference = F2A9CD65927CFC06321708C0E2984080 /* DynamicColor.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -1303,25 +1376,26 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Spring/Spring-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Spring/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/DynamicColor/DynamicColor-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/DynamicColor/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Spring/Spring.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = Spring;
+				MODULEMAP_FILE = "Target Support Files/DynamicColor/DynamicColor.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = DynamicColor;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
-		6E4596E32A6A1CCEA726CA8A8A56762E /* Release */ = {
+		4290D52FA0B746CB0C04B807B0FE49B0 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 13B415B1DBF3C0B8F72442E62BBE7F47 /* TEAChart.xcconfig */;
+			baseConfigurationReference = C7A07F72AFD86BFF6BC3DF5992D8E0C6 /* TEAChart.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -1345,6 +1419,65 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
+		};
+		462A8AEA87F711886B56B2726F3649C6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 669223F0D7B67852E76B4EDF581DDAC8 /* Pods-conscious.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-conscious/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-conscious/Pods-conscious.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_conscious;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		6E15742D57D79096BA218D324351756C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E7DC6304E4CC4A53ABB557736A732CB3 /* Spring.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Spring/Spring-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Spring/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Spring/Spring.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = Spring;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
 		};
 		A70CDAD61F90AC503C7D04CC22DA2923 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -1385,9 +1518,9 @@
 			};
 			name = Debug;
 		};
-		B216C1D97CB930AC6AE4AB4B63598281 /* Release */ = {
+		B808D2BECD7A0A4F60440DC5CAE782DB /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 94106D944A16CBEF98666D1A31295018 /* StarWars.xcconfig */;
+			baseConfigurationReference = D59EC81E5CBADF00B65270643187FBED /* StarWars.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -1412,9 +1545,9 @@
 			};
 			name = Release;
 		};
-		C2153F31B453BA857F4332AB2B4D19CE /* Debug */ = {
+		C35A1816D37B31E9D7F68A119E602614 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 669223F0D7B67852E76B4EDF581DDAC8 /* Pods-conscious.debug.xcconfig */;
+			baseConfigurationReference = F2A9CD65927CFC06321708C0E2984080 /* DynamicColor.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -1423,83 +1556,23 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-conscious/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/DynamicColor/DynamicColor-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/DynamicColor/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-conscious/Pods-conscious.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = Pods_conscious;
+				MODULEMAP_FILE = "Target Support Files/DynamicColor/DynamicColor.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = DynamicColor;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
-		E231646F288CD0F5EED7455262C759F2 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 94106D944A16CBEF98666D1A31295018 /* StarWars.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/StarWars/StarWars-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/StarWars/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/StarWars/StarWars.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = StarWars;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		ED3567137D1D7DE70B0F06601F7B15B0 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 724B47A6839934A0D8B8560BFDB5601F /* Spring.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Spring/Spring-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Spring/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Spring/Spring.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = Spring;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		F0CCB2407D2CE3E77B55C020F352F105 /* Release */ = {
+		C3F2FB45430DEDDB7676A207460DB325 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2BAC5AED08CDBFB57897232F3F7EED95 /* Pods-conscious.release.xcconfig */;
 			buildSettings = {
@@ -1529,9 +1602,91 @@
 			};
 			name = Release;
 		};
+		D432DA21C2745A7EE10880495C59C499 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C7A07F72AFD86BFF6BC3DF5992D8E0C6 /* TEAChart.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/TEAChart/TEAChart-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/TEAChart/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/TEAChart/TEAChart.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = TEAChart;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E805446E5B3304DEA230B3C97D84D923 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E7DC6304E4CC4A53ABB557736A732CB3 /* Spring.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Spring/Spring-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Spring/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Spring/Spring.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = Spring;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		ECF21C9967EAD6F3641F3730A56BE531 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D59EC81E5CBADF00B65270643187FBED /* StarWars.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/StarWars/StarWars-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/StarWars/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/StarWars/StarWars.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = StarWars;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		F4DEE7300D2822F3CA8199A1F25D2BAC /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 954DF65B137E678D4C809003D966D4D7 /* TPCircularBuffer.xcconfig */;
+			baseConfigurationReference = 95C1F22DF7AB6B4197B8E57FE31E1E43 /* TPCircularBuffer.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -1593,6 +1748,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		04A85D13F998EC82A7A45BA11588F2B6 /* Build configuration list for PBXNativeTarget "Pods-conscious" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				462A8AEA87F711886B56B2726F3649C6 /* Debug */,
+				C3F2FB45430DEDDB7676A207460DB325 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1602,11 +1766,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3D3A5464A6E0140B97A0011862DA067D /* Build configuration list for PBXNativeTarget "Spring" */ = {
+		3BA7D67ED66CE7C02A437CFA3E82D89E /* Build configuration list for PBXNativeTarget "StarWars" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				ED3567137D1D7DE70B0F06601F7B15B0 /* Debug */,
-				56D463118DC5B17361D13997C3A1E0A3 /* Release */,
+				ECF21C9967EAD6F3641F3730A56BE531 /* Debug */,
+				B808D2BECD7A0A4F60440DC5CAE782DB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1629,11 +1793,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		953C0891A9D5D46A4B971B37A06FDA41 /* Build configuration list for PBXNativeTarget "Pods-conscious" */ = {
+		9AFDD862C5CBFBACD0C03AD0AE66F9E3 /* Build configuration list for PBXNativeTarget "TEAChart" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C2153F31B453BA857F4332AB2B4D19CE /* Debug */,
-				F0CCB2407D2CE3E77B55C020F352F105 /* Release */,
+				D432DA21C2745A7EE10880495C59C499 /* Debug */,
+				4290D52FA0B746CB0C04B807B0FE49B0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1647,20 +1811,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D95FF91F93D3715223B59F840BF0B18A /* Build configuration list for PBXNativeTarget "StarWars" */ = {
+		E9E5008F639D7465EB403EDD8ACCD673 /* Build configuration list for PBXNativeTarget "Spring" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E231646F288CD0F5EED7455262C759F2 /* Debug */,
-				B216C1D97CB930AC6AE4AB4B63598281 /* Release */,
+				6E15742D57D79096BA218D324351756C /* Debug */,
+				E805446E5B3304DEA230B3C97D84D923 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E0B21ACB2DF228F3A97DC8FC562FEB66 /* Build configuration list for PBXNativeTarget "TEAChart" */ = {
+		FC4702B144C514B41D51E60E93CA52C5 /* Build configuration list for PBXNativeTarget "DynamicColor" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				05A018DD1AD5AFBE1801869016DBD7C9 /* Debug */,
-				6E4596E32A6A1CCEA726CA8A8A56762E /* Release */,
+				404BD2E9EFBB4D261815E8809436627E /* Debug */,
+				C35A1816D37B31E9D7F68A119E602614 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
