@@ -163,8 +163,16 @@ class MediaViewController: UIViewController, AVAudioPlayerDelegate, UIViewContro
         }
     }
     
+    var navigteToHomeScreen = true
     func animationControllerForDismissedController(dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         if finished {
+            if(navigteToHomeScreen){
+                navigteToHomeScreen = false
+                dispatch_after(0,dispatch_get_main_queue(),{
+                    self.dismissViewControllerAnimated(true, completion: nil)
+                })
+                return nil
+            }
              self.navigationController?.popViewControllerAnimated(true)
         } else {
             finished = true
