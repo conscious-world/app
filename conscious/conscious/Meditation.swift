@@ -113,22 +113,10 @@ class Meditation: NSObject, NSCoding{
     }
     
     static func getAllPossible() -> [Meditation]{
-        return [TimedMeditation.build(),
-            FiveMintueBreathingMeditation.build(),
-            RelaxMeditation.build(),
+        return [FiveMintueBreathingMeditation.build(),
+            TimedMeditation.build(),
+            ThreeMinuteBreathingMeditation.build(),
             HealingMeditation.build()]
-    }
-    
-    class TimedMeditation: Meditation{
-        static func build() -> Meditation{
-            let meditation = Meditation.newTimedMeditation()
-            meditation.coverImageUrl = "indoorMeditator"
-            meditation.iconName = "clock-stopwatch-7"
-            meditation.mediaName = "MARC5MinuteBreathing"
-            meditation.meditation_title = "Start a new timed meditation"
-            meditation.meditation_description = "Set a timer, selection optional scene, background sound, reminder tone and audio chant reverb"
-            return meditation
-        }
     }
     
     class FiveMintueBreathingMeditation: Meditation{
@@ -143,14 +131,28 @@ class Meditation: NSObject, NSCoding{
         }
     }
     
-    class RelaxMeditation: Meditation{
+    class TimedMeditation: Meditation{
+        static func build() -> Meditation{
+            let meditation = Meditation.newTimedMeditation()
+            meditation.coverImageUrl = "indoorMeditator"
+            meditation.iconName = "clock-stopwatch-7"
+            meditation.mediaName = "MARC5MinuteBreathing"
+            meditation.meditation_title = "Start a new timed meditation"
+            meditation.meditation_description = "Set a timer, selection optional scene, background sound, reminder tone and audio chant reverb"
+            return meditation
+        }
+    }
+    
+
+    
+    class ThreeMinuteBreathingMeditation: Meditation{
         static func build() -> Meditation{
             let meditation = Meditation.newGuidedMeditation()
             meditation.coverImageUrl = "colors"
             meditation.iconName = "circle-user-7"
-            meditation.mediaName = "MARC5MinuteBreathing"
-            meditation.meditation_title = "Relaxation Mediation"
-            meditation.meditation_description = "Five minutes is all it takes to reset your day with this simple breathing exercise"
+            meditation.mediaName = "3-Minute-Breathing-Space"
+            meditation.meditation_title = "3 Minute Breathing Space"
+            meditation.meditation_description = "Three minutes is all it takes to reset your day with this simple breathing exercise"
             return meditation
         }
     }
