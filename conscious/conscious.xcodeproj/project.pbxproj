@@ -62,6 +62,7 @@
 		DA4F856D1C97ACDF00C1AEBF /* DynamicColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4F856C1C97ACDF00C1AEBF /* DynamicColor.swift */; };
 		DA4F856F1C97ACED00C1AEBF /* HSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4F856E1C97ACED00C1AEBF /* HSL.swift */; };
 		DA4F85741C9D0DFB00C1AEBF /* radialColors.gif in Resources */ = {isa = PBXBuildFile; fileRef = DA4F85731C9D0DFB00C1AEBF /* radialColors.gif */; };
+		DA9E8E841CA24977002128B7 /* 3-Minute-Breathing-Space.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DA9E8E831CA24977002128B7 /* 3-Minute-Breathing-Space.mp3 */; };
 		DAF1CEA51C9F7F8E0020D003 /* launchHeader.png in Resources */ = {isa = PBXBuildFile; fileRef = DAF1CEA41C9F7F8E0020D003 /* launchHeader.png */; };
 		DAF1CEA71C9F9A7E0020D003 /* MicVisualizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF1CEA61C9F9A7E0020D003 /* MicVisualizer.swift */; };
 		DAF1CEA91CA0F6EE0020D003 /* launchbackgroundRainbow.png in Resources */ = {isa = PBXBuildFile; fileRef = DAF1CEA81CA0F6EE0020D003 /* launchbackgroundRainbow.png */; };
@@ -134,6 +135,7 @@
 		DA4F856C1C97ACDF00C1AEBF /* DynamicColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicColor.swift; sourceTree = "<group>"; };
 		DA4F856E1C97ACED00C1AEBF /* HSL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSL.swift; sourceTree = "<group>"; };
 		DA4F85731C9D0DFB00C1AEBF /* radialColors.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = radialColors.gif; sourceTree = "<group>"; };
+		DA9E8E831CA24977002128B7 /* 3-Minute-Breathing-Space.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "3-Minute-Breathing-Space.mp3"; sourceTree = "<group>"; };
 		DAF1CEA41C9F7F8E0020D003 /* launchHeader.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = launchHeader.png; path = icons/launchHeader.png; sourceTree = "<group>"; };
 		DAF1CEA61C9F9A7E0020D003 /* MicVisualizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MicVisualizer.swift; sourceTree = "<group>"; };
 		DAF1CEA81CA0F6EE0020D003 /* launchbackgroundRainbow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = launchbackgroundRainbow.png; path = icons/launchbackgroundRainbow.png; sourceTree = "<group>"; };
@@ -364,6 +366,7 @@
 			isa = PBXGroup;
 			children = (
 				DAF1CEB01CA1DF3C0020D003 /* Hein-Braat-Maha-Mrityeonjaya-Mantra.mp3 */,
+				DA9E8E831CA24977002128B7 /* 3-Minute-Breathing-Space.mp3 */,
 				DA3501D51C8CE4FC006A41A5 /* MARC5MinuteBreathing.mp3 */,
 			);
 			name = Media;
@@ -529,6 +532,7 @@
 				5CD6E2FE1C9BD96D00AB2770 /* VolumeSliderView.xib in Resources */,
 				DA3502091C951803006A41A5 /* bells.mp3 in Resources */,
 				5CCB32261C9508D500EB656E /* mental_state.storyboard in Resources */,
+				DA9E8E841CA24977002128B7 /* 3-Minute-Breathing-Space.mp3 in Resources */,
 				DAF29FF71C9F660A00B5649E /* launchHeader2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
