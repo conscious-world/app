@@ -18,14 +18,16 @@ class HomeTableViewController: UIViewController, UITableViewDataSource, UITableV
     var categories = ["Guided Meditations"]
     var histories = ["basics"]
     var ctas = ["intro"]
+    var history: [String] = []
     var recomededMediations = ["PM Relaxations"]
     var tableSectionsData:[[String]] = []
     var meditations: [Meditation] = Meditation.getAllPossible()
     var ctaCell: CallToActionTableViewCell?
+    var lastMeditaion: Meditation?
         
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableSectionsData = [ctas,recomededMediations]
+        tableSectionsData = [ctas,history,recomededMediations]
         tableView.dataSource = self
         tableView.delegate = self
         //tableView.rowHeight = UITableViewAutomaticDimension
@@ -39,8 +41,16 @@ class HomeTableViewController: UIViewController, UITableViewDataSource, UITableV
     }
     
     override func viewWillAppear(animated: Bool) {
-        let lastMeditaion = History.sharedInstance()?.last
-        print("you have \(History.count()) medations and your last mediation was of type \(lastMeditaion?.meditation_type)" )
+        
+        if let _lastMeditaion = History.sharedInstance()?.last{
+            lastMeditaion = _lastMeditaion
+            if(history.count < 1){
+                print("Inserty a history item")
+                history.append(_lastMeditaion.meditation_type)
+                tableSectionsData.insert(history, atIndex: 1)
+            }
+            print("you have \(History.count()) medations and your last mediation was of type \(lastMeditaion?.meditation_type)" )
+        }
         tableView.reloadData()
         
     }
@@ -52,8 +62,14 @@ class HomeTableViewController: UIViewController, UITableViewDataSource, UITableV
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if(section == 0){
+            print("section = 0")
             return 1
         }
+        if section == 1{
+            print("section = 1")
+            return history.count < 1 ? 0 : 1
+        }
+        print("section = 2")
         return meditations.count
     }
     
@@ -73,16 +89,14 @@ class HomeTableViewController: UIViewController, UITableViewDataSource, UITableV
             return ctaCell!
             
         case 1:
-            if(indexPath.row == 0){
-                let cell =  tableView.dequeueReusableCellWithIdentifier("ContributionStyleHistoryTableViewCell", forIndexPath: indexPath) as! ContributionStyleHistoryTableViewCell
-                return cell
-            
-            }else{
-                let cell = tableView.dequeueReusableCellWithIdentifier("MediaTableViewCell", forIndexPath: indexPath) as! MediaTableViewCell
-                cell.meditation = meditations[indexPath.row]
-                cell.navigationController = self.navigationController
-                return cell
-            }
+            print("render ContributionStyleHistoryTableViewCell")
+            let cell =  tableView.dequeueReusableCellWithIdentifier("ContributionStyleHistoryTableViewCell", forIndexPath: indexPath) as! ContributionStyleHistoryTableViewCell
+            return cell
+        case 2:
+            let cell = tableView.dequeueReusableCellWithIdentifier("MediaTableViewCell", forIndexPath: indexPath) as! MediaTableViewCell
+            cell.meditation = meditations[indexPath.row]
+            cell.navigationController = self.navigationController
+            return cell
         default:
             return tableView.dequeueReusableCellWithIdentifier("MediaTableViewCell", forIndexPath: indexPath) as! MediaTableViewCell
         }
