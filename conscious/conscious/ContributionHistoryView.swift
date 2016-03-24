@@ -16,7 +16,6 @@ class ContributionHistoryView: UIView, TEAContributionGraphDataSource {
     }
     
     func  valueForDay(day: UInt ) -> Int{
-        
         return 1
     }
 

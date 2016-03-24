@@ -29,10 +29,6 @@ class ContributionStyleHistoryTableViewCell: UITableViewCell, TEAContributionGra
             return
         }
         
-        for mediation in history.meditations!{
-            print("mediation = mediation.time_type: \(mediation.meditation_type),mediation.time_start: \(mediation.time_start), mediation.time_end: \(mediation.time_end)")
-        }
-        
         for day in 1...31{
             mediationsDays.append(0)
             for mediation in history.meditations!{
@@ -41,7 +37,7 @@ class ContributionStyleHistoryTableViewCell: UITableViewCell, TEAContributionGra
                     let components = calendar.components([.Month, .Day], fromDate: date)
                     let (_, medDay) = (components.month, components.day)
                     
-                    print(medDay == Int(day))
+
                     
                     if medDay == Int(day){
                         mediationsDays[day] = 1
@@ -73,12 +69,12 @@ class ContributionStyleHistoryTableViewCell: UITableViewCell, TEAContributionGra
 //    }
 //    
 //    
-//    var originalColor: UIColor = UIColor(hexString: "#FAC54B")
-//    let rageColor: UIColor = UIColor(hexString: "#f96c6c")
-//    let fearColor: UIColor = UIColor(hexString: "#b2f96c")
-//    var amazementColor: UIColor = UIColor(hexString: "#6cf9f9")
-//    var loathingColor: UIColor = UIColor(hexString: "#b26cf9")
-//    var joyColor: UIColor = UIColor(hexString: "#f4eb24")
+    var originalColor: UIColor = UIColor(hexString: "#FAC54B")
+    let rageColor: UIColor = UIColor(hexString: "#f96c6c")
+    let fearColor: UIColor = UIColor(hexString: "#b2f96c")
+    var amazementColor: UIColor = UIColor(hexString: "#6cf9f9")
+    var loathingColor: UIColor = UIColor(hexString: "#b26cf9")
+    var joyColor: UIColor = UIColor(hexString: "#f4eb24")
 //    // Defines what color should be used by each grade.
 //    
 //    @objc
@@ -96,6 +92,17 @@ class ContributionStyleHistoryTableViewCell: UITableViewCell, TEAContributionGra
 //        }
 //
 //    }
+    
+    
+    @objc(colorForGrade:)
+    func colorForGrade(grade: UInt) -> UIColor{
+        if(grade == 0){
+            return UIColor.lightGrayColor()
+        }
+        else{
+            return loathingColor
+        }
+    }
     
     // Defines the cutoff values used for translating values into grades.
     // For example, you may want different grades for the values grade == 0, 1 <= grade < 5, 5 <= grade.
