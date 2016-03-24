@@ -69,12 +69,12 @@ class ContributionStyleHistoryTableViewCell: UITableViewCell, TEAContributionGra
 //    }
 //    
 //    
-//    var originalColor: UIColor = UIColor(hexString: "#FAC54B")
-//    let rageColor: UIColor = UIColor(hexString: "#f96c6c")
-//    let fearColor: UIColor = UIColor(hexString: "#b2f96c")
-//    var amazementColor: UIColor = UIColor(hexString: "#6cf9f9")
-//    var loathingColor: UIColor = UIColor(hexString: "#b26cf9")
-//    var joyColor: UIColor = UIColor(hexString: "#f4eb24")
+    var originalColor: UIColor = UIColor(hexString: "#FAC54B")
+    let rageColor: UIColor = UIColor(hexString: "#f96c6c")
+    let fearColor: UIColor = UIColor(hexString: "#b2f96c")
+    var amazementColor: UIColor = UIColor(hexString: "#6cf9f9")
+    var loathingColor: UIColor = UIColor(hexString: "#b26cf9")
+    var joyColor: UIColor = UIColor(hexString: "#f4eb24")
 //    // Defines what color should be used by each grade.
 //    
 //    @objc
@@ -92,6 +92,17 @@ class ContributionStyleHistoryTableViewCell: UITableViewCell, TEAContributionGra
 //        }
 //
 //    }
+    
+    
+    @objc(colorForGrade:)
+    func colorForGrade(grade: UInt) -> UIColor{
+        if(grade == 0){
+            return UIColor.lightGrayColor()
+        }
+        else{
+            return loathingColor
+        }
+    }
     
     // Defines the cutoff values used for translating values into grades.
     // For example, you may want different grades for the values grade == 0, 1 <= grade < 5, 5 <= grade.
