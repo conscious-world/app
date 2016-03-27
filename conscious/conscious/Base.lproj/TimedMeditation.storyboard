@@ -23,7 +23,7 @@
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CvU-q9-36m" customClass="EZAudioPlotGL">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
+                                <rect key="frame" x="0.0" y="200" width="600" height="351"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D8U-sJ-42l" customClass="DraggableView" customModule="conscious" customModuleProvider="target">
@@ -55,7 +55,7 @@
                                             <color key="titleColor" red="1" green="0.99145235499999995" blue="0.99073272270000001" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="onStopButtonPressed:" destination="gYi-Qb-TMT" eventType="touchUpInside" id="dCD-37-S0p"/>
+                                            <action selector="onPauseButtonPressed:" destination="gYi-Qb-TMT" eventType="touchUpInside" id="Q4z-13-IKs"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2hz-xE-klj">
@@ -80,16 +80,42 @@
                                             <action selector="onStartButtonPressed:" destination="gYi-Qb-TMT" eventType="touchUpInside" id="Rg1-Qy-WjH"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2jz-dl-N5v">
+                                        <rect key="frame" x="8" y="86" width="48" height="48"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="48" id="Y17-FM-nTL"/>
+                                            <constraint firstAttribute="height" constant="48" id="j46-OT-nbg"/>
+                                        </constraints>
+                                        <color key="tintColor" red="1" green="0.98286214279999995" blue="0.97762249580000005" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="onMicButtonTap:" destination="gYi-Qb-TMT" eventType="touchUpInside" id="m95-AU-bVJ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vfk-UY-HrZ">
+                                        <rect key="frame" x="544" y="86" width="48" height="48"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="48" id="Hy1-Hs-fAf"/>
+                                            <constraint firstAttribute="height" constant="48" id="h0d-Xz-QIT"/>
+                                        </constraints>
+                                        <state key="normal" image="ic_volume_up_white_48pt"/>
+                                        <connections>
+                                            <action selector="onMuteButtonTapped:" destination="gYi-Qb-TMT" eventType="touchUpInside" id="3ig-dV-vaK"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="2jz-dl-N5v" firstAttribute="leading" secondItem="D8U-sJ-42l" secondAttribute="leading" constant="8" id="1Q1-AT-wyh"/>
                                     <constraint firstItem="sry-oo-w6E" firstAttribute="leading" secondItem="D8U-sJ-42l" secondAttribute="leadingMargin" id="4iD-5D-a38"/>
                                     <constraint firstAttribute="trailingMargin" secondItem="Bd6-08-2OC" secondAttribute="trailing" id="D0G-nQ-3Df"/>
+                                    <constraint firstItem="2jz-dl-N5v" firstAttribute="centerY" secondItem="D8U-sJ-42l" secondAttribute="centerY" id="NeA-eX-AaE"/>
                                     <constraint firstItem="2hz-xE-klj" firstAttribute="centerY" secondItem="D8U-sJ-42l" secondAttribute="centerY" id="SQC-RN-JYW"/>
                                     <constraint firstItem="Bhu-hO-Dhf" firstAttribute="centerX" secondItem="D8U-sJ-42l" secondAttribute="centerX" id="SsC-SL-nCl"/>
+                                    <constraint firstAttribute="trailing" secondItem="vfk-UY-HrZ" secondAttribute="trailing" constant="8" id="X8a-sv-J7O"/>
                                     <constraint firstItem="2hz-xE-klj" firstAttribute="centerX" secondItem="D8U-sJ-42l" secondAttribute="centerX" id="Ztc-wI-syO"/>
                                     <constraint firstItem="Bhu-hO-Dhf" firstAttribute="centerY" secondItem="D8U-sJ-42l" secondAttribute="centerY" id="aAD-JN-toa"/>
                                     <constraint firstItem="2hz-xE-klj" firstAttribute="centerX" secondItem="D8U-sJ-42l" secondAttribute="centerX" id="du2-xY-wLU"/>
                                     <constraint firstItem="2hz-xE-klj" firstAttribute="centerY" secondItem="D8U-sJ-42l" secondAttribute="centerY" id="h3D-Zn-RqH"/>
+                                    <constraint firstItem="vfk-UY-HrZ" firstAttribute="centerY" secondItem="D8U-sJ-42l" secondAttribute="centerY" id="mxm-FK-fb8"/>
                                     <constraint firstAttribute="bottomMargin" secondItem="sry-oo-w6E" secondAttribute="bottom" constant="8" id="ol0-i4-1kl"/>
                                     <constraint firstAttribute="bottomMargin" secondItem="Bd6-08-2OC" secondAttribute="bottom" constant="8" id="skD-M5-Rct"/>
                                     <constraint firstAttribute="height" constant="220" id="vmC-YO-mID"/>
@@ -107,6 +133,7 @@
                                     <constraint firstAttribute="height" constant="24" id="WlM-1g-vIF"/>
                                     <constraint firstAttribute="width" constant="24" id="e4V-c1-qnt"/>
                                 </constraints>
+                                <color key="tintColor" red="1" green="0.98286214279999995" blue="0.97762249580000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" image="ic_settings_white">
                                     <color key="titleColor" red="1" green="0.1115816458" blue="0.055203490180000002" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -123,7 +150,7 @@
                                     <color key="titleShadowColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="onDoneButtonPressed:" destination="gYi-Qb-TMT" eventType="touchUpInside" id="9zX-gY-Iyy"/>
+                                    <action selector="onDoneButtonPressed:" destination="gYi-Qb-TMT" eventType="touchUpInside" id="K9L-yX-d74"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -137,7 +164,7 @@
                             <constraint firstItem="jQD-Qi-wye" firstAttribute="leading" secondItem="X61-L1-Zz2" secondAttribute="leading" id="Cho-J8-aG8"/>
                             <constraint firstItem="rHl-uE-oC6" firstAttribute="top" secondItem="9eB-dO-dnH" secondAttribute="bottom" constant="23" id="FNl-82-LQU"/>
                             <constraint firstAttribute="trailing" secondItem="jQD-Qi-wye" secondAttribute="trailing" id="HGf-DP-hM1"/>
-                            <constraint firstItem="CvU-q9-36m" firstAttribute="top" secondItem="X61-L1-Zz2" secondAttribute="top" id="QUJ-ZC-a67"/>
+                            <constraint firstItem="CvU-q9-36m" firstAttribute="top" secondItem="X61-L1-Zz2" secondAttribute="top" constant="200" id="QUJ-ZC-a67"/>
                             <constraint firstItem="jQD-Qi-wye" firstAttribute="top" secondItem="X61-L1-Zz2" secondAttribute="top" id="Ry2-Xv-MGL"/>
                             <constraint firstItem="CvU-q9-36m" firstAttribute="leading" secondItem="X61-L1-Zz2" secondAttribute="leading" id="Tbu-R5-g59"/>
                             <constraint firstItem="jQD-Qi-wye" firstAttribute="top" secondItem="X61-L1-Zz2" secondAttribute="top" constant="15" id="UgO-4x-uhb"/>
@@ -162,6 +189,8 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="backgroundVisualization" destination="jQD-Qi-wye" id="hlE-D0-ypz"/>
+                        <outlet property="micButton" destination="2jz-dl-N5v" id="4p9-I1-VZG"/>
+                        <outlet property="muteButton" destination="vfk-UY-HrZ" id="LDL-b8-qqe"/>
                         <outlet property="plot" destination="CvU-q9-36m" id="Af2-Xb-QCr"/>
                         <outlet property="startButton" destination="2hz-xE-klj" id="tDq-gM-uSw"/>
                         <outlet property="stopButton" destination="Bhu-hO-Dhf" id="MJn-k2-5nj"/>
@@ -179,5 +208,6 @@
         <image name="ic_play_circle_outline_white_48pt" width="48" height="48"/>
         <image name="ic_settings_white" width="24" height="24"/>
         <image name="ic_timer" width="24" height="24"/>
+        <image name="ic_volume_up_white_48pt" width="48" height="48"/>
     </resources>
 </document>

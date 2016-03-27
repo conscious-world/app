@@ -274,7 +274,9 @@ class MentalStateViewController: UIViewController, UIViewControllerTransitioning
     
     
     func dismissView() {
-        self.dismissViewControllerAnimated(true, completion: nil)
+        self.dismissViewControllerAnimated(true, completion: {
+            print("Dismiss me!")
+        })
     }
     
     func changeColor(tint: Float, color: UIColor) {

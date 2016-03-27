@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Spring
 import TEAChart
 
 class HistoryViewController: UIViewController, TEAContributionGraphDataSource {

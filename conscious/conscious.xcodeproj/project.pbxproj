@@ -281,7 +281,6 @@
 		DA3501921C880A27006A41A5 = {
 			isa = PBXGroup;
 			children = (
-				DA596D3A1CA7528C005266BF /* TimedMeditaion */,
 				DA35019D1C880A27006A41A5 /* conscious */,
 				DA35019C1C880A27006A41A5 /* Products */,
 				08411C9DA7095F834BE95345 /* Pods */,
@@ -300,6 +299,7 @@
 		DA35019D1C880A27006A41A5 /* conscious */ = {
 			isa = PBXGroup;
 			children = (
+				DA596D3A1CA7528C005266BF /* TimedMeditaion */,
 				DA2F195C1C9E4442002AEA12 /* Extensions */,
 				5C04E3081C98F26A003558CF /* Animations */,
 				5CCB32241C9508A100EB656E /* mental_state */,
@@ -475,6 +475,7 @@
 				DA596D371CA749A0005266BF /* TimedMeditation.storyboard */,
 			);
 			name = TimedMeditaion;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
