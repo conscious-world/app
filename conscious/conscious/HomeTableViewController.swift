@@ -27,7 +27,7 @@ class HomeTableViewController: UIViewController, UITableViewDataSource, UITableV
         
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableSectionsData = [ctas,history,recomededMediations]
+        tableSectionsData = [ctas,recomededMediations]
         tableView.dataSource = self
         tableView.delegate = self
         //tableView.rowHeight = UITableViewAutomaticDimension
@@ -44,15 +44,9 @@ class HomeTableViewController: UIViewController, UITableViewDataSource, UITableV
         
         if let _lastMeditaion = History.sharedInstance()?.last{
             lastMeditaion = _lastMeditaion
-            if(history.count < 1){
-                print("Inserty a history item")
-                history.append(_lastMeditaion.meditation_type)
-                tableSectionsData[1].insert(_lastMeditaion.meditation_type, atIndex: 0)
-            }
             print("you have \(History.count()) medations and your last mediation was of type \(lastMeditaion?.meditation_type)" )
         }
         tableView.reloadData()
-        
     }
 
     override func didReceiveMemoryWarning() {
@@ -65,11 +59,11 @@ class HomeTableViewController: UIViewController, UITableViewDataSource, UITableV
             print("section = 0")
             return 1
         }
-        if section == 1{
-            print("section = 1")
-            return history.count < 1 ? 0 : 1
-        }
-        print("section = 2")
+//        if section == 1{
+//            print("section = 1")
+//            return history.count < 1 ? 0 : 1
+//        }
+//        print("section = 2")
         return meditations.count
     }
     
@@ -88,12 +82,7 @@ class HomeTableViewController: UIViewController, UITableViewDataSource, UITableV
         case 0:
             ctaCell =  tableView.dequeueReusableCellWithIdentifier("CallToActionTableViewCell", forIndexPath: indexPath) as? CallToActionTableViewCell
             return ctaCell!
-            
         case 1:
-            print("render ContributionStyleHistoryTableViewCell")
-            let cell =  tableView.dequeueReusableCellWithIdentifier("ContributionStyleHistoryTableViewCell", forIndexPath: indexPath) as! ContributionStyleHistoryTableViewCell
-            return cell
-        case 2:
             print("render MediaTableViewCell")
             let cell = tableView.dequeueReusableCellWithIdentifier("MediaTableViewCell", forIndexPath: indexPath) as! MediaTableViewCell
             cell.meditation = meditations[indexPath.row]

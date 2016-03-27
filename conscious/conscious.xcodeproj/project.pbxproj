@@ -63,6 +63,12 @@
 		DA4F856D1C97ACDF00C1AEBF /* DynamicColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4F856C1C97ACDF00C1AEBF /* DynamicColor.swift */; };
 		DA4F856F1C97ACED00C1AEBF /* HSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4F856E1C97ACED00C1AEBF /* HSL.swift */; };
 		DA4F85741C9D0DFB00C1AEBF /* radialColors.gif in Resources */ = {isa = PBXBuildFile; fileRef = DA4F85731C9D0DFB00C1AEBF /* radialColors.gif */; };
+		DA596D391CA749A0005266BF /* TimedMeditation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA596D371CA749A0005266BF /* TimedMeditation.storyboard */; };
+		DA596D3C1CA764F6005266BF /* GlobalTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA596D3B1CA764F6005266BF /* GlobalTabBarViewController.swift */; };
+		DA596D3E1CA766CF005266BF /* UIColor+conscious.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA596D3D1CA766CF005266BF /* UIColor+conscious.swift */; };
+		DA596D411CA76CCD005266BF /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA596D3F1CA76CCD005266BF /* Profile.storyboard */; };
+		DA596D431CA7713B005266BF /* History.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA596D421CA7713B005266BF /* History.storyboard */; };
+		DA596D451CA7716F005266BF /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA596D441CA7716F005266BF /* HistoryViewController.swift */; };
 		DA9E8E841CA24977002128B7 /* 3-Minute-Breathing-Space.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DA9E8E831CA24977002128B7 /* 3-Minute-Breathing-Space.mp3 */; };
 		DAF1CEA51C9F7F8E0020D003 /* launchHeader.png in Resources */ = {isa = PBXBuildFile; fileRef = DAF1CEA41C9F7F8E0020D003 /* launchHeader.png */; };
 		DAF1CEA71C9F9A7E0020D003 /* MicVisualizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF1CEA61C9F9A7E0020D003 /* MicVisualizer.swift */; };
@@ -137,6 +143,12 @@
 		DA4F856C1C97ACDF00C1AEBF /* DynamicColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicColor.swift; sourceTree = "<group>"; };
 		DA4F856E1C97ACED00C1AEBF /* HSL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSL.swift; sourceTree = "<group>"; };
 		DA4F85731C9D0DFB00C1AEBF /* radialColors.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = radialColors.gif; sourceTree = "<group>"; };
+		DA596D381CA749A0005266BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/TimedMeditation.storyboard; sourceTree = "<group>"; };
+		DA596D3B1CA764F6005266BF /* GlobalTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalTabBarViewController.swift; sourceTree = "<group>"; };
+		DA596D3D1CA766CF005266BF /* UIColor+conscious.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+conscious.swift"; sourceTree = "<group>"; };
+		DA596D401CA76CCD005266BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Profile.storyboard; sourceTree = "<group>"; };
+		DA596D421CA7713B005266BF /* History.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = History.storyboard; sourceTree = "<group>"; };
+		DA596D441CA7716F005266BF /* HistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		DA9E8E831CA24977002128B7 /* 3-Minute-Breathing-Space.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "3-Minute-Breathing-Space.mp3"; sourceTree = "<group>"; };
 		DAF1CEA41C9F7F8E0020D003 /* launchHeader.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = launchHeader.png; path = icons/launchHeader.png; sourceTree = "<group>"; };
 		DAF1CEA61C9F9A7E0020D003 /* MicVisualizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MicVisualizer.swift; sourceTree = "<group>"; };
@@ -261,6 +273,7 @@
 			isa = PBXGroup;
 			children = (
 				DA2F195D1C9E4469002AEA12 /* UIImage+color.swift */,
+				DA596D3D1CA766CF005266BF /* UIColor+conscious.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -286,6 +299,7 @@
 		DA35019D1C880A27006A41A5 /* conscious */ = {
 			isa = PBXGroup;
 			children = (
+				DA596D3A1CA7528C005266BF /* TimedMeditaion */,
 				DA2F195C1C9E4442002AEA12 /* Extensions */,
 				5C04E3081C98F26A003558CF /* Animations */,
 				5CCB32241C9508A100EB656E /* mental_state */,
@@ -305,6 +319,8 @@
 				DAF1CEAE1CA0F8330020D003 /* launchrainbow2.png */,
 				DAF1CEA81CA0F6EE0020D003 /* launchbackgroundRainbow.png */,
 				DA3501A21C880A27006A41A5 /* Main.storyboard */,
+				DA596D421CA7713B005266BF /* History.storyboard */,
+				DA596D3F1CA76CCD005266BF /* Profile.storyboard */,
 				DA3501A51C880A27006A41A5 /* Assets.xcassets */,
 				DA3501A71C880A27006A41A5 /* LaunchScreen.storyboard */,
 				DA3501AA1C880A27006A41A5 /* Info.plist */,
@@ -340,6 +356,8 @@
 			children = (
 				DA3501A01C880A27006A41A5 /* HomeTableViewController.swift */,
 				DA3501BF1C8A749E006A41A5 /* CategoryViewController.swift */,
+				DA596D3B1CA764F6005266BF /* GlobalTabBarViewController.swift */,
+				DA596D441CA7716F005266BF /* HistoryViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -412,9 +430,6 @@
 		DA3501F41C926A11006A41A5 /* timed_mediation */ = {
 			isa = PBXGroup;
 			children = (
-				DA3501FB1C9277E0006A41A5 /* Views */,
-				DA3501F81C926A7B006A41A5 /* Controllers */,
-				DA3501F71C926A6B006A41A5 /* Models */,
 				DA3501F51C926A34006A41A5 /* timed_meditation.storyboard */,
 			);
 			name = timed_mediation;
@@ -427,6 +442,7 @@
 				DA3502021C94E63C006A41A5 /* SimpleSelectableSetting.swift */,
 			);
 			name = Models;
+			path = conscious;
 			sourceTree = "<group>";
 		};
 		DA3501F81C926A7B006A41A5 /* Controllers */ = {
@@ -437,6 +453,7 @@
 				DA3501FE1C94D32D006A41A5 /* SelectableSettingViewController.swift */,
 			);
 			name = Controllers;
+			path = conscious;
 			sourceTree = "<group>";
 		};
 		DA3501FB1C9277E0006A41A5 /* Views */ = {
@@ -446,6 +463,19 @@
 				DA3501FC1C94D184006A41A5 /* SettingCheckboxTableViewCell.swift */,
 			);
 			name = Views;
+			path = conscious;
+			sourceTree = "<group>";
+		};
+		DA596D3A1CA7528C005266BF /* TimedMeditaion */ = {
+			isa = PBXGroup;
+			children = (
+				DA3501F71C926A6B006A41A5 /* Models */,
+				DA3501FB1C9277E0006A41A5 /* Views */,
+				DA3501F81C926A7B006A41A5 /* Controllers */,
+				DA596D371CA749A0005266BF /* TimedMeditation.storyboard */,
+			);
+			name = TimedMeditaion;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -515,12 +545,15 @@
 				5CB0BA151C9291C20045901F /* media_meditation.storyboard in Resources */,
 				DAF1CEB11CA1DF3C0020D003 /* Hein-Braat-Maha-Mrityeonjaya-Mantra.mp3 in Resources */,
 				DA3501A91C880A27006A41A5 /* LaunchScreen.storyboard in Resources */,
+				DA596D431CA7713B005266BF /* History.storyboard in Resources */,
 				DA3501E51C8FDECA006A41A5 /* sunset1.gif in Resources */,
 				DA3501E61C8FDECA006A41A5 /* waterfall1.gif in Resources */,
+				DA596D391CA749A0005266BF /* TimedMeditation.storyboard in Resources */,
 				DA3501A61C880A27006A41A5 /* Assets.xcassets in Resources */,
 				DA3501F11C8FFBC0006A41A5 /* rain.mp3 in Resources */,
 				DA35020F1C951CE2006A41A5 /* crickets.mp3 in Resources */,
 				DA3501E31C8FDECA006A41A5 /* cloudssf.gif in Resources */,
+				DA596D411CA76CCD005266BF /* Profile.storyboard in Resources */,
 				DA4F85741C9D0DFB00C1AEBF /* radialColors.gif in Resources */,
 				DAF1CEAD1CA0F7E80020D003 /* launchrainbow1.png in Resources */,
 				DA3501E71C8FDECA006A41A5 /* waterfall2.gif in Resources */,
@@ -609,11 +642,13 @@
 				DA3501B51C88112D006A41A5 /* CallToActionTableViewCell.swift in Sources */,
 				5C49AC481C9D0947003F90F4 /* StarsOverlay.swift in Sources */,
 				DA3502111C9641F1006A41A5 /* Meditation.swift in Sources */,
+				DA596D3E1CA766CF005266BF /* UIColor+conscious.swift in Sources */,
 				DAF1CEA71C9F9A7E0020D003 /* MicVisualizer.swift in Sources */,
 				DA3501FA1C927046006A41A5 /* TimePickerView.swift in Sources */,
 				5CB34B381C9BDC8F00DF50FF /* VolumeSliderView.swift in Sources */,
 				DA3501D11C8CD27B006A41A5 /* TimerSettingsTableViewController.swift in Sources */,
 				DA3501CB1C8CCE00006A41A5 /* History.swift in Sources */,
+				DA596D3C1CA764F6005266BF /* GlobalTabBarViewController.swift in Sources */,
 				5C822B461C96786C00D085B1 /* Sector.swift in Sources */,
 				DA4F856F1C97ACED00C1AEBF /* HSL.swift in Sources */,
 				DA4F856D1C97ACDF00C1AEBF /* DynamicColor.swift in Sources */,
@@ -629,6 +664,7 @@
 				5C04E3071C98F0FA003558CF /* mentalStatePresentation.swift in Sources */,
 				DA3501C91C8CCDF5006A41A5 /* Category.swift in Sources */,
 				5C04E30A1C98F2A1003558CF /* presentationAnimation.swift in Sources */,
+				DA596D451CA7716F005266BF /* HistoryViewController.swift in Sources */,
 				5CD6E2F81C9B9DBD00AB2770 /* PlayPauseButton.swift in Sources */,
 				DA3501FF1C94D32D006A41A5 /* SelectableSettingViewController.swift in Sources */,
 			);
@@ -651,6 +687,23 @@
 				DA3501A81C880A27006A41A5 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		DA596D371CA749A0005266BF /* TimedMeditation.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DA596D381CA749A0005266BF /* Base */,
+			);
+			name = TimedMeditation.storyboard;
+			path = conscious;
+			sourceTree = "<group>";
+		};
+		DA596D3F1CA76CCD005266BF /* Profile.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DA596D401CA76CCD005266BF /* Base */,
+			);
+			name = Profile.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

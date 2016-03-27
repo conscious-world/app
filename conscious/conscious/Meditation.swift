@@ -112,9 +112,20 @@ class Meditation: NSObject, NSCoding{
         self.time_end = NSDate()
     }
     
+    func inProgress() -> Bool{
+        return (self.time_start != nil && self.time_end == nil)
+    }
+    
+    func hasEnded() -> Bool{
+        return (self.time_start != nil && self.time_end != nil)
+    }
+    
+    func hasNotStarted() -> Bool{
+        return (self.time_start == nil && self.time_end == nil)
+    }
+    
     static func getAllPossible() -> [Meditation]{
         return [ThreeMinuteBreathingMeditation.build(),
-            TimedMeditation.build(),
             HealingMeditation.build(),
             FiveMintueBreathingMeditation.build()]
     }

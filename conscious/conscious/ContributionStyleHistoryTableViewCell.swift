@@ -62,52 +62,14 @@ class ContributionStyleHistoryTableViewCell: UITableViewCell, TEAContributionGra
         return mediationsDays[Int(day)]
     }
     
-     // Defines the number of distinct colors in the graph
-//    @objc
-//    override func numberOfGrades() -> UInt{
-//        return 3
-//    }
-//    
-//    
-    var originalColor: UIColor = UIColor(hexString: "#FAC54B")
-    let rageColor: UIColor = UIColor(hexString: "#f96c6c")
-    let fearColor: UIColor = UIColor(hexString: "#b2f96c")
-    var amazementColor: UIColor = UIColor(hexString: "#6cf9f9")
-    var loathingColor: UIColor = UIColor(hexString: "#b26cf9")
-    var joyColor: UIColor = UIColor(hexString: "#f4eb24")
-//    // Defines what color should be used by each grade.
-//    
-//    @objc
-//    override func colorForGrade(grade: UInt){
-//        if(grade = 0)
-//        {
-//            return UIColor.whiteColor()
-//        }
-//        else if grade >= 1 && grade < 5{
-//            
-//            return amazementColor
-//        }
-//        else{
-//            return rageColor
-//        }
-//
-//    }
-    
-    
     @objc(colorForGrade:)
     func colorForGrade(grade: UInt) -> UIColor{
         if(grade == 0){
             return UIColor.lightGrayColor()
         }
         else{
-            return loathingColor
+            return UIColor.loathingColor()
         }
     }
-    
-    // Defines the cutoff values used for translating values into grades.
-    // For example, you may want different grades for the values grade == 0, 1 <= grade < 5, 5 <= grade.
-    // This means there are three grades total
-    // The minimumValue for the first grade is 0, the minimum for the second grade is 1, and the minimum for the third grade is 5
-    //- (NSInteger)minimumValueForGrade:(NSUInteger)grade;
 
 }

@@ -22,10 +22,12 @@ class MediaTableViewCell: UITableViewCell {
     var meditation: Meditation?{
         didSet{
             if let newMeditation = meditation{
-                self.titleLabel.text = newMeditation.meditation_title
-                //self.descriptionLabel.text = newMeditation.meditation_description
-                self.coverImage.image = newMeditation.coverImage
-                self.iconImageView.image = UIImage(named: newMeditation.iconName!)
+                if(self.titleLabel != nil){
+                    self.titleLabel.text = newMeditation.meditation_title
+                    //self.descriptionLabel.text = newMeditation.meditation_description
+                    self.coverImage.image = newMeditation.coverImage
+                    self.iconImageView.image = UIImage(named: newMeditation.iconName!)
+                }
                 
 //                self.iconImageView.tintColor = UIColor.whiteColor()
             }
@@ -37,10 +39,12 @@ class MediaTableViewCell: UITableViewCell {
         tapGestureRecognizer = UITapGestureRecognizer(target: self, action: "onTap")
         self.userInteractionEnabled = true
         self.addGestureRecognizer(tapGestureRecognizer!)
-        titleLabel.layer.shadowOpacity = 0.8
-        titleLabel.layer.shadowRadius = 6.0
-        titleLabel.layer.shadowColor = UIColor.blackColor().CGColor
-        titleLabel.layer.shadowOffset = CGSizeMake(0.0, -1.0)
+        if(titleLabel != nil){
+            titleLabel.layer.shadowOpacity = 0.8
+            titleLabel.layer.shadowRadius = 6.0
+            titleLabel.layer.shadowColor = UIColor.blackColor().CGColor
+            titleLabel.layer.shadowOffset = CGSizeMake(0.0, -1.0)
+        }
 //        self.iconContainerView.layer.cornerRadius = 24
 //        self.iconContainerView.clipsToBounds = true
     }
@@ -52,20 +56,14 @@ class MediaTableViewCell: UITableViewCell {
     }
     
     func onTap(){
-        if let meditation = self.meditation{
-            if meditation.meditation_type == Meditation.guided_mediation_type{
-                let storyBoard = UIStoryboard(name: "media_meditation", bundle: nil)
-
-                if let vc = self.window!.rootViewController{
-                    vc.performSegueWithIdentifier("toMediaMeditationSegue", sender: self)
-                }
-            }
-        }
-        //else lets start a timed meditaion
-        let storyBoard = UIStoryboard(name: "timed_meditation", bundle: nil)
-        if let vc = self.window!.rootViewController{
-            vc.performSegueWithIdentifier("toTimedMeditationSegue", sender: self)
+        let storyBoard = UIStoryboard(name: "media_meditation", bundle: nil)
+        if let mediaViewController  = storyBoard.instantiateViewControllerWithIdentifier("MediaViewController") as? MediaViewController{
+            mediaViewController.modalPresentationStyle = .OverFullScreen
+            mediaViewController.meditation = self.meditation
+            self.window?.rootViewController!.presentViewController(mediaViewController, animated: true, completion: nil)
         }
     }
+
+
 
 }
