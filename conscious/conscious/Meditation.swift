@@ -114,7 +114,6 @@ class Meditation: NSObject, NSCoding{
     
     static func getAllPossible() -> [Meditation]{
         return [ThreeMinuteBreathingMeditation.build(),
-            TimedMeditation.build(),
             HealingMeditation.build(),
             FiveMintueBreathingMeditation.build()]
     }

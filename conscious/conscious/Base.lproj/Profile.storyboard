@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="CcU-SW-mPd">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Profile-->
+        <scene sceneID="GOT-fu-cF9">
+            <objects>
+                <viewController id="CcU-SW-mPd" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="T1Q-kB-UV8"/>
+                        <viewControllerLayoutGuide type="bottom" id="oEP-Po-YcB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qwH-Il-np5">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sea-beach-waves-surfing" translatesAutoresizingMaskIntoConstraints="NO" id="VER-JD-vkB">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kVU-CD-vTE">
+                                <rect key="frame" x="20" y="485" width="560" height="40"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5uI-qz-PbH">
+                                        <rect key="frame" x="0.0" y="0.0" width="560" height="40"/>
+                                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
+                                        <state key="normal" title="Sign in with Twitter" image="Twitter_logo_blue_16">
+                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="5uI-qz-PbH" secondAttribute="trailing" id="7kK-sg-sNv"/>
+                                    <constraint firstItem="5uI-qz-PbH" firstAttribute="leading" secondItem="kVU-CD-vTE" secondAttribute="leading" id="GVy-Dq-qtD"/>
+                                    <constraint firstAttribute="bottom" secondItem="5uI-qz-PbH" secondAttribute="bottom" id="QPc-aE-JLU"/>
+                                    <constraint firstItem="5uI-qz-PbH" firstAttribute="top" secondItem="kVU-CD-vTE" secondAttribute="top" id="j0D-8u-LLl"/>
+                                    <constraint firstAttribute="height" constant="40" id="wD5-Dg-ltN"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="bRn-Bm-Rkr">
+                                <rect key="frame" x="20" y="437" width="560" height="40"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aTO-vm-ZXJ">
+                                        <rect key="frame" x="0.0" y="0.0" width="270" height="40"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1cG-nB-QvF">
+                                                <rect key="frame" x="0.0" y="0.0" width="270" height="40"/>
+                                                <state key="normal" title="Log In">
+                                                    <color key="titleColor" red="0.80171697990000002" green="0.27509967590000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="1cG-nB-QvF" secondAttribute="bottom" constant="5" id="0JT-Tp-No7"/>
+                                            <constraint firstItem="1cG-nB-QvF" firstAttribute="centerX" secondItem="aTO-vm-ZXJ" secondAttribute="centerX" id="Hgk-x8-PTE"/>
+                                            <constraint firstAttribute="trailing" secondItem="1cG-nB-QvF" secondAttribute="trailing" id="Sbd-Ww-N1A"/>
+                                            <constraint firstItem="1cG-nB-QvF" firstAttribute="top" secondItem="aTO-vm-ZXJ" secondAttribute="top" id="T65-Mn-5Hf"/>
+                                            <constraint firstAttribute="trailing" secondItem="1cG-nB-QvF" secondAttribute="trailing" id="e8S-VZ-JvY"/>
+                                            <constraint firstItem="1cG-nB-QvF" firstAttribute="top" secondItem="aTO-vm-ZXJ" secondAttribute="top" id="edy-7w-kVI"/>
+                                            <constraint firstItem="1cG-nB-QvF" firstAttribute="leading" secondItem="aTO-vm-ZXJ" secondAttribute="leading" id="guR-av-GaT"/>
+                                            <constraint firstItem="1cG-nB-QvF" firstAttribute="centerY" secondItem="aTO-vm-ZXJ" secondAttribute="centerY" id="gxc-jJ-iuC"/>
+                                            <constraint firstItem="1cG-nB-QvF" firstAttribute="leading" secondItem="aTO-vm-ZXJ" secondAttribute="leading" id="hkR-yh-DMj"/>
+                                            <constraint firstAttribute="bottom" secondItem="1cG-nB-QvF" secondAttribute="bottom" id="j0m-ag-2or"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="0JT-Tp-No7"/>
+                                                <exclude reference="Sbd-Ww-N1A"/>
+                                                <exclude reference="T65-Mn-5Hf"/>
+                                                <exclude reference="hkR-yh-DMj"/>
+                                            </mask>
+                                        </variation>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2nm-jm-K4H">
+                                        <rect key="frame" x="290" y="0.0" width="270" height="40"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ecg-xT-Wm5">
+                                                <rect key="frame" x="0.0" y="0.0" width="270" height="40"/>
+                                                <state key="normal" title="Sign Up">
+                                                    <color key="titleColor" red="0.80171697990000002" green="0.27509967590000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="ecg-xT-Wm5" secondAttribute="trailing" id="245-R8-eYC"/>
+                                            <constraint firstItem="ecg-xT-Wm5" firstAttribute="top" secondItem="2nm-jm-K4H" secondAttribute="top" id="ICo-1j-Yks"/>
+                                            <constraint firstItem="ecg-xT-Wm5" firstAttribute="leading" secondItem="2nm-jm-K4H" secondAttribute="leading" id="T2C-81-FMQ"/>
+                                            <constraint firstAttribute="bottom" secondItem="ecg-xT-Wm5" secondAttribute="bottom" id="d8b-V0-sCG"/>
+                                            <constraint firstItem="ecg-xT-Wm5" firstAttribute="centerY" secondItem="2nm-jm-K4H" secondAttribute="centerY" id="iso-Zk-HAW"/>
+                                            <constraint firstItem="ecg-xT-Wm5" firstAttribute="centerX" secondItem="2nm-jm-K4H" secondAttribute="centerX" id="vaD-z1-k7s"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="20e-xI-yWB"/>
+                                    <constraint firstAttribute="bottom" secondItem="aTO-vm-ZXJ" secondAttribute="bottom" id="H4U-BG-FqW"/>
+                                    <constraint firstAttribute="bottom" secondItem="2nm-jm-K4H" secondAttribute="bottom" id="QJ1-uT-JRh"/>
+                                    <constraint firstItem="aTO-vm-ZXJ" firstAttribute="top" secondItem="bRn-Bm-Rkr" secondAttribute="top" id="hTy-qS-eZG"/>
+                                    <constraint firstItem="2nm-jm-K4H" firstAttribute="width" secondItem="aTO-vm-ZXJ" secondAttribute="width" id="kDj-VC-jtz"/>
+                                    <constraint firstItem="2nm-jm-K4H" firstAttribute="top" secondItem="bRn-Bm-Rkr" secondAttribute="top" id="oz7-ax-kId"/>
+                                    <constraint firstAttribute="trailing" secondItem="2nm-jm-K4H" secondAttribute="trailing" id="tT8-vI-liC"/>
+                                    <constraint firstItem="aTO-vm-ZXJ" firstAttribute="leading" secondItem="bRn-Bm-Rkr" secondAttribute="leading" id="uZd-Kr-HHq"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="VER-JD-vkB" secondAttribute="trailing" id="6KY-fi-G16"/>
+                            <constraint firstItem="bRn-Bm-Rkr" firstAttribute="trailing" secondItem="qwH-Il-np5" secondAttribute="trailingMargin" id="BAh-rX-hke"/>
+                            <constraint firstItem="kVU-CD-vTE" firstAttribute="top" secondItem="bRn-Bm-Rkr" secondAttribute="bottom" constant="8" id="E3P-yr-Nk8"/>
+                            <constraint firstItem="oEP-Po-YcB" firstAttribute="top" secondItem="kVU-CD-vTE" secondAttribute="bottom" constant="26" id="KwJ-Wc-Fy7"/>
+                            <constraint firstItem="kVU-CD-vTE" firstAttribute="trailing" secondItem="qwH-Il-np5" secondAttribute="trailingMargin" id="Npi-QF-ph7"/>
+                            <constraint firstItem="kVU-CD-vTE" firstAttribute="leading" secondItem="qwH-Il-np5" secondAttribute="leadingMargin" id="Xpo-ig-Pd4"/>
+                            <constraint firstItem="VER-JD-vkB" firstAttribute="leading" secondItem="qwH-Il-np5" secondAttribute="leading" id="aiR-5M-x9l"/>
+                            <constraint firstItem="VER-JD-vkB" firstAttribute="top" secondItem="qwH-Il-np5" secondAttribute="top" id="g85-MI-r3E"/>
+                            <constraint firstAttribute="bottom" secondItem="VER-JD-vkB" secondAttribute="bottom" id="xhh-YR-NFM"/>
+                            <constraint firstItem="bRn-Bm-Rkr" firstAttribute="leading" secondItem="qwH-Il-np5" secondAttribute="leadingMargin" id="zbF-CX-hcu"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Profile" image="ic_account_circle" id="1Pw-bJ-lz1"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics">
+                        <color key="tintColor" red="1" green="0.51318947189999997" blue="0.080729444710000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </simulatedTabBarMetrics>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ijZ-Qo-EJ9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="687" y="1464"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Twitter_logo_blue_16" width="16" height="16"/>
+        <image name="ic_account_circle" width="24" height="24"/>
+        <image name="sea-beach-waves-surfing" width="1920" height="1280"/>
+    </resources>
+</document>

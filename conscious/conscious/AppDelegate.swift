@@ -22,6 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         NSLog("String: \(s)")
         print("didFinishLaunchingWithOptions")
         
+        
         self.history = self.historyFromDisk()
         return true
     }

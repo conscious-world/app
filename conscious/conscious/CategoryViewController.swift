@@ -12,7 +12,8 @@ class CategoryViewController: UIViewController, UITableViewDelegate, UITableView
 
     @IBOutlet weak var tableView: UITableView!
     
-    var categoryMedia = ["Relaxations"]
+    //var categoryMedia = ["Relaxations"]
+    var meditations: [Meditation] = Meditation.getAllPossible()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,14 +30,15 @@ class CategoryViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("MediaTableViewCell", forIndexPath: indexPath)     as! MediaTableViewCell
-        cell.navigationController = self.navigationController
-        
+        let cell = tableView.dequeueReusableCellWithIdentifier("MediaTableViewCell", forIndexPath: indexPath) as! MediaTableViewCell
+        cell.meditation = meditations[indexPath.row]
+        //cell.navigationController = self.navigationController
         return cell
+        
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return categoryMedia.count
+        return meditations.count
     }
     
     

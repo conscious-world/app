@@ -23,13 +23,10 @@ class TimerViewController: UIViewController, EZMicrophoneDelegate, EZAudioFFTDel
     var first: Bool = true
     
     @IBOutlet var backgroundVisualization: MicVisualizer!
-    @IBOutlet weak var controlContainerView: UIView!
     
     @IBOutlet weak var plot: EZAudioPlotGL?
     @IBOutlet weak var stopButton: UIButton!
     @IBOutlet weak var startButton: UIButton!
-    @IBOutlet weak var maxFrequencyLabel: UILabel!
-    //@IBOutlet weak var meditationDescriptionLabel: UILabel!
     
     let FFTViewControllerFFTWindowSize:vDSP_Length = 4096;
     var fft: EZAudioFFTRolling!
@@ -47,7 +44,6 @@ class TimerViewController: UIViewController, EZMicrophoneDelegate, EZAudioFFTDel
 
     @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var timeLeftLabel: UILabel!
-    @IBOutlet weak var tiledBackground: UIView!
     
     var microphone: EZMicrophone!
     var session: AVAudioSession?
@@ -61,28 +57,15 @@ class TimerViewController: UIViewController, EZMicrophoneDelegate, EZAudioFFTDel
     override func viewDidLoad() {
         super.viewDidLoad()
         self.plot?.backgroundColor = UIColor.clearColor()
-        //setBackground()
-        //self.view.sendSubviewToBack(backgroundView)
         styleButtons()
-        controlContainerView.backgroundColor = UIColor.clearColor()
         session = AVAudioSession.sharedInstance()
-        self.maxFrequencyLabel.numberOfLines = 0;
-        //startAudio()
         timerLabel.hidden = true
         timeLeftLabel.hidden = true
-
-        //let tiledTriangleView =   TiledTriangleView(frame: tiledBackground.frame, tileWidth: 100, tileHeight: 75)
-        //tiledBackground.addSubview(tiledTriangleView)
-        self.view.bringSubviewToFront(controlContainerView)
-        //onSettingsBarBtnTap()
+        //self.tabBarItem = UITabBarItem(tabBarSystemItem: UITabBarSystemItem.History, tag: 1)
         if first {
-
             meditation = Meditation.newTimedMeditation()
-            //self.meditationDescriptionLabel?.text = meditation?.meditation_title
         }
     }
-    @IBOutlet weak var conrolContainerBottonConstraint: NSLayoutConstraint!
-    var controlHiden = false
    
     override func willMoveToParentViewController(parent: UIViewController?) {
         if parent == nil {
@@ -117,19 +100,17 @@ class TimerViewController: UIViewController, EZMicrophoneDelegate, EZAudioFFTDel
     }
     
     @IBAction func onStartButtonPressed(sender: UIButton) {
-        meditation!.start()
-        startAudio()
-        startVisualization()
-        updateControlsOnStart()
-        userSettings.playBackgroundSound()
-
-        if(userSettings.useAudioReverb()){
-           startMicrophonePassthrough()
-        }
+        presentation()
     }
     
-    func startVisualization(){
-        self.tiledBackground.alpha = 0.2
+    func beginMediation(){
+        meditation!.start()
+        startAudio()
+        updateControlsOnStart()
+        userSettings.playBackgroundSound()
+        if(userSettings.useAudioReverb()){
+            startMicrophonePassthrough()
+        }
     }
     
     func startMicrophonePassthrough(){
@@ -214,8 +195,7 @@ class TimerViewController: UIViewController, EZMicrophoneDelegate, EZAudioFFTDel
     }
     
     override func viewDidAppear(animated: Bool) {
-        //onSettingsBarBtnTap()
-        presentation()
+        //presentation()
         first = false
     }
     
@@ -257,7 +237,6 @@ class TimerViewController: UIViewController, EZMicrophoneDelegate, EZAudioFFTDel
             let color = UIColor(hue: CGFloat(min(1.0,maxFrequency/3000)), saturation: 1.0, brightness: 1.0, alpha: 1.0)
             print("alpha = \(CGFloat(1.0 / Double(gain * 10)))")
             self.backgroundVisualization.changeColor(color)
-            //self.tiledBackground.alpha = min(CGFloat(9.0),CGFloat(gain))
         })
     }
     
@@ -313,9 +292,7 @@ class TimerViewController: UIViewController, EZMicrophoneDelegate, EZAudioFFTDel
             
             if(navigteToHomeScreen){
                 navigteToHomeScreen = false
-                dispatch_after(0,dispatch_get_main_queue(),{
-                    self.dismissViewControllerAnimated(true, completion: nil)
-                })
+                self.tabBarController?.selectedIndex = 0
                 return nil
             }
             
@@ -323,7 +300,8 @@ class TimerViewController: UIViewController, EZMicrophoneDelegate, EZAudioFFTDel
             self.navigationController?.popViewControllerAnimated(true)
         } else {
             //play
-            onStartButtonPressed(UIButton())
+            beginMediation()
+            //onStartButtonPressed(UIButton())
             finished = true
         }
         return nil
