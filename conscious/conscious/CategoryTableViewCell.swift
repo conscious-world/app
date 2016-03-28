@@ -16,7 +16,7 @@ class CategoryTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
 
-        tapGestureRecognizer = UITapGestureRecognizer(target: self, action: "onTap")
+        tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(CategoryTableViewCell.onTap))
         self.userInteractionEnabled = true
         self.addGestureRecognizer(tapGestureRecognizer)
     }

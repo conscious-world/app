@@ -93,7 +93,7 @@ class MediaViewController: UIViewController, AVAudioPlayerDelegate, UIViewContro
         UIGraphicsBeginImageContext(self.view.frame.size)
         UIImage(named: "evileye.jpg")?.drawInRect(self.view.bounds)
         
-        var image: UIImage = UIGraphicsGetImageFromCurrentImageContext()
+        let image: UIImage = UIGraphicsGetImageFromCurrentImageContext()
         
         UIGraphicsEndImageContext()
         
@@ -104,7 +104,7 @@ class MediaViewController: UIViewController, AVAudioPlayerDelegate, UIViewContro
         playPauseButton = PlayPauseButton(frame: playView.bounds)
         playPauseButton.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
         playView.addSubview(playPauseButton)
-        let tap = UITapGestureRecognizer(target: self, action: Selector("handlePlayTap:"))
+        let tap = UITapGestureRecognizer(target: self, action: #selector(MediaViewController.handlePlayTap(_:)))
         tap.delegate = self
         playPauseButton.addGestureRecognizer(tap)
     }
@@ -129,7 +129,7 @@ class MediaViewController: UIViewController, AVAudioPlayerDelegate, UIViewContro
             meditation!.start()
             audioPlayer.play()
             startBackgroundAudioSession()
-            timer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: Selector("updateTimeSlider"), userInfo: nil, repeats: true)
+            timer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: #selector(MediaViewController.updateTimeSlider), userInfo: nil, repeats: true)
             playing = true
         }
     }

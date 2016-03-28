@@ -173,7 +173,7 @@ class TimerViewController: UIViewController, EZMicrophoneDelegate, EZAudioFFTDel
         micButton.hidden = false
         muteButton.hidden = false
         timeLeftLabel.hidden = false
-        timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("updateCounter"), userInfo: nil, repeats: true)
+        timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(TimerViewController.updateCounter), userInfo: nil, repeats: true)
     }
     
     func updateCounter(){

@@ -14,7 +14,7 @@ class TimePickerView: UIDatePicker {
  
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        self.addTarget(self, action: Selector("timePickerChanged:"), forControlEvents: UIControlEvents.ValueChanged)
+        self.addTarget(self, action: #selector(TimePickerView.timePickerChanged(_:)), forControlEvents: UIControlEvents.ValueChanged)
     }
     
     func timePickerChanged(timePicker:UIDatePicker) {
