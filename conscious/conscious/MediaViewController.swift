@@ -12,10 +12,19 @@ import AVFoundation
 class MediaViewController: UIViewController, AVAudioPlayerDelegate, UIViewControllerTransitioningDelegate, MentalStateDelegate, UIGestureRecognizerDelegate {
 
     @IBAction func onBackPressed(sender: AnyObject) {
-        dismissViewControllerAnimated(true) { () -> Void in
-            // TODO:
-            // stop audio player and handle saving meditation history
-            // but that should probably happen in the viewWillDissapear method
+        // TODO:
+        // handle saving meditation history
+        // but that should probably happen in the viewWillDissapear method
+        if self.playing {
+            self.togglePlayingSound()
+            self.presentation()
+        }
+        else if self.meditation != nil && self.meditation!.inProgress(){
+            self.presentation()
+        }else{
+            dismissViewControllerAnimated(true) { () -> Void in
+        
+            }
         }
     }
     
@@ -44,6 +53,9 @@ class MediaViewController: UIViewController, AVAudioPlayerDelegate, UIViewContro
     var next = MentalStateViewController!()
     var finished: Bool = false
     var first: Bool = true
+    var backgroundTaskId: UIBackgroundTaskIdentifier?
+    var avSession = AVAudioSession.sharedInstance()
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -110,13 +122,41 @@ class MediaViewController: UIViewController, AVAudioPlayerDelegate, UIViewContro
             endMeditation()
             audioPlayer.pause()
             timer.invalidate()
+            endBackgroundAudioSession()
             playing = false
         } else {
 //            mediaView.setEmitters(false)
             meditation!.start()
             audioPlayer.play()
+            startBackgroundAudioSession()
             timer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: Selector("updateTimeSlider"), userInfo: nil, repeats: true)
             playing = true
+        }
+    }
+    
+    func endBackgroundAudioSession(){
+        do{
+            try avSession.setActive(false)
+        }
+        catch {
+            NSLog("Error setting up audio session active")
+        }
+    }
+    
+    func startBackgroundAudioSession(){
+        backgroundTaskId = UIApplication.sharedApplication().beginBackgroundTaskWithExpirationHandler(nil)
+        do{
+            try avSession.setCategory(AVAudioSessionCategoryPlayAndRecord)
+        }
+        catch _{
+            NSLog("Error setting up audio session category:")
+        }
+        
+        do{
+            try avSession.setActive(true)
+        }
+        catch {
+            NSLog("Error setting up audio session active")
         }
     }
     
