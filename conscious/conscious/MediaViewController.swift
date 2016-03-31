@@ -236,7 +236,9 @@ class MediaViewController: UIViewController, AVAudioPlayerDelegate, UIViewContro
         let audioFileUrl = NSURL.fileURLWithPath(audioFilePath)
         
         do {
+  
             audioPlayer = try AVAudioPlayer(contentsOfURL: audioFileUrl, fileTypeHint: nil)
+            audioPlayer.volume = 0.8
             audioPlayer.delegate = self
             currentTimeLabel.text = minValue.mmss
             duration = self.audioPlayer.duration

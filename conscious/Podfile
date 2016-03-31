@@ -10,5 +10,7 @@ target 'conscious' do
   pod 'TEAChart', '~> 0.3.2'
   pod 'DynamicColor', '~> 2.4.0'
   pod 'Spring', :git => 'https://github.com/MengTo/Spring.git', :branch => 'swift2'
+  pod 'HockeySDK', '~> 3.8.5'
+  pod 'Player'
 end
 

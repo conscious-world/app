@@ -6,7 +6,11 @@ PODS:
   - EZAudio/Full (1.1.5):
     - EZAudio/Core
     - TPCircularBuffer (= 1.1)
+  - HockeySDK (3.8.6):
+    - HockeySDK/AllFeaturesLib (= 3.8.6)
+  - HockeySDK/AllFeaturesLib (3.8.6)
   - MMParallaxCell (1.2)
+  - Player (0.1.0)
   - Spring (1.0.3)
   - StarWars (1.0)
   - TEAChart (0.3.2)
@@ -15,7 +19,9 @@ PODS:
 DEPENDENCIES:
   - DynamicColor (~> 2.4.0)
   - EZAudio (~> 1.0)
+  - HockeySDK (~> 3.8.5)
   - MMParallaxCell
+  - Player
   - Spring (from `https://github.com/MengTo/Spring.git`, branch `swift2`)
   - StarWars (~> 1.0)
   - TEAChart (~> 0.3.2)
@@ -33,7 +39,9 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   DynamicColor: 2f3fd61053684667bad9f03045dcf9a2a5a007ea
   EZAudio: 3b1cb4b6d7ebca68f0c2478576d75940aad4aa99
+  HockeySDK: ab68303eec6680f6b539de65d747742dd276e934
   MMParallaxCell: 9c9045097743b725076c38ed2c53e3790e90bd14
+  Player: e05be4073ea64fce1981869898ad9796c27cdd2b
   Spring: 3f02b5dc3308572ef177b3cad0fa7bbc4b0706f7
   StarWars: 01f1731789f738f64c6a9533c209213aaf465014
   TEAChart: b22170216cc5e97a9e32da46f5ca06c07ef43cd0

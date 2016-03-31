@@ -20,7 +20,6 @@
                     </tabBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="0U1-ja-Fr4"/>
-                        <segue destination="pF2-gs-vkV" kind="relationship" relationship="viewControllers" id="RUo-me-0Dy"/>
                         <segue destination="8NK-BG-jRm" kind="relationship" relationship="viewControllers" id="Ehh-6E-05k"/>
                         <segue destination="OHA-3z-9YT" kind="relationship" relationship="viewControllers" id="DBP-ax-nNF"/>
                         <segue destination="4Ol-qL-TLn" kind="relationship" relationship="viewControllers" id="w0W-EQ-yUk"/>
@@ -67,7 +66,7 @@
                                                         <constraint firstAttribute="width" constant="263" id="Mjb-Ik-2qD"/>
                                                     </constraints>
                                                     <color key="tintColor" red="1" green="0.44313136634072903" blue="0.39321716877106794" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <state key="normal" title="▶︎ Get Started Now" backgroundImage="orangeBackground">
+                                                    <state key="normal" title="▶︎ Recommeded For You" backgroundImage="orangeBackground">
                                                         <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     </state>
                                                     <userDefinedRuntimeAttributes>
@@ -192,7 +191,7 @@
                                                     <rect key="frame" x="8" y="216" width="45" height="23"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <color key="highlightedColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="shadowColor" red="0.34025930851063835" green="0.33442799305677939" blue="0.33264515440644765" alpha="1" colorSpace="calibratedRGB"/>
                                                     <size key="shadowOffset" width="1" height="1"/>
                                                     <variation key="heightClass=regular" fixedFrame="YES">
@@ -280,7 +279,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Dxr-iD-yP2">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Dxr-iD-yP2">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -288,7 +287,7 @@
                                         <rect key="frame" x="0.0" y="28" width="600" height="200"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="4BI-A9-aZ8" id="gNQ-Pe-Z0U">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="200"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="199.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="exampleMeditionCover" translatesAutoresizingMaskIntoConstraints="NO" id="wkT-Gg-670">

@@ -18,13 +18,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jQD-Qi-wye" customClass="MicVisualizer" customModule="conscious" customModuleProvider="target">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="E0f-hd-DUP">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
+                            </scrollView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CvU-q9-36m" customClass="EZAudioPlotGL">
-                                <rect key="frame" x="0.0" y="200" width="600" height="351"/>
+                                <rect key="frame" x="0.0" y="451" width="600" height="100"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="hUK-d0-LS3"/>
+                                </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D8U-sJ-42l" customClass="DraggableView" customModule="conscious" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="330" width="600" height="220"/>
@@ -44,7 +46,7 @@
                                         <color key="shadowColor" white="0.5" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                     </label>
                                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bhu-hO-Dhf">
-                                        <rect key="frame" x="276.5" y="86" width="48" height="48"/>
+                                        <rect key="frame" x="276" y="86" width="48" height="48"/>
                                         <accessibility key="accessibilityConfiguration" identifier="Play"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="48" id="8g6-zk-9pR"/>
@@ -102,10 +104,20 @@
                                             <action selector="onMuteButtonTapped:" destination="gYi-Qb-TMT" eventType="touchUpInside" id="3ig-dV-vaK"/>
                                         </connections>
                                     </button>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" minuteInterval="1" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BNS-ND-kPN" customClass="TimePickerView" customModule="conscious" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="-23" width="600" height="111"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="111" id="fmF-fD-ca8"/>
+                                        </constraints>
+                                        <date key="date" timeIntervalSinceReferenceDate="478454708.10538697">
+                                            <!--2016-02-29 16:05:08 +0000-->
+                                        </date>
+                                    </datePicker>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="2jz-dl-N5v" firstAttribute="leading" secondItem="D8U-sJ-42l" secondAttribute="leading" constant="8" id="1Q1-AT-wyh"/>
                                     <constraint firstItem="sry-oo-w6E" firstAttribute="leading" secondItem="D8U-sJ-42l" secondAttribute="leadingMargin" id="4iD-5D-a38"/>
+                                    <constraint firstItem="BNS-ND-kPN" firstAttribute="top" secondItem="D8U-sJ-42l" secondAttribute="top" constant="-23" id="5g6-6L-fNx"/>
                                     <constraint firstAttribute="trailingMargin" secondItem="Bd6-08-2OC" secondAttribute="trailing" id="D0G-nQ-3Df"/>
                                     <constraint firstItem="2jz-dl-N5v" firstAttribute="centerY" secondItem="D8U-sJ-42l" secondAttribute="centerY" id="NeA-eX-AaE"/>
                                     <constraint firstItem="2hz-xE-klj" firstAttribute="centerY" secondItem="D8U-sJ-42l" secondAttribute="centerY" id="SQC-RN-JYW"/>
@@ -117,7 +129,9 @@
                                     <constraint firstItem="2hz-xE-klj" firstAttribute="centerY" secondItem="D8U-sJ-42l" secondAttribute="centerY" id="h3D-Zn-RqH"/>
                                     <constraint firstItem="vfk-UY-HrZ" firstAttribute="centerY" secondItem="D8U-sJ-42l" secondAttribute="centerY" id="mxm-FK-fb8"/>
                                     <constraint firstAttribute="bottomMargin" secondItem="sry-oo-w6E" secondAttribute="bottom" constant="8" id="ol0-i4-1kl"/>
+                                    <constraint firstAttribute="trailing" secondItem="BNS-ND-kPN" secondAttribute="trailing" id="q4g-9n-Ry7"/>
                                     <constraint firstAttribute="bottomMargin" secondItem="Bd6-08-2OC" secondAttribute="bottom" constant="8" id="skD-M5-Rct"/>
+                                    <constraint firstItem="BNS-ND-kPN" firstAttribute="leading" secondItem="D8U-sJ-42l" secondAttribute="leading" id="t0z-hJ-ObU"/>
                                     <constraint firstAttribute="height" constant="220" id="vmC-YO-mID"/>
                                 </constraints>
                                 <variation key="default">
@@ -127,20 +141,6 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vxO-4F-DsK">
-                                <rect key="frame" x="568" y="43" width="24" height="24"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="24" id="WlM-1g-vIF"/>
-                                    <constraint firstAttribute="width" constant="24" id="e4V-c1-qnt"/>
-                                </constraints>
-                                <color key="tintColor" red="1" green="0.98286214279999995" blue="0.97762249580000005" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" image="ic_settings_white">
-                                    <color key="titleColor" red="1" green="0.1115816458" blue="0.055203490180000002" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="onControlSettingsButtonTap:" destination="gYi-Qb-TMT" eventType="touchUpInside" id="sNo-lq-HWH"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rHl-uE-oC6">
                                 <rect key="frame" x="8" y="43" width="46" height="34"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
@@ -157,45 +157,37 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="D8U-sJ-42l" secondAttribute="bottom" constant="50" id="0V4-kF-12m"/>
-                            <constraint firstItem="vxO-4F-DsK" firstAttribute="top" secondItem="9eB-dO-dnH" secondAttribute="bottom" constant="23" id="7RU-ba-tas"/>
                             <constraint firstAttribute="trailing" secondItem="CvU-q9-36m" secondAttribute="trailing" id="8nM-qY-rJI"/>
-                            <constraint firstAttribute="bottom" secondItem="jQD-Qi-wye" secondAttribute="bottom" id="AAS-4m-YfQ"/>
                             <constraint firstAttribute="trailing" secondItem="D8U-sJ-42l" secondAttribute="trailing" id="AIt-N7-uro"/>
-                            <constraint firstItem="jQD-Qi-wye" firstAttribute="leading" secondItem="X61-L1-Zz2" secondAttribute="leading" id="Cho-J8-aG8"/>
                             <constraint firstItem="rHl-uE-oC6" firstAttribute="top" secondItem="9eB-dO-dnH" secondAttribute="bottom" constant="23" id="FNl-82-LQU"/>
-                            <constraint firstAttribute="trailing" secondItem="jQD-Qi-wye" secondAttribute="trailing" id="HGf-DP-hM1"/>
-                            <constraint firstItem="CvU-q9-36m" firstAttribute="top" secondItem="X61-L1-Zz2" secondAttribute="top" constant="200" id="QUJ-ZC-a67"/>
-                            <constraint firstItem="jQD-Qi-wye" firstAttribute="top" secondItem="X61-L1-Zz2" secondAttribute="top" id="Ry2-Xv-MGL"/>
+                            <constraint firstItem="E0f-hd-DUP" firstAttribute="leading" secondItem="X61-L1-Zz2" secondAttribute="leading" id="KRG-Nr-iLG"/>
+                            <constraint firstItem="CvU-q9-36m" firstAttribute="top" secondItem="X61-L1-Zz2" secondAttribute="top" constant="400" id="QUJ-ZC-a67"/>
+                            <constraint firstAttribute="bottom" secondItem="E0f-hd-DUP" secondAttribute="bottom" id="SvN-Ih-ky3"/>
                             <constraint firstItem="CvU-q9-36m" firstAttribute="leading" secondItem="X61-L1-Zz2" secondAttribute="leading" id="Tbu-R5-g59"/>
-                            <constraint firstItem="jQD-Qi-wye" firstAttribute="top" secondItem="X61-L1-Zz2" secondAttribute="top" constant="15" id="UgO-4x-uhb"/>
                             <constraint firstItem="rHl-uE-oC6" firstAttribute="leading" secondItem="X61-L1-Zz2" secondAttribute="leading" constant="8" id="UsM-c5-RE4"/>
-                            <constraint firstAttribute="trailing" secondItem="vxO-4F-DsK" secondAttribute="trailing" constant="8" id="Y4l-GO-S4E"/>
-                            <constraint firstItem="jQD-Qi-wye" firstAttribute="leading" secondItem="X61-L1-Zz2" secondAttribute="leading" id="aIf-Zp-3OK"/>
+                            <constraint firstAttribute="trailing" secondItem="E0f-hd-DUP" secondAttribute="trailing" id="fu1-pf-EFd"/>
+                            <constraint firstItem="E0f-hd-DUP" firstAttribute="top" secondItem="X61-L1-Zz2" secondAttribute="top" id="kmz-i1-1bB"/>
                             <constraint firstItem="Glk-a0-vVr" firstAttribute="top" secondItem="CvU-q9-36m" secondAttribute="bottom" id="meE-KY-gVI"/>
-                            <constraint firstAttribute="trailing" secondItem="jQD-Qi-wye" secondAttribute="trailing" id="ss5-ft-4Ln"/>
                             <constraint firstItem="D8U-sJ-42l" firstAttribute="leading" secondItem="X61-L1-Zz2" secondAttribute="leading" id="xwP-4T-va2"/>
-                            <constraint firstAttribute="bottom" secondItem="jQD-Qi-wye" secondAttribute="bottom" constant="15" id="zoI-a7-sDd"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="UgO-4x-uhb"/>
-                                <exclude reference="aIf-Zp-3OK"/>
-                                <exclude reference="ss5-ft-4Ln"/>
-                                <exclude reference="zoI-a7-sDd"/>
+                                <exclude reference="QUJ-ZC-a67"/>
                             </mask>
                         </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="Timed Meditation" image="ic_timer" id="RaS-3s-TSC"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="backgroundVisualization" destination="jQD-Qi-wye" id="hlE-D0-ypz"/>
                         <outlet property="micButton" destination="2jz-dl-N5v" id="4p9-I1-VZG"/>
                         <outlet property="muteButton" destination="vfk-UY-HrZ" id="LDL-b8-qqe"/>
                         <outlet property="plot" destination="CvU-q9-36m" id="Af2-Xb-QCr"/>
                         <outlet property="startButton" destination="2hz-xE-klj" id="tDq-gM-uSw"/>
                         <outlet property="stopButton" destination="Bhu-hO-Dhf" id="MJn-k2-5nj"/>
                         <outlet property="timeLeftLabel" destination="Bd6-08-2OC" id="8MM-XC-jJW"/>
+                        <outlet property="timePicker" destination="BNS-ND-kPN" id="ZUM-hK-Ne3"/>
                         <outlet property="timerLabel" destination="sry-oo-w6E" id="yHP-9V-SWu"/>
+                        <outlet property="videoScrollView" destination="E0f-hd-DUP" id="WVR-H0-dYX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SK0-8B-C61" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -206,7 +198,6 @@
     <resources>
         <image name="ic_pause_circle_outline_white_48pt" width="48" height="48"/>
         <image name="ic_play_circle_outline_white_48pt" width="48" height="48"/>
-        <image name="ic_settings_white" width="24" height="24"/>
         <image name="ic_timer" width="24" height="24"/>
         <image name="ic_volume_up_white_48pt" width="48" height="48"/>
     </resources>
