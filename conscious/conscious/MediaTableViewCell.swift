@@ -30,6 +30,7 @@ class MediaTableViewCell: UITableViewCell {
                     self.iconImageView.image = UIImage(named: newMeditation.iconName!)
                     self.userAvatar.layer.cornerRadius = 24
                     self.userAvatar.clipsToBounds = true
+                    toggleFavoriteButton(newMeditation.favorited)
                     if let avatar = newMeditation.user_avatar_name{
                         self.userAvatar.image = UIImage(named: avatar)
                     }else{
@@ -39,6 +40,35 @@ class MediaTableViewCell: UITableViewCell {
             }
         }
     }
+    
+    @IBOutlet weak var favoriteButton: UIButton!
+    
+    @IBAction func onFavoriteButtonTap(sender: UIButton) {
+        
+        if let faved = self.meditation?.favorited{
+            self.meditation?.favorited = !faved
+            toggleFavoriteButton(!faved)
+        }
+        else{
+            toggleFavoriteButton(false)
+        }
+        
+        //TODO BAD BACK
+        if let tableView = self.superview?.superview as? UITableView{
+            tableView.reloadData()
+        }
+        
+
+    }
+    
+    func toggleFavoriteButton(favorited: Bool){
+        if(favorited){
+            self.favoriteButton.imageView?.image = UIImage(named: "ic_favorite")
+        }else{
+            self.favoriteButton.imageView?.image = UIImage(named: "ic_favorite_border")
+        }
+    }
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()

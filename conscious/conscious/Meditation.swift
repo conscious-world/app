@@ -18,6 +18,7 @@ class Meditation: NSObject, NSCoding{
     static let TIME_START_KEY = "conscious.mediation.time_start"
     static let TIME_END_KEY = "conscious.mediation.time_end"
     static let VIDEO_NAME_KEY = "conscious.mediation.video_name"
+    static let FAVORITED_KEY = "conscious.mediation.favorited"
     static let OPTIONS_KEY = "conscious.mediation.options"
     
     static let timed_mediation_type = "timed_meditation"
@@ -38,6 +39,7 @@ class Meditation: NSObject, NSCoding{
     var mediaName: String?
     var video_name: String?
     var user_avatar_name: String?
+    var favorited = false
     var isVRVideo = false
     
     var pathForMedia: String?{
@@ -58,7 +60,7 @@ class Meditation: NSObject, NSCoding{
     }
     
     
-    init(meditation_type: String, media_id: String?, mentality_before: String?, mentality_after: String?, durration: NSTimeInterval?, time_start: NSDate?, time_end: NSDate?, video_name: String?,options: [[String:String]]?){
+    init(meditation_type: String, media_id: String?, mentality_before: String?, mentality_after: String?, durration: NSTimeInterval?, time_start: NSDate?, time_end: NSDate?, video_name: String?, favorited: Bool, options: [[String:String]]?){
         self.meditation_type    = meditation_type
         self.media_id           = media_id
         self.mentality_before   = mentality_before
@@ -67,6 +69,7 @@ class Meditation: NSObject, NSCoding{
         self.time_start         = time_start
         self.time_end           = time_end
         self.video_name         = video_name
+        self.favorited          = favorited
         self.options            = options
     }
     
@@ -84,6 +87,8 @@ class Meditation: NSObject, NSCoding{
             time_start:         decoder.decodeObjectForKey(Meditation.TIME_START_KEY) as? NSDate,
             time_end:           decoder.decodeObjectForKey(Meditation.TIME_END_KEY) as? NSDate,
             video_name:         decoder.decodeObjectForKey(Meditation.VIDEO_NAME_KEY) as? String,
+            favorited:          (decoder.decodeObjectForKey(Meditation.FAVORITED_KEY) as? Bool)!,
+            
 
             options:            decoder.decodeObjectForKey(Meditation.OPTIONS_KEY) as? [[String:String]]
         )
@@ -103,13 +108,13 @@ class Meditation: NSObject, NSCoding{
     }
     
     static func newTimedMeditation() -> Meditation{
-        let meditation = Meditation(meditation_type: Meditation.timed_mediation_type, media_id: nil, mentality_before: nil, mentality_after: nil, durration: nil, time_start: nil, time_end: nil, video_name: nil, options: nil)
+        let meditation = Meditation(meditation_type: Meditation.timed_mediation_type, media_id: nil, mentality_before: nil, mentality_after: nil, durration: nil, time_start: nil, time_end: nil, video_name: nil, favorited: false, options: nil)
         //meditation.meditation_title = "Timed medation"
         return meditation
     }
     
     static func newGuidedMeditation() -> Meditation{
-        return Meditation(meditation_type: Meditation.guided_mediation_type, media_id: nil, mentality_before: nil, mentality_after: nil, durration: nil, time_start: nil, time_end: nil, video_name: nil, options: nil)
+        return Meditation(meditation_type: Meditation.guided_mediation_type, media_id: nil, mentality_before: nil, mentality_after: nil, durration: nil, time_start: nil, time_end: nil, video_name: nil, favorited: false, options: nil)
     }
     
     func start(){

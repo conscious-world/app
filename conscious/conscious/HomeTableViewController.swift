@@ -31,7 +31,7 @@ class HomeTableViewController: UIViewController, UITableViewDataSource, UITableV
         tableView.dataSource = self
         tableView.delegate = self
         //tableView.rowHeight = UITableViewAutomaticDimension
-        tableView.estimatedRowHeight = 250
+        tableView.estimatedRowHeight = 200
         
 //        let layer = ctaCell?.ctaButton.layer
 //        layer.animation = "squeezeDown"
@@ -96,7 +96,7 @@ class HomeTableViewController: UIViewController, UITableViewDataSource, UITableV
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 250.0
+        return (indexPath.section == 0) ? 300 : 200
     }
     
     //there is no segue
@@ -118,7 +118,7 @@ class HomeTableViewController: UIViewController, UITableViewDataSource, UITableV
         self.ctaCell?.resizeLogo(200.0 - scrollView.contentOffset.y)
         
         if(scrollView.contentOffset.y < 0){
-            self.ctaCell?.resizeHeader(250.0 + abs(scrollView.contentOffset.y))
+            self.ctaCell?.resizeHeader(300.0 + abs(scrollView.contentOffset.y))
         }
 
     }
