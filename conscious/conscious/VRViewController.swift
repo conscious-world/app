@@ -152,7 +152,7 @@ class VRViewController: UIViewController , SCNSceneRendererDelegate, UIGestureRe
     func play(){
         
         //let fileURL: NSURL? = NSURL(string: "http://www.kolor.com/360-videos-files/noa-neal-graffiti-360-music-video-full-hd.mp4")
-        let fileURL: NSURL? = NSURL.fileURLWithPath(NSBundle.mainBundle().pathForResource("vr", ofType: "mp4")!)
+        let fileURL: NSURL? = NSURL.fileURLWithPath(NSBundle.mainBundle().pathForResource("loveingkindness2", ofType: "mp4")!)
         
         if (fileURL != nil){
             
