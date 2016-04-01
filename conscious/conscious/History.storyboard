@@ -17,16 +17,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sea-beach-waves-surfing" translatesAutoresizingMaskIntoConstraints="NO" id="Qgk-gn-Iqn">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q3A-vx-aWG">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                            </imageView>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Qgk-gn-Iqn" firstAttribute="leading" secondItem="8lk-9t-Br6" secondAttribute="leading" id="LDU-Ac-c4c"/>
-                            <constraint firstItem="Qgk-gn-Iqn" firstAttribute="top" secondItem="8lk-9t-Br6" secondAttribute="top" id="WFo-PR-QKa"/>
-                            <constraint firstAttribute="trailing" secondItem="Qgk-gn-Iqn" secondAttribute="trailing" id="kGT-ac-lta"/>
-                            <constraint firstAttribute="bottom" secondItem="Qgk-gn-Iqn" secondAttribute="bottom" id="wIg-d9-eYM"/>
+                            <constraint firstAttribute="trailing" secondItem="q3A-vx-aWG" secondAttribute="trailing" id="90p-aa-nyX"/>
+                            <constraint firstAttribute="bottom" secondItem="q3A-vx-aWG" secondAttribute="bottom" id="oML-WJ-vUk"/>
+                            <constraint firstItem="q3A-vx-aWG" firstAttribute="top" secondItem="8lk-9t-Br6" secondAttribute="top" id="oWP-yW-fYI"/>
+                            <constraint firstItem="q3A-vx-aWG" firstAttribute="leading" secondItem="8lk-9t-Br6" secondAttribute="leading" id="qxr-3q-5JD"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="History" image="ic_assessment" selectedImage="ic_assessment" id="PXV-7g-k3r"/>
@@ -34,6 +35,9 @@
                         <color key="tintColor" red="1" green="0.51318947189999997" blue="0.080729444710000001" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="barTintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </simulatedTabBarMetrics>
+                    <connections>
+                        <outlet property="backgroundVideoContainer" destination="q3A-vx-aWG" id="YHN-s0-nW7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4rn-8J-hwX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -42,6 +46,5 @@
     </scenes>
     <resources>
         <image name="ic_assessment" width="24" height="24"/>
-        <image name="sea-beach-waves-surfing" width="1920" height="1280"/>
     </resources>
 </document>

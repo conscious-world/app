@@ -15,7 +15,6 @@
 		5C822B461C96786C00D085B1 /* Sector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C822B451C96786C00D085B1 /* Sector.swift */; };
 		5CB0BA151C9291C20045901F /* media_meditation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CB0BA141C9291C20045901F /* media_meditation.storyboard */; };
 		5CB34B381C9BDC8F00DF50FF /* VolumeSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB34B371C9BDC8F00DF50FF /* VolumeSliderView.swift */; };
-		5CB377461CA2747D004979E0 /* evileye.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5CB377431CA2747D004979E0 /* evileye.jpg */; };
 		5CCB32231C95044A00EB656E /* MentalStateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCB32221C95044A00EB656E /* MentalStateViewController.swift */; };
 		5CCB32261C9508D500EB656E /* mental_state.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CCB32251C9508D500EB656E /* mental_state.storyboard */; };
 		5CD6E2F81C9B9DBD00AB2770 /* PlayPauseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD6E2F71C9B9DBD00AB2770 /* PlayPauseButton.swift */; };
@@ -41,12 +40,6 @@
 		DA3501D11C8CD27B006A41A5 /* TimerSettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3501D01C8CD27B006A41A5 /* TimerSettingsTableViewController.swift */; };
 		DA3501D61C8CE4FC006A41A5 /* MARC5MinuteBreathing.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DA3501D51C8CE4FC006A41A5 /* MARC5MinuteBreathing.mp3 */; };
 		DA3501DA1C8CEDDB006A41A5 /* ReverbOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3501D91C8CEDDB006A41A5 /* ReverbOutput.swift */; };
-		DA3501E21C8FDECA006A41A5 /* beach1.gif in Resources */ = {isa = PBXBuildFile; fileRef = DA3501DC1C8FDECA006A41A5 /* beach1.gif */; };
-		DA3501E31C8FDECA006A41A5 /* cloudssf.gif in Resources */ = {isa = PBXBuildFile; fileRef = DA3501DD1C8FDECA006A41A5 /* cloudssf.gif */; };
-		DA3501E41C8FDECA006A41A5 /* river1.gif in Resources */ = {isa = PBXBuildFile; fileRef = DA3501DE1C8FDECA006A41A5 /* river1.gif */; };
-		DA3501E51C8FDECA006A41A5 /* sunset1.gif in Resources */ = {isa = PBXBuildFile; fileRef = DA3501DF1C8FDECA006A41A5 /* sunset1.gif */; };
-		DA3501E61C8FDECA006A41A5 /* waterfall1.gif in Resources */ = {isa = PBXBuildFile; fileRef = DA3501E01C8FDECA006A41A5 /* waterfall1.gif */; };
-		DA3501E71C8FDECA006A41A5 /* waterfall2.gif in Resources */ = {isa = PBXBuildFile; fileRef = DA3501E11C8FDECA006A41A5 /* waterfall2.gif */; };
 		DA3501E91C8FF1AB006A41A5 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA3501E81C8FF1AB006A41A5 /* AudioToolbox.framework */; };
 		DA3501EB1C8FF439006A41A5 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA3501EA1C8FF439006A41A5 /* AVFoundation.framework */; };
 		DA3501F11C8FFBC0006A41A5 /* rain.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DA3501F01C8FFBC0006A41A5 /* rain.mp3 */; };
@@ -64,9 +57,17 @@
 		DA4D29F71CACAC86001F4856 /* abstract-ocean-with-light-flares.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = DA4D29F41CACAC06001F4856 /* abstract-ocean-with-light-flares.mp4 */; };
 		DA4D29F81CACACAE001F4856 /* heavenly-rays.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = DAE96CBA1CAB2380000FAD10 /* heavenly-rays.mp4 */; };
 		DA4D29FA1CACACEA001F4856 /* green-sky-in-space.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = DA4D29F91CACACCB001F4856 /* green-sky-in-space.mp4 */; };
+		DA4D2A001CAD838A001F4856 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4D29FF1CAD838A001F4856 /* ProfileViewController.swift */; };
+		DA4D2A021CAE20A1001F4856 /* VRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4D2A011CAE20A1001F4856 /* VRViewController.swift */; };
+		DA4D2A041CAE222B001F4856 /* vr.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = DA4D2A031CAE20E6001F4856 /* vr.mp4 */; };
+		DA4D2A061CAE2405001F4856 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA4D2A051CAE2405001F4856 /* CoreVideo.framework */; };
+		DA4D2A091CAE241B001F4856 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA4D2A071CAE241B001F4856 /* CoreAudio.framework */; };
+		DA4D2A0A1CAE241B001F4856 /* CoreAudioKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA4D2A081CAE241B001F4856 /* CoreAudioKit.framework */; };
+		DA4D2A0C1CAE2428001F4856 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA4D2A0B1CAE2428001F4856 /* CoreGraphics.framework */; };
+		DA4D2A0E1CAE242F001F4856 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA4D2A0D1CAE242F001F4856 /* CoreMotion.framework */; };
+		DA4D2A101CAE2441001F4856 /* SceneKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA4D2A0F1CAE2441001F4856 /* SceneKit.framework */; };
 		DA4F856D1C97ACDF00C1AEBF /* DynamicColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4F856C1C97ACDF00C1AEBF /* DynamicColor.swift */; };
 		DA4F856F1C97ACED00C1AEBF /* HSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4F856E1C97ACED00C1AEBF /* HSL.swift */; };
-		DA4F85741C9D0DFB00C1AEBF /* radialColors.gif in Resources */ = {isa = PBXBuildFile; fileRef = DA4F85731C9D0DFB00C1AEBF /* radialColors.gif */; };
 		DA596D391CA749A0005266BF /* TimedMeditation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA596D371CA749A0005266BF /* TimedMeditation.storyboard */; };
 		DA596D3C1CA764F6005266BF /* GlobalTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA596D3B1CA764F6005266BF /* GlobalTabBarViewController.swift */; };
 		DA596D3E1CA766CF005266BF /* UIColor+conscious.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA596D3D1CA766CF005266BF /* UIColor+conscious.swift */; };
@@ -97,7 +98,6 @@
 		5C822B451C96786C00D085B1 /* Sector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sector.swift; sourceTree = "<group>"; };
 		5CB0BA141C9291C20045901F /* media_meditation.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = media_meditation.storyboard; sourceTree = "<group>"; };
 		5CB34B371C9BDC8F00DF50FF /* VolumeSliderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VolumeSliderView.swift; sourceTree = "<group>"; };
-		5CB377431CA2747D004979E0 /* evileye.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = evileye.jpg; path = ../../../../../../../../Desktop/evileye.jpg; sourceTree = "<group>"; };
 		5CCB32221C95044A00EB656E /* MentalStateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MentalStateViewController.swift; sourceTree = "<group>"; };
 		5CCB32251C9508D500EB656E /* mental_state.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = mental_state.storyboard; sourceTree = "<group>"; };
 		5CD6E2F71C9B9DBD00AB2770 /* PlayPauseButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayPauseButton.swift; sourceTree = "<group>"; };
@@ -128,12 +128,6 @@
 		DA3501D51C8CE4FC006A41A5 /* MARC5MinuteBreathing.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = MARC5MinuteBreathing.mp3; sourceTree = "<group>"; };
 		DA3501D71C8CE9EA006A41A5 /* conscios-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "conscios-Bridging-Header.h"; sourceTree = "<group>"; };
 		DA3501D91C8CEDDB006A41A5 /* ReverbOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReverbOutput.swift; sourceTree = "<group>"; };
-		DA3501DC1C8FDECA006A41A5 /* beach1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = beach1.gif; sourceTree = "<group>"; };
-		DA3501DD1C8FDECA006A41A5 /* cloudssf.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = cloudssf.gif; sourceTree = "<group>"; };
-		DA3501DE1C8FDECA006A41A5 /* river1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = river1.gif; sourceTree = "<group>"; };
-		DA3501DF1C8FDECA006A41A5 /* sunset1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = sunset1.gif; sourceTree = "<group>"; };
-		DA3501E01C8FDECA006A41A5 /* waterfall1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = waterfall1.gif; sourceTree = "<group>"; };
-		DA3501E11C8FDECA006A41A5 /* waterfall2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = waterfall2.gif; sourceTree = "<group>"; };
 		DA3501E81C8FF1AB006A41A5 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		DA3501EA1C8FF439006A41A5 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		DA3501F01C8FFBC0006A41A5 /* rain.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = rain.mp3; sourceTree = "<group>"; };
@@ -150,9 +144,17 @@
 		DA4D29F41CACAC06001F4856 /* abstract-ocean-with-light-flares.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "abstract-ocean-with-light-flares.mp4"; sourceTree = "<group>"; };
 		DA4D29F51CACAC3A001F4856 /* lights-sea-sparkling_bynqeb.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "lights-sea-sparkling_bynqeb.mp4"; sourceTree = "<group>"; };
 		DA4D29F91CACACCB001F4856 /* green-sky-in-space.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "green-sky-in-space.mp4"; sourceTree = "<group>"; };
+		DA4D29FF1CAD838A001F4856 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		DA4D2A011CAE20A1001F4856 /* VRViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VRViewController.swift; sourceTree = "<group>"; };
+		DA4D2A031CAE20E6001F4856 /* vr.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = vr.mp4; sourceTree = "<group>"; };
+		DA4D2A051CAE2405001F4856 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		DA4D2A071CAE241B001F4856 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
+		DA4D2A081CAE241B001F4856 /* CoreAudioKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudioKit.framework; path = System/Library/Frameworks/CoreAudioKit.framework; sourceTree = SDKROOT; };
+		DA4D2A0B1CAE2428001F4856 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		DA4D2A0D1CAE242F001F4856 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		DA4D2A0F1CAE2441001F4856 /* SceneKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SceneKit.framework; path = System/Library/Frameworks/SceneKit.framework; sourceTree = SDKROOT; };
 		DA4F856C1C97ACDF00C1AEBF /* DynamicColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicColor.swift; sourceTree = "<group>"; };
 		DA4F856E1C97ACED00C1AEBF /* HSL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSL.swift; sourceTree = "<group>"; };
-		DA4F85731C9D0DFB00C1AEBF /* radialColors.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = radialColors.gif; sourceTree = "<group>"; };
 		DA596D381CA749A0005266BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/TimedMeditation.storyboard; sourceTree = "<group>"; };
 		DA596D3B1CA764F6005266BF /* GlobalTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalTabBarViewController.swift; sourceTree = "<group>"; };
 		DA596D3D1CA766CF005266BF /* UIColor+conscious.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+conscious.swift"; sourceTree = "<group>"; };
@@ -185,6 +187,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA4D2A101CAE2441001F4856 /* SceneKit.framework in Frameworks */,
+				DA4D2A0E1CAE242F001F4856 /* CoreMotion.framework in Frameworks */,
+				DA4D2A0C1CAE2428001F4856 /* CoreGraphics.framework in Frameworks */,
+				DA4D2A091CAE241B001F4856 /* CoreAudio.framework in Frameworks */,
+				DA4D2A0A1CAE241B001F4856 /* CoreAudioKit.framework in Frameworks */,
+				DA4D2A061CAE2405001F4856 /* CoreVideo.framework in Frameworks */,
 				DA3501EB1C8FF439006A41A5 /* AVFoundation.framework in Frameworks */,
 				DA3501E91C8FF1AB006A41A5 /* AudioToolbox.framework in Frameworks */,
 				1D196E2C49435BC52C402D5E /* Pods_conscious.framework in Frameworks */,
@@ -255,6 +263,7 @@
 			isa = PBXGroup;
 			children = (
 				DA3501C11C8A7E9A006A41A5 /* MediaViewController.swift */,
+				DA4D2A011CAE20A1001F4856 /* VRViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -281,6 +290,12 @@
 		D9D6E06B6FE8CF0D49E40748 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DA4D2A0F1CAE2441001F4856 /* SceneKit.framework */,
+				DA4D2A0D1CAE242F001F4856 /* CoreMotion.framework */,
+				DA4D2A0B1CAE2428001F4856 /* CoreGraphics.framework */,
+				DA4D2A071CAE241B001F4856 /* CoreAudio.framework */,
+				DA4D2A081CAE241B001F4856 /* CoreAudioKit.framework */,
+				DA4D2A051CAE2405001F4856 /* CoreVideo.framework */,
 				DA3501EA1C8FF439006A41A5 /* AVFoundation.framework */,
 				DA3501E81C8FF1AB006A41A5 /* AudioToolbox.framework */,
 				3302C71425482D62DEF932A4 /* Pods_conscious.framework */,
@@ -377,6 +392,7 @@
 				DA3501BF1C8A749E006A41A5 /* CategoryViewController.swift */,
 				DA596D3B1CA764F6005266BF /* GlobalTabBarViewController.swift */,
 				DA596D441CA7716F005266BF /* HistoryViewController.swift */,
+				DA4D29FF1CAD838A001F4856 /* ProfileViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -434,14 +450,6 @@
 		DA3501DB1C8FDDA6006A41A5 /* backgroundImages */ = {
 			isa = PBXGroup;
 			children = (
-				5CB377431CA2747D004979E0 /* evileye.jpg */,
-				DA4F85731C9D0DFB00C1AEBF /* radialColors.gif */,
-				DA3501DC1C8FDECA006A41A5 /* beach1.gif */,
-				DA3501DD1C8FDECA006A41A5 /* cloudssf.gif */,
-				DA3501DE1C8FDECA006A41A5 /* river1.gif */,
-				DA3501DF1C8FDECA006A41A5 /* sunset1.gif */,
-				DA3501E01C8FDECA006A41A5 /* waterfall1.gif */,
-				DA3501E11C8FDECA006A41A5 /* waterfall2.gif */,
 			);
 			name = backgroundImages;
 			sourceTree = "<group>";
@@ -504,6 +512,7 @@
 				DAE96CBC1CAB2380000FAD10 /* water-reflection-particles_wk-9nlwls__D.mp4 */,
 				DAE96CBD1CAB2380000FAD10 /* dancing-sunbeams_zkcc3cyeb__D.mp4 */,
 				DAE96CBE1CAB2380000FAD10 /* beautiful-particles_by9bslveb__D.mp4 */,
+				DA4D2A031CAE20E6001F4856 /* vr.mp4 */,
 				DA4D29EF1CACA283001F4856 /* stars-and-colors-in-space.mp4 */,
 			);
 			name = BackgroundVideos;
@@ -572,6 +581,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA4D2A041CAE222B001F4856 /* vr.mp4 in Resources */,
 				DA4D29FA1CACACEA001F4856 /* green-sky-in-space.mp4 in Resources */,
 				DA4D29F81CACACAE001F4856 /* heavenly-rays.mp4 in Resources */,
 				DA4D29F61CACAC86001F4856 /* lights-sea-sparkling_bynqeb.mp4 in Resources */,
@@ -584,27 +594,19 @@
 				DAF1CEB11CA1DF3C0020D003 /* Hein-Braat-Maha-Mrityeonjaya-Mantra.mp3 in Resources */,
 				DA3501A91C880A27006A41A5 /* LaunchScreen.storyboard in Resources */,
 				DA596D431CA7713B005266BF /* History.storyboard in Resources */,
-				DA3501E51C8FDECA006A41A5 /* sunset1.gif in Resources */,
-				DA3501E61C8FDECA006A41A5 /* waterfall1.gif in Resources */,
 				DA596D391CA749A0005266BF /* TimedMeditation.storyboard in Resources */,
 				DA4D29F31CACA283001F4856 /* stars-and-colors-in-space.mp4 in Resources */,
 				DA3501A61C880A27006A41A5 /* Assets.xcassets in Resources */,
 				DA3501F11C8FFBC0006A41A5 /* rain.mp3 in Resources */,
 				DA35020F1C951CE2006A41A5 /* crickets.mp3 in Resources */,
-				DA3501E31C8FDECA006A41A5 /* cloudssf.gif in Resources */,
 				DA596D411CA76CCD005266BF /* Profile.storyboard in Resources */,
 				DAE96CC81CAB6CC2000FAD10 /* timed_meditation.storyboard in Resources */,
-				DA4F85741C9D0DFB00C1AEBF /* radialColors.gif in Resources */,
 				DAF1CEAD1CA0F7E80020D003 /* launchrainbow1.png in Resources */,
-				DA3501E71C8FDECA006A41A5 /* waterfall2.gif in Resources */,
 				DAF1CEA51C9F7F8E0020D003 /* launchHeader.png in Resources */,
-				DA3501E41C8FDECA006A41A5 /* river1.gif in Resources */,
-				5CB377461CA2747D004979E0 /* evileye.jpg in Resources */,
 				DA35020B1C951869006A41A5 /* bowl.mp3 in Resources */,
 				DA3502071C951731006A41A5 /* waves.mp3 in Resources */,
 				DAF1CEAF1CA0F8330020D003 /* launchrainbow2.png in Resources */,
 				DA3501A41C880A27006A41A5 /* Main.storyboard in Resources */,
-				DA3501E21C8FDECA006A41A5 /* beach1.gif in Resources */,
 				5CD6E2FE1C9BD96D00AB2770 /* VolumeSliderView.xib in Resources */,
 				DA3502091C951803006A41A5 /* bells.mp3 in Resources */,
 				5CCB32261C9508D500EB656E /* mental_state.storyboard in Resources */,
@@ -705,6 +707,7 @@
 				DA4F856F1C97ACED00C1AEBF /* HSL.swift in Sources */,
 				DA4F856D1C97ACDF00C1AEBF /* DynamicColor.swift in Sources */,
 				DA3501B91C88115B006A41A5 /* MediaTableViewCell.swift in Sources */,
+				DA4D2A021CAE20A1001F4856 /* VRViewController.swift in Sources */,
 				DA3501C21C8A7E9A006A41A5 /* MediaViewController.swift in Sources */,
 				DA3501CD1C8CCE23006A41A5 /* Media.swift in Sources */,
 				DA3502031C94E63C006A41A5 /* SimpleSelectableSetting.swift in Sources */,
@@ -717,6 +720,7 @@
 				DA3501C91C8CCDF5006A41A5 /* Category.swift in Sources */,
 				5C04E30A1C98F2A1003558CF /* presentationAnimation.swift in Sources */,
 				DA596D451CA7716F005266BF /* HistoryViewController.swift in Sources */,
+				DA4D2A001CAD838A001F4856 /* ProfileViewController.swift in Sources */,
 				5CD6E2F81C9B9DBD00AB2770 /* PlayPauseButton.swift in Sources */,
 				DA3501FF1C94D32D006A41A5 /* SelectableSettingViewController.swift in Sources */,
 			);

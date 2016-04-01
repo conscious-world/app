@@ -9,14 +9,22 @@
 import UIKit
 import Spring
 import TEAChart
+import Player
 
-class HistoryViewController: UIViewController, TEAContributionGraphDataSource {
+class HistoryViewController: UIViewController, TEAContributionGraphDataSource, PlayerDelegate {
     
     var contributionGraph: TEAContributionGraph?
     var mediationsDays: [Int] = [0]
+    
+    @IBOutlet weak var backgroundVideoContainer: UIView!
+    
+    let videoNames = ["heavenly-rays", "green-sky-in-space","abstract-ocean-with-light-flares", "lights-sea-sparkling_bynqeb", "stars-and-colors-in-space"]
+    
+    var player = Player()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        addBackgroundVideo()
         let contributionGraph = TEAContributionGraph(frame: CGRectMake(50, 50, 282, 260))
         self.view.addSubview(contributionGraph)
         contributionGraph.showDayNumbers = true
@@ -71,6 +79,42 @@ class HistoryViewController: UIViewController, TEAContributionGraphDataSource {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    override func viewDidAppear(animated: Bool) {
+        self.player.playFromBeginning()
+        self.player.fillMode = AVLayerVideoGravityResizeAspectFill
+    }
+    
+    func addBackgroundVideo(){
+        self.player.delegate = self
+        self.player.view.frame = self.view.bounds
+        self.addChildViewController(player)
+        self.backgroundVideoContainer.addSubview(player.view)
+        self.player.didMoveToParentViewController(self)
+        
+        let urlpath = NSBundle.mainBundle().pathForResource(videoNames[0], ofType: "mp4")
+        let videoUrl:NSURL = NSURL.fileURLWithPath(urlpath!)
+        self.player.setUrl(videoUrl)
+        
+    }
+    
+    func playerReady(player: Player) {
+    }
+    
+    func playerPlaybackStateDidChange(player: Player) {
+    }
+    
+    func playerBufferingStateDidChange(player: Player) {
+    }
+    
+    func playerPlaybackWillStartFromBeginning(player: Player) {
+    }
+    
+    func playerPlaybackDidEnd(player: Player) {
+        player.playFromBeginning()
+    }
+    
+
     
     
     
