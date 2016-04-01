@@ -29,6 +29,8 @@ class MediaViewController: UIViewController, AVAudioPlayerDelegate, UIViewContro
         }
     }
     
+    @IBOutlet weak var mediationTitle: UILabel!
+    @IBOutlet weak var userAvatar: UIImageView!
     @IBOutlet weak var currentTimeLabel: UILabel!
     @IBOutlet weak var timeLeftLabel: UILabel!
     @IBOutlet weak var timeSlider: UISlider!
@@ -82,6 +84,15 @@ class MediaViewController: UIViewController, AVAudioPlayerDelegate, UIViewContro
             first = false
         } else {
         }
+        
+        
+        if let avatarName =  self.meditation?.user_avatar_name{
+            self.userAvatar.layer.cornerRadius = 24
+            self.userAvatar.clipsToBounds = true
+            self.userAvatar.image = UIImage(named: avatarName)
+        }
+        self.mediationTitle.text = self.meditation?.meditation_title
+        
         presentation()
         self.player.fillMode = AVLayerVideoGravityResizeAspectFill
         //setBackground()
@@ -97,6 +108,7 @@ class MediaViewController: UIViewController, AVAudioPlayerDelegate, UIViewContro
     }
     
     func setBackground() {
+   
         UIGraphicsBeginImageContext(self.view.frame.size)
         //UIImage(named: "evileye.jpg")?.drawInRect(self.view.bounds)
         
