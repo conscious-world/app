@@ -89,7 +89,6 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-conscious/MMParallaxCell.framework"
   install_framework "Pods-conscious/Player.framework"
   install_framework "Pods-conscious/Spring.framework"
-  install_framework "Pods-conscious/StarWars.framework"
   install_framework "Pods-conscious/TEAChart.framework"
   install_framework "Pods-conscious/TPCircularBuffer.framework"
 fi
@@ -99,7 +98,6 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-conscious/MMParallaxCell.framework"
   install_framework "Pods-conscious/Player.framework"
   install_framework "Pods-conscious/Spring.framework"
-  install_framework "Pods-conscious/StarWars.framework"
   install_framework "Pods-conscious/TEAChart.framework"
   install_framework "Pods-conscious/TPCircularBuffer.framework"
 fi

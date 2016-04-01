@@ -102,7 +102,7 @@ class MentalStateViewController: UIViewController, UIViewControllerTransitioning
     func createSectors(){
         let angleSize: CGFloat = CGFloat(2 * M_PI / Double(numberOfSections))
         var mid: CGFloat = 0
-        for var i = 0; i < numberOfSections; i++ {
+        for i in 0 ..< numberOfSections {
             let sector: Sector = Sector()
             sector.midValue = mid
             sector.minValue = mid - (angleSize/2)
@@ -167,10 +167,9 @@ class MentalStateViewController: UIViewController, UIViewControllerTransitioning
         } else if gesture.state == UIGestureRecognizerState.Changed {
             dx = Float(mentalStateCursorView.center.x - gridCenter!.x)
             dy = Float(mentalStateCursorView.center.y - gridCenter!.y)
-            var distFromCenter: Float = 0
+            let distFromCenter: Float = 0
             let radians: CGFloat = CGFloat(atan2f(Float(dx), Float(dy)))
             var sector: Int = 0
-            var weight: CGFloat = 0
             for s: Sector in sectors! {
                 if radians > CGFloat(s.minValue!) && radians < CGFloat(s.maxValue!) {
                     sector = s.sector!
@@ -184,20 +183,20 @@ class MentalStateViewController: UIViewController, UIViewControllerTransitioning
                     }
                 }
                 color = sectors![sector].color
-                var triangulation = sqrt((dx*dx) + (dy*dy))
-                distFromCenter = 1 - Float(triangulation)/Float(190.0)
-                
-                if triangulation < 45 {
-                    
-                }
-                
-                if triangulation > 45 && triangulation < 90 {
-                    
-                }
-                
-                if triangulation > 90  {
-                    
-                }
+//                var triangulation = sqrt((dx*dx) + (dy*dy))
+//                distFromCenter = 1 - Float(triangulation)/Float(190.0)
+//                
+//                if triangulation < 45 {
+//                    
+//                }
+//                
+//                if triangulation > 45 && triangulation < 90 {
+//                    
+//                }
+//                
+//                if triangulation > 90  {
+//                    
+//                }
                 
             }
             color = color!.tintColor(amount: CGFloat(distFromCenter))

@@ -201,34 +201,34 @@
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="ozU-1q-ZLM"/>
-                                <exclude reference="aF1-K1-heP"/>
                                 <exclude reference="Aua-2P-WE7"/>
                                 <exclude reference="NB1-uF-Dn3"/>
+                                <exclude reference="aF1-K1-heP"/>
+                                <exclude reference="ozU-1q-ZLM"/>
+                                <exclude reference="5Lr-Tu-bMH"/>
                                 <exclude reference="9lK-5o-qKT"/>
                                 <exclude reference="F3t-LX-9P5"/>
-                                <exclude reference="5Lr-Tu-bMH"/>
                                 <exclude reference="Obu-lP-VlL"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="constraints">
-                                <include reference="ozU-1q-ZLM"/>
-                                <exclude reference="BqP-jP-UPW"/>
                                 <exclude reference="7Hm-je-0pm"/>
-                                <include reference="aF1-K1-heP"/>
                                 <include reference="Aua-2P-WE7"/>
-                                <exclude reference="tkE-0b-sx6"/>
+                                <exclude reference="BqP-jP-UPW"/>
                                 <include reference="NB1-uF-Dn3"/>
-                                <include reference="9lK-5o-qKT"/>
-                                <exclude reference="FWV-sG-kUs"/>
-                                <include reference="F3t-LX-9P5"/>
+                                <include reference="aF1-K1-heP"/>
+                                <include reference="ozU-1q-ZLM"/>
+                                <exclude reference="tkE-0b-sx6"/>
                                 <exclude reference="05s-5A-TCu"/>
                                 <include reference="5Lr-Tu-bMH"/>
                                 <exclude reference="8xa-4b-2ZC"/>
+                                <include reference="9lK-5o-qKT"/>
+                                <include reference="F3t-LX-9P5"/>
+                                <exclude reference="FWV-sG-kUs"/>
                                 <include reference="Obu-lP-VlL"/>
-                                <exclude reference="i9G-mS-VPs"/>
                                 <exclude reference="Ry4-rQ-lZo"/>
+                                <exclude reference="i9G-mS-VPs"/>
                             </mask>
                         </variation>
                     </view>

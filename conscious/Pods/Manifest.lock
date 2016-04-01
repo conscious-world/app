@@ -12,7 +12,6 @@ PODS:
   - MMParallaxCell (1.2)
   - Player (0.1.0)
   - Spring (1.0.3)
-  - StarWars (1.0)
   - TEAChart (0.3.2)
   - TPCircularBuffer (1.1)
 
@@ -23,7 +22,6 @@ DEPENDENCIES:
   - MMParallaxCell
   - Player
   - Spring (from `https://github.com/MengTo/Spring.git`, branch `swift2`)
-  - StarWars (~> 1.0)
   - TEAChart (~> 0.3.2)
 
 EXTERNAL SOURCES:
@@ -43,7 +41,6 @@ SPEC CHECKSUMS:
   MMParallaxCell: 9c9045097743b725076c38ed2c53e3790e90bd14
   Player: e05be4073ea64fce1981869898ad9796c27cdd2b
   Spring: 3f02b5dc3308572ef177b3cad0fa7bbc4b0706f7
-  StarWars: 01f1731789f738f64c6a9533c209213aaf465014
   TEAChart: b22170216cc5e97a9e32da46f5ca06c07ef43cd0
   TPCircularBuffer: 4960a919e667280f7f38963d771f45871b64fe62
 
