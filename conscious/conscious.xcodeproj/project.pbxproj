@@ -66,6 +66,15 @@
 		DA4D2A0C1CAE2428001F4856 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA4D2A0B1CAE2428001F4856 /* CoreGraphics.framework */; };
 		DA4D2A0E1CAE242F001F4856 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA4D2A0D1CAE242F001F4856 /* CoreMotion.framework */; };
 		DA4D2A101CAE2441001F4856 /* SceneKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA4D2A0F1CAE2441001F4856 /* SceneKit.framework */; };
+		DA4D2A151CAE428B001F4856 /* lovingkindnessVR.PNG in Resources */ = {isa = PBXBuildFile; fileRef = DA4D2A141CAE428B001F4856 /* lovingkindnessVR.PNG */; };
+		DA4D2A191CAE4749001F4856 /* loveingkindness2.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = DA4D2A131CAE41D0001F4856 /* loveingkindness2.mp4 */; };
+		DA4D2A1B1CAE47E2001F4856 /* LovingKindness.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DA4D2A1A1CAE47E2001F4856 /* LovingKindness.mp3 */; };
+		DA4D2A1D1CAE48C4001F4856 /* launchScreenBlueWaveBrain.png in Resources */ = {isa = PBXBuildFile; fileRef = DA4D2A1C1CAE48C4001F4856 /* launchScreenBlueWaveBrain.png */; };
+		DA4D2A1F1CAE4C11001F4856 /* PeaceSoundMeditation.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DA4D2A1E1CAE4C11001F4856 /* PeaceSoundMeditation.mp3 */; };
+		DA4D2A241CAE4DF0001F4856 /* DrCampbellBodyScan2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DA4D2A201CAE4DF0001F4856 /* DrCampbellBodyScan2.mp3 */; };
+		DA4D2A251CAE4DF0001F4856 /* MIDecemberMeditation.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DA4D2A211CAE4DF0001F4856 /* MIDecemberMeditation.mp3 */; };
+		DA4D2A261CAE4DF0001F4856 /* MINovemberMeditation.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DA4D2A221CAE4DF0001F4856 /* MINovemberMeditation.mp3 */; };
+		DA4D2A271CAE4DF0001F4856 /* MIOctoberMeditationTheMasksWeWear.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DA4D2A231CAE4DF0001F4856 /* MIOctoberMeditationTheMasksWeWear.mp3 */; };
 		DA4F856D1C97ACDF00C1AEBF /* DynamicColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4F856C1C97ACDF00C1AEBF /* DynamicColor.swift */; };
 		DA4F856F1C97ACED00C1AEBF /* HSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4F856E1C97ACED00C1AEBF /* HSL.swift */; };
 		DA596D391CA749A0005266BF /* TimedMeditation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA596D371CA749A0005266BF /* TimedMeditation.storyboard */; };
@@ -153,6 +162,15 @@
 		DA4D2A0B1CAE2428001F4856 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		DA4D2A0D1CAE242F001F4856 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		DA4D2A0F1CAE2441001F4856 /* SceneKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SceneKit.framework; path = System/Library/Frameworks/SceneKit.framework; sourceTree = SDKROOT; };
+		DA4D2A131CAE41D0001F4856 /* loveingkindness2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = loveingkindness2.mp4; sourceTree = "<group>"; };
+		DA4D2A141CAE428B001F4856 /* lovingkindnessVR.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lovingkindnessVR.PNG; sourceTree = "<group>"; };
+		DA4D2A1A1CAE47E2001F4856 /* LovingKindness.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = LovingKindness.mp3; sourceTree = "<group>"; };
+		DA4D2A1C1CAE48C4001F4856 /* launchScreenBlueWaveBrain.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = launchScreenBlueWaveBrain.png; path = icons/launchScreenBlueWaveBrain.png; sourceTree = "<group>"; };
+		DA4D2A1E1CAE4C11001F4856 /* PeaceSoundMeditation.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = PeaceSoundMeditation.mp3; sourceTree = "<group>"; };
+		DA4D2A201CAE4DF0001F4856 /* DrCampbellBodyScan2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = DrCampbellBodyScan2.mp3; sourceTree = "<group>"; };
+		DA4D2A211CAE4DF0001F4856 /* MIDecemberMeditation.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = MIDecemberMeditation.mp3; sourceTree = "<group>"; };
+		DA4D2A221CAE4DF0001F4856 /* MINovemberMeditation.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = MINovemberMeditation.mp3; sourceTree = "<group>"; };
+		DA4D2A231CAE4DF0001F4856 /* MIOctoberMeditationTheMasksWeWear.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = MIOctoberMeditationTheMasksWeWear.mp3; sourceTree = "<group>"; };
 		DA4F856C1C97ACDF00C1AEBF /* DynamicColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicColor.swift; sourceTree = "<group>"; };
 		DA4F856E1C97ACED00C1AEBF /* HSL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSL.swift; sourceTree = "<group>"; };
 		DA596D381CA749A0005266BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/TimedMeditation.storyboard; sourceTree = "<group>"; };
@@ -351,6 +369,7 @@
 				DA4F856E1C97ACED00C1AEBF /* HSL.swift */,
 				DAF1CEAC1CA0F7E80020D003 /* launchrainbow1.png */,
 				DAF1CEAE1CA0F8330020D003 /* launchrainbow2.png */,
+				DA4D2A1C1CAE48C4001F4856 /* launchScreenBlueWaveBrain.png */,
 				DAF1CEA81CA0F6EE0020D003 /* launchbackgroundRainbow.png */,
 				DA3501A21C880A27006A41A5 /* Main.storyboard */,
 				DA596D421CA7713B005266BF /* History.storyboard */,
@@ -422,6 +441,12 @@
 			children = (
 				DAF1CEB01CA1DF3C0020D003 /* Hein-Braat-Maha-Mrityeonjaya-Mantra.mp3 */,
 				DA9E8E831CA24977002128B7 /* 3-Minute-Breathing-Space.mp3 */,
+				DA4D2A1E1CAE4C11001F4856 /* PeaceSoundMeditation.mp3 */,
+				DA4D2A1A1CAE47E2001F4856 /* LovingKindness.mp3 */,
+				DA4D2A201CAE4DF0001F4856 /* DrCampbellBodyScan2.mp3 */,
+				DA4D2A211CAE4DF0001F4856 /* MIDecemberMeditation.mp3 */,
+				DA4D2A221CAE4DF0001F4856 /* MINovemberMeditation.mp3 */,
+				DA4D2A231CAE4DF0001F4856 /* MIOctoberMeditationTheMasksWeWear.mp3 */,
 				DA3501D51C8CE4FC006A41A5 /* MARC5MinuteBreathing.mp3 */,
 			);
 			name = Media;
@@ -450,6 +475,7 @@
 		DA3501DB1C8FDDA6006A41A5 /* backgroundImages */ = {
 			isa = PBXGroup;
 			children = (
+				DA4D2A141CAE428B001F4856 /* lovingkindnessVR.PNG */,
 			);
 			name = backgroundImages;
 			sourceTree = "<group>";
@@ -502,6 +528,7 @@
 			isa = PBXGroup;
 			children = (
 				DAE96CB71CAB2380000FAD10 /* sea-shimmer.mp4 */,
+				DA4D2A131CAE41D0001F4856 /* loveingkindness2.mp4 */,
 				DAE96CB81CAB2380000FAD10 /* canyon-with-rolling-light.mp4 */,
 				DAE96CB91CAB2380000FAD10 /* spring-tree-blossoms-breeze.mp4 */,
 				DAE96CBA1CAB2380000FAD10 /* heavenly-rays.mp4 */,
@@ -581,22 +608,28 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA4D2A191CAE4749001F4856 /* loveingkindness2.mp4 in Resources */,
 				DA4D2A041CAE222B001F4856 /* vr.mp4 in Resources */,
 				DA4D29FA1CACACEA001F4856 /* green-sky-in-space.mp4 in Resources */,
 				DA4D29F81CACACAE001F4856 /* heavenly-rays.mp4 in Resources */,
 				DA4D29F61CACAC86001F4856 /* lights-sea-sparkling_bynqeb.mp4 in Resources */,
 				DA4D29F71CACAC86001F4856 /* abstract-ocean-with-light-flares.mp4 in Resources */,
 				DAE96CBF1CAB297B000FAD10 /* sea-shimmer.mp4 in Resources */,
+				DA4D2A1F1CAE4C11001F4856 /* PeaceSoundMeditation.mp3 in Resources */,
+				DA4D2A271CAE4DF0001F4856 /* MIOctoberMeditationTheMasksWeWear.mp3 in Resources */,
 				DAE96CC61CAB297B000FAD10 /* beautiful-particles_by9bslveb__D.mp4 in Resources */,
+				DA4D2A151CAE428B001F4856 /* lovingkindnessVR.PNG in Resources */,
 				DAF1CEA91CA0F6EE0020D003 /* launchbackgroundRainbow.png in Resources */,
 				DA3501D61C8CE4FC006A41A5 /* MARC5MinuteBreathing.mp3 in Resources */,
 				5CB0BA151C9291C20045901F /* media_meditation.storyboard in Resources */,
 				DAF1CEB11CA1DF3C0020D003 /* Hein-Braat-Maha-Mrityeonjaya-Mantra.mp3 in Resources */,
+				DA4D2A241CAE4DF0001F4856 /* DrCampbellBodyScan2.mp3 in Resources */,
 				DA3501A91C880A27006A41A5 /* LaunchScreen.storyboard in Resources */,
 				DA596D431CA7713B005266BF /* History.storyboard in Resources */,
 				DA596D391CA749A0005266BF /* TimedMeditation.storyboard in Resources */,
 				DA4D29F31CACA283001F4856 /* stars-and-colors-in-space.mp4 in Resources */,
 				DA3501A61C880A27006A41A5 /* Assets.xcassets in Resources */,
+				DA4D2A1B1CAE47E2001F4856 /* LovingKindness.mp3 in Resources */,
 				DA3501F11C8FFBC0006A41A5 /* rain.mp3 in Resources */,
 				DA35020F1C951CE2006A41A5 /* crickets.mp3 in Resources */,
 				DA596D411CA76CCD005266BF /* Profile.storyboard in Resources */,
@@ -605,11 +638,14 @@
 				DAF1CEA51C9F7F8E0020D003 /* launchHeader.png in Resources */,
 				DA35020B1C951869006A41A5 /* bowl.mp3 in Resources */,
 				DA3502071C951731006A41A5 /* waves.mp3 in Resources */,
+				DA4D2A1D1CAE48C4001F4856 /* launchScreenBlueWaveBrain.png in Resources */,
 				DAF1CEAF1CA0F8330020D003 /* launchrainbow2.png in Resources */,
+				DA4D2A261CAE4DF0001F4856 /* MINovemberMeditation.mp3 in Resources */,
 				DA3501A41C880A27006A41A5 /* Main.storyboard in Resources */,
 				5CD6E2FE1C9BD96D00AB2770 /* VolumeSliderView.xib in Resources */,
 				DA3502091C951803006A41A5 /* bells.mp3 in Resources */,
 				5CCB32261C9508D500EB656E /* mental_state.storyboard in Resources */,
+				DA4D2A251CAE4DF0001F4856 /* MIDecemberMeditation.mp3 in Resources */,
 				DA9E8E841CA24977002128B7 /* 3-Minute-Breathing-Space.mp3 in Resources */,
 				DAF29FF71C9F660A00B5649E /* launchHeader2.png in Resources */,
 			);

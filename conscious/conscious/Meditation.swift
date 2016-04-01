@@ -37,6 +37,7 @@ class Meditation: NSObject, NSCoding{
     var options: [[String:String]]?
     var mediaName: String?
     var video_name: String?
+    var isVRVideo = false
     
     var pathForMedia: String?{
         get{
@@ -131,7 +132,14 @@ class Meditation: NSObject, NSCoding{
     }
     
     static func getAllPossible() -> [Meditation]{
-        return [ThreeMinuteBreathingMeditation.build(),
+        return [
+            DrCampbellBodyScan.build(),
+            SarahCruzPeaceSoundMeditation.build(),
+            MindfullnessInstitueDecember.build(),
+            MindfullnessInstitueNovemer.build(),
+            MindfullnessInstitueOctober.build(),
+            LovingKindnessVRMeditation.build(),
+            ThreeMinuteBreathingMeditation.build(),
             HealingMeditation.build(),
             FiveMintueBreathingMeditation.build()]
     }
@@ -161,7 +169,18 @@ class Meditation: NSObject, NSCoding{
         }
     }
     
-
+    class LovingKindnessVRMeditation: Meditation{
+        static func build() -> Meditation{
+            let meditation = Meditation.newTimedMeditation()
+            meditation.coverImageUrl = "lovingkindnessVRcover"
+            meditation.iconName = "ic_3d_rotation_white_18pt"
+            meditation.mediaName = "LovingKindness"
+            meditation.meditation_title = "Paul Thormahlen: Loving Kindness Medations (VR)"
+            meditation.meditation_description = ""
+            meditation.isVRVideo = true
+            return meditation
+        }
+    }
     
     class ThreeMinuteBreathingMeditation: Meditation{
         static func build() -> Meditation{
@@ -173,6 +192,76 @@ class Meditation: NSObject, NSCoding{
             meditation.meditation_description = "Three minutes is all it takes to reset your day with this simple breathing exercise"
             meditation.video_name = "heavenly-rays"
 
+            return meditation
+        }
+    }
+    
+    class DrCampbellBodyScan: Meditation{
+        static func build() -> Meditation{
+            let meditation = Meditation.newGuidedMeditation()
+            meditation.coverImageUrl = "colors"
+            meditation.iconName = "circle-user-7"
+            meditation.mediaName = "DrCampbellBodyScan2"
+            meditation.meditation_title = "Dr Cambell, Ignite your potential: Body Scan"
+            meditation.meditation_description = "Three minutes is all it takes to reset your day with this simple breathing exercise"
+            meditation.video_name = "heavenly-rays"
+            
+            return meditation
+        }
+    }
+    
+    class MindfullnessInstitueDecember: Meditation{
+        static func build() -> Meditation{
+            let meditation = Meditation.newGuidedMeditation()
+            meditation.coverImageUrl = "mindful-institute-header-image"
+            meditation.iconName = "circle-user-7"
+            meditation.mediaName = "MIDecemberMeditation"
+            meditation.meditation_title = "Mindfulinstitue: December"
+            meditation.meditation_description = ""
+            meditation.video_name = "heavenly-rays"
+            
+            return meditation
+        }
+    }
+    
+    
+    class MindfullnessInstitueNovemer: Meditation{
+        static func build() -> Meditation{
+            let meditation = Meditation.newGuidedMeditation()
+            meditation.coverImageUrl = "mindful-institute-header-image"
+            meditation.iconName = "circle-user-7"
+            meditation.mediaName = "MINovemberMeditation"
+            meditation.meditation_title = "Mindful Institue: November"
+            meditation.meditation_description = ""
+            meditation.video_name = "heavenly-rays"
+            
+            return meditation
+        }
+    }
+    
+    class MindfullnessInstitueOctober: Meditation{
+        static func build() -> Meditation{
+            let meditation = Meditation.newGuidedMeditation()
+            meditation.coverImageUrl = "mindful-institute-header-image"
+            meditation.iconName = "circle-user-7"
+            meditation.mediaName = "MIOctoberMeditationTheMasksWeWear"
+            meditation.meditation_title = "Mindful Institue: the masks we wear"
+            meditation.meditation_description = ""
+            meditation.video_name = "heavenly-rays"
+            
+            return meditation
+        }
+    }
+    
+    class SarahCruzPeaceSoundMeditation: Meditation{
+        static func build() -> Meditation{
+            let meditation = Meditation.newGuidedMeditation()
+            meditation.coverImageUrl = "exampleMeditionCover"
+            meditation.iconName = "circle-user-7"
+            meditation.mediaName = "PeaceSoundMeditation"
+            meditation.meditation_title = "Postures of Grace: Peace Sound Medation"
+            meditation.meditation_description = ""
+            meditation.video_name = "abstract-ocean-with-light-flares"
             return meditation
         }
     }

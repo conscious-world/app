@@ -109,6 +109,11 @@ class MediaViewController: UIViewController, AVAudioPlayerDelegate, UIViewContro
     
     func setupPlayButton() {
         playPauseButton = PlayPauseButton(frame: playView.bounds)
+        
+        if let isVRMeditation = self.meditation?.isVRVideo{
+           self.VR3DButton.hidden = !isVRMeditation
+        }
+
         playPauseButton.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
         playView.addSubview(playPauseButton)
         let tap = UITapGestureRecognizer(target: self, action: Selector("handlePlayTap:")   )
