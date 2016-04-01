@@ -93,7 +93,7 @@ class MediaViewController: UIViewController, AVAudioPlayerDelegate, UIViewContro
         UIGraphicsBeginImageContext(self.view.frame.size)
         UIImage(named: "evileye.jpg")?.drawInRect(self.view.bounds)
         
-        var image: UIImage = UIGraphicsGetImageFromCurrentImageContext()
+        let image: UIImage = UIGraphicsGetImageFromCurrentImageContext()
         
         UIGraphicsEndImageContext()
         
@@ -104,7 +104,7 @@ class MediaViewController: UIViewController, AVAudioPlayerDelegate, UIViewContro
         playPauseButton = PlayPauseButton(frame: playView.bounds)
         playPauseButton.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
         playView.addSubview(playPauseButton)
-        let tap = UITapGestureRecognizer(target: self, action: Selector("handlePlayTap:"))
+        let tap = UITapGestureRecognizer(target: self, action: Selector("handlePlayTap:")   )
         tap.delegate = self
         playPauseButton.addGestureRecognizer(tap)
     }
