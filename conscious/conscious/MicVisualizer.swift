@@ -69,7 +69,7 @@ class MicVisualizer: UIView {
         
         if self.window != nil {
             if emitterTimer == nil {
-                emitterTimer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: #selector(MicVisualizer.randomizeEmitterPosition), userInfo: nil, repeats: true)
+                emitterTimer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: "randomizeEmitterPosition", userInfo: nil, repeats: true)
             }
         } else if emitterTimer != nil {
             emitterTimer?.invalidate()

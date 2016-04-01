@@ -75,7 +75,7 @@ class StarsOverlay: UIView {
         
         if self.window != nil {
             if emitterTimer == nil {
-                emitterTimer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: #selector(StarsOverlay.lessRandom), userInfo: nil, repeats: true)
+                emitterTimer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: "lessRandom", userInfo: nil, repeats: true)
             }
         } else if emitterTimer != nil {
             emitterTimer?.invalidate()
@@ -89,7 +89,7 @@ class StarsOverlay: UIView {
             particle.spin = degreesToRadians(spin!)
             particle.spinRange = zeroDegreesInRadians
             particle.emissionRange = degreesToRadians(360.0)
-            emitterTimer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: #selector(StarsOverlay.lessRandom), userInfo: nil, repeats: true)
+            emitterTimer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: "lessRandom", userInfo: nil, repeats: true)
         } else {
             emitterTimer?.invalidate()
         }

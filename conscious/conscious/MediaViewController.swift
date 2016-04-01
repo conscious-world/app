@@ -104,7 +104,7 @@ class MediaViewController: UIViewController, AVAudioPlayerDelegate, UIViewContro
         playPauseButton = PlayPauseButton(frame: playView.bounds)
         playPauseButton.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
         playView.addSubview(playPauseButton)
-        let tap = UITapGestureRecognizer(target: self, action: #selector(MediaViewController.handlePlayTap(_:)))
+        let tap = UITapGestureRecognizer(target: self, action: Selector("handlePlayTap:")   )
         tap.delegate = self
         playPauseButton.addGestureRecognizer(tap)
     }
@@ -129,7 +129,7 @@ class MediaViewController: UIViewController, AVAudioPlayerDelegate, UIViewContro
             meditation!.start()
             audioPlayer.play()
             startBackgroundAudioSession()
-            timer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: #selector(MediaViewController.updateTimeSlider), userInfo: nil, repeats: true)
+            timer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: Selector("updateTimeSlider"), userInfo: nil, repeats: true)
             playing = true
         }
     }

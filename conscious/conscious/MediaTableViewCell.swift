@@ -36,7 +36,7 @@ class MediaTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(MediaTableViewCell.onTap))
+        tapGestureRecognizer = UITapGestureRecognizer(target: self, action: "onTap")
         self.userInteractionEnabled = true
         self.addGestureRecognizer(tapGestureRecognizer!)
         if(titleLabel != nil){

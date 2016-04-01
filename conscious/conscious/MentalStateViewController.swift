@@ -227,7 +227,7 @@ class MentalStateViewController: UIViewController, UIViewControllerTransitioning
     @IBAction func onContinuePressed(sender: AnyObject) {
         makeRipple()
         delegate?.mentalStateSelected(self, didPickState: self.state, color: color)
-        NSTimer.scheduledTimerWithTimeInterval(0.5, target: self, selector: #selector(MentalStateViewController.dismissView), userInfo:nil ,repeats: false)
+        NSTimer.scheduledTimerWithTimeInterval(0.5, target: self, selector: "dismissView", userInfo:nil ,repeats: false)
     }
     
     
