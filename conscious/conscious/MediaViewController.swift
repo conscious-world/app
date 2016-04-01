@@ -8,8 +8,9 @@
 
 import UIKit
 import AVFoundation
+import Player
 
-class MediaViewController: UIViewController, AVAudioPlayerDelegate, UIViewControllerTransitioningDelegate, MentalStateDelegate, UIGestureRecognizerDelegate {
+class MediaViewController: UIViewController, AVAudioPlayerDelegate, UIViewControllerTransitioningDelegate, MentalStateDelegate, UIGestureRecognizerDelegate, PlayerDelegate {
 
     @IBAction func onBackPressed(sender: AnyObject) {
         // TODO:
@@ -33,6 +34,10 @@ class MediaViewController: UIViewController, AVAudioPlayerDelegate, UIViewContro
     @IBOutlet weak var timeSlider: UISlider!
     @IBOutlet var mediaView: StarsOverlay!
     @IBOutlet weak var playView: UIView!
+    @IBOutlet weak var VR3DButton: UIButton!
+    @IBOutlet weak var backgroundVideoContainer: UIView!
+    let videoNames = ["heavenly-rays", "green-sky-in-space","abstract-ocean-with-light-flares", "lights-sea-sparkling_bynqeb", "stars-and-colors-in-space"]
+    var player = Player()
     var originalColor: UIColor = UIColor(hexString: "#FAC54B")
     
     var smallerView: StarsOverlay?
@@ -61,6 +66,7 @@ class MediaViewController: UIViewController, AVAudioPlayerDelegate, UIViewContro
         super.viewDidLoad()
         loadAudio()
         setupPlayButton()
+        addBackgroundVideo()
         self.view.backgroundColor = originalColor
         mediaView.setEmitters(true, spin: 130.0)
         timeSlider.setThumbImage(UIImage(named: "lotus-pointer"), forState: .Normal)
@@ -77,7 +83,8 @@ class MediaViewController: UIViewController, AVAudioPlayerDelegate, UIViewContro
         } else {
         }
         presentation()
-        setBackground()
+        self.player.fillMode = AVLayerVideoGravityResizeAspectFill
+        //setBackground()
 
         UIView.animateWithDuration(1) { () -> Void in
             self.view.layoutIfNeeded()
@@ -86,12 +93,12 @@ class MediaViewController: UIViewController, AVAudioPlayerDelegate, UIViewContro
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-
+        self.player.playFromBeginning()
     }
     
     func setBackground() {
         UIGraphicsBeginImageContext(self.view.frame.size)
-        UIImage(named: "evileye.jpg")?.drawInRect(self.view.bounds)
+        //UIImage(named: "evileye.jpg")?.drawInRect(self.view.bounds)
         
         let image: UIImage = UIGraphicsGetImageFromCurrentImageContext()
         
@@ -236,7 +243,9 @@ class MediaViewController: UIViewController, AVAudioPlayerDelegate, UIViewContro
         let audioFileUrl = NSURL.fileURLWithPath(audioFilePath)
         
         do {
+  
             audioPlayer = try AVAudioPlayer(contentsOfURL: audioFileUrl, fileTypeHint: nil)
+            audioPlayer.volume = 0.8
             audioPlayer.delegate = self
             currentTimeLabel.text = minValue.mmss
             duration = self.audioPlayer.duration
@@ -271,7 +280,46 @@ class MediaViewController: UIViewController, AVAudioPlayerDelegate, UIViewContro
         // segue to post-meditation screen
         presentation()
     }
+    
+    
+    func addBackgroundVideo(){
+        self.player.delegate = self
+        self.player.view.frame = self.view.bounds
+        self.addChildViewController(player)
+        self.backgroundVideoContainer.addSubview(player.view)
+        self.player.didMoveToParentViewController(self)
+        
+        var videoName = videoNames[4]
+        if self.meditation?.video_name != nil {
+            videoName = (self.meditation!.video_name)!
+        }
+        
+        let urlpath = NSBundle.mainBundle().pathForResource(videoName, ofType: "mp4")
+        
+        let videoUrl:NSURL = NSURL.fileURLWithPath(urlpath!)
+        self.player.setUrl(videoUrl)
+        
+    }
+    
+    func playerReady(player: Player) {
+    }
+    
+    func playerPlaybackStateDidChange(player: Player) {
+    }
+    
+    func playerBufferingStateDidChange(player: Player) {
+    }
+    
+    func playerPlaybackWillStartFromBeginning(player: Player) {
+    }
+    
+    func playerPlaybackDidEnd(player: Player) {
+        player.playFromBeginning()
+    }
 
+    @IBAction func on3VRButtonTap(sender: UIButton) {
+        
+    }
     /*
     // MARK: - Navigation
 

@@ -8,8 +8,9 @@
 
 import UIKit
 import AudioToolbox
+import Player
 
-class TimerViewController: UIViewController, EZMicrophoneDelegate, EZAudioFFTDelegate, TimerSettingsTableViewControllerDelegate, UIViewControllerTransitioningDelegate, MentalStateDelegate {
+class TimerViewController: UIViewController, EZMicrophoneDelegate, EZAudioFFTDelegate, TimerSettingsTableViewControllerDelegate, UIViewControllerTransitioningDelegate, MentalStateDelegate, PlayerDelegate, UIScrollViewDelegate {
     
     var settingButton : UIBarButtonItem?
     
@@ -21,13 +22,14 @@ class TimerViewController: UIViewController, EZMicrophoneDelegate, EZAudioFFTDel
     var next = MentalStateViewController!()
     var first: Bool = true
     
-    @IBOutlet var backgroundVisualization: MicVisualizer!
+    //@IBOutlet var backgroundVisualization: MicVisualizer!
     
     @IBOutlet weak var plot: EZAudioPlotGL?
     @IBOutlet weak var stopButton: UIButton!
     @IBOutlet weak var startButton: UIButton!
     @IBOutlet weak var micButton: UIButton!
     @IBOutlet weak var muteButton: UIButton!
+    @IBOutlet weak var videoScrollView: UIScrollView!
     
     let FFTViewControllerFFTWindowSize:vDSP_Length = 4096;
     var fft: EZAudioFFTRolling!
@@ -63,7 +65,10 @@ class TimerViewController: UIViewController, EZMicrophoneDelegate, EZAudioFFTDel
             self.meditation = Meditation.newTimedMeditation()
         }
         configureUI()
+        playBackVideos()
     }
+    
+    @IBOutlet weak var timePicker: TimePickerView!
     
     func configureUI(){
         //todo just hide/show all controles in a view, not each one individually
@@ -72,13 +77,80 @@ class TimerViewController: UIViewController, EZMicrophoneDelegate, EZAudioFFTDel
         micButton.hidden = true
         muteButton.hidden = true
         userSettings.useAudioReverb() ? showMicOnButton() : showMicMuteButton()
+        self.videoScrollView.delegate = self
+        self.videoScrollView.frame = CGRectMake(0,0, self.view.frame.width, self.view.frame.height)
+        
+        timePicker.settings = userSettings
+        timePicker.setValue(UIColor.lightGrayColor(), forKeyPath:"textColor")
+        dispatch_async(dispatch_get_main_queue(),{
+            self.timePicker.countDownDuration = self.userSettings.intervalSeconds
+        })
+
     }
+    
+
+    
+    let videoNames = ["heavenly-rays", "green-sky-in-space","abstract-ocean-with-light-flares", "lights-sea-sparkling_bynqeb", "stars-and-colors-in-space"]
+    var players: [Player] = []
+    
+    func playBackVideos(){
+        
+        let scrollviewHeight = self.videoScrollView.frame.height
+        let scrollviewWidth = self.videoScrollView.frame.width
+        
+        for index in 0...(videoNames.count - 1) {
+            players.append(Player())
+            players[index].delegate = self
+            players[index].view.frame = CGRectMake((CGFloat(index) * scrollviewWidth),0,scrollviewWidth, scrollviewHeight)
+            
+            self.addChildViewController(players[index])
+            self.videoScrollView.addSubview(players[index].view)
+            players[index].didMoveToParentViewController(self)
+            
+            let urlpath = NSBundle.mainBundle().pathForResource(videoNames[index], ofType: "mp4")
+            let videoUrl:NSURL = NSURL.fileURLWithPath(urlpath!)
+            players[index].setUrl(videoUrl)
+        }
+        
+        self.videoScrollView.contentSize = CGSizeMake(self.videoScrollView.frame.width * CGFloat(videoNames.count), self.videoScrollView.frame.height)
+    }
+    
+    var currentVideoIndex = 0
+    func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
+        currentVideoIndex = Int(scrollView.contentOffset.x / scrollView.frame.size.width)
+        print("page is \(currentVideoIndex)")
+        for player in players{
+            if player.playbackState == PlaybackState.Playing{
+                player.pause()
+            }
+        }
+        players[currentVideoIndex].playFromCurrentTime()
+ 
+        toggleBackgroundSoundEffects()
+    }
+    
+    func toggleBackgroundSoundEffects(){
+        //such hack
+        if(currentVideoIndex == 2 || currentVideoIndex == 3){
+        userSettings.playBackgroundSound()
+        }
+        else{
+        userSettings.stopBackgroundSound()
+        }
+    }
+    
     
     override func viewDidAppear(animated: Bool) {
         if self.meditation == nil {
             self.meditation = Meditation.newTimedMeditation()
             configureUI()
         }
+        players[0].playFromBeginning()
+        //self.player.fillMode = AVLayerVideoGravityResizeAspect
+        for player in players{
+            player.fillMode = AVLayerVideoGravityResizeAspectFill
+        }
+
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -92,6 +164,23 @@ class TimerViewController: UIViewController, EZMicrophoneDelegate, EZAudioFFTDel
         }else{
             navigateToHomeViewController()
         }
+        timePicker.hidden = false
+    }
+    
+    func playerReady(player: Player) {
+    }
+    
+    func playerPlaybackStateDidChange(player: Player) {
+    }
+    
+    func playerBufferingStateDidChange(player: Player) {
+    }
+    
+    func playerPlaybackWillStartFromBeginning(player: Player) {
+    }
+    
+    func playerPlaybackDidEnd(player: Player) {
+        player.playFromBeginning()
     }
     
     @IBAction func onPauseButtonPressed(sender: UIButton) {
@@ -112,6 +201,7 @@ class TimerViewController: UIViewController, EZMicrophoneDelegate, EZAudioFFTDel
     
     @IBAction func onStartButtonPressed(sender: UIButton) {
         if(self.meditation!.hasNotStarted()){
+            timePicker.hidden = true
             presentation()
             //presentation will call beginMediation() when done
         }else{
@@ -266,12 +356,10 @@ extension TimerViewController{
             NSLog("Error setting up audio session active")
         }
         
-        self.plot?.backgroundColor = UIColor.clearColor()
-        self.microphone = EZMicrophone.sharedMicrophone()
+        
+        setMicrophone()
         self.microphone.delegate = self
-        //EZMicrophone.sharedMicrophone().startFetchingAudio()
         self.microphone.output = ReverbOutput.sharedOutput()
-        //EZMicrophone.sharedMicrophone().output = DelayedOutput.sharedOutput()
         self.fft = EZAudioFFTRolling.fftWithWindowSize(FFTViewControllerFFTWindowSize, sampleRate: Float(self.microphone.audioStreamBasicDescription().mSampleRate), delegate: self)
         
         do{
@@ -279,13 +367,13 @@ extension TimerViewController{
         }
         catch _{
             NSLog("Error setting up audio session active");
-            
         }
         
-        userSettings.playBackgroundSound()
         if(userSettings.useAudioReverb()){
             startMicrophonePassthrough()
         }
+        
+        toggleBackgroundSoundEffects()
     }
     
     func stopMicrophonePassthrough(){
@@ -294,7 +382,8 @@ extension TimerViewController{
     }
     
     func startMicrophonePassthrough(){
-        EZMicrophone.sharedMicrophone().startFetchingAudio()
+        self.microphone.startFetchingAudio()
+        //  EZMicrophone.sharedMicrophone().startFetchingAudio()
         EZOutput.sharedOutput().startPlayback();
         backgroundTaskId = UIApplication.sharedApplication().beginBackgroundTaskWithExpirationHandler(nil)
     }
@@ -309,19 +398,107 @@ extension TimerViewController{
         });
     }
     
+    func setMicrophone(){
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "audioRouteChangeListenerCallback:", name: AVAudioSessionRouteChangeNotification, object: nil)
+
+        print("****************\(EZAudioDevice.inputDevices().count) inputDevices***************")
+        print(EZAudioDevice.inputDevices())
+        
+        self.microphone = EZMicrophone.sharedMicrophone()
+        //self.microphone = EZMicrophone()
+//        //self.microphone.device = EZAudioDevice.inputDevices().last as! EZAudioDevice
+//
+//        for device in EZAudioDevice.inputDevices() {
+//            let d = device as! EZAudioDevice
+//            print("device.name \(d.name)")
+//            if d.name == "Headset Microphone"{
+//                print("set mic to =Headset Microphone")
+//                self.microphone.device = d
+//            }
+//        }
+
+        
+       
+        
+        //print("----------")
+        //print(EZAudioDevice.inputDevices().first)
+        //print("****************outputDevices***************")
+        //print(EZAudioDevice.outputDevices())
+        
+        let possibleInputs = self.session?.availableInputs
+        
+        //self.session?.setInputDataSource(AVAudioSessionDataSourceDescription.) = AVAudioSessionPortDescription.
+        print("^^^^^^^^^^^^^^^^^^^^^^^ possibleInputs \(possibleInputs) ^^^^^^^^^^^^^^^^^^")
+        
+//        for input in possibleInputs!{
+//            print("input.dataSourceName \(input.portType)")
+//            if(input.portType == "MicrophoneWired"){
+//                print("we have a MicrophoneWired")
+//                AVAudioSessionPortDescription *port = [[[session currentRoute] inputs] firstObject];
+//                AVAudioSessionDataSourceDescription *dataSource = [session inputDataSource];
+//                EZAudioDevice *device = [[EZAudioDevice alloc] init];
+//                device.port = port;
+//                device.dataSource = dataSource;
+//                return device;
+                
+                //let mic = EZAudioDevice()
+ //               mic.port = input
+                //print("input.dataSources = \(input.dataSources)")
+                //let mic.dataSource = input.dataSources
+                //return input
+//            }
+//        }
+        
+//        if(EZAudioDevice.inputDevices().count > 0){
+//            //do some work to get get the right mic
+//            let currentInput = EZAudioDevice.inputDevices().last as! EZAudioDevice
+//            self.microphone.device = currentInput
+//            
+//        }
+    }
+    
     func fft(fft: EZAudioFFT!, updatedWithFFTData fftData: UnsafeMutablePointer<Float>, bufferSize: vDSP_Length) {
         
         
         let maxFrequency: Float = fft.maxFrequency
         let gain = fft.maxFrequencyMagnitude
         let noteName: String = EZAudioUtilities.noteNameStringForFrequency(maxFrequency, includeOctave: true)
-        dispatch_async(dispatch_get_main_queue(), {() -> Void in
-            NSLog("Highest Note: \(noteName),\nFrequency: \(maxFrequency) amplitude: \(gain)")
-            self.backgroundVisualization.changeSize(min(4,Double(gain * 20)))
-            let color = UIColor(hue: CGFloat(min(1.0,maxFrequency/3000)), saturation: 1.0, brightness: 1.0, alpha: 1.0)
-            print("alpha = \(CGFloat(1.0 / Double(gain * 10)))")
-            self.backgroundVisualization.changeColor(color)
-        })
+//        dispatch_async(dispatch_get_main_queue(), {() -> Void in
+//            //NSLog("Highest Note: \(noteName),\nFrequency: \(maxFrequency) amplitude: \(gain)")
+//            self.backgroundVisualization.changeSize(min(4,Double(gain * 20)))
+//            let color = UIColor(hue: CGFloat(min(1.0,maxFrequency/3000)), saturation: 1.0, brightness: 1.0, alpha: 1.0)
+//            //print("alpha = \(CGFloat(1.0 / Double(gain * 10)))")
+//            self.backgroundVisualization.changeColor(color)
+//        })
+    }
+    
+    func audioRouteChangeListenerCallback (notif: NSNotification){
+        let userInfo:[NSObject:AnyObject] = notif.userInfo!
+       //print("**************** inputDevices\(EZAudioDevice.inputDevices()) ***************")
+       // print("~~~~~~~~~userInfo: \(userInfo) ~~~~~~~~~~")
+        let routChangeReason = UInt((userInfo[AVAudioSessionRouteChangeReasonKey]?.integerValue)!)
+        switch routChangeReason {
+        case AVAudioSessionRouteChangeReason.NewDeviceAvailable.rawValue:
+            print("Headphone/Line plugged in");
+            break;
+            
+        case AVAudioSessionRouteChangeReason.OldDeviceUnavailable.rawValue:
+            //If the headphones was pulled move to speaker
+            do {
+                try AVAudioSession.sharedInstance().overrideOutputAudioPort(AVAudioSessionPortOverride.Speaker)
+            } catch _ {
+            }
+            print("Headphone/Line was pulled. Stopping player....");
+            break;
+            
+        case AVAudioSessionRouteChangeReason.CategoryChange.rawValue:
+            // called at start - also when other audio wants to play
+            print("AVAudioSessionRouteChangeReasonCategoryChange");
+            break;
+        default:
+            print("else default \(routChangeReason)")
+            break;
+        }
     }
 }
 
@@ -355,7 +532,7 @@ extension TimerViewController{
     }
     
     func navigateToNextViewController(){
-        self.tabBarController?.selectedIndex = 3
+        self.tabBarController?.selectedIndex = 2
     }
     
     func navigateToHomeViewController(){

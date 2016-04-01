@@ -9,7 +9,7 @@
         <!--Profile-->
         <scene sceneID="GOT-fu-cF9">
             <objects>
-                <viewController id="CcU-SW-mPd" sceneMemberID="viewController">
+                <viewController id="CcU-SW-mPd" customClass="ProfileViewController" customModule="conscious" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="T1Q-kB-UV8"/>
                         <viewControllerLayoutGuide type="bottom" id="oEP-Po-YcB"/>
@@ -18,9 +18,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sea-beach-waves-surfing" translatesAutoresizingMaskIntoConstraints="NO" id="VER-JD-vkB">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JUp-c7-cSl">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                            </imageView>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kVU-CD-vTE">
                                 <rect key="frame" x="20" y="485" width="560" height="40"/>
                                 <subviews>
@@ -111,15 +112,15 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="VER-JD-vkB" secondAttribute="trailing" id="6KY-fi-G16"/>
+                            <constraint firstItem="JUp-c7-cSl" firstAttribute="leading" secondItem="qwH-Il-np5" secondAttribute="leading" id="1T2-ma-qyj"/>
                             <constraint firstItem="bRn-Bm-Rkr" firstAttribute="trailing" secondItem="qwH-Il-np5" secondAttribute="trailingMargin" id="BAh-rX-hke"/>
                             <constraint firstItem="kVU-CD-vTE" firstAttribute="top" secondItem="bRn-Bm-Rkr" secondAttribute="bottom" constant="8" id="E3P-yr-Nk8"/>
                             <constraint firstItem="oEP-Po-YcB" firstAttribute="top" secondItem="kVU-CD-vTE" secondAttribute="bottom" constant="26" id="KwJ-Wc-Fy7"/>
+                            <constraint firstAttribute="trailing" secondItem="JUp-c7-cSl" secondAttribute="trailing" id="NP9-pB-20V"/>
                             <constraint firstItem="kVU-CD-vTE" firstAttribute="trailing" secondItem="qwH-Il-np5" secondAttribute="trailingMargin" id="Npi-QF-ph7"/>
                             <constraint firstItem="kVU-CD-vTE" firstAttribute="leading" secondItem="qwH-Il-np5" secondAttribute="leadingMargin" id="Xpo-ig-Pd4"/>
-                            <constraint firstItem="VER-JD-vkB" firstAttribute="leading" secondItem="qwH-Il-np5" secondAttribute="leading" id="aiR-5M-x9l"/>
-                            <constraint firstItem="VER-JD-vkB" firstAttribute="top" secondItem="qwH-Il-np5" secondAttribute="top" id="g85-MI-r3E"/>
-                            <constraint firstAttribute="bottom" secondItem="VER-JD-vkB" secondAttribute="bottom" id="xhh-YR-NFM"/>
+                            <constraint firstAttribute="bottom" secondItem="JUp-c7-cSl" secondAttribute="bottom" id="aWh-AM-T84"/>
+                            <constraint firstItem="JUp-c7-cSl" firstAttribute="top" secondItem="qwH-Il-np5" secondAttribute="top" id="cX4-BM-1H6"/>
                             <constraint firstItem="bRn-Bm-Rkr" firstAttribute="leading" secondItem="qwH-Il-np5" secondAttribute="leadingMargin" id="zbF-CX-hcu"/>
                         </constraints>
                     </view>
@@ -128,6 +129,9 @@
                         <color key="tintColor" red="1" green="0.51318947189999997" blue="0.080729444710000001" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="barTintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </simulatedTabBarMetrics>
+                    <connections>
+                        <outlet property="backgroundVideoContainer" destination="JUp-c7-cSl" id="t96-7K-uQn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ijZ-Qo-EJ9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -137,6 +141,5 @@
     <resources>
         <image name="Twitter_logo_blue_16" width="16" height="16"/>
         <image name="ic_account_circle" width="24" height="24"/>
-        <image name="sea-beach-waves-surfing" width="1920" height="1280"/>
     </resources>
 </document>

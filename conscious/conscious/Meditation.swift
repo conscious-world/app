@@ -17,6 +17,7 @@ class Meditation: NSObject, NSCoding{
     static let DURRATION_KEY = "conscious.mediation.durration"
     static let TIME_START_KEY = "conscious.mediation.time_start"
     static let TIME_END_KEY = "conscious.mediation.time_end"
+    static let VIDEO_NAME_KEY = "conscious.mediation.video_name"
     static let OPTIONS_KEY = "conscious.mediation.options"
     
     static let timed_mediation_type = "timed_meditation"
@@ -35,6 +36,7 @@ class Meditation: NSObject, NSCoding{
     var time_end: NSDate?
     var options: [[String:String]]?
     var mediaName: String?
+    var video_name: String?
     
     var pathForMedia: String?{
         get{
@@ -54,7 +56,7 @@ class Meditation: NSObject, NSCoding{
     }
     
     
-    init(meditation_type: String, media_id: String?, mentality_before: String?, mentality_after: String?, durration: NSTimeInterval?, time_start: NSDate?, time_end: NSDate?, options: [[String:String]]?){
+    init(meditation_type: String, media_id: String?, mentality_before: String?, mentality_after: String?, durration: NSTimeInterval?, time_start: NSDate?, time_end: NSDate?, video_name: String?,options: [[String:String]]?){
         self.meditation_type    = meditation_type
         self.media_id           = media_id
         self.mentality_before   = mentality_before
@@ -62,6 +64,7 @@ class Meditation: NSObject, NSCoding{
         self.durration          = durration
         self.time_start         = time_start
         self.time_end           = time_end
+        self.video_name         = video_name
         self.options            = options
     }
     
@@ -78,6 +81,8 @@ class Meditation: NSObject, NSCoding{
             durration:          decoder.decodeObjectForKey(Meditation.DURRATION_KEY) as? NSTimeInterval,
             time_start:         decoder.decodeObjectForKey(Meditation.TIME_START_KEY) as? NSDate,
             time_end:           decoder.decodeObjectForKey(Meditation.TIME_END_KEY) as? NSDate,
+            video_name:         decoder.decodeObjectForKey(Meditation.VIDEO_NAME_KEY) as? String,
+
             options:            decoder.decodeObjectForKey(Meditation.OPTIONS_KEY) as? [[String:String]]
         )
         
@@ -91,17 +96,18 @@ class Meditation: NSObject, NSCoding{
         coder.encodeObject(self.durration, forKey: Meditation.DURRATION_KEY)
         coder.encodeObject(self.time_start, forKey: Meditation.TIME_START_KEY)
         coder.encodeObject(self.time_end, forKey: Meditation.TIME_END_KEY)
+        coder.encodeObject(self.video_name, forKey: Meditation.VIDEO_NAME_KEY)
         coder.encodeObject(self.options, forKey: Meditation.OPTIONS_KEY)
     }
     
     static func newTimedMeditation() -> Meditation{
-        let meditation = Meditation(meditation_type: Meditation.timed_mediation_type, media_id: nil, mentality_before: nil, mentality_after: nil, durration: nil, time_start: nil, time_end: nil, options: nil)
+        let meditation = Meditation(meditation_type: Meditation.timed_mediation_type, media_id: nil, mentality_before: nil, mentality_after: nil, durration: nil, time_start: nil, time_end: nil, video_name: nil, options: nil)
         //meditation.meditation_title = "Timed medation"
         return meditation
     }
     
     static func newGuidedMeditation() -> Meditation{
-        return Meditation(meditation_type: Meditation.guided_mediation_type, media_id: nil, mentality_before: nil, mentality_after: nil, durration: nil, time_start: nil, time_end: nil, options: nil)
+        return Meditation(meditation_type: Meditation.guided_mediation_type, media_id: nil, mentality_before: nil, mentality_after: nil, durration: nil, time_start: nil, time_end: nil, video_name: nil, options: nil)
     }
     
     func start(){
@@ -138,6 +144,7 @@ class Meditation: NSObject, NSCoding{
             meditation.mediaName = "MARC5MinuteBreathing"
             meditation.meditation_title = "Five Minute breathing excersise"
             meditation.meditation_description = "Five minutes is all it takes to reset your day with this simple breathing exercise"
+            meditation.video_name = "lights-sea-sparkling_bynqeb"
             return meditation
         }
     }
@@ -164,6 +171,8 @@ class Meditation: NSObject, NSCoding{
             meditation.mediaName = "3-Minute-Breathing-Space"
             meditation.meditation_title = "3 Minute Breathing Space"
             meditation.meditation_description = "Three minutes is all it takes to reset your day with this simple breathing exercise"
+            meditation.video_name = "heavenly-rays"
+
             return meditation
         }
     }
@@ -176,6 +185,7 @@ class Meditation: NSObject, NSCoding{
             meditation.mediaName = "Hein-Braat-Maha-Mrityeonjaya-Mantra"
             meditation.meditation_title = "Hein Braat: Maha Mrityeonjaya Mantra"
             meditation.meditation_description = "Said to be beneficial for mental, emotional and physical health and to be a moksha mantra which bestows longevity and immortality."
+            meditation.video_name = "green-sky-in-space"
             return meditation
         }
     }

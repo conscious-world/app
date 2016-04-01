@@ -96,7 +96,7 @@ class CallToActionTableViewCell: UITableViewCell {
     
     func navigateToTimedMeditation(){
         if let tabController = self.window?.rootViewController as? GlobalTabBarViewController{
-            tabController.selectedIndex = 2
+            tabController.selectedIndex = 1
         }
     }
     
