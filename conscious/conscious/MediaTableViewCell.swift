@@ -18,6 +18,7 @@ class MediaTableViewCell: UITableViewCell {
     @IBOutlet weak var coverImage: UIImageView!
     @IBOutlet weak var iconContainerView: UIView!
     @IBOutlet weak var iconImageView: UIImageView!
+    @IBOutlet weak var userAvatar: UIImageView!
     
     var meditation: Meditation?{
         didSet{
@@ -27,9 +28,14 @@ class MediaTableViewCell: UITableViewCell {
                     //self.descriptionLabel.text = newMeditation.meditation_description
                     self.coverImage.image = newMeditation.coverImage
                     self.iconImageView.image = UIImage(named: newMeditation.iconName!)
+                    self.userAvatar.layer.cornerRadius = 24
+                    self.userAvatar.clipsToBounds = true
+                    if let avatar = newMeditation.user_avatar_name{
+                        self.userAvatar.image = UIImage(named: avatar)
+                    }else{
+                        self.userAvatar.image = nil
+                    }
                 }
-                
-//                self.iconImageView.tintColor = UIColor.whiteColor()
             }
         }
     }

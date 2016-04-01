@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="zJ7-gR-nWZ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="zJ7-gR-nWZ">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -156,29 +156,6 @@
                                                     <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="o8A-rv-Ovl">
                                                         <rect key="frame" x="0.0" y="0.0" width="600" height="45"/>
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                                        <subviews>
-                                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clock-7" translatesAutoresizingMaskIntoConstraints="NO" id="1n5-cF-z8W">
-                                                                <rect key="frame" x="572" y="13" width="20" height="20"/>
-                                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                                                <accessibility key="accessibilityConfiguration">
-                                                                    <accessibilityTraits key="traits" button="YES" image="YES"/>
-                                                                </accessibility>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="height" constant="20" id="lDN-6C-SXy"/>
-                                                                    <constraint firstAttribute="width" constant="20" id="va7-Js-Vsy"/>
-                                                                </constraints>
-                                                            </imageView>
-                                                        </subviews>
-                                                        <constraints>
-                                                            <constraint firstAttribute="trailing" secondItem="1n5-cF-z8W" secondAttribute="trailing" constant="8" id="4va-FB-i9C"/>
-                                                            <constraint firstItem="1n5-cF-z8W" firstAttribute="centerY" secondItem="o8A-rv-Ovl" secondAttribute="centerY" id="HA2-sZ-1Dt"/>
-                                                            <constraint firstAttribute="bottom" secondItem="1n5-cF-z8W" secondAttribute="bottom" constant="7" id="ucI-uN-CcQ"/>
-                                                        </constraints>
-                                                        <variation key="default">
-                                                            <mask key="constraints">
-                                                                <exclude reference="ucI-uN-CcQ"/>
-                                                            </mask>
-                                                        </variation>
                                                     </view>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="45" id="77D-cL-LlQ"/>
@@ -187,8 +164,15 @@
                                                         <blurEffect style="light"/>
                                                     </vibrancyEffect>
                                                 </visualEffectView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="55g-zv-igO">
+                                                    <rect key="frame" x="544" y="16" width="48" height="48"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="48" id="8aj-Ms-kO6"/>
+                                                        <constraint firstAttribute="width" constant="48" id="bFX-8M-O4U"/>
+                                                    </constraints>
+                                                </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gwh-LU-X9n">
-                                                    <rect key="frame" x="8" y="17" width="45" height="21"/>
+                                                    <rect key="frame" x="8" y="16" width="45.5" height="21.5"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <color key="highlightedColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -198,23 +182,54 @@
                                                         <rect key="frame" x="11" y="164" width="551" height="26"/>
                                                     </variation>
                                                 </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_record_voice_over" translatesAutoresizingMaskIntoConstraints="NO" id="1n5-cF-z8W">
+                                                    <rect key="frame" x="572" y="17" width="20" height="20"/>
+                                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                                    <accessibility key="accessibilityConfiguration">
+                                                        <accessibilityTraits key="traits" button="YES" image="YES"/>
+                                                    </accessibility>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="20" id="Xsr-2p-dZy"/>
+                                                        <constraint firstAttribute="width" constant="20" id="ZfP-ed-saW"/>
+                                                        <constraint firstAttribute="height" constant="20" id="lDN-6C-SXy"/>
+                                                        <constraint firstAttribute="width" constant="20" id="va7-Js-Vsy"/>
+                                                    </constraints>
+                                                    <variation key="default">
+                                                        <mask key="constraints">
+                                                            <exclude reference="lDN-6C-SXy"/>
+                                                            <exclude reference="va7-Js-Vsy"/>
+                                                        </mask>
+                                                    </variation>
+                                                </imageView>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="1n5-cF-z8W" secondAttribute="trailing" constant="8" id="1eo-Kq-zIx"/>
                                                 <constraint firstAttribute="bottom" secondItem="F1L-dj-xgU" secondAttribute="bottom" id="8Bb-y2-D1v"/>
                                                 <constraint firstItem="F1L-dj-xgU" firstAttribute="top" secondItem="k6j-Rq-gPz" secondAttribute="top" id="Bti-sc-3dD"/>
+                                                <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="gwh-LU-X9n" secondAttribute="trailing" constant="36" id="CQs-pR-pPF"/>
                                                 <constraint firstItem="F1L-dj-xgU" firstAttribute="leading" secondItem="k6j-Rq-gPz" secondAttribute="leading" id="ClF-Po-Ay6"/>
                                                 <constraint firstAttribute="bottom" secondItem="gwh-LU-X9n" secondAttribute="bottom" constant="12" id="LeC-Uv-FxA"/>
                                                 <constraint firstAttribute="bottom" secondItem="ZPZ-cx-wvP" secondAttribute="bottom" id="MZa-P1-uz5"/>
+                                                <constraint firstItem="1n5-cF-z8W" firstAttribute="centerY" secondItem="gwh-LU-X9n" secondAttribute="centerY" id="NYc-qN-UPL"/>
+                                                <constraint firstItem="55g-zv-igO" firstAttribute="top" secondItem="k6j-Rq-gPz" secondAttribute="top" constant="16" id="S9X-PY-6cQ"/>
+                                                <constraint firstAttribute="trailing" secondItem="55g-zv-igO" secondAttribute="trailing" constant="8" id="SJW-uR-4ED"/>
                                                 <constraint firstAttribute="trailing" secondItem="ZPZ-cx-wvP" secondAttribute="trailing" id="eKU-gJ-tMc"/>
+                                                <constraint firstItem="1n5-cF-z8W" firstAttribute="leading" secondItem="55g-zv-igO" secondAttribute="trailing" constant="8" id="hY1-pP-yNY"/>
                                                 <constraint firstItem="gwh-LU-X9n" firstAttribute="leading" secondItem="k6j-Rq-gPz" secondAttribute="leading" constant="8" id="kSf-PL-9fY"/>
                                                 <constraint firstAttribute="trailing" secondItem="F1L-dj-xgU" secondAttribute="trailing" id="pCu-v0-px7"/>
                                                 <constraint firstItem="ZPZ-cx-wvP" firstAttribute="leading" secondItem="k6j-Rq-gPz" secondAttribute="leading" id="uBm-Ii-bFL"/>
                                             </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="hY1-pP-yNY"/>
+                                                </mask>
+                                            </variation>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="coverImage" destination="F1L-dj-xgU" id="B05-66-aVf"/>
                                             <outlet property="iconImageView" destination="1n5-cF-z8W" id="KV0-ZX-ygH"/>
                                             <outlet property="titleLabel" destination="gwh-LU-X9n" id="nvv-of-VZL"/>
+                                            <outlet property="userAvatar" destination="55g-zv-igO" id="GTo-oN-XTc"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ContributionStyleHistoryTableViewCell" id="Djc-0d-xLO" customClass="ContributionStyleHistoryTableViewCell" customModule="conscious" customModuleProvider="target">
@@ -286,9 +301,8 @@
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MediaTableViewCell" rowHeight="200" id="4BI-A9-aZ8" customClass="MediaTableViewCell" customModule="conscious" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="600" height="200"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="4BI-A9-aZ8" id="gNQ-Pe-Z0U">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4BI-A9-aZ8" id="gNQ-Pe-Z0U">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="199.5"/>
-
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="exampleMeditionCover" translatesAutoresizingMaskIntoConstraints="NO" id="wkT-Gg-670">
@@ -403,7 +417,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="clock-7" width="30" height="30"/>
         <image name="consciousBrainWhite" width="200" height="200"/>
         <image name="exampleMeditionCover" width="1188" height="616"/>
         <image name="ic_record_voice_over" width="24" height="24"/>

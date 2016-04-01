@@ -37,6 +37,7 @@ class Meditation: NSObject, NSCoding{
     var options: [[String:String]]?
     var mediaName: String?
     var video_name: String?
+    var user_avatar_name: String?
     var isVRVideo = false
     
     var pathForMedia: String?{
@@ -133,22 +134,23 @@ class Meditation: NSObject, NSCoding{
     
     static func getAllPossible() -> [Meditation]{
         return [
+            DrCampbellIntro.build(),
             DrCampbellBodyScan.build(),
             SarahCruzPeaceSoundMeditation.build(),
             MindfullnessInstitueDecember.build(),
-            MindfullnessInstitueNovemer.build(),
-            MindfullnessInstitueOctober.build(),
             LovingKindnessVRMeditation.build(),
             ThreeMinuteBreathingMeditation.build(),
+            MindfullnessInstitueNovemer.build(),
             HealingMeditation.build(),
-            FiveMintueBreathingMeditation.build()]
+            FiveMintueBreathingMeditation.build(),
+            MindfullnessInstitueOctober.build(),]
     }
     
     class FiveMintueBreathingMeditation: Meditation{
         static func build() -> Meditation{
             let meditation = Meditation.newGuidedMeditation()
             meditation.coverImageUrl = "guidedBeachMeditation"
-            meditation.iconName = "circle-user-7"
+            meditation.iconName = "ic_record_voice_over"
             meditation.mediaName = "MARC5MinuteBreathing"
             meditation.meditation_title = "Five Minute breathing excersise"
             meditation.meditation_description = "Five minutes is all it takes to reset your day with this simple breathing exercise"
@@ -161,7 +163,7 @@ class Meditation: NSObject, NSCoding{
         static func build() -> Meditation{
             let meditation = Meditation.newTimedMeditation()
             meditation.coverImageUrl = "indoorMeditator"
-            meditation.iconName = "clock-stopwatch-7"
+            meditation.iconName = "ic_record_voice_over"
             meditation.mediaName = "MARC5MinuteBreathing"
             meditation.meditation_title = "Start a new timed meditation"
             meditation.meditation_description = "Set a timer, selection optional scene, background sound, reminder tone and audio chant reverb"
@@ -178,6 +180,7 @@ class Meditation: NSObject, NSCoding{
             meditation.meditation_title = "Paul Thormahlen: Loving Kindness Medations (VR)"
             meditation.meditation_description = ""
             meditation.isVRVideo = true
+            meditation.user_avatar_name = "paulthorahlen"
             return meditation
         }
     }
@@ -186,7 +189,7 @@ class Meditation: NSObject, NSCoding{
         static func build() -> Meditation{
             let meditation = Meditation.newGuidedMeditation()
             meditation.coverImageUrl = "colors"
-            meditation.iconName = "circle-user-7"
+            meditation.iconName = "ic_record_voice_over"
             meditation.mediaName = "3-Minute-Breathing-Space"
             meditation.meditation_title = "3 Minute Breathing Space"
             meditation.meditation_description = "Three minutes is all it takes to reset your day with this simple breathing exercise"
@@ -196,15 +199,31 @@ class Meditation: NSObject, NSCoding{
         }
     }
     
+    class DrCampbellIntro: Meditation{
+        static func build() -> Meditation{
+            let meditation = Meditation.newGuidedMeditation()
+            meditation.coverImageUrl = "colors"
+            meditation.iconName = "ic_record_voice_over"
+            meditation.mediaName = "DrCampbellBodyScan2"
+            meditation.meditation_title = "Intro to meditation with Dr Colleen Cambell"
+            meditation.meditation_description = "Three minutes is all it takes to reset your day with this simple breathing exercise"
+            meditation.video_name = "heavenly-rays"
+            meditation.user_avatar_name = "colleen"
+            
+            return meditation
+        }
+    }
+    
     class DrCampbellBodyScan: Meditation{
         static func build() -> Meditation{
             let meditation = Meditation.newGuidedMeditation()
             meditation.coverImageUrl = "colors"
-            meditation.iconName = "circle-user-7"
+            meditation.iconName = "ic_record_voice_over"
             meditation.mediaName = "DrCampbellBodyScan2"
-            meditation.meditation_title = "Dr Cambell, Ignite your potential: Body Scan"
+            meditation.meditation_title = "Dr Colleen Cambell - Ignite your potential: Full body scan"
             meditation.meditation_description = "Three minutes is all it takes to reset your day with this simple breathing exercise"
             meditation.video_name = "heavenly-rays"
+            meditation.user_avatar_name = "colleen"
             
             return meditation
         }
@@ -213,12 +232,13 @@ class Meditation: NSObject, NSCoding{
     class MindfullnessInstitueDecember: Meditation{
         static func build() -> Meditation{
             let meditation = Meditation.newGuidedMeditation()
-            meditation.coverImageUrl = "mindful-institute-header-image"
-            meditation.iconName = "circle-user-7"
+            meditation.coverImageUrl = "mindfulInstutiuteCover"
+            meditation.iconName = "ic_record_voice_over"
             meditation.mediaName = "MIDecemberMeditation"
             meditation.meditation_title = "Mindfulinstitue: December"
             meditation.meditation_description = ""
             meditation.video_name = "heavenly-rays"
+            meditation.user_avatar_name = "lianna"
             
             return meditation
         }
@@ -228,12 +248,13 @@ class Meditation: NSObject, NSCoding{
     class MindfullnessInstitueNovemer: Meditation{
         static func build() -> Meditation{
             let meditation = Meditation.newGuidedMeditation()
-            meditation.coverImageUrl = "mindful-institute-header-image"
-            meditation.iconName = "circle-user-7"
+            meditation.coverImageUrl = "mindfulInstutiuteCover"
+            meditation.iconName = "ic_record_voice_over"
             meditation.mediaName = "MINovemberMeditation"
             meditation.meditation_title = "Mindful Institue: November"
             meditation.meditation_description = ""
             meditation.video_name = "heavenly-rays"
+            meditation.user_avatar_name = "lianna"
             
             return meditation
         }
@@ -242,12 +263,13 @@ class Meditation: NSObject, NSCoding{
     class MindfullnessInstitueOctober: Meditation{
         static func build() -> Meditation{
             let meditation = Meditation.newGuidedMeditation()
-            meditation.coverImageUrl = "mindful-institute-header-image"
-            meditation.iconName = "circle-user-7"
+            meditation.coverImageUrl = "mindfulInstutiuteCover"
+            meditation.iconName = "ic_record_voice_over"
             meditation.mediaName = "MIOctoberMeditationTheMasksWeWear"
             meditation.meditation_title = "Mindful Institue: the masks we wear"
             meditation.meditation_description = ""
             meditation.video_name = "heavenly-rays"
+            meditation.user_avatar_name = "lianna"
             
             return meditation
         }
@@ -257,11 +279,12 @@ class Meditation: NSObject, NSCoding{
         static func build() -> Meditation{
             let meditation = Meditation.newGuidedMeditation()
             meditation.coverImageUrl = "exampleMeditionCover"
-            meditation.iconName = "circle-user-7"
+            meditation.iconName = "ic_record_voice_over"
             meditation.mediaName = "PeaceSoundMeditation"
             meditation.meditation_title = "Postures of Grace: Peace Sound Medation"
             meditation.meditation_description = ""
             meditation.video_name = "abstract-ocean-with-light-flares"
+            meditation.user_avatar_name = "sarahcruz"
             return meditation
         }
     }
@@ -270,7 +293,7 @@ class Meditation: NSObject, NSCoding{
         static func build() -> Meditation{
             let meditation = Meditation.newGuidedMeditation()
             meditation.coverImageUrl = "maha-mrityunjaya"
-            meditation.iconName = "circle-user-7"
+            meditation.iconName = "ic_record_voice_over"
             meditation.mediaName = "Hein-Braat-Maha-Mrityeonjaya-Mantra"
             meditation.meditation_title = "Hein Braat: Maha Mrityeonjaya Mantra"
             meditation.meditation_description = "Said to be beneficial for mental, emotional and physical health and to be a moksha mantra which bestows longevity and immortality."
