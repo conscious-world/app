@@ -92,7 +92,7 @@ class HistoryViewController: UIViewController, TEAContributionGraphDataSource, P
         self.backgroundVideoContainer.addSubview(player.view)
         self.player.didMoveToParentViewController(self)
         
-        let urlpath = NSBundle.mainBundle().pathForResource(videoNames[0], ofType: "mp4")
+        let urlpath = NSBundle.mainBundle().pathForResource(videoNames[2], ofType: "mp4")
         let videoUrl:NSURL = NSURL.fileURLWithPath(urlpath!)
         self.player.setUrl(videoUrl)
         

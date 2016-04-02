@@ -17,13 +17,13 @@ class ProfileViewController: UIViewController, PlayerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        addBackgroundVideo()
+        //addBackgroundVideo()
         // Do any additional setup after loading the view.
     }
     
     override func viewDidAppear(animated: Bool) {
-        self.player.playFromBeginning()
-        self.player.fillMode = AVLayerVideoGravityResizeAspectFill
+        //self.player.playFromBeginning()
+        //self.player.fillMode = AVLayerVideoGravityResizeAspectFill
     }
 
     override func didReceiveMemoryWarning() {

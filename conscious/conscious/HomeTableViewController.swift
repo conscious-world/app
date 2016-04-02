@@ -9,8 +9,11 @@
 import UIKit
 import Spring
 import TEAChart
+import Player
 
-class HomeTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UIScrollViewDelegate, TEAContributionGraphDataSource {
+class HomeTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UIScrollViewDelegate, TEAContributionGraphDataSource, PlayerDelegate{
+    
+    let videoNames = ["heavenly-rays", "green-sky-in-space","abstract-ocean-with-light-flares", "lights-sea-sparkling_bynqeb", "stars-and-colors-in-space"]
 
     @IBOutlet weak var tableView: UITableView!
 
@@ -24,15 +27,16 @@ class HomeTableViewController: UIViewController, UITableViewDataSource, UITableV
     var meditations: [Meditation] = Meditation.getAllPossible()
     var ctaCell: CallToActionTableViewCell?
     var lastMeditaion: Meditation?
+    var player = Player()
         
     override func viewDidLoad() {
         super.viewDidLoad()
         tableSectionsData = [ctas,recomededMediations]
+
         tableView.dataSource = self
         tableView.delegate = self
         //tableView.rowHeight = UITableViewAutomaticDimension
-        tableView.estimatedRowHeight = 250
-        
+        tableView.estimatedRowHeight = 200
 //        let layer = ctaCell?.ctaButton.layer
 //        layer.animation = "squeezeDown"
 //        layer.animate()
@@ -40,8 +44,13 @@ class HomeTableViewController: UIViewController, UITableViewDataSource, UITableV
         // Do any additional setup after loading the view, typically from a nib.
     }
     
+    override func viewDidAppear(animated: Bool) {
+        self.player.playFromBeginning()
+        self.player.fillMode = AVLayerVideoGravityResizeAspectFill
+    }
+    
     override func viewWillAppear(animated: Bool) {
-        
+        addBackgroundVideo()
         if let _lastMeditaion = History.sharedInstance()?.last{
             lastMeditaion = _lastMeditaion
             print("you have \(History.count()) medations and your last mediation was of type \(lastMeditaion?.meditation_type)" )
@@ -59,11 +68,7 @@ class HomeTableViewController: UIViewController, UITableViewDataSource, UITableV
             print("section = 0")
             return 1
         }
-//        if section == 1{
-//            print("section = 1")
-//            return history.count < 1 ? 0 : 1
-//        }
-//        print("section = 2")
+
         return meditations.count
     }
     
@@ -96,7 +101,7 @@ class HomeTableViewController: UIViewController, UITableViewDataSource, UITableV
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 250.0
+        return (indexPath.section == 0) ? 400 : 200
     }
     
     //there is no segue
@@ -118,7 +123,7 @@ class HomeTableViewController: UIViewController, UITableViewDataSource, UITableV
         self.ctaCell?.resizeLogo(200.0 - scrollView.contentOffset.y)
         
         if(scrollView.contentOffset.y < 0){
-            self.ctaCell?.resizeHeader(250.0 + abs(scrollView.contentOffset.y))
+            self.ctaCell?.resizeHeader(300.0 + abs(scrollView.contentOffset.y))
         }
 
     }
@@ -130,6 +135,46 @@ class HomeTableViewController: UIViewController, UITableViewDataSource, UITableV
     func  valueForDay(day: UInt ) -> Int{
         
         return Int(day) % 6;
+    }
+    
+    func addBackgroundVideo(){
+
+        if let tableCell = self.tableView.cellForRowAtIndexPath(NSIndexPath(forRow: 0, inSection: 0)) as? CallToActionTableViewCell{
+            
+            tableCell.backgroundColor = UIColor.clearColor()
+            tableCell.contentView.backgroundColor = UIColor.clearColor()
+            self.tableView.backgroundColor = UIColor.clearColor()
+            self.player.delegate = self
+            self.player.view.frame = self.view.bounds
+            self.addChildViewController(player)
+            
+            self.view.addSubview(player.view)
+            self.view.sendSubviewToBack(player.view)
+            self.player.didMoveToParentViewController(self)
+            
+            let urlpath = NSBundle.mainBundle().pathForResource(videoNames[2], ofType: "mp4")
+            let videoUrl:NSURL = NSURL.fileURLWithPath(urlpath!)
+            self.player.setUrl(videoUrl)
+        
+        }
+
+        
+    }
+    
+    func playerReady(player: Player) {
+    }
+    
+    func playerPlaybackStateDidChange(player: Player) {
+    }
+    
+    func playerBufferingStateDidChange(player: Player) {
+    }
+    
+    func playerPlaybackWillStartFromBeginning(player: Player) {
+    }
+    
+    func playerPlaybackDidEnd(player: Player) {
+        player.playFromBeginning()
     }
 
 }

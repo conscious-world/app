@@ -49,18 +49,11 @@ class CallToActionTableViewCell: UITableViewCell {
         self.layoutIfNeeded()
     }
     
+    @IBOutlet weak var headerBackgroundHeightConstraint: NSLayoutConstraint!
     func resizeHeader(height: CGFloat){
         print("resizeHeader")
-        let topContraints:[NSLayoutConstraint] = self.headerImage.constraints.filter({ (constraint) -> Bool in
-            print("\(constraint.firstAttribute)")
-            if constraint.firstItem as! UIImageView == self.headerImage && constraint.firstAttribute == NSLayoutAttribute.Height {
-                constraint.constant = height
-                return true
-            }
-            return false
-        })
         
-        print("heightContraints.count \(topContraints.count)")
+        headerBackgroundHeightConstraint.constant = height
         
         self.layoutIfNeeded()
     }
