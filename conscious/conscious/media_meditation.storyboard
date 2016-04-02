@@ -49,15 +49,41 @@
                                 <color key="shadowColor" red="0.044714095744680882" green="0.035747236474746043" blue="0.018268480370283495" alpha="1" colorSpace="calibratedRGB"/>
                                 <size key="shadowOffset" width="1" height="-1"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dtW-Eo-OQ9">
-                                <rect key="frame" x="20" y="77" width="48" height="46"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dtW-Eo-OQ9">
+                                <rect key="frame" x="38" y="508" width="48" height="46"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="48" id="at6-lW-dON"/>
                                     <constraint firstAttribute="height" constant="46" id="uQQ-X2-fiv"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4KQ-U9-FOy">
+                                <rect key="frame" x="26" y="40" width="26" height="24"/>
+                                <color key="tintColor" red="0.80171697990000002" green="0.27509967590000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <size key="titleShadowOffset" width="2" height="2"/>
+                                <state key="normal" image="back">
+                                    <color key="titleShadowColor" red="0.044714095744680882" green="0.044714095744680882" blue="0.044714095744680882" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="onBackPressed:" destination="xZ1-Jg-0QA" eventType="touchUpInside" id="I9N-Fn-Vxq"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zZm-TX-MT5">
+                                <rect key="frame" x="20" y="429" width="43" height="21.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <size key="shadowOffset" width="1" height="-1"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="0At-Zh-jTa">
+                                <rect key="frame" x="18" y="452" width="564" height="31"/>
+                                <color key="thumbTintColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="scrubTimeSlider:" destination="xZ1-Jg-0QA" eventType="valueChanged" id="Vq8-IB-zwi"/>
+                                </connections>
+                            </slider>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oqP-2m-O3C">
-                                <rect key="frame" x="514" y="28" width="48" height="48"/>
+                                <rect key="frame" x="514" y="507" width="48" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="Off-cu-lkO"/>
                                     <constraint firstAttribute="width" constant="48" id="co5-5k-2W0"/>
@@ -77,32 +103,6 @@
                                     <segue destination="5qi-yz-EIF" kind="show" id="abN-pf-e7X"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4KQ-U9-FOy">
-                                <rect key="frame" x="26" y="40" width="26" height="24"/>
-                                <color key="tintColor" red="0.80171697990000002" green="0.27509967590000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <size key="titleShadowOffset" width="2" height="2"/>
-                                <state key="normal" image="back">
-                                    <color key="titleShadowColor" red="0.044714095744680882" green="0.044714095744680882" blue="0.044714095744680882" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="onBackPressed:" destination="xZ1-Jg-0QA" eventType="touchUpInside" id="I9N-Fn-Vxq"/>
-                                </connections>
-                            </button>
-                            <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="0At-Zh-jTa">
-                                <rect key="frame" x="18" y="452" width="564" height="31"/>
-                                <color key="thumbTintColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
-                                <connections>
-                                    <action selector="scrubTimeSlider:" destination="xZ1-Jg-0QA" eventType="valueChanged" id="Vq8-IB-zwi"/>
-                                </connections>
-                            </slider>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zZm-TX-MT5">
-                                <rect key="frame" x="20" y="429.5" width="43" height="21.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                                <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <size key="shadowOffset" width="1" height="-1"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <color key="tintColor" red="0.69009782019999999" green="1" blue="0.54698733190000004" alpha="1" colorSpace="calibratedRGB"/>
@@ -111,11 +111,15 @@
                         </accessibility>
                         <constraints>
                             <constraint firstItem="iRv-xM-wNa" firstAttribute="top" secondItem="0At-Zh-jTa" secondAttribute="bottom" constant="119" id="0Td-Ex-8kP"/>
+                            <constraint firstItem="dtW-Eo-OQ9" firstAttribute="centerY" secondItem="YSA-cu-O6i" secondAttribute="centerY" id="0be-Q7-v2u"/>
                             <constraint firstItem="ijJ-In-Xx5" firstAttribute="baseline" secondItem="7eF-Ie-fJl" secondAttribute="baseline" id="0oF-pb-qJx"/>
                             <constraint firstItem="YSA-cu-O6i" firstAttribute="centerX" secondItem="2f2-ut-DKj" secondAttribute="centerX" id="35c-tj-CJB"/>
                             <constraint firstItem="zZm-TX-MT5" firstAttribute="leading" secondItem="2f2-ut-DKj" secondAttribute="leading" constant="20" id="3Di-Dt-n1l"/>
+                            <constraint firstItem="dtW-Eo-OQ9" firstAttribute="leading" secondItem="2f2-ut-DKj" secondAttribute="leadingMargin" constant="38" id="68U-dq-HKn"/>
                             <constraint firstItem="iRv-xM-wNa" firstAttribute="top" secondItem="YSA-cu-O6i" secondAttribute="bottom" constant="42" id="8Ta-8r-42f"/>
                             <constraint firstAttribute="trailingMargin" secondItem="oqP-2m-O3C" secondAttribute="trailing" constant="18" id="AJo-23-hhR"/>
+                            <constraint firstItem="oqP-2m-O3C" firstAttribute="centerY" secondItem="dtW-Eo-OQ9" secondAttribute="centerY" id="GNj-t7-hvE"/>
+                            <constraint firstItem="dtW-Eo-OQ9" firstAttribute="leading" secondItem="2f2-ut-DKj" secondAttribute="leading" constant="38" id="HnD-4D-8qJ"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="zZm-TX-MT5" secondAttribute="trailing" constant="20" id="IGV-MM-h7t"/>
                             <constraint firstItem="FfF-XH-I9z" firstAttribute="top" secondItem="2f2-ut-DKj" secondAttribute="top" id="JBd-6y-KcY"/>
                             <constraint firstItem="ijJ-In-Xx5" firstAttribute="top" secondItem="0At-Zh-jTa" secondAttribute="bottom" constant="-29" id="Kar-Rx-dbM"/>
@@ -131,7 +135,9 @@
                             <constraint firstItem="oqP-2m-O3C" firstAttribute="top" secondItem="hBW-h3-gPX" secondAttribute="bottom" constant="20" id="cec-j7-xeO"/>
                             <constraint firstAttribute="leadingMargin" secondItem="ijJ-In-Xx5" secondAttribute="leading" id="cy0-X6-bht"/>
                             <constraint firstItem="YSA-cu-O6i" firstAttribute="centerX" secondItem="2f2-ut-DKj" secondAttribute="centerX" constant="7.5" id="igz-O3-3gz"/>
+                            <constraint firstAttribute="trailing" secondItem="oqP-2m-O3C" secondAttribute="trailing" constant="38" id="kxd-o0-jDa"/>
                             <constraint firstAttribute="trailing" secondItem="FfF-XH-I9z" secondAttribute="trailing" id="nGG-wN-tsB"/>
+                            <constraint firstAttribute="trailing" secondItem="dtW-Eo-OQ9" secondAttribute="trailing" constant="38" id="o9c-BU-bxR"/>
                             <constraint firstItem="0At-Zh-jTa" firstAttribute="top" secondItem="hBW-h3-gPX" secondAttribute="bottom" constant="431" id="rYA-dA-hZt"/>
                             <constraint firstItem="ijJ-In-Xx5" firstAttribute="top" secondItem="0At-Zh-jTa" secondAttribute="bottom" constant="-29" id="rbZ-R7-4Vw"/>
                             <constraint firstItem="4KQ-U9-FOy" firstAttribute="top" secondItem="hBW-h3-gPX" secondAttribute="bottom" constant="20" id="t7j-Lv-ae0"/>
@@ -143,8 +149,14 @@
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="cec-j7-xeO"/>
+                                <exclude reference="68U-dq-HKn"/>
+                                <exclude reference="NMV-id-CGf"/>
+                                <exclude reference="ZuY-bp-J8V"/>
+                                <exclude reference="o9c-BU-bxR"/>
                                 <exclude reference="igz-O3-3gz"/>
+                                <exclude reference="AJo-23-hhR"/>
+                                <exclude reference="NGh-nb-Seu"/>
+                                <exclude reference="cec-j7-xeO"/>
                             </mask>
                         </variation>
                     </view>

@@ -6,7 +6,7 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Profile-->
+        <!--Favorites-->
         <scene sceneID="GOT-fu-cF9">
             <objects>
                 <viewController id="CcU-SW-mPd" customClass="ProfileViewController" customModule="conscious" customModuleProvider="target" sceneMemberID="viewController">
@@ -20,9 +20,20 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JUp-c7-cSl">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="exampleFavorites" translatesAutoresizingMaskIntoConstraints="NO" id="hl8-aY-irM">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="556"/>
+                                    </imageView>
+                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="hl8-aY-irM" firstAttribute="leading" secondItem="JUp-c7-cSl" secondAttribute="leading" id="6Qx-OY-TX5"/>
+                                    <constraint firstAttribute="trailing" secondItem="hl8-aY-irM" secondAttribute="trailing" id="efD-wS-Lee"/>
+                                    <constraint firstAttribute="bottom" secondItem="hl8-aY-irM" secondAttribute="bottom" constant="44" id="pex-xT-QZf"/>
+                                    <constraint firstItem="hl8-aY-irM" firstAttribute="top" secondItem="JUp-c7-cSl" secondAttribute="top" id="sF2-eB-aGe"/>
+                                </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kVU-CD-vTE">
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kVU-CD-vTE">
                                 <rect key="frame" x="20" y="485" width="560" height="40"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5uI-qz-PbH">
@@ -42,7 +53,7 @@
                                     <constraint firstAttribute="height" constant="40" id="wD5-Dg-ltN"/>
                                 </constraints>
                             </view>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="bRn-Bm-Rkr">
+                            <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="bRn-Bm-Rkr">
                                 <rect key="frame" x="20" y="437" width="560" height="40"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aTO-vm-ZXJ">
@@ -124,7 +135,7 @@
                             <constraint firstItem="bRn-Bm-Rkr" firstAttribute="leading" secondItem="qwH-Il-np5" secondAttribute="leadingMargin" id="zbF-CX-hcu"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Profile" image="ic_account_circle" id="1Pw-bJ-lz1"/>
+                    <tabBarItem key="tabBarItem" title="Favorites" image="ic_favorite" id="1Pw-bJ-lz1"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics">
                         <color key="tintColor" red="1" green="0.51318947189999997" blue="0.080729444710000001" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="barTintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -140,6 +151,7 @@
     </scenes>
     <resources>
         <image name="Twitter_logo_blue_16" width="16" height="16"/>
-        <image name="ic_account_circle" width="24" height="24"/>
+        <image name="exampleFavorites" width="750" height="1194"/>
+        <image name="ic_favorite" width="24" height="24"/>
     </resources>
 </document>

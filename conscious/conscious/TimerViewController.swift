@@ -90,7 +90,7 @@ class TimerViewController: UIViewController, EZMicrophoneDelegate, EZAudioFFTDel
     
 
     
-    let videoNames = ["heavenly-rays", "green-sky-in-space","abstract-ocean-with-light-flares", "lights-sea-sparkling_bynqeb", "stars-and-colors-in-space"]
+    let videoNames = ["abstract-ocean-with-light-flares","heavenly-rays", "green-sky-in-space", "lights-sea-sparkling_bynqeb", "stars-and-colors-in-space"]
     var players: [Player] = []
     
     func playBackVideos(){

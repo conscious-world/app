@@ -60,7 +60,7 @@ class Meditation: NSObject, NSCoding{
     }
     
     
-    init(meditation_type: String, media_id: String?, mentality_before: String?, mentality_after: String?, durration: NSTimeInterval?, time_start: NSDate?, time_end: NSDate?, video_name: String?, favorited: Bool, options: [[String:String]]?){
+    init(meditation_type: String, media_id: String?, mentality_before: String?, mentality_after: String?, durration: NSTimeInterval?, time_start: NSDate?, time_end: NSDate?, video_name: String?, favorited: Bool?, options: [[String:String]]?){
         self.meditation_type    = meditation_type
         self.media_id           = media_id
         self.mentality_before   = mentality_before
@@ -69,7 +69,7 @@ class Meditation: NSObject, NSCoding{
         self.time_start         = time_start
         self.time_end           = time_end
         self.video_name         = video_name
-        self.favorited          = favorited
+        self.favorited          = favorited ?? false
         self.options            = options
     }
     
@@ -87,7 +87,7 @@ class Meditation: NSObject, NSCoding{
             time_start:         decoder.decodeObjectForKey(Meditation.TIME_START_KEY) as? NSDate,
             time_end:           decoder.decodeObjectForKey(Meditation.TIME_END_KEY) as? NSDate,
             video_name:         decoder.decodeObjectForKey(Meditation.VIDEO_NAME_KEY) as? String,
-            favorited:          (decoder.decodeObjectForKey(Meditation.FAVORITED_KEY) as? Bool)!,
+            favorited:          decoder.decodeObjectForKey(Meditation.FAVORITED_KEY) as? Bool,
             
 
             options:            decoder.decodeObjectForKey(Meditation.OPTIONS_KEY) as? [[String:String]]
@@ -140,9 +140,9 @@ class Meditation: NSObject, NSCoding{
     static func getAllPossible() -> [Meditation]{
         return [
             DrCampbellIntro.build(),
-            DrCampbellBodyScan.build(),
             SarahCruzPeaceSoundMeditation.build(),
             MindfullnessInstitueDecember.build(),
+            DrCampbellBodyScan.build(),
             LovingKindnessVRMeditation.build(),
             ThreeMinuteBreathingMeditation.build(),
             MindfullnessInstitueNovemer.build(),
@@ -209,7 +209,7 @@ class Meditation: NSObject, NSCoding{
             let meditation = Meditation.newGuidedMeditation()
             meditation.coverImageUrl = "colors"
             meditation.iconName = "ic_record_voice_over"
-            meditation.mediaName = "DrCampbellBodyScan2"
+            meditation.mediaName = "DrCambellBodyScanIntro"
             meditation.meditation_title = "Intro to meditation with Dr Colleen Cambell"
             meditation.meditation_description = "Three minutes is all it takes to reset your day with this simple breathing exercise"
             meditation.video_name = "heavenly-rays"

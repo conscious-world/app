@@ -52,7 +52,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="94"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="sea-beach-waves-surfing" translatesAutoresizingMaskIntoConstraints="NO" id="4we-iv-Jh3">
+                                                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="sea-beach-waves-surfing" translatesAutoresizingMaskIntoConstraints="NO" id="4we-iv-Jh3">
                                                     <rect key="frame" x="0.0" y="-50" width="600" height="300"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="350" id="BpA-aJ-OWV"/>
@@ -129,6 +129,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="ctaButton" destination="lk9-f1-q8H" id="RnI-Qm-YAa"/>
+                                            <outlet property="headerBackgroundHeightConstraint" destination="BpA-aJ-OWV" id="bBi-K4-8kh"/>
                                             <outlet property="headerImage" destination="4we-iv-Jh3" id="S2D-6Y-6Rr"/>
                                             <outlet property="logoImage" destination="gI1-I6-iUM" id="wOn-4C-uep"/>
                                         </connections>
@@ -178,6 +179,7 @@
                                                         <constraint firstAttribute="height" constant="24" id="kKu-cJ-nAy"/>
                                                     </constraints>
                                                     <color key="tintColor" red="0.74474318484042556" green="0.0074078295241880882" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <state key="normal" image="ic_favorite_border"/>
                                                     <connections>
                                                         <action selector="onFavoriteButtonTap:" destination="q94-2a-WD7" eventType="touchUpInside" id="hnv-ef-fcM"/>
                                                     </connections>
@@ -437,6 +439,7 @@
     <resources>
         <image name="consciousBrainWhite" width="200" height="200"/>
         <image name="exampleMeditionCover" width="1188" height="616"/>
+        <image name="ic_favorite_border" width="24" height="24"/>
         <image name="ic_record_voice_over" width="24" height="24"/>
         <image name="ic_spa" width="24" height="24"/>
         <image name="orangeBackground" width="648" height="96"/>
